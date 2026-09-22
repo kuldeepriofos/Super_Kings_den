@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="cskGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#FDB913" />
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0B1B3D" />
+      <stop offset="100%" stop-color="#050C1B" />
+    </linearGradient>
+  </defs>
+  <!-- Shield Background -->
+  <path d="M50 5 L88 18 C88 55 50 92 50 92 C50 92 12 55 12 18 Z" fill="url(#shieldGrad)" stroke="#FDB913" stroke-width="3"/>
+  <!-- Crown / Mane -->
+  <path d="M35 24 L50 14 L65 24 L59 34 L41 34 Z" fill="url(#cskGrad)"/>
+  <!-- Roaring Lion Silhouette -->
+  <path d="M32 40 C34 32 42 30 50 30 C58 30 66 32 68 40 C70 47 67 54 62 58 C65 62 67 68 66 74 C59 75 52 70 50 67 C48 70 41 75 34 74 C33 68 35 62 38 58 C33 54 30 47 32 40 Z" fill="url(#cskGrad)"/>
+  <!-- Lion Eyes & Roar details -->
+  <circle cx="43" cy="45" r="2.5" fill="#0B1B3D"/>
+  <circle cx="57" cy="45" r="2.5" fill="#0B1B3D"/>
+  <path d="M44 56 Q50 62 56 56 Q50 59 44 56 Z" fill="#0B1B3D"/>
+  <!-- Stars -->
+  <polygon points="50,78 52,83 57,83 53,86 55,91 50,88 45,91 47,86 43,83 48,83" fill="#FDB913"/>
+</svg>

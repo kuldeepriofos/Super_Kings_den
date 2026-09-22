@@ -1,0 +1,83 @@
+
+---Downloaded files---
+The import files for: Magazine Demo were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = https://superkingsden.com
+Data file = /home/u811140109/domains/superkingsden.com/public_html/wp-content/plugins/papermag-extension//demo/magazine-demo.xml
+Widget file = /home/u811140109/domains/superkingsden.com/public_html/wp-content/plugins/papermag-extension//demo/magazine-widget.wie
+Customizer file = /home/u811140109/domains/superkingsden.com/public_html/wp-content/plugins/papermag-extension//demo/magazine.dat
+Redux files:
+not defined!
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+Sidebar : 
+
+Mailchimp Sign-Up Form - No Title - Imported
+Categories - Categories - Imported
+Gallery - Instagram Gallery - Imported
+Image - No Title - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---ocdi/after_import---
+

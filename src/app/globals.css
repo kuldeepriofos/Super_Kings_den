@@ -1,0 +1,432 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+    --csk-navy: #00275B;
+    --csk-gold-contrast: #D97706;
+    --csk-gold-dark: #B45309;
+    --csk-gold-icon: #F59E0B;
+    --csk-card-bg: #FFFFFF;
+    --csk-card-border: #E2E8F0;
+  }
+  
+  html.dark {
+    color-scheme: dark;
+    --csk-navy: #00275B;
+    --csk-gold-contrast: #FFCB05;
+    --csk-gold-dark: #FFCB05;
+    --csk-gold-icon: #FFCB05;
+    --csk-card-bg: #0D1E47;
+    --csk-card-border: rgba(255, 203, 5, 0.22);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    @apply antialiased font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600 !important;
+    letter-spacing: -0.015em;
+  }
+
+  b, strong {
+    font-weight: 600;
+  }
+}
+
+/* Light & Dark Mode Sports Cards - Snappy theme switch */
+.sports-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Dark Mode Sports Card with Official CSK Colors */
+.dark .sports-card {
+  background: linear-gradient(145deg, rgba(13, 30, 71, 0.92) 0%, rgba(8, 20, 50, 0.98) 100%);
+  border: 1px solid rgba(255, 203, 5, 0.22);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+.dark .sports-card:hover {
+  border-color: rgba(255, 203, 5, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px -10px rgba(255, 203, 5, 0.3);
+}
+
+/* Light Mode Sports Card - Clean, Crisp White with Refined Borders */
+html:not(.dark) .sports-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 10px -2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
+}
+
+html:not(.dark) .sports-card:hover {
+  border-color: #FFCB05;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -6px rgba(0, 39, 91, 0.12), 0 0 15px rgba(255, 203, 5, 0.2);
+}
+
+/* Signature Solid Royal CSK Navy Hero Banner - Works 100% in BOTH Light and Dark Modes */
+.csk-hero-banner {
+  background: linear-gradient(135deg, #001B44 0%, #00275B 50%, #081432 100%);
+  border: 1.5px solid rgba(255, 203, 5, 0.4);
+  box-shadow: 0 12px 30px -10px rgba(0, 39, 91, 0.3);
+  color: #FFFFFF;
+  border-radius: 1.25rem;
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.csk-hero-banner h1 {
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+}
+
+.csk-hero-banner p {
+  color: #E2E8F0 !important;
+}
+
+
+/* Minimal Website Load & Page Entrance Animations */
+@keyframes cskLoadBar {
+  0% {
+    width: 0%;
+    transform: translateX(-10%);
+  }
+  50% {
+    width: 65%;
+  }
+  100% {
+    width: 100%;
+    transform: translateX(0%);
+  }
+}
+
+.animate-csk-load-bar {
+  animation: cskLoadBar 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes pageEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-page-entrance {
+  animation: pageEntrance 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #081432;
+}
+
+html:not(.dark) ::-webkit-scrollbar-track {
+  background: #F6F8FA;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #1A3670;
+  border-radius: 4px;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFCB05;
+}
+
+/* WordPress & Sports Article Content Typography */
+.sports-article-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.85rem;
+  line-height: 1.3;
+  color: inherit;
+  font-family: 'Outfit', sans-serif;
+  border-left: 4px solid #FFCB05;
+  padding-left: 0.75rem;
+  letter-spacing: -0.015em;
+}
+
+.sports-article-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+  color: inherit;
+  font-family: 'Outfit', sans-serif;
+}
+
+.sports-article-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.sports-article-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+}
+
+.sports-article-content a {
+  color: #0066B3;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.15s;
+}
+
+.dark .sports-article-content a {
+  color: #FFCB05;
+}
+
+.sports-article-content a:hover {
+  color: #034EA2;
+}
+
+.dark .sports-article-content a:hover {
+  color: #FFF3B0;
+}
+
+.sports-article-content blockquote {
+  border-left: 4px solid #FFCB05;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  background-color: rgba(255, 203, 5, 0.08);
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+
+
+.sports-article-content ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.sports-article-content ol {
+  list-style-type: decimal;
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+
+.sports-article-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.sports-article-content figure.wp-block-table,
+.sports-article-content table {
+  width: 100%;
+  margin: 1.75rem 0;
+  overflow-x: auto;
+  border-collapse: collapse;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(253, 185, 19, 0.25);
+  font-size: 0.95rem;
+}
+
+.sports-article-content th,
+.sports-article-content td {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(253, 185, 19, 0.15);
+  text-align: left;
+}
+
+.sports-article-content th,
+.sports-article-content tr:first-child td {
+  background-color: rgba(253, 185, 19, 0.15);
+  font-weight: 700;
+}
+
+.dark .sports-article-content tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+html:not(.dark) .sports-article-content tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.sports-article-content img {
+  border-radius: 1rem;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  display: block;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* 🏏 404 Cricket Bowled Animation Keyframes */
+@keyframes cricketBallDelivery {
+  0% {
+    transform: translate(-260px, -120px) scale(0.65) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-150px, -20px) scale(0.85) rotate(240deg);
+  }
+  48% {
+    /* Pitch bounce */
+    transform: translate(-60px, 35px) scale(0.95) rotate(540deg);
+  }
+  65% {
+    /* Impact with Middle Stump! */
+    transform: translate(0px, 0px) scale(1) rotate(780deg);
+  }
+  80% {
+    /* Ricochet away */
+    transform: translate(70px, 80px) scale(0.9) rotate(1100deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(140px, 160px) scale(0.7) rotate(1400deg);
+    opacity: 0;
+  }
+}
+
+@keyframes offStumpFly {
+  0%, 64% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  75% {
+    transform: translate(25px, -35px) rotate(35deg);
+  }
+  90%, 100% {
+    transform: translate(45px, 15px) rotate(75deg);
+  }
+}
+
+@keyframes middleStumpCartwheel {
+  0%, 64% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  74% {
+    transform: translate(40px, -70px) rotate(60deg);
+  }
+  88% {
+    transform: translate(90px, -30px) rotate(145deg);
+  }
+  100% {
+    transform: translate(120px, 40px) rotate(210deg);
+  }
+}
+
+@keyframes legStumpShake {
+  0%, 64% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  68% {
+    transform: translate(-8px, -4px) rotate(-10deg);
+  }
+  75% {
+    transform: translate(4px, 0px) rotate(5deg);
+  }
+  85%, 100% {
+    transform: translate(-4px, 0px) rotate(-6deg);
+  }
+}
+
+@keyframes leftBailFly {
+  0%, 64% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(-45px, -85px) rotate(-220deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-90px, 20px) rotate(-460deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes rightBailFly {
+  0%, 64% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  74% {
+    transform: translate(65px, -110px) rotate(340deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(140px, -10px) rotate(720deg);
+    opacity: 0.85;
+  }
+}
+
+@keyframes ledStumpFlash {
+  0%, 64% {
+    filter: drop-shadow(0 0 0px transparent);
+  }
+  66%, 82% {
+    filter: drop-shadow(0 0 16px #EF4444) drop-shadow(0 0 24px #F59E0B);
+  }
+  100% {
+    filter: drop-shadow(0 0 6px #EF4444);
+  }
+}
+
+.animate-cricket-ball {
+  animation: cricketBallDelivery 3.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.animate-off-stump {
+  animation: offStumpFly 3.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  transform-origin: bottom center;
+}
+
+.animate-middle-stump {
+  animation: middleStumpCartwheel 3.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  transform-origin: bottom center;
+}
+
+.animate-leg-stump {
+  animation: legStumpShake 3.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  transform-origin: bottom center;
+}
+
+.animate-left-bail {
+  animation: leftBailFly 3.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.animate-right-bail {
+  animation: rightBailFly 3.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.animate-led-flash {
+  animation: ledStumpFlash 3.2s ease-in-out infinite;
+}
+
+

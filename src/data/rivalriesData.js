@@ -1,0 +1,461 @@
+// Comprehensive 12-Team Head-to-Head & Rivalry Data for CSK vs Every IPL Franchise
+export const RIVALRIES_DATA = [
+  {
+    id: 'csk-mi',
+    name: 'El Clasico of IPL',
+    marqueeTag: 'Biggest Rivalry',
+    rival: 'Mumbai Indians',
+    rivalShort: 'MI',
+    rivalColor: '#004BA0',
+    totalMatches: 41,
+    cskWins: 20,
+    rivalWins: 21,
+    noResult: 0,
+    winRate: '49%',
+    lastFive: ['CSK', 'CSK', 'MI', 'CSK', 'CSK'],
+    highestScoreCSK: 218,
+    highestScoreRival: 219,
+    chepaukDominance: 'CSK lead 6-3 at Chepauk',
+    iconicMoment: 'IPL 2010 Final: MS Dhoni tactical straightish long-off catch to dismiss Kieron Pollard and seal CSK maiden IPL trophy.',
+    topCSKScorer: 'Suresh Raina (736 runs)',
+    topCSKBowler: 'Dwayne Bravo (35 wickets)'
+  },
+  {
+    id: 'csk-rcb',
+    name: 'The Southern Derby (Kaveri Clash)',
+    marqueeTag: 'Southern Derby',
+    rival: 'Royal Challengers Bengaluru',
+    rivalShort: 'RCB',
+    rivalColor: '#EC1C24',
+    totalMatches: 35,
+    cskWins: 21,
+    rivalWins: 14,
+    noResult: 0,
+    winRate: '60%',
+    lastFive: ['RCB', 'CSK', 'CSK', 'RCB', 'CSK'],
+    highestScoreCSK: 226,
+    highestScoreRival: 218,
+    chepaukDominance: 'CSK 8-1 at Chepauk (Fortress)',
+    iconicMoment: 'Albie Morkel smashing 28 runs off Virat Kohli 19th over at Chepauk in 2012 to complete an impossible 206 chase.',
+    topCSKScorer: 'MS Dhoni (839 runs)',
+    topCSKBowler: 'Ravindra Jadeja (26 wickets)'
+  },
+  {
+    id: 'csk-dc',
+    name: 'Capital Clashes',
+    marqueeTag: 'Playoff Foes',
+    rival: 'Delhi Capitals',
+    rivalShort: 'DC',
+    rivalColor: '#17479E',
+    totalMatches: 33,
+    cskWins: 21,
+    rivalWins: 12,
+    noResult: 0,
+    winRate: '64%',
+    lastFive: ['DC', 'CSK', 'CSK', 'DC', 'CSK'],
+    highestScoreCSK: 222,
+    highestScoreRival: 198,
+    chepaukDominance: 'CSK lead 8-2 at Chepauk',
+    iconicMoment: 'IPL 2021 Qualifier 1: MS Dhoni blasting Tom Curran for three boundaries in the 20th over to power CSK into the final.',
+    topCSKScorer: 'MS Dhoni (685 runs)',
+    topCSKBowler: 'Dwayne Bravo (21 wickets)'
+  },
+  {
+    id: 'csk-kkr',
+    name: 'The Championship Duel',
+    marqueeTag: 'Championship Duel',
+    rival: 'Kolkata Knight Riders',
+    rivalShort: 'KKR',
+    rivalColor: '#3A225D',
+    totalMatches: 32,
+    cskWins: 21,
+    rivalWins: 11,
+    noResult: 0,
+    winRate: '66%',
+    lastFive: ['CSK', 'KKR', 'CSK', 'CSK', 'KKR'],
+    highestScoreCSK: 235,
+    highestScoreRival: 202,
+    chepaukDominance: 'CSK lead 10-3 at Chepauk',
+    iconicMoment: 'IPL 2021 Final in Dubai: Faf du Plessis 86 off 59 balls propelling CSK to their 4th title by 27 runs.',
+    topCSKScorer: 'Suresh Raina (612 runs)',
+    topCSKBowler: 'Ravichandran Ashwin (16 wickets)'
+  },
+  {
+    id: 'csk-pbks',
+    name: 'Kings Showdown',
+    marqueeTag: 'Northern Rivalry',
+    rival: 'Punjab Kings',
+    rivalShort: 'PBKS',
+    rivalColor: '#ED1B24',
+    totalMatches: 32,
+    cskWins: 16,
+    rivalWins: 16,
+    noResult: 0,
+    winRate: '50%',
+    lastFive: ['CSK', 'PBKS', 'PBKS', 'PBKS', 'CSK'],
+    highestScoreCSK: 240,
+    highestScoreRival: 231,
+    chepaukDominance: 'CSK lead 5-3 at Chepauk',
+    iconicMoment: 'IPL 2010 Dharamshala: MS Dhoni smashing Irfan Pathan for 16 runs in the final over and punching his helmet to take CSK into playoffs.',
+    topCSKScorer: 'Suresh Raina (719 runs)',
+    topCSKBowler: 'Dwayne Bravo (24 wickets)'
+  },
+  {
+    id: 'csk-rr',
+    name: 'The Royal Battles',
+    marqueeTag: 'Original 2008 Rivals',
+    rival: 'Rajasthan Royals',
+    rivalShort: 'RR',
+    rivalColor: '#254AA5',
+    totalMatches: 32,
+    cskWins: 16,
+    rivalWins: 16,
+    noResult: 0,
+    winRate: '50%',
+    lastFive: ['CSK', 'RR', 'RR', 'RR', 'CSK'],
+    highestScoreCSK: 246,
+    highestScoreRival: 223,
+    chepaukDominance: 'CSK lead 7-2 at Chepauk',
+    iconicMoment: 'Murali Vijay smashing 127 off 56 balls at Chepauk in 2010, the highest score by a CSK batsman in IPL history.',
+    topCSKScorer: 'Suresh Raina (630 runs)',
+    topCSKBowler: 'Ravindra Jadeja (19 wickets)'
+  },
+  {
+    id: 'csk-srh',
+    name: 'Deccan Supremacy',
+    marqueeTag: 'Yellow vs Orange',
+    rival: 'Sunrisers Hyderabad',
+    rivalShort: 'SRH',
+    rivalColor: '#F7A721',
+    totalMatches: 24,
+    cskWins: 15,
+    rivalWins: 9,
+    noResult: 0,
+    winRate: '63%',
+    lastFive: ['SRH', 'CSK', 'CSK', 'SRH', 'CSK'],
+    highestScoreCSK: 223,
+    highestScoreRival: 208,
+    chepaukDominance: 'CSK 5-0 unbeaten at Chepauk',
+    iconicMoment: 'IPL 2018 Final at Wankhede: Shane Watson scintillating 117* off 57 balls hunting down 179 with authority.',
+    topCSKScorer: 'Ambati Rayudu (540 runs)',
+    topCSKBowler: 'Dwayne Bravo (22 wickets)'
+  },
+  {
+    id: 'csk-gt',
+    name: 'The Modern Thriller',
+    marqueeTag: 'Finals Rematch',
+    rival: 'Gujarat Titans',
+    rivalShort: 'GT',
+    rivalColor: '#1B2133',
+    totalMatches: 10,
+    cskWins: 4,
+    rivalWins: 6,
+    noResult: 0,
+    winRate: '40%',
+    lastFive: ['GT', 'CSK', 'CSK', 'CSK', 'GT'],
+    highestScoreCSK: 206,
+    highestScoreRival: 231,
+    chepaukDominance: 'CSK 2-0 at Chepauk',
+    iconicMoment: 'IPL 2023 Final at 3:00 AM: Ravindra Jadeja hitting 6 & 4 off the final 2 deliveries of Mohit Sharma to clinch Title #5.',
+    topCSKScorer: 'Ruturaj Gaikwad (350 runs)',
+    topCSKBowler: 'Matheesha Pathirana (9 wickets)'
+  },
+  {
+    id: 'csk-dch',
+    name: 'Vintage Deccan Clashes',
+    marqueeTag: 'Historic Foes',
+    rival: 'Deccan Chargers',
+    rivalShort: 'DCH',
+    rivalColor: '#FF6600',
+    totalMatches: 10,
+    cskWins: 6,
+    rivalWins: 4,
+    noResult: 0,
+    winRate: '60%',
+    lastFive: ['CSK', 'CSK', 'DCH', 'CSK', 'CSK'],
+    highestScoreCSK: 193,
+    highestScoreRival: 190,
+    chepaukDominance: 'CSK 3-1 at Chepauk',
+    iconicMoment: 'IPL 2010 Semifinal in Mumbai: Doug Bollinger 4/13 choking Deccan Chargers to 104 all out.',
+    topCSKScorer: 'Suresh Raina (352 runs)',
+    topCSKBowler: 'Albie Morkel (14 wickets)'
+  },
+  {
+    id: 'csk-lsg',
+    name: 'Nawabs vs Super Kings',
+    marqueeTag: 'New Age Rivalry',
+    rival: 'Lucknow Super Giants',
+    rivalShort: 'LSG',
+    rivalColor: '#A72056',
+    totalMatches: 7,
+    cskWins: 3,
+    rivalWins: 4,
+    noResult: 0,
+    winRate: '43%',
+    lastFive: ['LSG', 'LSG', 'CSK', 'LSG', 'CSK'],
+    highestScoreCSK: 217,
+    highestScoreRival: 213,
+    chepaukDominance: '1-1 at Chepauk',
+    iconicMoment: 'Moeen Ali spinning web with 4/26 at Chepauk to secure a 12-run victory in IPL 2023.',
+    topCSKScorer: 'Ruturaj Gaikwad (248 runs)',
+    topCSKBowler: 'Moeen Ali (6 wickets)'
+  },
+  {
+    id: 'csk-pwi',
+    name: 'Maharashtra Battles',
+    marqueeTag: 'Historic Foes',
+    rival: 'Pune Warriors India',
+    rivalShort: 'PWI',
+    rivalColor: '#7B2D8B',
+    totalMatches: 6,
+    cskWins: 4,
+    rivalWins: 2,
+    noResult: 0,
+    winRate: '67%',
+    lastFive: ['CSK', 'CSK', 'PWI', 'CSK', 'CSK'],
+    highestScoreCSK: 164,
+    highestScoreRival: 172,
+    chepaukDominance: 'CSK 2-1 at Chepauk',
+    iconicMoment: 'MS Dhoni finishing with 24 off 10 balls at Cuttack to outshine Sourav Ganguly led Warriors in 2012.',
+    topCSKScorer: 'MS Dhoni (182 runs)',
+    topCSKBowler: 'Ravichandran Ashwin (9 wickets)'
+  },
+  {
+    id: 'csk-ktk',
+    name: 'South Indian Coastal Clash',
+    marqueeTag: 'Historic Foes',
+    rival: 'Kochi Tuskers Kerala',
+    rivalShort: 'KTK',
+    rivalColor: '#FFA500',
+    totalMatches: 2,
+    cskWins: 1,
+    rivalWins: 1,
+    noResult: 0,
+    winRate: '50%',
+    lastFive: ['CSK', 'KTK'],
+    highestScoreCSK: 152,
+    highestScoreRival: 156,
+    chepaukDominance: 'CSK 1-0 at Chepauk',
+    iconicMoment: 'Wriddhiman Saha and Albie Morkel clinching a clinical 11-run Chepauk defense in IPL 2011.',
+    topCSKScorer: 'Wriddhiman Saha (68 runs)',
+    topCSKBowler: 'Ravichandran Ashwin (3 wickets)'
+  }
+];
+
+// All 7 Official Silverware Trophies (5 IPL + 2 CLT20)
+export const TROPHIES_DATA = [
+  {
+    year: '2010',
+    title: 'IPL Champions',
+    opponent: 'Mumbai Indians',
+    margin: 'Won by 22 runs',
+    venue: 'DY Patil Stadium, Navi Mumbai',
+    hero: 'Suresh Raina (57* off 35 & 1/21)'
+  },
+  {
+    year: '2010',
+    title: 'CLT20 Champions',
+    opponent: 'Warriors',
+    margin: 'Won by 8 wickets',
+    venue: 'Wanderers Stadium, Johannesburg',
+    hero: 'Murali Vijay (58 off 53)'
+  },
+  {
+    year: '2011',
+    title: 'IPL Champions',
+    opponent: 'Royal Challengers Bangalore',
+    margin: 'Won by 58 runs',
+    venue: 'MA Chidambaram Stadium, Chennai',
+    hero: 'Murali Vijay (95 off 52)'
+  },
+  {
+    year: '2014',
+    title: 'CLT20 Champions',
+    opponent: 'Kolkata Knight Riders',
+    margin: 'Won by 8 wickets',
+    venue: 'M. Chinnaswamy Stadium, Bengaluru',
+    hero: 'Suresh Raina (109* off 62)'
+  },
+  {
+    year: '2018',
+    title: 'IPL Champions',
+    opponent: 'Sunrisers Hyderabad',
+    margin: 'Won by 8 wickets',
+    venue: 'Wankhede Stadium, Mumbai',
+    hero: 'Shane Watson (117* off 57)'
+  },
+  {
+    year: '2021',
+    title: 'IPL Champions',
+    opponent: 'Kolkata Knight Riders',
+    margin: 'Won by 27 runs',
+    venue: 'Dubai International Cricket Stadium',
+    hero: 'Faf du Plessis (86 off 59)'
+  },
+  {
+    year: '2023',
+    title: 'IPL Champions',
+    opponent: 'Gujarat Titans',
+    margin: 'Won by 5 wickets (DLS)',
+    venue: 'Narendra Modi Stadium, Ahmedabad',
+    hero: 'Ravindra Jadeja (15* off 6 & 1/38)'
+  }
+];
+
+// Fan Choice Candidates for CSK All-Time XI
+export const ALL_TIME_CANDIDATES = [
+  {
+    id: 'msd',
+    name: 'MS Dhoni',
+    role: 'Captain & Wicketkeeper',
+    country: 'India',
+    isOverseas: false,
+    avatar: 'https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg',
+    pct: 99,
+    votes: 18450
+  },
+  {
+    id: 'raina',
+    name: 'Suresh Raina',
+    role: 'Mr. IPL / Top-Order',
+    country: 'India',
+    isOverseas: false,
+    avatar: 'https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg',
+    pct: 96,
+    votes: 16920
+  },
+  {
+    id: 'jadeja',
+    name: 'Ravindra Jadeja',
+    role: 'Spin All-Rounder',
+    country: 'India',
+    isOverseas: false,
+    avatar: 'https://superkingsden.com/wp-content/uploads/2023/06/Website-feature-photo78.png',
+    pct: 95,
+    votes: 16400
+  },
+  {
+    id: 'bravo',
+    name: 'Dwayne Bravo',
+    role: 'Death Specialist / All-Rounder',
+    country: 'West Indies',
+    isOverseas: true,
+    avatar: 'https://superkingsden.com/wp-content/uploads/2023/06/Website-feature-photo78.png',
+    pct: 93,
+    votes: 15300
+  },
+  {
+    id: 'faf',
+    name: 'Faf du Plessis',
+    role: 'Opening Batter',
+    country: 'South Africa',
+    isOverseas: true,
+    avatar: 'https://superkingsden.com/wp-content/uploads/2025/12/Website-feature-photo-9.png',
+    pct: 91,
+    votes: 14750
+  },
+  {
+    id: 'hussey',
+    name: 'Michael Hussey',
+    role: 'Mr. Cricket / Opener',
+    country: 'Australia',
+    isOverseas: true,
+    avatar: 'https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png',
+    pct: 89,
+    votes: 13900
+  },
+  {
+    id: 'ashwin',
+    name: 'Ravichandran Ashwin',
+    role: 'Off-Spin Maestro',
+    country: 'India',
+    isOverseas: false,
+    avatar: 'https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png',
+    pct: 88,
+    votes: 13200
+  },
+  {
+    id: 'watson',
+    name: 'Shane Watson',
+    role: 'Opening Batter / All-Rounder',
+    country: 'Australia',
+    isOverseas: true,
+    avatar: 'https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png',
+    pct: 87,
+    votes: 12850
+  },
+  {
+    id: 'ruturaj',
+    name: 'Ruturaj Gaikwad',
+    role: 'Captain / Opening Batter',
+    country: 'India',
+    isOverseas: false,
+    avatar: 'https://superkingsden.com/wp-content/uploads/2026/09/RUTURAJ-GAIKWAD.jpg',
+    pct: 86,
+    votes: 12400
+  },
+  {
+    id: 'pathirana',
+    name: 'Matheesha Pathirana',
+    role: 'Fast Bowler / Slinging Yorker',
+    country: 'Sri Lanka',
+    isOverseas: true,
+    avatar: 'https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png',
+    pct: 84,
+    votes: 11900
+  },
+  {
+    id: 'dube',
+    name: 'Shivam Dube',
+    role: 'Power Hitter / All-Rounder',
+    country: 'India',
+    isOverseas: false,
+    avatar: 'https://superkingsden.com/wp-content/uploads/2024/03/Website-feature-photo313.png',
+    pct: 82,
+    votes: 11200
+  },
+  {
+    id: 'chahar',
+    name: 'Deepak Chahar',
+    role: 'Powerplay Swing Pacer',
+    country: 'India',
+    isOverseas: false,
+    avatar: 'https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo295.png',
+    pct: 81,
+    votes: 10800
+  }
+];
+
+// Fan IQ Trivia Challenge Questions
+export const QUIZ_QUESTIONS = [
+  {
+    question: 'How many IPL championship titles has Chennai Super Kings won?',
+    options: ['3 Titles', '4 Titles', '5 Titles', '6 Titles'],
+    correctIndex: 2,
+    explanation: 'CSK won 5 IPL trophies: 2010, 2011, 2018, 2021, and 2023, tied for the most in IPL history.'
+  },
+  {
+    question: 'Who hit 6 and 4 off the final two deliveries to win the IPL 2023 Final for CSK?',
+    options: ['MS Dhoni', 'Shivam Dube', 'Ravindra Jadeja', 'Ambati Rayudu'],
+    correctIndex: 2,
+    explanation: 'Ravindra Jadeja struck a monumental 6 and 4 off Mohit Sharma in the final over to seal CSK 5th title at 3:00 AM.'
+  },
+  {
+    question: 'What is the home ground fortress of Chennai Super Kings famously called?',
+    options: ['Eden Gardens', 'Wankhede Stadium', 'MA Chidambaram Stadium (Chepauk)', 'Chinnaswamy Stadium'],
+    correctIndex: 2,
+    explanation: 'MA Chidambaram Stadium (Chepauk), fondly called AnbuDen, is CSK celebrated fortress in Chennai.'
+  },
+  {
+    question: 'Who scored an unbeaten 117* in the IPL 2018 Final against Sunrisers Hyderabad?',
+    options: ['Shane Watson', 'Ambati Rayudu', 'Suresh Raina', 'Faf du Plessis'],
+    correctIndex: 0,
+    explanation: 'Shane Watson overcame 10 dot balls initially to smash 117* off 57 balls in the 2018 Final.'
+  },
+  {
+    question: 'Which player is known across cricket and IPL history as Mr. IPL?',
+    options: ['MS Dhoni', 'Suresh Raina', 'Dwayne Bravo', 'Ravichandran Ashwin'],
+    correctIndex: 1,
+    explanation: 'Suresh Raina earned the revered nickname Mr. IPL for his extraordinary consistency and 5,529 runs for CSK.'
+  }
+];
