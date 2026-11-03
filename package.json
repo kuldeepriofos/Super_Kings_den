@@ -20,7 +20,7 @@
     "@tiptap/starter-kit": "^3.32.1",
     "bcryptjs": "^3.0.3",
     "dompurify": "^3.4.17",
-    "jose": "^5.9.6",
+    "jose": "^5.10.0",
     "jsonwebtoken": "^9.0.3",
     "lucide-react": "^0.475.0",
     "mongoose": "^9.11.4",
