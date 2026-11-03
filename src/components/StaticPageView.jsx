@@ -39,6 +39,50 @@ export default function StaticPageView({ page }) {
 
   const isContactPage = page.slug === 'contact-us';
   const isCollaboratePage = page.slug === 'collaborate-with-us';
+  const isAboutPage = page.slug === 'about-us';
+
+  // Schema.org Structured Data for WebPages & Information Pages
+  const schemaType = page.schemaType || (isAboutPage ? 'AboutPage' : isContactPage ? 'ContactPage' : 'WebPage');
+  const pageUrl = `https://superkingsden.com/${page.slug}/`;
+  const cleanExcerpt = (page.excerpt || '').replace(/<[^>]+>/g, '').trim();
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': schemaType,
+    'name': page.seoTitle || page.title,
+    'description': page.metaDescription || cleanExcerpt || `${page.title} - Super Kings Den Official Portal`,
+    'url': pageUrl,
+    'isPartOf': {
+      '@type': 'WebSite',
+      'name': 'Super Kings Den',
+      'url': 'https://superkingsden.com',
+    },
+    'publisher': {
+      '@type': 'Organization',
+      'name': 'Super Kings Den',
+      'logo': {
+        '@type': 'ImageObject',
+        'url': 'https://superkingsden.com/superkingsden-1.png',
+      },
+    },
+    'breadcrumb': {
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Home',
+          'item': 'https://superkingsden.com',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': page.title,
+          'item': pageUrl,
+        },
+      ],
+    },
+  };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -47,6 +91,17 @@ export default function StaticPageView({ page }) {
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      {/* Schema.org Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {page.customSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: page.customSchema }}
+        />
+      )}
       {/* Breadcrumb */}
       <nav className="flex items-center space-x-2 text-xs text-slate-500 dark:text-slate-400 mb-6">
         <Link href="/" className="hover:text-amber-600 dark:hover:text-csk-yellow transition">

@@ -1,6 +1,7 @@
 import postsIndex from '../data/postsIndex.json';
 import categoriesData from '../data/categoriesData.json';
 import webStoriesData from '../data/webStoriesData.json';
+import { SQUAD_PLAYERS } from '../data/mockData';
 
 const BASE_URL = 'https://superkingsden.com';
 
@@ -8,17 +9,20 @@ export default async function sitemap() {
   // 1. Core Feature Routes
   const coreRoutes = [
     '',
-    '/seasons',
-    '/players',
-    '/rivalries',
-    '/stats',
-    '/trophies',
-    '/standings',
+    '/chennai-super-kings',
+    '/joburg-super-kings',
+    '/texas-super-kings',
+    '/csk-team',
+    '/jsk-team',
+    '/tsk-team',
+    '/csk-trophies',
+    '/csk-fixtures',
+    '/jsk-fixtures',
+    '/tsk-fixtures',
     '/news',
     '/csk-news',
     '/jsk-news',
     '/tsk-news',
-    '/all-time-xi',
     '/quiz',
     '/web-stories',
   ].map((route) => ({
@@ -81,12 +85,21 @@ export default async function sitemap() {
     };
   });
 
+  // 6. Player Profile Direct Routes
+  const playerRoutes = SQUAD_PLAYERS.map((p) => ({
+    url: `${BASE_URL}/${p.slug}/`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.95,
+  }));
+
   return [
     ...coreRoutes,
     ...legalRoutes,
     ...categoryRoutes,
     ...webStoryRoutes,
     ...articleRoutes,
+    ...playerRoutes,
   ];
 }
 

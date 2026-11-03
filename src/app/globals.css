@@ -160,6 +160,17 @@ html:not(.dark) ::-webkit-scrollbar-thumb {
 }
 
 /* WordPress & Sports Article Content Typography */
+.sports-article-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+  color: #FDB913;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+
 .sports-article-content h2 {
   font-size: 1.5rem;
   font-weight: 600;
@@ -226,54 +237,264 @@ html:not(.dark) ::-webkit-scrollbar-thumb {
 
 
 .sports-article-content ul {
-  list-style-type: disc;
-  margin-left: 1.5rem;
-  margin-bottom: 1.25rem;
+  list-style-type: disc !important;
+  margin-left: 1.75rem !important;
+  margin-bottom: 1.25rem !important;
+  padding-left: 0.5rem !important;
 }
 
 .sports-article-content ol {
-  list-style-type: decimal;
-  margin-left: 1.5rem;
-  margin-bottom: 1.25rem;
+  list-style-type: decimal !important;
+  margin-left: 1.75rem !important;
+  margin-bottom: 1.25rem !important;
+  padding-left: 0.5rem !important;
 }
-
 
 .sports-article-content li {
-  margin-bottom: 0.5rem;
-  line-height: 1.7;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.75 !important;
+  display: list-item !important;
 }
 
-.sports-article-content figure.wp-block-table,
-.sports-article-content table {
-  width: 100%;
-  margin: 1.75rem 0;
-  overflow-x: auto;
-  border-collapse: collapse;
-  border-radius: 0.75rem;
-  overflow: hidden;
-  border: 1px solid rgba(253, 185, 19, 0.25);
-  font-size: 0.95rem;
+/* ==========================================================================
+   WordPress Block Table & Responsive Cricket Tables (Light & Dark Mode)
+   ========================================================================== */
+
+/* 1. Table Container (Light Mode Default) */
+.sports-article-content figure.wp-block-table {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 1.75rem 0 !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  display: block !important;
+  border-radius: 0.75rem !important;
+  border: 1px solid #E2E8F0 !important;
+  background-color: #FFFFFF !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  scrollbar-width: thin;
+  scrollbar-color: #CBD5E1 #F8FAFC;
 }
 
+.sports-article-content figure.wp-block-table::-webkit-scrollbar {
+  height: 8px;
+}
+
+.sports-article-content figure.wp-block-table::-webkit-scrollbar-track {
+  background: #F8FAFC;
+  border-radius: 4px;
+}
+
+.sports-article-content figure.wp-block-table::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+.sports-article-content figure.wp-block-table::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Standalone tables without figure wrapper (Light Mode Default) */
+.sports-article-content table:not(figure table) {
+  display: block !important;
+  overflow-x: auto !important;
+  max-width: 100% !important;
+  border-radius: 0.75rem !important;
+  border: 1px solid #E2E8F0 !important;
+  background-color: #FFFFFF !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  scrollbar-width: thin;
+  scrollbar-color: #CBD5E1 #F8FAFC;
+  margin: 1.75rem 0 !important;
+}
+
+.sports-article-content table:not(figure table):::-webkit-scrollbar {
+  height: 8px;
+}
+
+.sports-article-content table:not(figure table):::-webkit-scrollbar-track {
+  background: #F8FAFC;
+  border-radius: 4px;
+}
+
+.sports-article-content table:not(figure table):::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+.sports-article-content table:not(figure table):::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Table element layout */
+.sports-article-content table,
+.sports-article-content table.has-fixed-layout {
+  width: 100% !important;
+  min-width: 680px;
+  border-collapse: collapse !important;
+  font-size: 0.82rem !important;
+  display: table !important;
+  table-layout: auto !important;
+  margin: 0 !important;
+  background-color: transparent !important;
+}
+
+.sports-article-content thead {
+  display: table-header-group !important;
+}
+
+.sports-article-content tbody {
+  display: table-row-group !important;
+}
+
+.sports-article-content tr {
+  display: table-row !important;
+  transition: background-color 0.15s ease;
+}
+
+/* Cells Base - Light Mode */
 .sports-article-content th,
 .sports-article-content td {
-  padding: 0.75rem 1rem;
-  border: 1px solid rgba(253, 185, 19, 0.15);
-  text-align: left;
+  display: table-cell !important;
+  padding: 0.6rem 0.75rem !important;
+  border: 1px solid #E2E8F0 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  color: #1E293B !important;
 }
 
-.sports-article-content th,
-.sports-article-content tr:first-child td {
-  background-color: rgba(253, 185, 19, 0.15);
-  font-weight: 700;
+/* Header Row - Light Mode (STRICTLY applies ONLY to table header, NEVER data rows) */
+.sports-article-content thead th,
+.sports-article-content thead td,
+.sports-article-content th {
+  background-color: #FEF9C3 !important;
+  color: #78350F !important;
+  border: 1px solid #FDE68A !important;
+  border-bottom: 2px solid #F59E0B !important;
+  font-weight: 800 !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
 }
 
-.dark .sports-article-content tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.03);
+/* Ensure data cells inside tbody NEVER inherit header yellow/gold colors */
+.sports-article-content tbody td,
+.sports-article-content td {
+  background-color: transparent;
+  color: #1E293B !important;
 }
 
-html:not(.dark) .sports-article-content tr:nth-child(even) {
-  background-color: rgba(0, 0, 0, 0.02);
+/* First Column Left-aligned */
+.sports-article-content th:first-child {
+  text-align: left !important;
+  padding-left: 0.9rem !important;
+  font-weight: 800 !important;
+  color: #78350F !important;
+}
+
+.sports-article-content td:first-child {
+  text-align: left !important;
+  padding-left: 0.9rem !important;
+  font-weight: 700 !important;
+  color: #0F172A !important;
+}
+
+/* Zebra striping - Light Mode */
+.sports-article-content tbody tr:nth-child(even) td {
+  background-color: #F8FAFC !important;
+}
+
+/* Row Hover - Light Mode */
+.sports-article-content tbody tr:hover td {
+  background-color: #FEFCE8 !important;
+}
+
+/* Total / Career Row - Light Mode */
+.sports-article-content tr.csk-total-row td {
+  background-color: #FEF3C7 !important;
+  color: #78350F !important;
+  font-weight: 800 !important;
+  border-top: 2px solid #F59E0B !important;
+  border-bottom: 2px solid #F59E0B !important;
+}
+
+/* ==========================================================================
+   Dark Mode Tables (Preserved Exact Dark Theme)
+   ========================================================================== */
+
+.dark .sports-article-content figure.wp-block-table,
+.dark .sports-article-content table:not(figure table) {
+  border: 1px solid rgba(253, 185, 19, 0.35) !important;
+  background-color: rgba(15, 23, 42, 0.6) !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4) !important;
+  scrollbar-color: #FDB913 rgba(15, 23, 42, 0.8) !important;
+}
+
+.dark .sports-article-content figure.wp-block-table::-webkit-scrollbar-track,
+.dark .sports-article-content table:not(figure table)::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.dark .sports-article-content figure.wp-block-table::-webkit-scrollbar-thumb,
+.dark .sports-article-content table:not(figure table)::-webkit-scrollbar-thumb {
+  background: #FDB913;
+}
+
+.dark .sports-article-content figure.wp-block-table::-webkit-scrollbar-thumb:hover,
+.dark .sports-article-content table:not(figure table)::-webkit-scrollbar-thumb:hover {
+  background: #FFE066;
+}
+
+.dark .sports-article-content th,
+.dark .sports-article-content td {
+  border: 1px solid rgba(253, 185, 19, 0.2) !important;
+  color: #E2E8F0 !important;
+}
+
+/* Header Row - Dark Mode (STRICTLY applies ONLY to table header, NEVER data rows) */
+.dark .sports-article-content thead th,
+.dark .sports-article-content thead td,
+.dark .sports-article-content th {
+  background-color: rgba(253, 185, 19, 0.25) !important;
+  color: #FDB913 !important;
+  border: 1px solid rgba(253, 185, 19, 0.2) !important;
+  border-bottom: 2px solid rgba(253, 185, 19, 0.4) !important;
+  font-weight: 800 !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+}
+
+/* Ensure data cells inside tbody in dark mode NEVER inherit yellow header styles */
+.dark .sports-article-content tbody td,
+.dark .sports-article-content td {
+  background-color: transparent !important;
+  color: #E2E8F0 !important;
+}
+
+.dark .sports-article-content th:first-child {
+  color: #FDB913 !important;
+}
+
+.dark .sports-article-content td:first-child {
+  color: #F8FAFC !important;
+  font-weight: 700 !important;
+}
+
+.dark .sports-article-content tbody tr:nth-child(even) td {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.dark .sports-article-content tbody tr:hover td {
+  background-color: rgba(253, 185, 19, 0.08) !important;
+}
+
+.dark .sports-article-content tr.csk-total-row td {
+  background-color: rgba(253, 185, 19, 0.15) !important;
+  color: #FDB913 !important;
+  border-top: 2px solid rgba(253, 185, 19, 0.5) !important;
+  border-bottom: none !important;
 }
 
 .sports-article-content img {
@@ -283,6 +504,101 @@ html:not(.dark) .sports-article-content tr:nth-child(even) {
   margin: 1.5rem auto;
   display: block;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* 🖼️ WordPress Gutenberg Image Alignment & Responsive Styling */
+.sports-article-content figure.wp-block-image {
+  margin: 1.75rem auto;
+  max-width: 100%;
+  clear: both;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.sports-article-content figure.wp-block-image img {
+  border-radius: 0.75rem;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
+  transition: outline 0.15s ease;
+}
+
+.sports-article-content figure.wp-block-image[data-selected="true"] img {
+  outline: 3px solid #FDB913 !important;
+  outline-offset: 3px !important;
+}
+
+.sports-article-content figure.wp-block-image figcaption,
+.sports-article-content figure.wp-block-image .wp-element-caption {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: #94a3b8;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.sports-article-content figure.wp-block-image figcaption:empty::before {
+  content: attr(data-placeholder);
+  color: #64748b;
+}
+
+/* Align Center */
+.sports-article-content figure.wp-block-image.aligncenter {
+  display: table !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  clear: both !important;
+  text-align: center;
+}
+
+/* Align Left: Float left with text wrapping */
+.sports-article-content figure.wp-block-image.alignleft {
+  float: left !important;
+  margin: 0.5rem 1.75rem 1.25rem 0 !important;
+  max-width: 50%;
+  clear: left !important;
+  display: block !important;
+}
+
+/* Align Right: Float right with text wrapping */
+.sports-article-content figure.wp-block-image.alignright {
+  float: right !important;
+  margin: 0.5rem 0 1.25rem 1.75rem !important;
+  max-width: 50%;
+  clear: right !important;
+  display: block !important;
+}
+
+/* Full Width / Wide */
+.sports-article-content figure.wp-block-image.alignwide,
+.sports-article-content figure.wp-block-image.alignfull {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 2rem 0 !important;
+  clear: both !important;
+  display: block !important;
+}
+
+/* Mobile Breakpoint: Floats reset to 100% width on narrow screens */
+@media (max-width: 640px) {
+  .sports-article-content figure.wp-block-image.alignleft,
+  .sports-article-content figure.wp-block-image.alignright {
+    float: none !important;
+    margin: 1.25rem auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    clear: both !important;
+  }
+}
+
+/* Clearfix for article content */
+.sports-article-content::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* 🏏 404 Cricket Bowled Animation Keyframes */

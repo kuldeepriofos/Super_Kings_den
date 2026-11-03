@@ -1,0 +1,23 @@
+{
+  "siteName": "Super Kings Den",
+  "siteTagline": "The Premier Super Kings Global Fan Destination",
+  "email": "contact@superkingsden.com",
+  "phone": "+91 98765 43210",
+  "whatsapp": "+91 98765 43210",
+  "address": "Chepauk Media Enclave, Chennai, Tamil Nadu 600005, India",
+  "deskHours": "Mon - Sat, 9:00 AM - 7:00 PM IST",
+  "social": {
+    "twitter": "https://x.com/superkingsden",
+    "facebook": "https://www.facebook.com/people/Super-Kings-Den/61561343112284/",
+    "instagram": "https://www.instagram.com/superkingsden/",
+    "youtube": "https://www.youtube.com/@SuperKingsDen",
+    "whatsapp": "https://wa.me/919876543210",
+    "telegram": "",
+    "threads": "",
+    "linkedin": ""
+  },
+  "footer": {
+    "aboutText": "The premier independent fan destination celebrating the roaring spirit of Chennai Super Kings (IPL), Joburg Super Kings (SA20), and Texas Super Kings (MLC). Where Super Kings fans unite under one golden flag.",
+    "copyrightText": "© 2026 Super Kings Den. Independent cricket fan community and dispatches network."
+  }
+}

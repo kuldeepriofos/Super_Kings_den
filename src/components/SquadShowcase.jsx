@@ -20,6 +20,10 @@ export default function SquadShowcase({ players = SQUAD_PLAYERS }) {
 
   const sourcePlayers = players || SQUAD_PLAYERS;
 
+  const currentCount = sourcePlayers.filter(p => p.isCurrent).length;
+  const legendsCount = sourcePlayers.filter(p => p.isLegend).length;
+  const overseasCount = sourcePlayers.filter(p => p.country && p.country.toLowerCase() !== 'india').length;
+
   const filteredPlayers = sourcePlayers.filter((p) => {
     // Cohort filter
     if (cohortFilter === 'CURRENT' && !p.isCurrent) return false;
@@ -32,7 +36,7 @@ export default function SquadShowcase({ players = SQUAD_PLAYERS }) {
     // Search query
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
-      const matchName = p.name.toLowerCase().includes(q);
+      const matchName = (p.name || '').toLowerCase().includes(q);
       const matchRole = (p.role || '').toLowerCase().includes(q);
       const matchSpecialty = (p.specialty || '').toLowerCase().includes(q);
       const matchCountry = (p.country || '').toLowerCase().includes(q);
@@ -49,22 +53,22 @@ export default function SquadShowcase({ players = SQUAD_PLAYERS }) {
         <div className="flex items-center space-x-2.5">
           <div className="w-2.5 h-7 bg-csk-yellow rounded-full flex-shrink-0"></div>
           <div>
-            <h2 className="text-xl sm:text-2xl font-semibold uppercase font-heading tracking-tight text-slate-900 dark:text-white flex items-center">
+            <h2 className="text-xl sm:text-2xl font-bold uppercase font-heading tracking-tight text-slate-900 dark:text-white flex items-center">
               Super Kings Roster &amp; Legends
             </h2>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
-              The icons who wore the yellow jersey and made history &bull; {filteredPlayers.length} Players Listed
+            <p className="text-xs text-slate-600 dark:text-slate-400 mt-1 sm:mt-1.5">
+              The icons who wore the yellow jersey &bull; Showing {filteredPlayers.length} of {sourcePlayers.length} Players
             </p>
           </div>
         </div>
 
         {/* Cohort Switcher: All / Current / Legends / Overseas */}
-        <div className="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-900 p-1.5 rounded-2xl border border-slate-200 dark:border-white/10 self-start md:self-auto">
+        <div className="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-900 p-1.5 rounded-2xl border border-slate-200 dark:border-white/10 self-start md:self-auto overflow-x-auto scrollbar-none">
           <button
             onClick={() => setCohortFilter('ALL')}
-            className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition whitespace-nowrap ${
               cohortFilter === 'ALL'
-                ? 'bg-csk-yellow text-csk-darkNavy shadow-sm'
+                ? 'bg-csk-yellow text-csk-darkNavy shadow-xs'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
             }`}
           >
@@ -72,51 +76,51 @@ export default function SquadShowcase({ players = SQUAD_PLAYERS }) {
           </button>
           <button
             onClick={() => setCohortFilter('CURRENT')}
-            className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 whitespace-nowrap ${
               cohortFilter === 'CURRENT'
-                ? 'bg-csk-yellow text-csk-darkNavy shadow-sm'
+                ? 'bg-csk-yellow text-csk-darkNavy shadow-xs'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
             }`}
           >
-            <Users className="w-3.5 h-3.5" />
-            <span>Current Squad</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Current Squad ({currentCount})</span>
           </button>
           <button
             onClick={() => setCohortFilter('LEGENDS')}
-            className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 whitespace-nowrap ${
               cohortFilter === 'LEGENDS'
-                ? 'bg-csk-yellow text-csk-darkNavy shadow-sm'
+                ? 'bg-csk-yellow text-csk-darkNavy shadow-xs'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
             }`}
           >
             <Star className="w-3.5 h-3.5" />
-            <span>Franchise Legends</span>
+            <span>Legends ({legendsCount})</span>
           </button>
           <button
             onClick={() => setCohortFilter('OVERSEAS')}
-            className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 whitespace-nowrap ${
               cohortFilter === 'OVERSEAS'
-                ? 'bg-csk-yellow text-csk-darkNavy shadow-sm'
+                ? 'bg-csk-yellow text-csk-darkNavy shadow-xs'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
             }`}
           >
             <Plane className="w-3.5 h-3.5 rotate-[-45deg]" />
-            <span>Overseas</span>
+            <span>Overseas ({overseasCount})</span>
           </button>
         </div>
       </div>
 
       {/* Search & Role Filter Bar */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 mb-8">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 mb-6 p-4 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 shadow-xs">
         {/* Search Bar */}
         <div className="relative w-full sm:w-80">
           <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
           <input
             type="text"
-            placeholder="Search player by name, role..."
+            placeholder="Search player by name, role, country..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 text-xs rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-csk-yellow transition"
+            className="w-full pl-10 pr-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-hidden focus:border-csk-yellow transition"
           />
         </div>
 
@@ -128,8 +132,8 @@ export default function SquadShowcase({ players = SQUAD_PLAYERS }) {
               onClick={() => setRoleFilter(r.id)}
               className={`px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition ${
                 roleFilter === r.id
-                  ? 'bg-csk-yellow text-csk-darkNavy shadow-sm'
-                  : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-csk-yellow hover:text-slate-900 dark:hover:text-white'
+                  ? 'bg-csk-yellow text-csk-darkNavy shadow-xs font-black'
+                  : 'bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5 hover:border-csk-yellow hover:text-slate-900 dark:hover:text-white'
               }`}
             >
               {r.label}
@@ -140,127 +144,162 @@ export default function SquadShowcase({ players = SQUAD_PLAYERS }) {
 
       {/* Players Cards Grid */}
       {filteredPlayers.length === 0 ? (
-        <div className="text-center py-12 sports-card rounded-2xl border border-slate-200 dark:border-white/10">
+        <div className="text-center py-16 bg-white dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-white/10">
           <Users className="w-10 h-10 text-slate-400 mx-auto mb-3 opacity-50" />
-          <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+          <p className="text-sm font-bold text-slate-700 dark:text-slate-300 mb-1">
             No players found matching "{searchQuery}"
+          </p>
+          <p className="text-xs text-slate-500 dark:text-slate-400 mb-4">
+            Try adjusting your search query or cohort filter.
           </p>
           <button
             onClick={() => { setSearchQuery(''); setRoleFilter('ALL'); setCohortFilter('ALL'); }}
-            className="mt-3 px-4 py-1.5 rounded-lg bg-csk-yellow text-csk-darkNavy font-semibold text-xs uppercase tracking-wider"
+            className="px-4 py-2 rounded-xl bg-csk-yellow text-csk-darkNavy font-black text-xs uppercase tracking-wider"
           >
-            Clear Filters
+            Reset Filters
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {filteredPlayers.map((player) => {
+            const isCaptain = (player.role || '').toLowerCase().includes('captain');
+            const playerTag = player.tag || (isCaptain && player.isCurrent ? 'Captain' : null);
             const isOverseas = player.country && player.country.toLowerCase() !== 'india';
-            const playerUrl = `/players/${player.slug || player.id}`;
+            const playerUrl = `/${player.slug || player.id}/`;
 
             return (
-              <div
+              <Link
                 key={player.id}
-                className="sports-card group relative rounded-2xl overflow-hidden border border-slate-200 dark:border-csk-borderNavy p-6 flex flex-col justify-between hover:border-csk-yellow/50 transition duration-300 shadow-xs hover:shadow-md bg-white dark:bg-slate-900/60"
+                href={playerUrl}
+                className={`sports-card group relative rounded-2xl overflow-hidden border flex flex-col justify-between transition-all duration-300 bg-white dark:bg-slate-900/80 shadow-xs hover:shadow-xl hover:-translate-y-1 ${
+                  player.isCurrent
+                    ? 'border-emerald-500/30 dark:border-emerald-500/20 hover:border-csk-yellow'
+                    : 'border-slate-200 dark:border-csk-borderNavy hover:border-amber-400'
+                }`}
               >
-                {/* Jersey Number Background Watermark */}
-                <span className="absolute -top-4 -right-2 text-8xl font-semibold text-slate-900/5 dark:text-white/5 select-none pointer-events-none font-heading group-hover:text-csk-yellow/10 transition">
-                  #{player.jersey}
-                </span>
+                {/* Standardized Hero Portrait Container */}
+                <div className="relative w-full h-56 sm:h-60 overflow-hidden bg-gradient-to-b from-amber-500/5 via-slate-100/60 to-white dark:from-csk-navy/60 dark:via-slate-900/60 dark:to-slate-900 flex items-end justify-center border-b border-slate-100 dark:border-white/5">
+                  {/* Subtle Studio Lighting Glow */}
+                  <div
+                    className="absolute inset-0 pointer-events-none opacity-50 dark:opacity-70 group-hover:opacity-90 transition-opacity duration-300"
+                    style={{
+                      background: 'radial-gradient(circle at 50% 65%, rgba(253, 185, 19, 0.25) 0%, rgba(253, 185, 19, 0.05) 55%, transparent 75%)'
+                    }}
+                  />
 
-                <div>
-                  {/* Header: Franchise + Era + Overseas Flight Badge */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex flex-wrap items-center gap-1.5">
-                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-amber-500/10 text-amber-700 dark:text-csk-yellow border border-amber-500/20">
-                        {player.franchise} &bull; {player.country}
-                      </span>
-
-                      {isOverseas && (
-                        <span 
-                          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-sky-500/15 text-sky-700 dark:text-sky-300 border border-sky-500/30" 
-                          title={`Overseas Player (${player.country})`}
-                        >
-                          <Plane className="w-3 h-3 rotate-[-45deg]" />
-                          <span>Overseas</span>
-                        </span>
-                      )}
-
-                      {player.era && !isOverseas && (
-                        <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-slate-100 dark:bg-white/10 text-slate-600 dark:text-slate-300">
-                          {player.era}
+                  {/* Top Status & Role Badges */}
+                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10 gap-1.5">
+                    <div>
+                      {!player.isCurrent && (
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-500/20 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 border border-amber-500/40 shadow-xs backdrop-blur-xs flex items-center gap-1">
+                          <Star className="w-2.5 h-2.5 text-amber-500 fill-amber-500" />
+                          <span>CSK Legend</span>
                         </span>
                       )}
                     </div>
-                    <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-                      #{player.jersey}
-                    </span>
+
+                    <div className="flex items-center gap-1.5">
+                      {/* Tag / Captain / Category Badge */}
+                      {playerTag ? (
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase bg-amber-500 text-slate-950 shadow-xs flex items-center gap-1 tracking-wider">
+                          <Sparkles className="w-2.5 h-2.5" /> {playerTag}
+                        </span>
+                      ) : isCaptain ? (
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase bg-csk-yellow text-csk-darkNavy shadow-xs tracking-wider">
+                          Captain
+                        </span>
+                      ) : (
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold text-slate-600 dark:text-slate-300 bg-white/90 dark:bg-slate-950/80 border border-slate-200/60 dark:border-white/10 backdrop-blur-xs">
+                          {player.category}
+                        </span>
+                      )}
+                    </div>
                   </div>
 
-                  {/* Player Info Row */}
-                  <Link href={playerUrl} className="flex items-center space-x-4 mb-4 group/link">
-                    <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-csk-yellow shadow-csk-glow flex-shrink-0 bg-slate-200 dark:bg-slate-800">
-                      <img 
-                        src={player.avatar} 
-                        alt={player.name} 
-                        className="w-full h-full object-cover group-hover:scale-110 transition duration-500" 
+                  {/* Player Studio Portrait Image or Regal CSK Monogram */}
+                  <div className="relative z-5 w-full h-[90%] flex items-end justify-center px-4">
+                    {player.avatar ? (
+                      <img
+                        src={player.avatar}
+                        alt={player.name}
+                        className="h-full w-auto max-w-[85%] object-contain object-bottom filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.18)] group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
                         onError={(e) => {
-                          e.target.src = "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg";
+                          e.currentTarget.style.display = 'none';
+                          const fallback = e.currentTarget.parentElement?.querySelector('.avatar-fallback');
+                          if (fallback) fallback.classList.remove('hidden');
                         }}
                       />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white group-hover/link:text-amber-600 dark:group-hover/link:text-csk-yellow transition font-heading truncate">
-                        {player.name}
-                      </h3>
-                      <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 flex items-center mt-0.5 truncate">
-                        <Award className="w-3.5 h-3.5 mr-1 text-amber-500 dark:text-csk-yellow flex-shrink-0" /> {player.role}
-                      </p>
-                    </div>
-                  </Link>
-
-                  {/* Specialty Tagline */}
-                  <div className="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-white/5 mb-4 text-xs text-slate-700 dark:text-slate-300">
-                    <span className="text-slate-500 dark:text-slate-400 font-normal">Specialty: </span>
-                    <span className="font-semibold text-amber-700 dark:text-csk-yellow">{player.specialty}</span>
-                  </div>
-                </div>
-
-                <div>
-                  {/* Quick Stats Grid */}
-                  <div className="grid grid-cols-3 gap-2 pt-3 border-t border-slate-200 dark:border-white/10 text-center mb-3">
-                    <div className="bg-slate-100 dark:bg-slate-900/60 rounded-lg p-2 border border-slate-200 dark:border-white/5">
-                      <span className="text-slate-500 dark:text-slate-400 text-[10px] uppercase font-semibold block">Matches</span>
-                      <span className="text-sm font-semibold text-slate-900 dark:text-white tabular-nums">{player.matches}</span>
-                    </div>
-                    <div className="bg-slate-100 dark:bg-slate-900/60 rounded-lg p-2 border border-slate-200 dark:border-white/5">
-                      <span className="text-slate-500 dark:text-slate-400 text-[10px] uppercase font-semibold block">
-                        {player.runs ? 'Runs' : 'Wickets'}
+                    ) : null}
+                    <div className={`avatar-fallback w-28 h-28 rounded-full bg-gradient-to-br from-amber-500/20 via-csk-yellow/15 to-amber-600/10 border-2 border-csk-yellow/40 flex flex-col items-center justify-center text-center shadow-lg shadow-amber-500/10 backdrop-blur-xs mb-3 group-hover:scale-105 transition-transform duration-300 ${player.avatar ? 'hidden' : 'flex'}`}>
+                      <span className="text-2xl sm:text-3xl font-black text-amber-500 dark:text-csk-yellow font-heading tracking-wider">
+                        {(player.name || '').split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()}
                       </span>
-                      <span className="text-sm font-semibold text-amber-600 dark:text-csk-yellow tabular-nums">
-                        {player.runs || player.wickets}
-                      </span>
-                    </div>
-                    <div className="bg-slate-100 dark:bg-slate-900/60 rounded-lg p-2 border border-slate-200 dark:border-white/5">
-                      <span className="text-slate-500 dark:text-slate-400 text-[10px] uppercase font-semibold block">
-                        {player.strikeRate ? 'Strike Rate' : 'Economy'}
-                      </span>
-                      <span className="text-sm font-semibold text-slate-900 dark:text-white tabular-nums">
-                        {player.strikeRate || player.economy}
+                      <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mt-0.5">
+                        #{player.jersey || 'CSK'}
                       </span>
                     </div>
                   </div>
-
-                  {/* View Profile Action Link */}
-                  <Link
-                    href={playerUrl}
-                    className="w-full inline-flex items-center justify-center space-x-1.5 py-2 px-3 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-csk-yellow text-slate-800 dark:text-slate-200 hover:text-csk-darkNavy text-xs font-semibold transition group/btn"
-                  >
-                    <span>View Full Stats &amp; Profile</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
-                  </Link>
                 </div>
-              </div>
+
+                {/* Card Body Details */}
+                <div className="p-4 flex flex-col justify-between flex-1">
+                  <div>
+                    {/* Player Name & Role */}
+                    <h3 className="text-base sm:text-lg font-black text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-csk-yellow transition font-display mb-0.5 line-clamp-1">
+                      {player.name}
+                    </h3>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 mb-2.5 line-clamp-1">
+                      {player.role}
+                    </p>
+
+                    {/* Specialty Tag */}
+                    {player.specialty && (
+                      <div className="p-2 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-white/5 text-[11px] text-slate-600 dark:text-slate-300 mb-3">
+                        <span className="text-slate-400 block text-[9px] uppercase font-bold tracking-wider mb-0.5">Specialty</span>
+                        <span className="font-semibold text-slate-800 dark:text-slate-200 line-clamp-1 leading-snug">{player.specialty}</span>
+                      </div>
+                    )}
+
+                    {/* Quick Stats Grid */}
+                    <div className="grid grid-cols-3 gap-1.5 p-2 rounded-xl bg-slate-100/70 dark:bg-slate-800/50 border border-slate-200/50 dark:border-white/5 text-center mb-3">
+                      <div>
+                        <span className="text-slate-400 text-[9px] uppercase font-bold block">Matches</span>
+                        <span className="text-xs font-bold text-slate-900 dark:text-white tabular-nums">{player.matches || 0}</span>
+                      </div>
+                      <div>
+                        <span className="text-slate-400 text-[9px] uppercase font-bold block">
+                          {player.runs ? 'Runs' : 'Wickets'}
+                        </span>
+                        <span className="text-xs font-bold text-amber-600 dark:text-csk-yellow tabular-nums">
+                          {player.runs || player.wickets || 0}
+                        </span>
+                      </div>
+                      <div>
+                        <span className="text-slate-400 text-[9px] uppercase font-bold block">
+                          {player.strikeRate ? 'SR' : 'Econ'}
+                        </span>
+                        <span className="text-xs font-bold text-slate-900 dark:text-white tabular-nums">
+                          {player.strikeRate || player.economy || '-'}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Card Bottom Meta */}
+                  <div className="pt-2.5 border-t border-slate-100 dark:border-white/5 flex items-center justify-between text-[11px]">
+                    <span className="font-semibold text-slate-600 dark:text-slate-400 flex items-center">
+                      <span className={`w-1.5 h-1.5 rounded-full mr-1.5 inline-block ${
+                        isOverseas ? 'bg-sky-500' : 'bg-emerald-500'
+                      }`} />
+                      {player.country}
+                    </span>
+                    <span className="font-bold text-amber-600 dark:text-csk-yellow flex items-center group-hover:translate-x-1 transition-transform">
+                      Profile <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                    </span>
+                  </div>
+                </div>
+              </Link>
             );
           })}
         </div>

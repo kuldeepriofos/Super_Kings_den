@@ -8,9 +8,18 @@ import { useApp } from '../context/AppContext';
 export default function Footer({ onSelectFranchise: propOnSelect }) {
   const context = useApp ? useApp() : {};
   const onSelectFranchise = propOnSelect || context.setSelectedFranchise || (() => {});
+  const siteSettings = context.siteSettings || {};
+  const social = siteSettings.social || {};
+  const footerInfo = siteSettings.footer || {};
+
+  const twitterUrl = social.twitter || "https://x.com/superkingsden";
+  const facebookUrl = social.facebook || "https://www.facebook.com/people/Super-Kings-Den/61561343112284/";
+  const instagramUrl = social.instagram || "https://www.instagram.com/superkingsden/";
+  const youtubeUrl = social.youtube || "https://www.youtube.com/@SuperKingsDen";
+  const aboutText = footerInfo.aboutText || "The premier independent fan destination celebrating the roaring spirit of Chennai Super Kings (IPL), Joburg Super Kings (SA20), and Texas Super Kings (MLC). Where Super Kings fans unite under one golden flag.";
 
   return (
-    <footer className="bg-[#050A18] border-t border-slate-800 dark:border-csk-borderNavy text-slate-400 text-xs mt-20">
+    <footer className="bg-[#050A18] border-t border-slate-800 dark:border-csk-borderNavy text-slate-400 text-xs mt-8 sm:mt-10">
       {/* Upper Main Footer Grid */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -20,33 +29,38 @@ export default function Footer({ onSelectFranchise: propOnSelect }) {
             <div className="flex items-center space-x-3">
               <div className="h-14 px-3 py-1 bg-white rounded-xl shadow-md border border-amber-400/40 flex items-center justify-center">
                 <img 
-                  src="https://superkingsden.com/wp-content/uploads/2025/05/superkingsden-1.png" 
+                  src="/superkingsden-1.png" 
                   alt="Super King's Den Official Logo" 
                   className="h-11 w-auto object-contain"
-                  onError={(e) => {
-                    e.target.src = "/superkingsden-1.png";
-                  }}
                 />
               </div>
             </div>
 
             <p className="text-slate-300 text-xs leading-relaxed max-w-sm">
-              The premier independent fan destination celebrating the roaring spirit of Chennai Super Kings (IPL), Joburg Super Kings (SA20), and Texas Super Kings (MLC). Where Super Kings fans unite under one golden flag.
+              {aboutText}
             </p>
 
             <div className="flex items-center space-x-3 pt-2 text-slate-300">
-              <a href="https://x.com/superkingsden" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-slate-900 hover:bg-csk-yellow hover:text-csk-darkNavy transition">
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a href="https://www.facebook.com/people/Super-Kings-Den/61561343112284/" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-slate-900 hover:bg-blue-600 hover:text-white transition">
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a href="https://www.instagram.com/superkingsden/" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-slate-900 hover:bg-pink-600 hover:text-white transition">
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a href="https://www.youtube.com/@SuperKingsDen" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-slate-900 hover:bg-red-600 hover:text-white transition">
-                <Youtube className="w-4 h-4" />
-              </a>
+              {twitterUrl && (
+                <a href={twitterUrl} target="_blank" rel="noreferrer" title="Follow on X" className="p-2 rounded-lg bg-slate-900 hover:bg-csk-yellow hover:text-csk-darkNavy transition">
+                  <Twitter className="w-4 h-4" />
+                </a>
+              )}
+              {facebookUrl && (
+                <a href={facebookUrl} target="_blank" rel="noreferrer" title="Follow on Facebook" className="p-2 rounded-lg bg-slate-900 hover:bg-blue-600 hover:text-white transition">
+                  <Facebook className="w-4 h-4" />
+                </a>
+              )}
+              {instagramUrl && (
+                <a href={instagramUrl} target="_blank" rel="noreferrer" title="Follow on Instagram" className="p-2 rounded-lg bg-slate-900 hover:bg-pink-600 hover:text-white transition">
+                  <Instagram className="w-4 h-4" />
+                </a>
+              )}
+              {youtubeUrl && (
+                <a href={youtubeUrl} target="_blank" rel="noreferrer" title="Follow on YouTube" className="p-2 rounded-lg bg-slate-900 hover:bg-red-600 hover:text-white transition">
+                  <Youtube className="w-4 h-4" />
+                </a>
+              )}
             </div>
           </div>
 
@@ -87,12 +101,15 @@ export default function Footer({ onSelectFranchise: propOnSelect }) {
               Den Specials &amp; Hubs
             </h4>
             <ul className="space-y-2.5">
-              <li><Link href="/seasons" className="hover:text-csk-yellow transition">Seasons Archive (2008&ndash;2026)</Link></li>
-              <li><Link href="/players" className="hover:text-csk-yellow transition">Players &amp; Legends Directory</Link></li>
-              <li><Link href="/rivalries" className="hover:text-csk-yellow transition">CSK Rivalries &amp; Derbies</Link></li>
-              <li><Link href="/stats" className="hover:text-csk-yellow transition">IPL Stats &amp; Leaderboards</Link></li>
-              <li><Link href="/trophies" className="hover:text-csk-yellow transition">All 7 Trophies Showcase</Link></li>
-              <li><Link href="/standings" className="hover:text-csk-yellow transition">IPL 2026 Standings</Link></li>
+              <li><Link href="/csk-team" className="hover:text-csk-yellow transition">CSK Team &amp; Squad (IPL)</Link></li>
+              <li><Link href="/jsk-team" className="hover:text-csk-yellow transition">JSK Team &amp; Squad (SA20)</Link></li>
+              <li><Link href="/tsk-team" className="hover:text-csk-yellow transition">TSK Team &amp; Squad (MLC)</Link></li>
+              <li><Link href="/chennai-super-kings" className="hover:text-csk-yellow transition">CSK Hub &amp; Franchise Stats</Link></li>
+              <li><Link href="/csk-trophies" className="hover:text-csk-yellow transition">All 7 Trophies Showcase</Link></li>
+              <li><Link href="/csk-fixtures" className="hover:text-csk-yellow transition">CSK Fixtures &amp; Results</Link></li>
+              <li><Link href="/jsk-fixtures" className="hover:text-csk-yellow transition">JSK Fixtures &amp; Results</Link></li>
+              <li><Link href="/tsk-fixtures" className="hover:text-csk-yellow transition">TSK Fixtures &amp; Results</Link></li>
+              <li><Link href="/search" className="hover:text-csk-yellow transition">Search Hub &amp; Archives</Link></li>
             </ul>
           </div>
 

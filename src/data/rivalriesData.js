@@ -310,7 +310,7 @@ export const ALL_TIME_CANDIDATES = [
     role: 'Captain & Wicketkeeper',
     country: 'India',
     isOverseas: false,
-    avatar: 'https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg',
+    avatar: '/uploads/2024/02/MS-Dhoni.jpg',
     pct: 99,
     votes: 18450
   },
@@ -320,7 +320,7 @@ export const ALL_TIME_CANDIDATES = [
     role: 'Mr. IPL / Top-Order',
     country: 'India',
     isOverseas: false,
-    avatar: 'https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg',
+    avatar: '/uploads/2024/02/MS-Dhoni.jpg',
     pct: 96,
     votes: 16920
   },
@@ -330,7 +330,7 @@ export const ALL_TIME_CANDIDATES = [
     role: 'Spin All-Rounder',
     country: 'India',
     isOverseas: false,
-    avatar: 'https://superkingsden.com/wp-content/uploads/2023/06/Website-feature-photo78.png',
+    avatar: '/uploads/2023/06/Website-feature-photo78.png',
     pct: 95,
     votes: 16400
   },
@@ -340,7 +340,7 @@ export const ALL_TIME_CANDIDATES = [
     role: 'Death Specialist / All-Rounder',
     country: 'West Indies',
     isOverseas: true,
-    avatar: 'https://superkingsden.com/wp-content/uploads/2023/06/Website-feature-photo78.png',
+    avatar: '/uploads/2023/06/Website-feature-photo78.png',
     pct: 93,
     votes: 15300
   },
@@ -350,7 +350,7 @@ export const ALL_TIME_CANDIDATES = [
     role: 'Opening Batter',
     country: 'South Africa',
     isOverseas: true,
-    avatar: 'https://superkingsden.com/wp-content/uploads/2025/12/Website-feature-photo-9.png',
+    avatar: '/uploads/2025/12/Website-feature-photo-9.png',
     pct: 91,
     votes: 14750
   },
@@ -360,7 +360,7 @@ export const ALL_TIME_CANDIDATES = [
     role: 'Mr. Cricket / Opener',
     country: 'Australia',
     isOverseas: true,
-    avatar: 'https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png',
+    avatar: '/uploads/2023/10/Website-feature-photo-9.png',
     pct: 89,
     votes: 13900
   },
@@ -370,7 +370,7 @@ export const ALL_TIME_CANDIDATES = [
     role: 'Off-Spin Maestro',
     country: 'India',
     isOverseas: false,
-    avatar: 'https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png',
+    avatar: '/uploads/2026/02/Website-feature-photo-30.png',
     pct: 88,
     votes: 13200
   },
@@ -380,7 +380,7 @@ export const ALL_TIME_CANDIDATES = [
     role: 'Opening Batter / All-Rounder',
     country: 'Australia',
     isOverseas: true,
-    avatar: 'https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png',
+    avatar: '/uploads/2023/10/Website-feature-photo-9.png',
     pct: 87,
     votes: 12850
   },
@@ -390,7 +390,7 @@ export const ALL_TIME_CANDIDATES = [
     role: 'Captain / Opening Batter',
     country: 'India',
     isOverseas: false,
-    avatar: 'https://superkingsden.com/wp-content/uploads/2026/09/RUTURAJ-GAIKWAD.jpg',
+    avatar: '/uploads/2026/09/RUTURAJ-GAIKWAD.jpg',
     pct: 86,
     votes: 12400
   },
@@ -400,7 +400,7 @@ export const ALL_TIME_CANDIDATES = [
     role: 'Fast Bowler / Slinging Yorker',
     country: 'Sri Lanka',
     isOverseas: true,
-    avatar: 'https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png',
+    avatar: '/uploads/2026/02/Website-feature-photo-30.png',
     pct: 84,
     votes: 11900
   },
@@ -410,7 +410,7 @@ export const ALL_TIME_CANDIDATES = [
     role: 'Power Hitter / All-Rounder',
     country: 'India',
     isOverseas: false,
-    avatar: 'https://superkingsden.com/wp-content/uploads/2024/03/Website-feature-photo313.png',
+    avatar: '/uploads/2024/03/Website-feature-photo313.png',
     pct: 82,
     votes: 11200
   },
@@ -420,7 +420,7 @@ export const ALL_TIME_CANDIDATES = [
     role: 'Powerplay Swing Pacer',
     country: 'India',
     isOverseas: false,
-    avatar: 'https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo295.png',
+    avatar: '/uploads/2026/02/Website-feature-photo295.png',
     pct: 81,
     votes: 10800
   }

@@ -8,14 +8,34 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tiptap/extension-image": "^3.32.1",
+    "@tiptap/extension-link": "^3.32.1",
+    "@tiptap/extension-table": "^3.32.1",
+    "@tiptap/extension-table-cell": "^3.32.1",
+    "@tiptap/extension-table-header": "^3.32.1",
+    "@tiptap/extension-table-row": "^3.32.1",
+    "@tiptap/extension-youtube": "^3.32.1",
+    "@tiptap/pm": "^3.32.1",
+    "@tiptap/react": "^3.32.1",
+    "@tiptap/starter-kit": "^3.32.1",
+    "bcryptjs": "^3.0.3",
+    "dompurify": "^3.4.17",
+    "jsonwebtoken": "^9.0.3",
+    "lucide-react": "^0.475.0",
+    "mongoose": "^9.11.4",
     "next": "^14.2.23",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "lucide-react": "^0.475.0"
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
+    "@types/dompurify": "^3.0.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
     "autoprefixer": "^10.4.20",
+    "pngjs": "^7.0.0",
     "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "typescript": "^7.0.2"
   }
 }

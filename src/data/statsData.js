@@ -1,4 +1,9 @@
-// Comprehensive Chennai Super Kings Statistics & Leaderboards
+// Comprehensive Super Kings Global Franchises (CSK, JSK, TSK) Statistics & Leaderboards
+import franchiseStatsJson from './franchiseStatsData.json';
+
+// ============================================================================
+// 1. CHENNAI SUPER KINGS (CSK) — IPL
+// ============================================================================
 export const CSK_OVERVIEW_STATS = {
   totalMatches: 239,
   wins: 138,
@@ -176,7 +181,7 @@ export const BOWLING_LEADERBOARD = [
   { rank: 10, player: 'Imran Tahir', matches: 27, innings: 27, wickets: 35, avg: '21.08', econ: '7.11', best: '4/12', fourWkts: 2 }
 ];
 
-// Team Records
+// Team Records for CSK
 export const TEAM_RECORDS = [
   { title: 'Highest Team Total', value: '246/5', details: 'vs Rajasthan Royals at Chepauk (2010)' },
   { title: 'Second Highest Total', value: '240/5', details: 'vs Kings XI Punjab at Mohali (2008)' },
@@ -187,3 +192,216 @@ export const TEAM_RECORDS = [
   { title: 'Largest Victory (Wickets)', value: '10 Wickets', details: 'vs Kings XI Punjab at Mohali (2013 & 2020)' },
   { title: 'Consecutive Finals', value: '4 Consecutive', details: '2010, 2011, 2012, 2013 (All-time IPL record)' }
 ];
+
+// ============================================================================
+// 2. JOBURG SUPER KINGS (JSK) — SA20
+// ============================================================================
+export const JSK_OVERVIEW_STATS = {
+  totalMatches: 33,
+  wins: 17,
+  losses: 14,
+  noResult: 2,
+  winRate: '53.1%',
+  titles: '3x Semis',
+  finalsPlayed: '3x',
+  playoffsQualified: '3/3',
+  playoffPct: '100%',
+  highestScore: '211/6 vs PC (2024)',
+  lowestScore: '78 vs MICT (2024)',
+  fortressWinRate: '64.3%'
+};
+
+export const JSK_BATTING_LEADERBOARD = [
+  { rank: 1, player: 'Faf du Plessis', matches: 33, innings: 32, runs: 894, avg: '33.11', sr: '142.8', fifties: 7, hundreds: 1, high: '113*' },
+  { rank: 2, player: 'Leus du Plooy', matches: 22, innings: 21, runs: 669, avg: '37.16', sr: '144.5', fifties: 5, hundreds: 0, high: '81*' },
+  { rank: 3, player: 'Reeza Hendricks', matches: 23, innings: 22, runs: 520, avg: '27.36', sr: '119.8', fifties: 4, hundreds: 0, high: '96' },
+  { rank: 4, player: 'Donovan Ferreira', matches: 29, innings: 24, runs: 432, avg: '24.00', sr: '153.2', fifties: 2, hundreds: 0, high: '82*' },
+  { rank: 5, player: 'Wayne Madsen', matches: 12, innings: 11, runs: 275, avg: '30.55', sr: '138.8', fifties: 2, hundreds: 0, high: '66' },
+  { rank: 6, player: 'Moeen Ali', matches: 13, innings: 12, runs: 236, avg: '21.45', sr: '128.9', fifties: 1, hundreds: 0, high: '42' },
+  { rank: 7, player: 'Romario Shepherd', matches: 15, innings: 12, runs: 198, avg: '22.00', sr: '158.4', fifties: 1, hundreds: 0, high: '40' },
+  { rank: 8, player: 'Sibonelo Makhanya', matches: 14, innings: 11, runs: 168, avg: '18.66', sr: '115.8', fifties: 0, hundreds: 0, high: '37' }
+];
+
+export const JSK_BOWLING_LEADERBOARD = [
+  { rank: 1, player: 'Lizaad Williams', matches: 20, innings: 20, wickets: 29, avg: '18.55', econ: '8.84', best: '4/19', fourWkts: 2 },
+  { rank: 2, player: 'Imran Tahir', matches: 21, innings: 21, wickets: 23, avg: '21.30', econ: '7.22', best: '3/17', fourWkts: 0 },
+  { rank: 3, player: 'Gerald Coetzee', matches: 13, innings: 13, wickets: 23, avg: '16.52', econ: '8.42', best: '4/24', fourWkts: 1 },
+  { rank: 4, player: 'Nandre Burger', matches: 18, innings: 18, wickets: 19, avg: '24.21', econ: '7.95', best: '3/26', fourWkts: 0 },
+  { rank: 5, player: 'Romario Shepherd', matches: 15, innings: 15, wickets: 14, avg: '27.50', econ: '8.90', best: '2/24', fourWkts: 0 },
+  { rank: 6, player: 'Aaron Phangiso', matches: 9, innings: 9, wickets: 10, avg: '20.40', econ: '6.80', best: '4/20', fourWkts: 1 },
+  { rank: 7, player: 'Kyle Simmonds', matches: 7, innings: 7, wickets: 8, avg: '21.25', econ: '6.80', best: '3/23', fourWkts: 0 },
+  { rank: 8, player: 'Tabraiz Shamsi', matches: 8, innings: 8, wickets: 7, avg: '31.42', econ: '7.85', best: '2/18', fourWkts: 0 }
+];
+
+export const JSK_TEAM_RECORDS = [
+  { title: 'Highest Team Total', value: '211/6', details: 'vs Pretoria Capitals at Centurion (2024)' },
+  { title: 'Second Highest Total', value: '202/4', details: 'vs Durban\'s Super Giants at Kingsmead (2024)' },
+  { title: 'Highest Individual Score', value: '113*', details: 'Faf du Plessis vs Sunrisers Eastern Cape (2023)' },
+  { title: 'Best Bowling Figures', value: '4/19', details: 'Lizaad Williams vs Paarl Royals (2024)' },
+  { title: 'Largest Victory (Runs)', value: '76 Runs', details: 'vs Sunrisers Eastern Cape at Bullring (2023)' },
+  { title: 'Lowest Total Defended', value: '145/9', details: 'vs Paarl Royals at Bullring (2024)' },
+  { title: 'Consecutive Semi-Finals', value: '3 in a Row', details: '2023, 2024, 2025 (100% Playoff qualification rate)' },
+  { title: 'Highest Powerplay Score', value: '71/0', details: 'vs MI Cape Town at Wanderers Stadium (2024)' }
+];
+
+// ============================================================================
+// 3. TEXAS SUPER KINGS (TSK) — MLC
+// ============================================================================
+export const TSK_OVERVIEW_STATS = {
+  totalMatches: 19,
+  wins: 11,
+  losses: 7,
+  noResult: 1,
+  winRate: '61.1%',
+  titles: '2x Finalists',
+  finalsPlayed: '2x',
+  playoffsQualified: '2/2',
+  playoffPct: '100%',
+  highestScore: '215/5 vs SFU (2023)',
+  lowestScore: '115 vs MINY (2023)',
+  fortressWinRate: '66.7%'
+};
+
+export const TSK_BATTING_LEADERBOARD = [
+  { rank: 1, player: 'Faf du Plessis', matches: 19, innings: 19, runs: 888, avg: '52.23', sr: '168.4', fifties: 6, hundreds: 2, high: '103*' },
+  { rank: 2, player: 'Devon Conway', matches: 17, innings: 17, runs: 512, avg: '34.13', sr: '129.5', fifties: 3, hundreds: 0, high: '75' },
+  { rank: 3, player: 'Dwayne Bravo', matches: 18, innings: 15, runs: 268, avg: '26.80', sr: '145.2', fifties: 1, hundreds: 0, high: '76*' },
+  { rank: 4, player: 'Milind Kumar', matches: 15, innings: 13, runs: 220, avg: '24.44', sr: '124.2', fifties: 1, hundreds: 0, high: '54' },
+  { rank: 5, player: 'Mitchell Santner', matches: 15, innings: 12, runs: 192, avg: '24.00', sr: '135.2', fifties: 0, hundreds: 0, high: '45' },
+  { rank: 6, player: 'David Miller', matches: 7, innings: 6, runs: 178, avg: '35.60', sr: '142.4', fifties: 1, hundreds: 0, high: '61' },
+  { rank: 7, player: 'Calvin Savage', matches: 14, innings: 10, runs: 145, avg: '20.71', sr: '133.0', fifties: 0, hundreds: 0, high: '38*' },
+  { rank: 8, player: 'Marcus Stoinis', matches: 5, innings: 5, runs: 124, avg: '24.80', sr: '141.0', fifties: 1, hundreds: 0, high: '51' }
+];
+
+export const TSK_BOWLING_LEADERBOARD = [
+  { rank: 1, player: 'Mohammad Mohsin', matches: 17, innings: 17, wickets: 22, avg: '18.18', econ: '7.42', best: '4/8', fourWkts: 1 },
+  { rank: 2, player: 'Gerald Coetzee', matches: 10, innings: 10, wickets: 16, avg: '19.37', econ: '8.65', best: '4/31', fourWkts: 1 },
+  { rank: 3, player: 'Dwayne Bravo', matches: 18, innings: 17, wickets: 15, avg: '26.40', econ: '8.85', best: '3/28', fourWkts: 0 },
+  { rank: 4, player: 'Mitchell Santner', matches: 15, innings: 15, wickets: 14, avg: '24.85', econ: '7.10', best: '3/20', fourWkts: 0 },
+  { rank: 5, player: 'Zia-ul-Haq', matches: 12, innings: 12, wickets: 13, avg: '25.38', econ: '8.40', best: '3/33', fourWkts: 0 },
+  { rank: 6, player: 'Naveen-ul-Haq', matches: 7, innings: 7, wickets: 9, avg: '22.11', econ: '8.12', best: '3/22', fourWkts: 0 },
+  { rank: 7, player: 'Calvin Savage', matches: 14, innings: 11, wickets: 8, avg: '28.50', econ: '8.95', best: '2/25', fourWkts: 0 },
+  { rank: 8, player: 'Marcus Stoinis', matches: 5, innings: 5, wickets: 6, avg: '21.66', econ: '8.20', best: '2/18', fourWkts: 0 }
+];
+
+export const TSK_TEAM_RECORDS = [
+  { title: 'Highest Team Total', value: '215/5', details: 'vs San Francisco Unicorns at Grand Prairie (2023)' },
+  { title: 'Second Highest Total', value: '203/4', details: 'vs Washington Freedom at Morrisville (2024)' },
+  { title: 'Highest Individual Score', value: '103*', details: 'Faf du Plessis vs Washington Freedom (2024)' },
+  { title: 'Best Bowling Figures', value: '4/8', details: 'Mohammad Mohsin vs Los Angeles Knight Riders (2023)' },
+  { title: 'Largest Victory (Runs)', value: '69 Runs', details: 'vs Los Angeles Knight Riders at Grand Prairie (2023)' },
+  { title: 'Highest Successful Chase', value: '187/5', details: 'vs Seattle Orcas at Grand Prairie (2024)' },
+  { title: 'Most 6s in an Innings', value: '16 Sixes', details: 'vs San Francisco Unicorns at Dallas (2023)' },
+  { title: 'Consecutive Playoff Appearances', value: '2 in a Row', details: '2023 & 2024 (100% Playoff qualification rate in MLC)' }
+];
+
+// Unified helper function to fetch stats dataset by franchise
+export function getFranchiseStats(franchise = 'CSK') {
+  const norm = (franchise || 'CSK').toUpperCase();
+  if (franchiseStatsJson && franchiseStatsJson[norm]) {
+    return franchiseStatsJson[norm];
+  }
+  if (norm === 'JSK') {
+    return {
+      franchise: 'JSK',
+      teamName: 'Joburg Super Kings',
+      shortName: 'JSK',
+      league: 'SA20',
+      title: 'JSK All-Time Franchise Analytics',
+      subtitle: 'Performance records, batting firepower and bowling milestones across SA20 at the Bullring',
+      matchLabel: 'SA20 Matches',
+      fortressLabel: 'The Bullring Fortress',
+      fortressSub: 'Wanderers Win Dominance',
+      battingTitle: 'All-Time Leading Run Scorers for Joburg Super Kings',
+      battingSubtitle: 'Ranked by total runs scored in SA20 competition',
+      bowlingTitle: 'All-Time Leading Wicket Takers for Joburg Super Kings',
+      bowlingSubtitle: 'Ranked by total wickets taken for JSK in SA20 history',
+      overview: {
+        totalMatches: JSK_OVERVIEW_STATS.totalMatches,
+        wins: JSK_OVERVIEW_STATS.wins,
+        losses: JSK_OVERVIEW_STATS.losses,
+        titles: JSK_OVERVIEW_STATS.titles,
+        titleSub: 'SA20 Playoff Record',
+        finalsPlayed: JSK_OVERVIEW_STATS.finalsPlayed,
+        finalsSub: 'Consecutive Semi-Finals',
+        winRate: JSK_OVERVIEW_STATS.winRate,
+        winLossSub: '17 Wins / 14 Losses',
+        playoffsQualified: JSK_OVERVIEW_STATS.playoffsQualified,
+        playoffRateSub: '100% Playoff Streak',
+        fortressWinRate: JSK_OVERVIEW_STATS.fortressWinRate
+      },
+      batting: JSK_BATTING_LEADERBOARD,
+      bowling: JSK_BOWLING_LEADERBOARD,
+      records: JSK_TEAM_RECORDS
+    };
+  }
+
+  if (norm === 'TSK') {
+    return {
+      franchise: 'TSK',
+      teamName: 'Texas Super Kings',
+      shortName: 'TSK',
+      league: 'MLC',
+      title: 'TSK All-Time Franchise Analytics',
+      subtitle: 'Championship milestones, leaderboards and fortress records at Grand Prairie Stadium, Dallas',
+      matchLabel: 'MLC Matches',
+      fortressLabel: 'Grand Prairie Fortress',
+      fortressSub: 'Dallas Home Dominance',
+      battingTitle: 'All-Time Leading Run Scorers for Texas Super Kings',
+      battingSubtitle: 'Ranked by total runs scored in Major League Cricket competition',
+      bowlingTitle: 'All-Time Leading Wicket Takers for Texas Super Kings',
+      bowlingSubtitle: 'Ranked by total wickets taken for TSK in MLC history',
+      overview: {
+        totalMatches: TSK_OVERVIEW_STATS.totalMatches,
+        wins: TSK_OVERVIEW_STATS.wins,
+        losses: TSK_OVERVIEW_STATS.losses,
+        titles: TSK_OVERVIEW_STATS.titles,
+        titleSub: 'MLC Challenger Runs',
+        finalsPlayed: TSK_OVERVIEW_STATS.finalsPlayed,
+        finalsSub: 'Back-to-Back Playoff Finishes',
+        winRate: TSK_OVERVIEW_STATS.winRate,
+        winLossSub: '11 Wins / 7 Losses',
+        playoffsQualified: TSK_OVERVIEW_STATS.playoffsQualified,
+        playoffRateSub: '100% Playoff Streak',
+        fortressWinRate: TSK_OVERVIEW_STATS.fortressWinRate
+      },
+      batting: TSK_BATTING_LEADERBOARD,
+      bowling: TSK_BOWLING_LEADERBOARD,
+      records: TSK_TEAM_RECORDS
+    };
+  }
+
+  // Default: CSK
+  return {
+    franchise: 'CSK',
+    teamName: 'Chennai Super Kings',
+    shortName: 'CSK',
+    league: 'IPL',
+    title: 'CSK All-Time Franchise Analytics',
+    subtitle: 'The numbers behind the most consistent dynasty in modern T20 cricket history',
+    matchLabel: 'IPL Matches',
+    fortressLabel: 'Chepauk Fortress',
+    fortressSub: 'Home Win Dominance',
+    battingTitle: 'All-Time Leading Run Scorers for Chennai Super Kings',
+    battingSubtitle: 'Ranked by total runs scored wearing the yellow jersey in IPL competition',
+    bowlingTitle: 'All-Time Leading Wicket Takers for Chennai Super Kings',
+    bowlingSubtitle: 'Ranked by total wickets taken for CSK in IPL history',
+    overview: {
+      totalMatches: CSK_OVERVIEW_STATS.totalMatches,
+      wins: CSK_OVERVIEW_STATS.wins,
+      losses: CSK_OVERVIEW_STATS.losses,
+      titles: `${CSK_OVERVIEW_STATS.titles}x`,
+      titleSub: 'Joint Most in IPL',
+      finalsPlayed: CSK_OVERVIEW_STATS.finalsPlayed,
+      finalsSub: 'All-Time #1 Record',
+      winRate: CSK_OVERVIEW_STATS.winRate,
+      winLossSub: '138 Wins / 98 Losses',
+      playoffsQualified: CSK_OVERVIEW_STATS.playoffsQualified,
+      playoffRateSub: `${CSK_OVERVIEW_STATS.playoffPct} Qual. Rate`,
+      fortressWinRate: CSK_OVERVIEW_STATS.chepaukWinRate
+    },
+    batting: BATTING_LEADERBOARD,
+    bowling: BOWLING_LEADERBOARD,
+    records: TEAM_RECORDS
+  };
+}

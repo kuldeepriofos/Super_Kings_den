@@ -1,0 +1,122 @@
+[
+  {
+    "pos": 1,
+    "team": "Chennai Super Kings",
+    "shortName": "CSK",
+    "played": 14,
+    "won": 10,
+    "lost": 4,
+    "nrr": "+0.652",
+    "pts": 20,
+    "isLeader": true,
+    "tournament": "IPL 2026"
+  },
+  {
+    "pos": 2,
+    "team": "Kolkata Knight Riders",
+    "shortName": "KKR",
+    "played": 14,
+    "won": 9,
+    "lost": 5,
+    "nrr": "+0.450",
+    "pts": 18,
+    "isLeader": false,
+    "tournament": "IPL 2026"
+  },
+  {
+    "pos": 3,
+    "team": "Sunrisers Hyderabad",
+    "shortName": "SRH",
+    "played": 14,
+    "won": 8,
+    "lost": 6,
+    "nrr": "+0.310",
+    "pts": 16,
+    "isLeader": false,
+    "tournament": "IPL 2026"
+  },
+  {
+    "pos": 4,
+    "team": "Rajasthan Royals",
+    "shortName": "RR",
+    "played": 14,
+    "won": 8,
+    "lost": 6,
+    "nrr": "+0.180",
+    "pts": 16,
+    "isLeader": false,
+    "tournament": "IPL 2026"
+  },
+  {
+    "pos": 5,
+    "team": "Royal Challengers Bengaluru",
+    "shortName": "RCB",
+    "played": 14,
+    "won": 7,
+    "lost": 7,
+    "nrr": "+0.120",
+    "pts": 14,
+    "isLeader": false,
+    "tournament": "IPL 2026"
+  },
+  {
+    "pos": 6,
+    "team": "Delhi Capitals",
+    "shortName": "DC",
+    "played": 14,
+    "won": 7,
+    "lost": 7,
+    "nrr": "-0.050",
+    "pts": 14,
+    "isLeader": false,
+    "tournament": "IPL 2026"
+  },
+  {
+    "pos": 7,
+    "team": "Lucknow Super Giants",
+    "shortName": "LSG",
+    "played": 14,
+    "won": 7,
+    "lost": 7,
+    "nrr": "-0.110",
+    "pts": 14,
+    "isLeader": false,
+    "tournament": "IPL 2026"
+  },
+  {
+    "pos": 8,
+    "team": "Gujarat Titans",
+    "shortName": "GT",
+    "played": 14,
+    "won": 6,
+    "lost": 8,
+    "nrr": "-0.220",
+    "pts": 12,
+    "isLeader": false,
+    "tournament": "IPL 2026"
+  },
+  {
+    "pos": 9,
+    "team": "Punjab Kings",
+    "shortName": "PBKS",
+    "played": 14,
+    "won": 5,
+    "lost": 9,
+    "nrr": "-0.380",
+    "pts": 10,
+    "isLeader": false,
+    "tournament": "IPL 2026"
+  },
+  {
+    "pos": 10,
+    "team": "Mumbai Indians",
+    "shortName": "MI",
+    "played": 14,
+    "won": 4,
+    "lost": 10,
+    "nrr": "-0.450",
+    "pts": 8,
+    "isLeader": false,
+    "tournament": "IPL 2026"
+  }
+]

@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Dynamic API routes and SSR enabled for Admin Dashboard & MongoDB
   trailingSlash: true,
   images: {
     unoptimized: true,
@@ -29,11 +29,11 @@ const nextConfig = {
       },
       {
         source: '/all-csk-players',
-        destination: '/players',
+        destination: '/csk-team',
       },
       {
         source: '/csk-stats',
-        destination: '/stats',
+        destination: '/chennai-super-kings/',
       },
       {
         source: '/csk-rivalries',

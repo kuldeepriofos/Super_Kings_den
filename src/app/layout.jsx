@@ -1,8 +1,7 @@
 import './globals.css';
 import { AppProvider } from '../context/AppContext';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import GlobalSearchWrapper from '../components/GlobalSearchWrapper';
+import PublicShell from '../components/PublicShell';
+import { getCustomCodeData, CustomHeadInjector } from '../lib/customCode';
 
 export const metadata = {
   metadataBase: new URL('https://superkingsden.com'),
@@ -24,7 +23,7 @@ export const metadata = {
     description: 'Comprehensive CSK, JSK & TSK news, match previews, live countdown, player stats, and community analysis.',
     images: [
       {
-        url: 'https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg',
+        url: '/uploads/2026/06/Chennai-Super-Kings-2026.jpg',
         width: 1200,
         height: 675,
         alt: 'SuperKingsDen Official Banner'
@@ -37,7 +36,7 @@ export const metadata = {
     creator: '@superkingsden',
     title: 'SuperKingsDen — Where Super Kings Fans Unite',
     description: 'The ultimate Super Kings fan platform for CSK, JSK & TSK coverage.',
-    images: ['https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg'],
+    images: ['/uploads/2026/06/Chennai-Super-Kings-2026.jpg'],
   },
   robots: {
     index: true,
@@ -62,6 +61,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const customCode = getCustomCodeData();
+  const isEnabled = customCode?.isEnabled !== false;
+  const headCode = isEnabled && customCode?.headEnabled !== false ? customCode?.headCode : '';
+  const bodyOpenCode = isEnabled && customCode?.bodyOpenEnabled !== false ? customCode?.bodyOpenCode : '';
+  const bodyCloseCode = isEnabled && customCode?.bodyCloseEnabled !== false ? customCode?.bodyCloseCode : '';
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -90,17 +95,33 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+        {/* User-defined <head> Code (GTM, GA4, AdSense, Meta Pixel, Webmaster Tags) */}
+        {headCode ? <CustomHeadInjector snippet={headCode} /> : null}
       </head>
       <body className="bg-slate-50 dark:bg-[#081432] text-slate-900 dark:text-slate-100 font-sans antialiased min-h-screen selection:bg-[#FFCB05] selection:text-[#081432]">
+        {/* User-defined <body> opening Code (e.g. GTM <noscript> fallback) */}
+        {bodyOpenCode ? (
+          <div
+            id="skd-body-open-snippets"
+            style={{ display: 'contents' }}
+            dangerouslySetInnerHTML={{ __html: bodyOpenCode }}
+          />
+        ) : null}
 
         <AppProvider>
-          <Navbar />
-          <main className="min-h-[calc(100vh-200px)]">
+          <PublicShell>
             {children}
-          </main>
-          <Footer />
-          <GlobalSearchWrapper />
+          </PublicShell>
         </AppProvider>
+
+        {/* User-defined </body> closing Code (e.g. Chat widgets, tracking scripts) */}
+        {bodyCloseCode ? (
+          <div
+            id="skd-body-close-snippets"
+            style={{ display: 'contents' }}
+            dangerouslySetInnerHTML={{ __html: bodyCloseCode }}
+          />
+        ) : null}
       </body>
     </html>
   );

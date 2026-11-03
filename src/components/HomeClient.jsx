@@ -3,17 +3,12 @@
 import React from 'react';
 import HeroFeatured from './HeroFeatured';
 import FranchiseFamily from './FranchiseFamily';
-import TournamentBanner from './TournamentBanner';
-import ParallaxBanner from './ParallaxBanner';
-import CSKTrophiesSection from './CSKTrophiesSection';
-import SquadShowcase from './SquadShowcase';
-import NewsGrid from './NewsGrid';
-import FanCTASection from './FanCTASection';
+import MatchCenter from './MatchCenter';
 import StandingsTable from './StandingsTable';
-import FanZone from './FanZone';
+import NewsGrid from './NewsGrid';
 import { useApp } from '../context/AppContext';
 
-export default function HomeClient({ initialPosts, initialPlayers }) {
+export default function HomeClient({ initialPosts, initialFixtures }) {
   const { selectedFranchise, setSelectedFranchise } = useApp();
 
   // Filter posts if specific franchise is selected
@@ -53,43 +48,26 @@ export default function HomeClient({ initialPosts, initialPlayers }) {
         </div>
       )}
 
-      {/* 1. Hero Featured Top Stories */}
+      {/* 1. Top Headlines */}
       <HeroFeatured posts={displayedPosts} />
 
-      {/* 2. Global Super Kings Franchises: CSK, JSK, TSK */}
+      {/* 2. The Super Kings Global Family */}
       <FranchiseFamily 
         selectedFranchise={selectedFranchise} 
         onSelectFranchise={setSelectedFranchise} 
       />
 
-      {/* 3. Tournament Banner: Chennai Super Kings Emotion */}
-      <TournamentBanner />
+      {/* 3. Match Center • Countdown */}
+      <MatchCenter selectedFranchise={selectedFranchise} initialFixtures={initialFixtures} />
 
-      {/* 4. Cinematic Parallax Banner */}
-      <ParallaxBanner />
+      {/* 4. Points Table • Standings */}
+      <StandingsTable selectedFranchise={selectedFranchise} />
 
-      {/* 5. CSK Championship Trophies By Year (7 Trophies Timeline) */}
-      <CSKTrophiesSection />
-
-      {/* 6. Chennai Super Kings Squad (Players Roster) */}
-      <SquadShowcase 
-        players={initialPlayers} 
-      />
-
-      {/* 7. Latest Den Dispatches News Grid */}
+      {/* 5. Latest Den Dispatches */}
       <NewsGrid 
         posts={displayedPosts} 
         selectedFranchise={selectedFranchise} 
       />
-
-      {/* 8. High-Impact Yellow Army CTA & Fan Pass */}
-      <FanCTASection />
-
-      {/* 9. IPL Standings Table */}
-      <StandingsTable />
-
-      {/* 10. Whistle Podu Fan Zone */}
-      <FanZone />
     </>
   );
 }

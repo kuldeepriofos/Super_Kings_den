@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import defaultSettings from '../data/defaultSiteSettings.json';
 
 const AppContext = createContext();
 
@@ -9,6 +10,25 @@ export function AppProvider({ children }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [siteSettings, setSiteSettings] = useState(defaultSettings);
+
+  const refreshSettings = async () => {
+    try {
+      const res = await fetch('/api/settings/');
+      if (res.ok) {
+        const data = await res.json();
+        if (data.settings) {
+          setSiteSettings(data.settings);
+        }
+      }
+    } catch (err) {
+      // silently fallback to defaultSettings
+    }
+  };
+
+  useEffect(() => {
+    refreshSettings();
+  }, []);
 
   useEffect(() => {
     setMounted(true);
@@ -46,7 +66,10 @@ export function AppProvider({ children }) {
         setSearchOpen,
         darkMode,
         toggleDarkMode,
-        mounted
+        mounted,
+        siteSettings,
+        setSiteSettings,
+        refreshSettings,
       }}
     >
       {children}

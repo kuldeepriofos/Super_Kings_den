@@ -8,33 +8,82 @@ import { Clock, Calendar, User, ChevronRight, Share2, ArrowLeft, Flame, Sparkles
 export default function ArticleDetailView({ post, relatedPosts = [] }) {
   if (!post) return null;
 
+  // Track visited article in session storage for "Recently Viewed" filter
+  React.useEffect(() => {
+    if (post && post.slug && typeof window !== 'undefined') {
+      try {
+        const key = 'skd_visited_articles';
+        const existing = JSON.parse(sessionStorage.getItem(key) || localStorage.getItem(key) || '[]');
+        const updated = [post.slug, ...existing.filter((s) => s !== post.slug)].slice(0, 50);
+        sessionStorage.setItem(key, JSON.stringify(updated));
+        localStorage.setItem(key, JSON.stringify(updated));
+      } catch (e) {
+        // Storage disabled or quota exceeded
+      }
+    }
+  }, [post?.slug]);
+
   // Structured Data Schema for Google News & SEO
+  const rawImage = post.ogImage || post.featuredImage || '/uploads/2026/06/Chennai-Super-Kings-2026.jpg';
+  const postImageUrl = rawImage.startsWith('http')
+    ? rawImage
+    : `https://superkingsden.com${rawImage.startsWith('/') ? '' : '/'}${rawImage}`;
+
+  const postUrl = `https://superkingsden.com/${post.slug}/`;
+
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'NewsArticle',
-    'headline': post.title,
-    'description': post.excerpt,
-    'image': [post.featuredImage],
-    'datePublished': post.date,
-    'dateModified': post.date,
+    '@type': post.schemaType || 'NewsArticle',
+    'headline': post.seoTitle || post.title,
+    'description': post.metaDescription || (post.excerpt || '').replace(/<[^>]+>/g, '').slice(0, 200),
+    'image': [postImageUrl],
+    'datePublished': post.publishedAt || post.date,
+    'dateModified': post.modified || post.date,
     'author': [
       {
         '@type': 'Person',
-        'name': post.author || 'Super Kings Den Staff'
-      }
+        'name': post.author || 'Super Kings Den Team',
+      },
     ],
     'publisher': {
       '@type': 'Organization',
       'name': 'Super Kings Den',
       'logo': {
         '@type': 'ImageObject',
-        'url': 'https://superkingsden.com/wp-content/uploads/2025/05/superkingsden-1.png'
-      }
+        'url': 'https://superkingsden.com/superkingsden-1.png',
+      },
     },
     'mainEntityOfPage': {
       '@type': 'WebPage',
-      '@id': `https://superkingsden.com/${post.slug}/`
-    }
+      '@id': postUrl,
+    },
+    'articleSection': post.category || 'CSK News',
+    'keywords': post.focusKeywords || 'CSK, Chennai Super Kings, IPL 2026',
+  };
+
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': 'Home',
+        'item': 'https://superkingsden.com',
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': post.category || 'News',
+        'item': 'https://superkingsden.com/csk-news',
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': post.title,
+        'item': postUrl,
+      },
+    ],
   };
 
   const shareUrl = `https://superkingsden.com/${post.slug}`;
@@ -43,11 +92,21 @@ export default function ArticleDetailView({ post, relatedPosts = [] }) {
 
   return (
     <article className="min-h-screen pb-16">
-      {/* Schema.org JSON-LD Script */}
+      {/* Schema.org Article & Breadcrumbs JSON-LD Scripts */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      {post.customSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: post.customSchema }}
+        />
+      )}
 
       {/* Top Breadcrumb Navigation */}
       <div className="bg-slate-100 dark:bg-slate-900/60 border-b border-slate-200 dark:border-white/5 py-3 mb-8">
@@ -62,7 +121,7 @@ export default function ArticleDetailView({ post, relatedPosts = [] }) {
             </Link>
             <ChevronRight className="w-3.5 h-3.5 flex-shrink-0" />
             <span className="text-amber-700 dark:text-csk-yellow font-semibold">
-              {post.franchise}
+              {post.category || 'News'}
             </span>
             <ChevronRight className="w-3.5 h-3.5 flex-shrink-0" />
             <span className="text-slate-800 dark:text-slate-200 truncate max-w-[240px] sm:max-w-md font-medium">
@@ -86,13 +145,10 @@ export default function ArticleDetailView({ post, relatedPosts = [] }) {
               <span>Back to Den Dispatches</span>
             </Link>
 
-            {/* Article Header Category Badges */}
+            {/* Article Header Category Badge */}
             <div className="flex flex-wrap items-center gap-2 mb-4">
-              <span className="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-csk-yellow text-csk-darkNavy shadow-sm">
-                {post.franchise} Official
-              </span>
-              <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-white/10">
-                {post.category}
+              <span className="px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-csk-yellow text-csk-darkNavy shadow-sm">
+                {post.category || 'CSK News'}
               </span>
             </div>
 
@@ -134,20 +190,13 @@ export default function ArticleDetailView({ post, relatedPosts = [] }) {
                 alt={post.title}
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  e.target.src = "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg";
+                  e.target.src = "/uploads/2026/06/Chennai-Super-Kings-2026.jpg";
                 }}
               />
               <div className="absolute bottom-3 right-3 px-3 py-1 rounded-md text-[10px] font-bold bg-black/75 text-csk-yellow backdrop-blur-md border border-csk-yellow/30">
                 SuperKingsDen Exclusives
               </div>
             </div>
-
-            {/* Excerpt / Lead paragraph */}
-            {post.excerpt && (
-              <div className="p-5 rounded-2xl bg-amber-50 dark:bg-csk-yellow/10 border-l-4 border-csk-yellow mb-8 text-slate-800 dark:text-slate-200 text-base sm:text-lg font-medium leading-relaxed italic">
-                "{post.excerpt}"
-              </div>
-            )}
 
             {/* Main Content HTML (Rendered from WordPress or Catalog) */}
             <div
@@ -250,13 +299,13 @@ export default function ArticleDetailView({ post, relatedPosts = [] }) {
                         alt={related.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         onError={(e) => {
-                          e.target.src = "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg";
+                          e.target.src = "/uploads/2026/06/Chennai-Super-Kings-2026.jpg";
                         }}
                       />
                     </div>
                     <div className="min-w-0 flex-1">
                       <span className="text-[10px] font-semibold text-amber-700 dark:text-csk-yellow uppercase tracking-wider block">
-                        {related.franchise} &bull; {related.category}
+                        {related.category || 'CSK News'}
                       </span>
                       <h3 className="text-xs font-semibold text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-csk-yellow transition line-clamp-2 leading-snug font-heading">
                         {related.title}
@@ -282,10 +331,10 @@ export default function ArticleDetailView({ post, relatedPosts = [] }) {
                 Support the Yellow Army on matchday. Listen to the official roar!
               </p>
               <Link
-                href="/all-time-xi"
+                href="/csk-team"
                 className="inline-block w-full py-2.5 rounded-xl border border-amber-500 dark:border-csk-yellow text-amber-700 dark:text-csk-yellow hover:bg-csk-yellow hover:text-csk-darkNavy font-semibold text-xs uppercase tracking-wider transition"
               >
-                Pick All-Time XI
+                Explore CSK Players
               </Link>
             </div>
 

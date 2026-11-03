@@ -114,25 +114,25 @@ export default function NotFound() {
           </span>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-semibold">
             <Link 
-              href="/squad" 
+              href="/csk-team" 
               className="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900 hover:text-amber-600 dark:hover:text-csk-yellow text-slate-700 dark:text-slate-300 transition border border-slate-200/60 dark:border-white/5"
             >
-              Squad Roster
+              CSK Team
             </Link>
             <Link 
-              href="/seasons" 
+              href="/standings" 
               className="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900 hover:text-amber-600 dark:hover:text-csk-yellow text-slate-700 dark:text-slate-300 transition border border-slate-200/60 dark:border-white/5"
             >
-              IPL Seasons
+              IPL Standings
             </Link>
             <Link 
-              href="/stats" 
+              href="/chennai-super-kings" 
               className="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900 hover:text-amber-600 dark:hover:text-csk-yellow text-slate-700 dark:text-slate-300 transition border border-slate-200/60 dark:border-white/5"
             >
-              CSK Stats
+              CSK Hub
             </Link>
             <Link 
-              href="/trophies" 
+              href="/csk-trophies" 
               className="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-900 hover:text-amber-600 dark:hover:text-csk-yellow text-slate-700 dark:text-slate-300 transition border border-slate-200/60 dark:border-white/5"
             >
               Trophies

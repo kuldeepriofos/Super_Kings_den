@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Globe, ArrowRight } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 
@@ -28,7 +29,7 @@ function TeamLogo({ src, alt, color, short }) {
   );
 }
 
-export default function FranchiseFamily({ selectedFranchise: propFranchise, onSelectFranchise: propOnSelect }) {
+export default function FranchiseFamily({ selectedFranchise: propFranchise, onSelectFranchise: propOnSelect, className = "mb-8 sm:mb-10" }) {
   const context = useApp ? useApp() : {};
   const selectedFranchise = propFranchise || context.selectedFranchise || 'CSK';
   const onSelectFranchise = propOnSelect || context.setSelectedFranchise || (() => {});
@@ -48,6 +49,7 @@ export default function FranchiseFamily({ selectedFranchise: propFranchise, onSe
       stadium: 'MA Chidambaram Stadium (Chepauk)',
       titles: '5× IPL Titles (2010, 2011, 2018, 2021, 2023) + 2× CLT20',
       captain: 'MS Dhoni / Ruturaj Gaikwad',
+      href: '/chennai-super-kings',
     },
     {
       id: 'JSK',
@@ -63,6 +65,7 @@ export default function FranchiseFamily({ selectedFranchise: propFranchise, onSe
       stadium: 'Wanderers Stadium, Johannesburg (The Bullring)',
       titles: 'SA20 Semifinalists & Contenders',
       captain: 'Faf du Plessis / Donovan Ferreira',
+      href: '/joburg-super-kings',
     },
     {
       id: 'TSK',
@@ -78,11 +81,12 @@ export default function FranchiseFamily({ selectedFranchise: propFranchise, onSe
       stadium: 'Grand Prairie Stadium, Dallas, Texas',
       titles: 'MLC Playoff Contenders',
       captain: 'Faf du Plessis',
+      href: '/texas-super-kings',
     }
   ];
 
   return (
-    <section className="mb-14">
+    <section className={className}>
       {/* Section Header */}
       <div className="flex items-center space-x-2.5 mb-6">
         <div className="w-2.5 h-7 bg-csk-yellow rounded-full flex-shrink-0"></div>
@@ -90,7 +94,7 @@ export default function FranchiseFamily({ selectedFranchise: propFranchise, onSe
           <h2 className="text-xl sm:text-2xl font-semibold uppercase font-heading tracking-tight text-slate-900 dark:text-white flex items-center">
             The Super Kings Global Family
           </h2>
-          <p className="text-xs text-slate-500 dark:text-slate-400">
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 sm:mt-1.5">
             One Roar, Three Continents: India &bull; South Africa &bull; United States
           </p>
         </div>
@@ -98,17 +102,11 @@ export default function FranchiseFamily({ selectedFranchise: propFranchise, onSe
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {franchises.map((f) => {
-          const isSelected = selectedFranchise === f.id;
-
           return (
-            <div
+            <Link
               key={f.id}
-              onClick={() => onSelectFranchise(f.id)}
-              className={`sports-card group relative rounded-2xl p-6 border transition-all duration-300 cursor-pointer flex flex-col justify-between ${
-                isSelected 
-                  ? 'border-csk-yellow ring-2 ring-csk-yellow/30 bg-amber-50/40 dark:bg-csk-yellow/10 shadow-csk-glow'
-                  : 'border-slate-200 dark:border-csk-borderNavy hover:border-csk-yellow/60'
-              }`}
+              href={f.href}
+              className="sports-card group relative rounded-2xl p-6 border transition-all duration-300 cursor-pointer flex flex-col justify-between border-slate-200 dark:border-csk-borderNavy hover:border-csk-yellow/80 hover:shadow-csk-glow bg-white dark:bg-slate-900/60"
             >
               <div>
                 {/* Team Logo + Country Badge */}
@@ -145,12 +143,12 @@ export default function FranchiseFamily({ selectedFranchise: propFranchise, onSe
               </div>
 
               <div className="pt-3 border-t border-slate-200 dark:border-white/10 flex items-center justify-between text-xs font-semibold">
-                <span className="text-amber-700 dark:text-csk-yellow uppercase tracking-wider text-[11px] group-hover:translate-x-0.5 transition transform flex items-center">
-                  {isSelected ? 'Currently Viewing' : `Explore ${f.short}`} <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                <span className="text-amber-700 dark:text-csk-yellow uppercase tracking-wider text-[11px] font-bold group-hover:translate-x-0.5 transition transform flex items-center">
+                  Explore {f.short} Hub <ArrowRight className="w-3.5 h-3.5 ml-1" />
                 </span>
                 <span className="text-[10px] text-slate-400 font-semibold">{f.country}</span>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>

@@ -2,20 +2,16 @@ import React from 'react';
 import { Brain } from 'lucide-react';
 import QuizCard from '../../components/QuizCard';
 import FanZone from '../../components/FanZone';
+import { buildPageMetadata } from '../../lib/pagesManager';
 
-export const metadata = {
-  title: 'CSK Fan Quiz & Super Kings Trivia Challenge',
-  description: 'Test your Chennai Super Kings knowledge! Answer trivia questions about MS Dhoni, Chepauk records, IPL finals, and historic Super Kings milestones.',
-  alternates: {
-    canonical: 'https://superkingsden.com/quiz',
-  },
-  openGraph: {
+export async function generateMetadata() {
+  return buildPageMetadata('/quiz', {
     title: 'CSK Fan Quiz & Super Kings Trivia Challenge | Super Kings Den',
-    description: 'Are you a true Whistle Podu devotee? Prove your knowledge in the ultimate Super Kings trivia test.',
-    url: 'https://superkingsden.com/quiz',
-    siteName: 'Super Kings Den',
-  },
-};
+    description: 'Test your Chennai Super Kings knowledge! Answer trivia questions about MS Dhoni, Chepauk records, IPL finals, and historic Super Kings milestones.',
+    canonical: 'https://superkingsden.com/quiz/',
+    ogImage: '/uploads/2026/06/Chennai-Super-Kings-2026.jpg',
+  });
+}
 
 export default function QuizPage() {
   return (

@@ -1,33 +1,27 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { useApp } from '../context/AppContext';
 import SearchModal from './SearchModal';
-import { MOCK_POSTS } from '../data/mockData';
-import { fetchLivePosts } from '../services/api';
-import { useRouter } from 'next/navigation';
+import postsIndex from '../data/postsIndex.json';
 
 export default function GlobalSearchWrapper() {
   const { searchOpen, setSearchOpen } = useApp();
-  const [posts, setPosts] = useState(MOCK_POSTS);
-  const router = useRouter();
+  const pathname = usePathname();
 
+  // Close search modal when route changes
   useEffect(() => {
-    fetchLivePosts().then(res => {
-      if (res && res.length > 0) {
-        setPosts(res);
-      }
-    });
-  }, []);
+    setSearchOpen(false);
+  }, [pathname, setSearchOpen]);
 
   return (
     <SearchModal
       isOpen={searchOpen}
       onClose={() => setSearchOpen(false)}
-      posts={posts}
-      onSelectPost={(post) => {
+      posts={postsIndex}
+      onSelectPost={() => {
         setSearchOpen(false);
-        router.push(`/${post.slug}`);
       }}
     />
   );

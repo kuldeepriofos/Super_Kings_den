@@ -42,7 +42,7 @@ export default function AllTimeXI() {
             <h2 className="text-xl sm:text-2xl font-semibold uppercase font-heading tracking-tight text-slate-900 dark:text-white flex items-center">
               Pick Your All-Time CSK XI &bull; Fan Voting
             </h2>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 sm:mt-1.5">
               Select your legendary 11 players across 18 glorious years of Super Kings history
             </p>
           </div>

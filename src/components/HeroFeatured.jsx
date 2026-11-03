@@ -5,14 +5,14 @@ import Link from 'next/link';
 import { Flame, Clock, Sparkles, ChevronRight, User } from 'lucide-react';
 
 
-export default function HeroFeatured({ posts }) {
+export default function HeroFeatured({ posts, className = "mb-8 sm:mb-10" }) {
   if (!posts || posts.length === 0) return null;
 
   const leadStory = posts[0];
   const sideStories = posts.slice(1, 4);
 
   return (
-    <section className="mb-12">
+    <section className={className}>
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
         <div className="flex items-center space-x-2.5">
           <div className="w-2.5 h-7 bg-csk-yellow rounded-full flex-shrink-0"></div>
@@ -20,7 +20,7 @@ export default function HeroFeatured({ posts }) {
             <h2 className="text-xl sm:text-2xl font-semibold uppercase font-heading tracking-tight text-slate-900 dark:text-white flex items-center">
               Top Headlines
             </h2>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 sm:mt-1.5">
               Live Updates &bull; 2026 Season Coverage
             </p>
           </div>
@@ -40,7 +40,7 @@ export default function HeroFeatured({ posts }) {
               alt={leadStory.title}
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-90"
               onError={(e) => {
-                e.target.src = "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg";
+                e.target.src = "/uploads/2026/06/Chennai-Super-Kings-2026.jpg";
               }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-transparent"></div>
@@ -50,7 +50,7 @@ export default function HeroFeatured({ posts }) {
           <div className="relative z-10 p-6 sm:p-8">
             <div className="flex flex-wrap items-center gap-2 mb-3">
               <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide bg-csk-yellow text-csk-darkNavy shadow-md">
-                {leadStory.franchise} &bull; {leadStory.category}
+                {leadStory.category || 'CSK News'}
               </span>
               <span className="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-white/15 backdrop-blur-md text-white border border-white/20 flex items-center">
                 <Flame className="w-3 h-3 mr-1 text-red-400" /> Featured
@@ -100,12 +100,9 @@ export default function HeroFeatured({ posts }) {
                   alt={post.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                   onError={(e) => {
-                    e.target.src = "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg";
+                    e.target.src = "/uploads/2026/06/Chennai-Super-Kings-2026.jpg";
                   }}
                 />
-                <span className="absolute top-1 left-1 px-1.5 py-0.5 rounded text-[9px] font-bold uppercase bg-slate-900/90 text-csk-yellow border border-csk-yellow/40">
-                  {post.franchise}
-                </span>
               </div>
 
               {/* Text */}

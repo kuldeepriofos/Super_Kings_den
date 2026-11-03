@@ -1,4 +1,4 @@
-// All 770 articles from the Super Kings Den Sitemap catalog
+// All articles from the Super Kings Den Sitemap catalog
 export const SITEMAP_POSTS = [
   {
     "id": 1000,
@@ -11,7 +11,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 19, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/player-of-the-series-is-something-new-i-achieved-in-my-life-and-it-feels-really-good-shivam-dube/",
     "featured": true
   },
@@ -26,7 +26,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 19, 2024",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/shivam-dube-wins-first-man-of-series-award-for-india/",
     "featured": true
   },
@@ -41,7 +41,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 21, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/daryl-mitchell-stars-with-70-vs-pak-nz-take-4-0-lead-in-t20i-series/",
     "featured": true
   },
@@ -56,7 +56,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 23, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/spin-duo-of-ashwin-jadeja-only-indians-in-icc-test-team-of-the-year/",
     "featured": true
   },
@@ -71,7 +71,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 25, 2024",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-puts-3-word-story-to-support-wife-utkarsha-during-maharashtra-vs-uttrakhand-match/",
     "featured": true
   },
@@ -86,7 +86,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 28, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ravindra-jadeja-milestones-to-watch-out-for-in-2024/",
     "featured": false
   },
@@ -101,7 +101,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 28, 2024",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csks-rachin-ravindra-wins-icc-emerging-player-of-the-year-award/",
     "featured": false
   },
@@ -116,7 +116,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/what-kind-of-son-am-i-deepak-chahar-defends-decision-to-skip-south-african-tour/",
     "featured": false
   },
@@ -131,7 +131,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/shivam-dube-explosive-century-in-ranji-trophy-fuels-comeback-aspirations/",
     "featured": false
   },
@@ -146,7 +146,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 30, 2024",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ravindra-jadeja-and-kl-rahul-ruled-out-of-team-india-for-second-test-against-england/",
     "featured": false
   },
@@ -161,7 +161,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 31, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/matheesha-pathirana-shines-as-desert-vipers-outclass-mi-emirates-in-ilt20-thriller/",
     "featured": false
   },
@@ -176,7 +176,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 15, 2024",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/imran-tahir-takes-500th-t20-wicket-becomes-fourth-player-to-milestone/",
     "featured": false
   },
@@ -191,7 +191,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 15, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csks-moeen-ali-takes-a-hat-trick-in-2024-bpl/",
     "featured": false
   },
@@ -206,7 +206,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 19, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/indias-jad-ball-thrashes-englands-bazball-jadeja-shines-on-home-ground-rajkot-with-bat-and-ball-in-3rd-test/",
     "featured": false
   },
@@ -221,7 +221,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 24, 2024",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/trouble-for-csk-star-all-rounder-suffers-major-injury-a-month-before-ipl-2024-report/",
     "featured": false
   },
@@ -236,7 +236,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 25, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csks-deepak-chahar-exposes-new-fraud-in-india/",
     "featured": false
   },
@@ -251,7 +251,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 28, 2024",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/cool-victory-in-hometown-of-captain-cool-ravindra-jadeja-after-series-victory-in-ranchi/",
     "featured": false
   },
@@ -266,7 +266,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 28, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/watch-ms-dhonis-viral-appointment-letter-for-ticket-collector-job/",
     "featured": false
   },
@@ -281,7 +281,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 4, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/shardul-thakur-hits-maiden-ranji-trophy-century-helps-mumbai-stand-tall-against-tamil-nadu/",
     "featured": false
   },
@@ -296,7 +296,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 4, 2024",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/indo-caribbean-dandiya-ms-dhoni-dwayne-bravo-groove-in-style-at-anant-ambanis-pre-wedding-festivities/",
     "featured": false
   },
@@ -311,7 +311,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 5, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/shardul-thakur-wins-potm-in-ranji-trophy-semifinal-with-all-round-brilliance-against-tamil-nadu/",
     "featured": false
   },
@@ -326,7 +326,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 14, 2024",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2024-chennai-super-kings-handed-injury-scare-after-pathirana-sustains-hamstring-problem/",
     "featured": false
   },
@@ -341,7 +341,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 15, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/heroic-shardul-thakur-experiences-his-ranji-groundhog-day/",
     "featured": false
   },
@@ -356,7 +356,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 19, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2024-matheesha-pathirana-injured-mustafizur-rahman-may-have-to-step-up-for-chennai-super-kings/",
     "featured": false
   },
@@ -371,7 +371,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 19, 2024",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/rishabh-pant-ignored-ms-dhoni-as-he-named-this-legendary-keeper-his-all-time-idol/",
     "featured": false
   },
@@ -386,7 +386,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 20, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/kuldeep-yadav-reveals-ms-dhonis-massive-impact-on-his-bowling-wanted-him-to-play-more-because/",
     "featured": false
   },
@@ -401,7 +401,7 @@ export const SITEMAP_POSTS = [
     "date": "May 17, 2024",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csks-deshpande-and-kotians-record-breaking-partnership-in-ranji-trophy-quarterfinals/",
     "featured": false
   },
@@ -416,7 +416,7 @@ export const SITEMAP_POSTS = [
     "date": "May 18, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/thala-ms-dhoni-joins-chennai-super-kings-in-chennai-ahead-of-ipl-2024-internet-explodes/",
     "featured": false
   },
@@ -431,7 +431,7 @@ export const SITEMAP_POSTS = [
     "date": "May 29, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/i-will-take-care-of-your-surgery-fan-who-invaded-pitch-to-meet-ms-dhoni-reveals-promise-made-by-his-idol/",
     "featured": false
   },
@@ -446,7 +446,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 3, 2024",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ajinkya-rahane-joins-leicestershire-for-county-season-amid-india-hopes/",
     "featured": false
   },
@@ -461,7 +461,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 18, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/david-wiese-retires-from-international-cricket-after-namibias-t20-world-cup-campaign/",
     "featured": false
   },
@@ -476,7 +476,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 3, 2024",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/ind-vs-zim-shivam-dube-replaces-nitish-reddy-in-indias-squad-for-zimbabwe-t20i-series/",
     "featured": false
   },
@@ -491,7 +491,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 15, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/zim-vs-ind-tushar-deshpande-makes-india-debut-pacers-wife-filled-with-pride/",
     "featured": false
   },
@@ -506,7 +506,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 17, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/please-continue-to-care-for-radhika-ms-dhonis-advice-to-anant-ambani-post-wedding/",
     "featured": false
   },
@@ -521,7 +521,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 18, 2024",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-set-to-open-super-kings-academy-in-sydney-soon/",
     "featured": false
   },
@@ -536,7 +536,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 26, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/maheesh-theekshana-reveals-how-ms-dhoni-helped-tackle-sweep-shot-against-him/",
     "featured": false
   },
@@ -551,7 +551,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 27, 2024",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ind-vs-sl-pathirana-picks-4-fer-in-maiden-match-against-india/",
     "featured": false
   },
@@ -566,7 +566,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 27, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-applauds-new-recruit-sameer-rizvi-for-a-ton-ahead-of-ipl-2024/",
     "featured": false
   },
@@ -581,7 +581,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 30, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/sameer-rizvi-csks-million-dollar-signee-smashes-triple-ton-in-colonel-ck-nayudu-trophy/",
     "featured": false
   },
@@ -596,7 +596,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 30, 2024",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/heres-why-ms-dhoni-cant-play-for-chennai-owned-franchise-in-sa20-league/",
     "featured": false
   },
@@ -611,7 +611,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 30, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/csk-captain-ms-dhoni-adorns-bat-with-childhood-friend-sports-shop-sticker-during-nets-return/",
     "featured": false
   },
@@ -626,7 +626,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 30, 2024",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-named-the-captain-of-ipl-greatest-team-of-all-time/",
     "featured": false
   },
@@ -641,7 +641,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 30, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/reports-ms-dhonis-csk-teams-up-with-katrina-kaif-as-brand-ambassador-for-ipl-2024/",
     "featured": false
   },
@@ -656,7 +656,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 30, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/csk-captain-ms-dhoni-important-for-a-leader-to-earn-respect-with-deeds-rather-than-words/",
     "featured": false
   },
@@ -671,7 +671,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 30, 2024",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-invited-for-ram-temple-pran-pratistha/",
     "featured": false
   },
@@ -686,7 +686,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 30, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/prime-sports-owner-reacts-to-dhoni-doning-his-brand-sticker-ahead-of-ipl-2024/",
     "featured": false
   },
@@ -701,7 +701,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 30, 2024",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/watch-ms-dhoni-refuses-to-give-autograph-to-a-fans-hand/",
     "featured": false
   },
@@ -716,7 +716,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 31, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-to-continue-as-skipper-for-csk-in-ipl-2024-and-beyond-reports/",
     "featured": false
   },
@@ -731,7 +731,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 1, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-squad-full-player-list-for-ipl-2024/",
     "featured": false
   },
@@ -746,7 +746,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 2, 2024",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-vs-rcb-ipl-2024-preview-playing-11-prediction-venue-faqs/",
     "featured": false
   },
@@ -761,7 +761,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 3, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ravindra-jadeja-celerates-15-years-in-international-cricket/",
     "featured": false
   },
@@ -776,7 +776,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 3, 2024",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ravindra-jadeja-set-to-miss-3rd-test-against-england-reports/",
     "featured": false
   },
@@ -791,7 +791,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 3, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ive-always-given-my-best-for-my-country-ravindra-jadeja-announces-t20i-retirement/",
     "featured": false
   },
@@ -806,7 +806,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 3, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ind-vs-eng-3rd-test-ravindra-jadeja-slams-4th-test-century-on-home-ground-rajkot/",
     "featured": false
   },
@@ -821,7 +821,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 3, 2024",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ravindra-jadeja-apologize-through-insta-story-for-runout-debacle/",
     "featured": false
   },
@@ -836,7 +836,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 3, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/watch-james-anderson-mimics-ravindra-jadejas-sword-century-celebration-one-ball-after-sarfaraz-khan-run-out/",
     "featured": false
   },
@@ -851,7 +851,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 3, 2024",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ravindra-jadeja-strongly-denies-fathers-nonsense-allegations-condemns-attempt-to-tarnish-wife-rivabas-image/",
     "featured": false
   },
@@ -866,7 +866,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 3, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2024-to-kick-off-in-chennai-on-march-22/",
     "featured": false
   },
@@ -881,7 +881,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 3, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/major-blow-for-csk-devon-convay-ruled-out-of-ipl-2024-until-may/",
     "featured": false
   },
@@ -896,7 +896,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 3, 2024",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-unveil-new-jersey-for-the-upcoming-ipl-2024/",
     "featured": false
   },
@@ -911,7 +911,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 3, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-to-start-practice-camp-for-ipl-2024-on-march-1-deepak-chahar-confirms/",
     "featured": false
   },
@@ -926,7 +926,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 3, 2024",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/https-superkingsden-com-ms-dhoni-ipl-salary-evolution/",
     "featured": false
   },
@@ -941,7 +941,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 4, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/shivam-dube-earns-well-deserved-spot-in-indias-t20-world-cup-squad-csk-captain-gaikwad-misses-out/",
     "featured": false
   },
@@ -956,7 +956,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 4, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/maharashtra-cricket-association-names-ruturaj-gaikwad-as-captain-for-ranji-trophy-2024-25/",
     "featured": false
   },
@@ -971,7 +971,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 6, 2024",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/masterstroke-fans-go-berserk-over-ms-dhonis-cameo-in-goat-movie/",
     "featured": false
   },
@@ -986,38 +986,8 @@ export const SITEMAP_POSTS = [
     "date": "Sep 6, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/brendon-mccullum-takes-on-dual-role-as-england-white-ball-and-test-coach/",
-    "featured": false
-  },
-  {
-    "id": 1066,
-    "slug": "mustafizur-rahman",
-    "title": "Mustafizur Rahman",
-    "excerpt": "Complete analysis and coverage: Mustafizur Rahman. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Sep 8, 2024",
-    "readingTime": "4 min read",
-    "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/mustafizur-rahman/",
-    "featured": false
-  },
-  {
-    "id": 1067,
-    "slug": "matheesha-pathirana",
-    "title": "Matheesha Pathirana",
-    "excerpt": "Complete analysis and coverage: Matheesha Pathirana. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Sep 8, 2024",
-    "readingTime": "5 min read",
-    "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/matheesha-pathirana/",
     "featured": false
   },
   {
@@ -1031,7 +1001,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 8, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/duleep-trophy-2024-25-ruturaj-gaikwad-receives-dhoni-like-treatment-by-pitch-invader-at-anantpura/",
     "featured": false
   },
@@ -1046,7 +1016,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 8, 2024",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-seen-dancing-with-ishan-kishan-at-ambani-wedding/",
     "featured": false
   },
@@ -1061,7 +1031,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 8, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/former-csk-cricketer-faf-du-plessis-gives-autographs-on-ms-dhonis-picture-and-csk-jersey-pictures-go-viral/",
     "featured": false
   },
@@ -1076,7 +1046,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 8, 2024",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/what-is-the-story-behind-ms-dhoni-iconic-jersey-number-7/",
     "featured": false
   },
@@ -1091,7 +1061,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 8, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/list-chennai-super-kings-ipl-squad-from-2008-to-2024-updated/",
     "featured": false
   },
@@ -1106,53 +1076,8 @@ export const SITEMAP_POSTS = [
     "date": "Sep 9, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/5-time-ipl-champions-csk-set-to-adorn-etihad-airways-on-their-yellove-jersey/",
-    "featured": false
-  },
-  {
-    "id": 1074,
-    "slug": "rachin-ravindra",
-    "title": "Rachin Ravindra",
-    "excerpt": "Complete analysis and coverage: Rachin Ravindra. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Sep 9, 2024",
-    "readingTime": "7 min read",
-    "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/rachin-ravindra/",
-    "featured": false
-  },
-  {
-    "id": 1075,
-    "slug": "ajinkya-rahane",
-    "title": "Ajinkya Rahane",
-    "excerpt": "Complete analysis and coverage: Ajinkya Rahane. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Sep 9, 2024",
-    "readingTime": "3 min read",
-    "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/ajinkya-rahane/",
-    "featured": false
-  },
-  {
-    "id": 1076,
-    "slug": "deepak-chahar",
-    "title": "Deepak Chahar",
-    "excerpt": "Complete analysis and coverage: Deepak Chahar. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Sep 9, 2024",
-    "readingTime": "4 min read",
-    "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/deepak-chahar/",
     "featured": false
   },
   {
@@ -1166,7 +1091,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 27, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-uncapped-player-rule-explained/",
     "featured": false
   },
@@ -1181,38 +1106,8 @@ export const SITEMAP_POSTS = [
     "date": "Sep 30, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-in-duleep-trophy/",
-    "featured": false
-  },
-  {
-    "id": 1079,
-    "slug": "matthew-hayden",
-    "title": "Matthew Hayden",
-    "excerpt": "Complete analysis and coverage: Matthew Hayden. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Sep 30, 2024",
-    "readingTime": "7 min read",
-    "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/matthew-hayden/",
-    "featured": false
-  },
-  {
-    "id": 1080,
-    "slug": "michael-hussey",
-    "title": "Michael Hussey",
-    "excerpt": "Complete analysis and coverage: Michael Hussey. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Oct 2, 2024",
-    "readingTime": "3 min read",
-    "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/michael-hussey/",
     "featured": false
   },
   {
@@ -1226,7 +1121,7 @@ export const SITEMAP_POSTS = [
     "date": "Oct 5, 2024",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/absolute-rubbish-tommy-smsek-csks-physio-slams-harbhajan-singh-for-fake-claims/",
     "featured": false
   },
@@ -1241,7 +1136,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 8, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/chennai-super-kings-csk-retentions-for-ipl-2025-a-quest-for-redemption/",
     "featured": false
   },
@@ -1256,7 +1151,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 19, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/cheteshwar-pujara-set-to-join-team-india-in-a-never-seen-avatar-in-bgt-2024-25/",
     "featured": false
   },
@@ -1271,7 +1166,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 25, 2024",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-fails-to-buy-back-loyal-pacers-deepak-chahar-and-tushar-deshpande-in-ipl-2025-mega-auction/",
     "featured": false
   },
@@ -1286,7 +1181,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 28, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/deepak-chahar-and-family-share-emotional-posts-on-csk-exit-after-ipl-2025-auction/",
     "featured": false
   },
@@ -1301,7 +1196,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 28, 2024",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/etihad-airways-takes-cricketing-loyalty-to-the-skies-with-csk-themed-airbus/",
     "featured": false
   },
@@ -1316,7 +1211,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 3, 2024",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/yash-dayal-needs-to-hesitate-rcb-pacer-faces-backlash-for-flaunting-ms-dhoni-dismissal-in-ipl-2024/",
     "featured": false
   },
@@ -1331,7 +1226,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 4, 2024",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/we-havent-spoken-for-10-years-harbhajan-singh-opens-on-his-relationship-with-ms-dhoni/",
     "featured": false
   },
@@ -1346,7 +1241,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 5, 2024",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/smat-2025-csk-captain-ruturaj-gaikwad-dimolishes-services-bowling-attack-with-explosive-knock-of-97-runs/",
     "featured": false
   },
@@ -1361,23 +1256,8 @@ export const SITEMAP_POSTS = [
     "date": "Dec 22, 2024",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-announces-fedex-as-leading-sponsor-ahead-of-ipl-2025/",
-    "featured": false
-  },
-  {
-    "id": 1091,
-    "slug": "suresh-raina",
-    "title": "Suresh Raina",
-    "excerpt": "Complete analysis and coverage: Suresh Raina. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Jan 28, 2025",
-    "readingTime": "4 min read",
-    "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/suresh-raina/",
     "featured": false
   },
   {
@@ -1391,7 +1271,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 28, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/watch-ms-dhoni-wins-internet-with-his-gesture-towards-security-guard/",
     "featured": false
   },
@@ -1406,7 +1286,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/moeen-ali-to-play-for-joburg-super-kings-in-the-2024-edition-of-sa20-check-out-other-fresh-signings/",
     "featured": false
   },
@@ -1421,7 +1301,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/chennai-ms-dhoni-sakshi-dhoni-make-grand-appearance-at-lgm-trailer-launch-dhonis-first-production-project/",
     "featured": false
   },
@@ -1436,7 +1316,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/csk-pacer-deepak-chahar-challenges-shivam-dube-for-a-one-over-match-in-a-hilarious-banter/",
     "featured": false
   },
@@ -1451,7 +1331,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-plays-golf-with-former-us-president-donald-trump/",
     "featured": false
   },
@@ -1466,7 +1346,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ben-stokes-shines-on-odi-return-as-csk-star-breaks-multiple-records-with-magnificent-182-against-new-zealand/",
     "featured": false
   },
@@ -1481,7 +1361,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-won-lot-of-trophies-but-gautam-gambhir-declares-a-jaw-dropping-comment-on-india-legend-before-world-cup/",
     "featured": false
   },
@@ -1496,7 +1376,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/he-treats-me-like-a-deepak-chahar-reveals-why-he-always-gets-scolded-by-skipper-ms-dhoni/",
     "featured": false
   },
@@ -1511,7 +1391,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/m-s-dhoni-dons-a-vintage-inspired-new-haircut-by-aalim-hakim/",
     "featured": false
   },
@@ -1526,7 +1406,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/devon-conway-hits-first-century-of-odi-world-cup-2023/",
     "featured": false
   },
@@ -1541,7 +1421,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-mourns-unexpected-passing-of-gokulakrishnan-former-bcci-referee-and-tamil-nadu-coach/",
     "featured": false
   },
@@ -1556,7 +1436,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/smat-2023-ajinky-rahanes-76-helps-mumbai-start-season-with-a-win/",
     "featured": false
   },
@@ -1571,7 +1451,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 30, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/new-zealands-mitchell-santner-calls-chennai-home-away-from-home-after-taking-100-odi-wickets-against-afghanistan/",
     "featured": false
   },
@@ -1586,7 +1466,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 30, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/watch-jadejas-incredible-catch-graces-the-big-screen-sparking-wild-celebration-in-the-indian-dressing-room/",
     "featured": false
   },
@@ -1601,7 +1481,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 30, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/im-a-huge-ms-dhoni-fan-england-world-cup-captain-jos-buttler-praises-dhonis-cool-composer-behind-the-stumps/",
     "featured": false
   },
@@ -1616,7 +1496,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 3, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/smat-2023-csk-star-tushar-deshpande-takes-hat-trick-to-help-mumbai-decimate-mizoram/",
     "featured": false
   },
@@ -1631,7 +1511,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 3, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/watch-when-ms-dhoni-announced-his-arrival-with-magnificent-183-against-sri-lanka/",
     "featured": false
   },
@@ -1646,7 +1526,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 3, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mitchell-santner-of-newzealand-emerges-as-the-top-fielder-after-6-group-stage-games-in-ongoing-odi-world-cup/",
     "featured": false
   },
@@ -1661,7 +1541,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 3, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/cricket-world-cup-2023-englands-ben-stokes-to-have-knee-surgery-after-tournament/",
     "featured": false
   },
@@ -1676,7 +1556,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 3, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-most-hundreds-and-fifties-for-joburg-super-kings-in-sa20/",
     "featured": false
   },
@@ -1691,7 +1571,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 3, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/watch-ms-dhoni-signs-fans-bmw-internet-calls-it-worlds-most-valuable-car/",
     "featured": false
   },
@@ -1706,7 +1586,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 3, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/rishabh-pant-celebrates-diwali-with-ms-dhoni-pic-goes-viral/",
     "featured": false
   },
@@ -1721,7 +1601,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 3, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/breaking-csk-set-to-release-ben-stokes-ahead-of-2024-auction/",
     "featured": false
   },
@@ -1736,7 +1616,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 4, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/dhoni-spotted-sakshi-shares-wholesome-pic-with-ms-dhoni-netizens-call-them-cuties/",
     "featured": false
   },
@@ -1751,7 +1631,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 4, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/after-asian-games-victory-ruturaj-gaikwad-named-vice-captain-of-indian-t20i-team-for-australia-series/",
     "featured": false
   },
@@ -1766,7 +1646,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 4, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/pat-cummins-captaincy-swung-the-world-cup-final-in-australias-favour-suresh-raina/",
     "featured": false
   },
@@ -1781,7 +1661,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 5, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/sa20-2024-know-joburg-super-kings-full-schedule-fixtures-and-teams-news/",
     "featured": false
   },
@@ -1796,7 +1676,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 5, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/stokes-opts-out-of-ipl-2024-to-manage-workload-and-fitness/",
     "featured": false
   },
@@ -1811,7 +1691,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 5, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/my-favourite-batting-partner-was-ms-dhoni-gautam-gambhir/",
     "featured": false
   },
@@ -1826,7 +1706,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 5, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ind-vs-aus-ruturaj-gaikwad-becomes-3rd-indian-to-get-out-for-a-diamond-duck-in-t20is/",
     "featured": false
   },
@@ -1841,7 +1721,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 5, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/chennai-super-kings-csk-squad-list-of-players-retained-released-and-traded-ahead-of-ipl-2024-auction/",
     "featured": false
   },
@@ -1856,7 +1736,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 5, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-confirmed-for-ipl-2024-as-csk-announce-retention-list-ahead-of-mini-auction-stokes-jamieson-released/",
     "featured": false
   },
@@ -1871,7 +1751,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 6, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-spotted-driving-mercedes-g-class-with-a-special-number-plate/",
     "featured": false
   },
@@ -1886,7 +1766,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 6, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/thalaivan-is-thalaivan-csk-ceo-offers-a-big-statement-on-whether-ms-dhoni-will-play-ipl-2024/",
     "featured": false
   },
@@ -1901,7 +1781,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 6, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-sends-a-message-that-ruturaj-gaikwad-reveals-how-the-legend-helped-him-visualise-the-situation/",
     "featured": false
   },
@@ -1916,7 +1796,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 6, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/rishabh-pant-to-be-ms-dhonis-replacement-at-csk-in-ipl-2025-ex-india-stars-big-claim/",
     "featured": false
   },
@@ -1931,7 +1811,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 6, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/faf-du-plessis-hints-international-return-for-south-africa-ahead-of-t20-world-cup-2024/",
     "featured": false
   },
@@ -1946,7 +1826,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 7, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2024-allegations-arise-as-csk-fans-claim-mi-made-unlawful-trade-approach-following-matheesha-pathiranas-social-media-post/",
     "featured": false
   },
@@ -1961,7 +1841,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 7, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/rishabh-pant-spotted-partying-with-ms-dhoni-in-mumbai/",
     "featured": false
   },
@@ -1976,7 +1856,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 7, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhonis-iconic-no-7-jersey-retired-no-longer-up-for-grabs/",
     "featured": false
   },
@@ -1991,7 +1871,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 7, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-instagram-followers/",
     "featured": false
   },
@@ -2006,7 +1886,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 10, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ravindra-jadeja-joins-elite-club-with-6000-international-runs-and-600-wickets/",
     "featured": false
   },
@@ -2021,7 +1901,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 10, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhonis-game-changing-wisdom-that-unleashed-shai-hopes-dramatic-six-hitting-spree-in-west-indies-win-over-england/",
     "featured": false
   },
@@ -2036,7 +1916,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 10, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/madras-hc-sentences-ips-officer-sampath-kumar-to-15-days-of-imprisonment-after-ms-dhoni-files-contempt-of-court-petition/",
     "featured": false
   },
@@ -2051,7 +1931,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 10, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/who-is-samir-rizvi-uncapped-player-bought-for-8-40cr-by-chennai-super-kings-in-mini-auction/",
     "featured": false
   },
@@ -2066,7 +1946,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 10, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/they-are-the-reason-why-we-do-all-this-daryl-mitchell-opens-up-after-csk-bought-him-for-14-crores-rs/",
     "featured": false
   },
@@ -2081,7 +1961,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 11, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/rachin-ravindra-injury-doubtful-for-sa-odi-after-pakistan-blow/",
     "featured": false
   },
@@ -2096,7 +1976,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 11, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/india-vs-england-shivam-dube-fifty-and-pandyas-partnership-help-india-seal-t20-series/",
     "featured": false
   },
@@ -2111,7 +1991,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 11, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ravindra-jadejas-record-in-tests-in-australia-decoding-csk-stars-domination-on-the-australian-soil/",
     "featured": false
   },
@@ -2126,7 +2006,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 11, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/must-be-an-rcb-fan-ruturaj-gaikwad-chooses-violence-to-jab-back-in-bangalore/",
     "featured": false
   },
@@ -2141,7 +2021,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 11, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/list-of-brand-endorsed-by-ms-dhoni/",
     "featured": false
   },
@@ -2156,7 +2036,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 13, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csks-fiery-response-to-reports-of-approaching-mi-for-rohit-surya-and-bumrahs-trade/",
     "featured": false
   },
@@ -2171,7 +2051,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 13, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/pride-of-2024-rizvi-to-ravindra-checkout-list-of-players-bought-by-csk-in-ipl-2024-auction/",
     "featured": false
   },
@@ -2186,7 +2066,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 13, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/how-will-csk-fans-feel-dhonis-graceful-reply-when-asked-to-support-rcb/",
     "featured": false
   },
@@ -2201,7 +2081,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 14, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/i-am-still-pinching-myself-because-of-how-grateful-and-lucky-i-am-daryl-mitchell/",
     "featured": false
   },
@@ -2216,7 +2096,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 14, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-set-to-miss-test-series-against-south-africa-due-to-injury-sustained-in-2nd-odi/",
     "featured": false
   },
@@ -2231,7 +2111,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 14, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/suresh-raina-to-join-lucknow-super-giants-as-mentor/",
     "featured": false
   },
@@ -2246,7 +2126,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 14, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ind-vs-sa-1st-test-shardul-thakur-hit-on-helmet-undergoes-concussion-test-after-swelling-on-forehead/",
     "featured": false
   },
@@ -2261,7 +2141,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 14, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ex-csk-player-ambati-rayudu-joins-ysrcp-in-andhra-chief-ministers-presence/",
     "featured": false
   },
@@ -2276,7 +2156,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 19, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/chennai-super-kings-sponsors/",
     "featured": false
   },
@@ -2291,7 +2171,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 19, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/watch-rachin-ravindras-heartwarming-autograph-gesture-for-csk-fan-goes-viral/",
     "featured": false
   },
@@ -2306,7 +2186,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 19, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-and-mc-stan-team-up-for-fire-boltt/",
     "featured": false
   },
@@ -2321,7 +2201,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 19, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/after-going-to-the-csk-camp-i-understood-that-i-have-to-prepare-differently-for-each-format-shaik-rasheed/",
     "featured": false
   },
@@ -2336,7 +2216,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 20, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csks-daryl-mitchells-fifty-powers-new-zealand-to-their-highest-t20is-total-against-pakistan/",
     "featured": false
   },
@@ -2351,7 +2231,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 20, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/if-dhoni-is-rating-me-as-very-good-player-then-how-can-i-not-play-well-shivam-dube-after-match-winning-show-vs-afg/",
     "featured": false
   },
@@ -2366,7 +2246,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 24, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/list-highest-individual-scores-for-csk-in-ipl/",
     "featured": false
   },
@@ -2381,7 +2261,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 24, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-smokes-multiple-records-with-maiden-t20i-century-vs-australia-enters-elite-list-starring-kohli-rohit/",
     "featured": false
   },
@@ -2396,7 +2276,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 27, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/how-ms-dhoni-shaped-d-gukeshs-chess-mindset-with-ipl-influence/",
     "featured": false
   },
@@ -2411,7 +2291,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 28, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/thala-for-a-reason-memes-take-over-internet-that-features-ms-dhoni-watch/",
     "featured": false
   },
@@ -2426,7 +2306,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 28, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-ipl-records-csk-record/",
     "featured": false
   },
@@ -2441,7 +2321,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 29, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/story-of-ms-dhoni-ipl-auction-2008-how-much-csk-paid-for-him/",
     "featured": false
   },
@@ -2456,7 +2336,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 29, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-highest-score-in-ipl/",
     "featured": false
   },
@@ -2471,7 +2351,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 3, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/bcci-chews-over-stephen-flemings-appointment-as-head-coach-of-team-india/",
     "featured": false
   },
@@ -2486,7 +2366,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 4, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/rachin-ravindra-kane-williamson-break-records-in-champions-trophy-semi-final-2025/",
     "featured": false
   },
@@ -2501,7 +2381,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 4, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/mera-mann-like-thoda-aur-sanju-samson-hopes-ms-dhoni-plays-ipl-2025/",
     "featured": false
   },
@@ -2516,7 +2396,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 4, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mi-vs-csk-the-el-classico-of-ipl-to-reignite-on-23-march/",
     "featured": false
   },
@@ -2531,7 +2411,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 4, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ravindra-jadeja-cryptic-instagram-post-sparks-retirement-rumors/",
     "featured": false
   },
@@ -2546,7 +2426,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 11, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ambati-rayudu-set-to-become-the-only-second-indian-to-feature-in-cpl-2023-joins-st-kitts-nevis-patriots/",
     "featured": false
   },
@@ -2561,7 +2441,7 @@ export const SITEMAP_POSTS = [
     "date": "May 14, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/orange-cap-winners-for-chennai-super-kings-updated/",
     "featured": false
   },
@@ -2576,7 +2456,7 @@ export const SITEMAP_POSTS = [
     "date": "May 14, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/what-is-name-of-chennai-super-kings-mascot-in-ipl/",
     "featured": false
   },
@@ -2591,7 +2471,7 @@ export const SITEMAP_POSTS = [
     "date": "May 18, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/jadeja-breaks-record-in-test-ranking/",
     "featured": false
   },
@@ -2606,7 +2486,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 11, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-yorkshire-county-championship/",
     "featured": false
   },
@@ -2621,7 +2501,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 11, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-inducted-icc-hall-of-fame-2025/",
     "featured": false
   },
@@ -2636,7 +2516,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 17, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/i-will-always-be-a-thalas-fan-ambati-rayudu-silences-trolls-for-ms-dhoni-comment/",
     "featured": false
   },
@@ -2651,7 +2531,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 18, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/joburg-super-kings-new-signings/",
     "featured": false
   },
@@ -2666,7 +2546,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 18, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/dewald-brevis-the-baby-ab/",
     "featured": false
   },
@@ -2681,7 +2561,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 22, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/dewald-brevis-next-game-changer/",
     "featured": false
   },
@@ -2696,7 +2576,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 30, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-trademark-captain-cool-2025/",
     "featured": false
   },
@@ -2711,7 +2591,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/will-ruturaj-gaikwad-return-as-captain/",
     "featured": false
   },
@@ -2726,7 +2606,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/complete-super-kings-network/",
     "featured": false
   },
@@ -2741,7 +2621,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/the-rise-of-shivam-dube/",
     "featured": false
   },
@@ -2756,7 +2636,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/the-ravindra-jadeja-effect-his-role-impact-on-csks-ipl-2025-journey/",
     "featured": false
   },
@@ -2771,7 +2651,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/will-ms-dhoni-play-in-ipl-2026/",
     "featured": false
   },
@@ -2786,7 +2666,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-vs-gt-highlights-ipl-2025/",
     "featured": false
   },
@@ -2801,7 +2681,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-set-to-return-to-field-but-not-csk-in-ipl-2025/",
     "featured": false
   },
@@ -2816,7 +2696,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/r-ashwin-awarded-padma-shri-by-president-droupadi-murmu/",
     "featured": false
   },
@@ -2831,7 +2711,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/messi-and-dhoni-share-screen-in-lays-india-ad/",
     "featured": false
   },
@@ -2846,7 +2726,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ashwin-steps-back-from-csk-discussions-on-his-youtube-channel-amid-criticism/",
     "featured": false
   },
@@ -2861,7 +2741,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/new-csk-signee-jamie-overton-attempts-r-ashwin-like-run-out-in-bbl/",
     "featured": false
   },
@@ -2876,7 +2756,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/if-you-play-good-cricket-you-dont-need-pr-ms-dhoni-subtly-shuts-haters-calling-him-out-for-having-strong-pr/",
     "featured": false
   },
@@ -2891,7 +2771,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/devon-conway-and-wife-kim-conway-blessed-with-a-daughter-olivia/",
     "featured": false
   },
@@ -2906,7 +2786,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ive-never-seen-a-leader-like-ms-dhoni-sanjay-goenka-praises-csk-captain/",
     "featured": false
   },
@@ -2921,7 +2801,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/thala-dhoni-leaves-shah-rukh-khan-amitabh-bachchan-secures-most-no-of-brand-endorsements-in-2024/",
     "featured": false
   },
@@ -2936,7 +2816,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-recruit-shreyas-gopal-shines-in-smat-2024-25-with-hat-trick-after/",
     "featured": false
   },
@@ -2951,7 +2831,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/watch-ms-dhoni-dancing-on-garhwali-folk-song-gulabi-sharara-with-wife-sakshi/",
     "featured": false
   },
@@ -2966,7 +2846,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/new-csk-signee-shreyas-gopal-shines-in-smat-2024-25-with-fifer-against-assam/",
     "featured": false
   },
@@ -2981,7 +2861,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/vijay-shankar-hits-hardik-pandya-for-back-to-back-sixes-in-smat-2025/",
     "featured": false
   },
@@ -2996,7 +2876,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/never-ending-craze-tamil-artist-hiphop-tamizha-donnes-thala-dhoni-jersey-in-paris-concert/",
     "featured": false
   },
@@ -3011,7 +2891,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mlc-2025-waf-vs-tsk-highlights/",
     "featured": false
   },
@@ -3026,7 +2906,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/why-texas-super-kings-could-win-mlc/",
     "featured": false
   },
@@ -3041,7 +2921,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 4, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ravindra-jadeja-wtc-double-record/",
     "featured": false
   },
@@ -3056,7 +2936,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/even-if-i-am-in-a-wheelchair-ms-dhoni-breaks-silence-on-ipl-2025-retirement-rumours/",
     "featured": false
   },
@@ -3071,7 +2951,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-stumping-in-ipl-2025-lightning-fast-glovework-dismisses-suryakumar/",
     "featured": false
   },
@@ -3086,7 +2966,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-vs-rcb-ipl-2025-csk-aims-to-settle-scores-with-rcb/",
     "featured": false
   },
@@ -3101,7 +2981,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/why-ms-dhoni-is-batting-lower-in-ipl-2025-csk-coach-explains/",
     "featured": false
   },
@@ -3116,7 +2996,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2025-csk-vs-kkr-preview-playing-11-prediction-venue-faqs/",
     "featured": false
   },
@@ -3131,7 +3011,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2025-csk-vs-lsg-preview-playing-11-prediction-venue-faqs/",
     "featured": false
   },
@@ -3146,7 +3026,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/devon-conway-becomes-first-csk-player-to-be-retired-out-sparks-debate-online/",
     "featured": false
   },
@@ -3161,7 +3041,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-csk-captain-again-replaces-ruturaj-gaikwad-for-rest-of-ipl-2025/",
     "featured": false
   },
@@ -3176,7 +3056,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-fuels-for-last-ipl-2025-retirement-rumors-with-cryptic-hint/",
     "featured": false
   },
@@ -3191,7 +3071,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/sridharan-sriram-joins-csk-impact-on-ipl-2025-spin-attack/",
     "featured": false
   },
@@ -3206,7 +3086,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-time-table-2025-complete-fixtures-and-venues-for-the-upcoming-season/",
     "featured": false
   },
@@ -3221,7 +3101,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/20-year-old-shaik-rasheed-replaces-ruturaj-gaikwad-in-playing-11-in-csk-vs-lsg/",
     "featured": false
   },
@@ -3236,7 +3116,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2025-csk-vs-lsg-highlights-super-kings-end-5-match-losing-streak-win-by-5-wickets-against-lucknow/",
     "featured": false
   },
@@ -3251,7 +3131,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/dewald-brevis-joins-csk/",
     "featured": false
   },
@@ -3266,7 +3146,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/raina-slams-csks-2025-season/",
     "featured": false
   },
@@ -3281,7 +3161,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/why-is-dewald-brevis-called-baby-ab-ex-mumbai-indians-player-joins-csk-squad-in-ipl-2025/",
     "featured": false
   },
@@ -3296,7 +3176,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/urvil-patel-appears-for-mid-season-csk-trails/",
     "featured": false
   },
@@ -3311,7 +3191,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ayush-mhatre-shines-bright-youngster-brings-hope-to-csks-disappointing-ipl-2025-campaign/",
     "featured": false
   },
@@ -3326,7 +3206,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-signs-urvil-patel-mid-season-as-replacement-of-vansh-bedi/",
     "featured": false
   },
@@ -3341,7 +3221,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2025-csk-vs-kkr-preview-playing-11-prediction-venue-faqs-2/",
     "featured": false
   },
@@ -3356,7 +3236,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/who-is-urvil-patel-csks-newest-debutant-shines-in-ipl-2025-match-against-kkr/",
     "featured": false
   },
@@ -3371,7 +3251,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/dewald-brevis-csk-ipl-2025-return/",
     "featured": false
   },
@@ -3386,7 +3266,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/gt-vs-csk-ipl-2025-check-out-the-preview-of-chennai-super-kings-last-match/",
     "featured": false
   },
@@ -3401,7 +3281,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2024-csk-vs-gt-chennais-new-faces-shine-bright-as-they-overpower-gujarat/",
     "featured": false
   },
@@ -3416,7 +3296,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/milestone-alert-ms-dhoni-sets-new-record-for-most-run-outs-in-ipl-history/",
     "featured": false
   },
@@ -3431,7 +3311,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/csk-vs-gt-ipl-2024-shivam-dube-smashes-7th-ipl-fifty/",
     "featured": false
   },
@@ -3446,7 +3326,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/sameer-rizvi-announces-his-arrival-in-ipl-2024-in-style-with-first-ball-six-to-rashid-khan/",
     "featured": false
   },
@@ -3461,7 +3341,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/i-think-ruturaj-gaikwad-will-be-a-good-option-suresh-raina-weighs-in-on-future-chennai-super-kings-skipper/",
     "featured": false
   },
@@ -3476,7 +3356,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/breaking-ms-dhoni-steps-down-as-csk-captain-ruturaj-gaikwad-replaces-the-legend/",
     "featured": false
   },
@@ -3491,7 +3371,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-rolls-back-years-with-iconic-helicopter-shot-in-csks-training-tones-down-fitness-concerns/",
     "featured": false
   },
@@ -3506,7 +3386,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-creates-history-becomes-first-csk-player-ever-to/",
     "featured": false
   },
@@ -3521,7 +3401,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/lsg-vs-csk-ipl-2024-ruturaj-gaikwads-ton-gets-eclipsed-by-marcus-stoiniss-innings-in-the-chase-csk-fail-to-evenge/",
     "featured": false
   },
@@ -3536,7 +3416,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-yet-to-find-the-right-combination-head-coach-stephen-fleming/",
     "featured": false
   },
@@ -3551,7 +3431,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ex-csk-player-matthew-hayden-choose-nicholas-pooran-over-ms-dhoni-as-cleanest-hitter-in-the-world/",
     "featured": false
   },
@@ -3566,7 +3446,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/injured-conway-out-of-ipl-csk-add-richard-gleeson-to-squad/",
     "featured": false
   },
@@ -3581,7 +3461,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/who-is-richard-gleeson-recently-added-to-csk-squad-as-conways-replacement/",
     "featured": false
   },
@@ -3596,7 +3476,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ravindra-jadeja-the-cricket-thalapathy/",
     "featured": false
   },
@@ -3611,7 +3491,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ipl-2024-csk-vs-kkr-ravindra-jadeja-with-all-round-performance-etches-name-in-history/",
     "featured": false
   },
@@ -3626,7 +3506,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/cricket-thalapathy-sir-ravindra-jadeja-earns-a-new-title-after-dominance-over-kkr/",
     "featured": false
   },
@@ -3641,7 +3521,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/the-success-weve-had-things-we-have-been-doing-dont-want-to-change-single-bit-of-it-ruturaj-gaikwad-on-keeping-csks-tradition-intact/",
     "featured": false
   },
@@ -3656,7 +3536,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/which-players-will-csk-retain-ahead-of-ipl-2025-auction/",
     "featured": false
   },
@@ -3671,7 +3551,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/srikkanth-accuses-bcci-of-favouritism-in-hot-headed-rant-over-ruturaj-gaikwad-snub-from-t20-world-cup-namedrops-gill/",
     "featured": false
   },
@@ -3686,7 +3566,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ravindra-jadeja-wins-the-most-player-of-the-match-awards-for-csk-in-ipl-history/",
     "featured": false
   },
@@ -3701,7 +3581,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhonis-enduring-legacy-a-fans-touching-gesture-amidst-csk-vs-gt-clash/",
     "featured": false
   },
@@ -3716,7 +3596,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-vs-rcb-ipl-2024-preview-playing-11-prediction-venue-faqs-2/",
     "featured": false
   },
@@ -3731,7 +3611,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/players-csk-can-target-in-ipl-mega-auction/",
     "featured": false
   },
@@ -3746,7 +3626,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/will-do-whats-best-for-csk-ms-dhoni-on-ipl-retirement/",
     "featured": false
   },
@@ -3761,7 +3641,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 12, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ayush-mhatre-slams-maiden-youth-test-century/",
     "featured": false
   },
@@ -3776,7 +3656,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 15, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ravindra-jadejas-lone-battle-in-lords-test-goes-in-vain/",
     "featured": false
   },
@@ -3791,7 +3671,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 17, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/sakshi-dhoni-joins-fans-in-celebrating-vintage-mahi-shares-heartwarming-post-for-pant/",
     "featured": false
   },
@@ -3806,7 +3686,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 19, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-yorkshire-exit-reason/",
     "featured": false
   },
@@ -3821,7 +3701,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 22, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/reasons-behind-the-joburg-super-kings-batting-woes-in-sa20-league-2024/",
     "featured": false
   },
@@ -3836,7 +3716,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 22, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/reeza-hendricks-exploit-go-in-vain-against-as-jsk-succumb-against-royals/",
     "featured": false
   },
@@ -3851,7 +3731,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 22, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-vs-mict-rassie-van-der-dussen-rickelton-hand-super-kings-first-derby-defeat-in-sa20/",
     "featured": false
   },
@@ -3866,7 +3746,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 22, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/texas-super-kings-mlc-2025-journey-ends-season-recap-and-key-performances/",
     "featured": false
   },
@@ -3881,7 +3761,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 27, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ravindra-jadeja-century-in-4th-test-vs-england/",
     "featured": false
   },
@@ -3896,7 +3776,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 28, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/texas-super-kings-captain-in-mlc-2025/",
     "featured": false
   },
@@ -3911,7 +3791,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 28, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/what-went-wrong-for-tsk-in-mlc-2025/",
     "featured": false
   },
@@ -3926,7 +3806,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 30, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/harbhajan-singh-gets-candid-you-think-im-jealous-what-he-told-ashwin-will-surprise-you/",
     "featured": false
   },
@@ -3941,7 +3821,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-player-retention-list-all-players-retained-by-joburg-super-kings-ahead-of-sa20-league-2025/",
     "featured": false
   },
@@ -3956,7 +3836,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-playoff-record-reaching-third-straight-sa20-playoffs/",
     "featured": false
   },
@@ -3971,7 +3851,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-vs-pc-sa20-2025-preview-predicted-11-venue-faqs-2/",
     "featured": false
   },
@@ -3986,7 +3866,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-vs-pr-sa20-2025-preview-predicted-11-venue-faqs-2/",
     "featured": false
   },
@@ -4001,7 +3881,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-vs-dsg-sa20-2025-preview-predicted-11-venue-faqs-2/",
     "featured": false
   },
@@ -4016,7 +3896,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/faf-du-plessis-and-wayne-madsen-fire-as-jsk-qualify-for-sa20-semifinals/",
     "featured": false
   },
@@ -4031,7 +3911,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-vs-mict-sa20-2025-preview-predicted-11-venue-faqs/",
     "featured": false
   },
@@ -4046,7 +3926,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-vs-dsg-sa20-2025-preview-predicted-11-venue-faqs/",
     "featured": false
   },
@@ -4061,7 +3941,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-vs-pc-sa20-2025-preview-predicted-11-venue-faqs/",
     "featured": false
   },
@@ -4076,7 +3956,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-vs-sec-sa20-2025-preview-predicted-11-venue-faqs/",
     "featured": false
   },
@@ -4091,7 +3971,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/joburg-super-kings-retains-leus-du-plooy-ahead-of-sa20-2025/",
     "featured": false
   },
@@ -4106,7 +3986,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/sa20-2024-top-5-performers-of-joburg-super-kings/",
     "featured": false
   },
@@ -4121,7 +4001,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/watch-romario-shepherd-takes-an-unbelievable-blinder-in-sa20/",
     "featured": false
   },
@@ -4136,7 +4016,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/joburg-super-kings-captain-faf-du-plessis-sees-sa20-as-platform-for-international-return/",
     "featured": false
   },
@@ -4151,7 +4031,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/faf-du-plessis-dream-to-conquer-mlc-2024-shattered-tsk-lose-to-sfu-by-10-runs-in-a-nail-biter/",
     "featured": false
   },
@@ -4166,7 +4046,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/tsk-vs-waf-mlc-2024-faf-du-plessis-smashes-century-in-rain-affected-clash-against-washington-freedom/",
     "featured": false
   },
@@ -4181,7 +4061,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/players-bought-by-texas-super-king/",
     "featured": false
   },
@@ -4196,7 +4076,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/the-making-of-chennai-super-kings-to-release-new-docu-series-know-release-dates/",
     "featured": false
   },
@@ -4211,7 +4091,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/the-making-of-ruturaj-gaikwad-csks-journey-with-their-star-opener/",
     "featured": false
   },
@@ -4226,7 +4106,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-turns-into-animal-in-2025-ad-for-sandeep-reddy-vanga/",
     "featured": false
   },
@@ -4241,7 +4121,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-vs-rcb-matheesha-pathirana-ruled-out-as-chennai-faces-injury-setback/",
     "featured": false
   },
@@ -4256,7 +4136,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-400-ipl-match-csks-thala-scripts-history-at-the-iconic-ma-chidambaram-stadium/",
     "featured": false
   },
@@ -4271,7 +4151,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/feel-i-am-old-ms-dhoni-on-ipl-retirement-after-csk-secure-final-win/",
     "featured": false
   },
@@ -4286,7 +4166,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/dewald-brevis-hits-second-fifty-for-csk-narrowly-breaks-suresh-rainas-record/",
     "featured": false
   },
@@ -4301,7 +4181,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 1, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csks-ayush-mhatre-to-captain-india-in-u-19-tour-of-australia/",
     "featured": false
   },
@@ -4316,7 +4196,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 4, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/dewald-brevis-named-domestic-player-of-the-year/",
     "featured": false
   },
@@ -4331,7 +4211,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 11, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhonis-witty-hint-on-ipl-2026-comeback/",
     "featured": false
   },
@@ -4346,7 +4226,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 12, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/dewald-brevis-breaks-records-in-style-with-century/",
     "featured": false
   },
@@ -4361,7 +4241,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 13, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ravichandran-ashwin-to-leave-chennai-super-kings-ahead-of-ipl-2026/",
     "featured": false
   },
@@ -4376,7 +4256,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 13, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/harbhajans-honest-take-on-ashwins-jealousy/",
     "featured": false
   },
@@ -4391,7 +4271,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 13, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/baby-ab-ready-to-carry-legacy/",
     "featured": false
   },
@@ -4406,7 +4286,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 13, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/sanju-samson-csk-news-is-rr-captain-replacing-ms-dhoni-at-csk/",
     "featured": false
   },
@@ -4421,7 +4301,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 13, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csks-road-to-ipl-2026-lessons-from-2025-future-game-plan/",
     "featured": false
   },
@@ -4436,7 +4316,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 14, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ayush-mhatre-to-lead-mumbai/",
     "featured": false
   },
@@ -4451,7 +4331,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 14, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/jay-jani-viral-ms-dhoni-fan-dies/",
     "featured": false
   },
@@ -4466,7 +4346,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 15, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mlc-2025-tsk-vs-miny-highlight/",
     "featured": false
   },
@@ -4481,7 +4361,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 15, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mlc-2025-tsk-vs-lakr-highlight/",
     "featured": false
   },
@@ -4496,7 +4376,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 15, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mlc-2025-tsk-vs-so-highlights/",
     "featured": false
   },
@@ -4511,7 +4391,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 15, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/tsk-vs-miny/",
     "featured": false
   },
@@ -4526,7 +4406,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 15, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mlc-2025-tsk-vs-waf-qualifier-preview/",
     "featured": false
   },
@@ -4541,7 +4421,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 15, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mlc-2025-qualifier-2-tsk-vs-miny/",
     "featured": false
   },
@@ -4556,7 +4436,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 15, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/cognizant-named-major-league-crickets-first-title-sponsor/",
     "featured": false
   },
@@ -4571,7 +4451,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 15, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-captain-list/",
     "featured": false
   },
@@ -4586,7 +4466,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 16, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/dewald-brevis-csk-signing-sparks-controversy/",
     "featured": false
   },
@@ -4601,7 +4481,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 18, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-takes-wicket/",
     "featured": false
   },
@@ -4616,7 +4496,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 20, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/shivam-dube-picked-for-asia-cup-2025/",
     "featured": false
   },
@@ -4631,7 +4511,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 24, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/donovan-ferreira-earns-south-africa-callup/",
     "featured": false
   },
@@ -4646,7 +4526,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 24, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/cheteshwar-pujara-retires-from-cricket/",
     "featured": false
   },
@@ -4661,7 +4541,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 25, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-matches-2025-full-sa20-schedule-fixtures-dates-venues/",
     "featured": false
   },
@@ -4676,7 +4556,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 26, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/chennai-super-kings-head-coach/",
     "featured": false
   },
@@ -4691,7 +4571,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 27, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ravichandran-ashwin-ipl-reitrement/",
     "featured": false
   },
@@ -4706,7 +4586,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 27, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ayush-mhatre-player-profile-scorecard-stats-journey-so-far/",
     "featured": false
   },
@@ -4721,7 +4601,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 31, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-mentor-role/",
     "featured": false
   },
@@ -4736,7 +4616,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 2, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/with-only-%e2%82%b913-crore-left-deepak-chahar-reflects-on-csk-failing-to-buy-him-in-ipl-2025-mega-auction/",
     "featured": false
   },
@@ -4751,7 +4631,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 2, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ravichandran-ashwin-returns-to-chennai-super-kings-in-new-role-ahead-of-ipl-2025/",
     "featured": false
   },
@@ -4766,7 +4646,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 2, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2025-csk-vs-rr-preview-playing-11-prediction-venue-faqs/",
     "featured": false
   },
@@ -4781,7 +4661,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 3, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/n-srinivasan-returns-as-csk-chairman/",
     "featured": false
   },
@@ -4796,7 +4676,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 5, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-likely-to-return/",
     "featured": false
   },
@@ -4811,7 +4691,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 9, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-buy-nandre-burger/",
     "featured": false
   },
@@ -4826,7 +4706,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 11, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/chennai-super-kings-vs-mumbai-indians-2025-the-el-clasico-of-ipl-on-march-23/",
     "featured": false
   },
@@ -4841,7 +4721,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 11, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/chennai-super-kings-vs-mumbai-indians-head-to-head-match-ups-team-records-top-performances/",
     "featured": false
   },
@@ -4856,7 +4736,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 11, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/chepauk-revamp/",
     "featured": false
   },
@@ -4871,7 +4751,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 11, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/how-can-chennai-super-kings-csk-still-make-the-playoffs-of-ipl-2025/",
     "featured": false
   },
@@ -4886,7 +4766,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 12, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/chennai-super-kings-vs-royal-challengers-bengaluru-ipl-2025-ms-dhoni-vs-virat-kohli-for-the-last-time/",
     "featured": false
   },
@@ -4901,23 +4781,8 @@ export const SITEMAP_POSTS = [
     "date": "Sep 12, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2024-final-likely-to-be-held-in-chennais-ma-chidambaram-stadium-on-may-26/",
-    "featured": false
-  },
-  {
-    "id": 1327,
-    "slug": "faf-du-plessis",
-    "title": "Faf Du Plessis",
-    "excerpt": "Complete analysis and coverage: Faf Du Plessis. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Sep 14, 2025",
-    "readingTime": "5 min read",
-    "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/faf-du-plessis/",
     "featured": false
   },
   {
@@ -4931,7 +4796,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 14, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/joburg-super-kings-expensive-players/",
     "featured": false
   },
@@ -4946,23 +4811,8 @@ export const SITEMAP_POSTS = [
     "date": "Sep 18, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/kieron-pollard-names-ms-dhoni-the-best-captain/",
-    "featured": false
-  },
-  {
-    "id": 1330,
-    "slug": "nandre-burger",
-    "title": "Nandre Burger",
-    "excerpt": "Complete analysis and coverage: Nandre Burger. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Sep 19, 2025",
-    "readingTime": "3 min read",
-    "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/nandre-burger/",
     "featured": false
   },
   {
@@ -4976,7 +4826,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/a-line-has-to-be-drawn-robin-uthappa-voices-disappointment-on-rachin-ravindra-training-in-csk-academy/",
     "featured": false
   },
@@ -4991,7 +4841,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/a-statistical-rivalry-chennai-super-kings-vs-mumbai-indians-in-the-ipl/",
     "featured": false
   },
@@ -5006,7 +4856,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/abey-sans-to-lene-de-usko-virat-kohlis-hilarious-interaction-with-ravindra-jadeja-during-csk-vs-rcb-grabs-attention/",
     "featured": false
   },
@@ -5021,7 +4871,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/aiden-markram-joins-texas-super-kings-in-major-league-cricket/",
     "featured": false
   },
@@ -5036,7 +4886,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ajinkya-rahane-scores-maiden-ton-for-leicestershire-in-clash-against-glamorgan/",
     "featured": false
   },
@@ -5051,7 +4901,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ambati-rayudu-proposes-rohit-sharma-as-potential-csk-captain-for-2025-if-ms-dhoni-retires/",
     "featured": false
   },
@@ -5066,7 +4916,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ayush-mhatre-india-captain-u-19-team-vaibhav-suryavanshi-included/",
     "featured": false
   },
@@ -5081,7 +4931,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/bcci-allows-uncapped-player-rule-for-ms-dhoni-reports/",
     "featured": false
   },
@@ -5096,7 +4946,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/bcci-makes-changes-in-player-retention-rules-in-ipl-allows-up-to-six-retentions/",
     "featured": false
   },
@@ -5111,7 +4961,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/breaking-ms-dhoni-receives-legal-notice-regarding-old-business-dispute/",
     "featured": false
   },
@@ -5126,7 +4976,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/breaking-ravichandran-ashwin-announces-retirement-from-international-cricket/",
     "featured": false
   },
@@ -5141,7 +4991,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/captain-of-texas-super-kings/",
     "featured": false
   },
@@ -5156,7 +5006,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/chennai-super-kings-invite-mumbai-teenager-ayush-mhatre-for-mid-season-trials/",
     "featured": false
   },
@@ -5171,7 +5021,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/chennai-super-kings-vs-mumbai-indians-ipl-2025-preview-playing-11-prediction-venue-faqs/",
     "featured": false
   },
@@ -5186,7 +5036,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-advocates-sustainable-initiavies-by-partnering-with-iit-madras/",
     "featured": false
   },
@@ -5201,7 +5051,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-invites-17-year-old-ayush-mhatre-for-trails-ahead-of-ipl-2025-mega-auction/",
     "featured": false
   },
@@ -5216,7 +5066,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-legend-dwayne-bravo-announces-retirement-set-to-make-final-bow-in-cpl/",
     "featured": false
   },
@@ -5231,7 +5081,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-legend-dwayne-bravo-retires-from-all-formats-of-cricket/",
     "featured": false
   },
@@ -5246,7 +5096,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/csk-might-think-to-leave-ms-dhoni-out-for-a-match-ricky-ponting/",
     "featured": false
   },
@@ -5261,7 +5111,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-pacer-deepak-chahar-picks-6-wicket-haul-for-rajasthan-in-vijay-hazare-trophy/",
     "featured": false
   },
@@ -5276,7 +5126,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/csk-retention-list-ipl-2025-uncapped-ms-dhoni-retained-with-8-crore-pay-cut/",
     "featured": false
   },
@@ -5291,7 +5141,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/csk-sign-17-year-old-ayush-mhatre-after-gaikwad-injury/",
     "featured": false
   },
@@ -5306,7 +5156,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/csk-shares-suresh-raina-helping-limping-ms-dhoni-video-goes-viral/",
     "featured": false
   },
@@ -5321,7 +5171,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-sparks-excitement-with-social-media-announcement-of-potential-retentions-ahead-of-ipl-2025/",
     "featured": false
   },
@@ -5336,7 +5186,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/csk-star-ruturaj-gaikwad-smashes-86-in-ranji-trophy-to-help-bgt-selection/",
     "featured": false
   },
@@ -5351,7 +5201,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-vs-gt-ipl-2024-preview-playing-11-prediction-venue-faqs/",
     "featured": false
   },
@@ -5366,7 +5216,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-vs-kkr-ipl-2024-preview-playing-11-prediction-venue-faqs/",
     "featured": false
   },
@@ -5381,7 +5231,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-vs-pbks-ipl-2025-dream-11-prediction-preview-and-more/",
     "featured": false
   },
@@ -5396,7 +5246,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-vs-rcb-record-breaking-viewership-for-ipl-2024-opening-day-reports/",
     "featured": false
   },
@@ -5411,7 +5261,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-vs-rr-ipl-2025-preview-playing-11-prediction-venue-faqs/",
     "featured": false
   },
@@ -5426,7 +5276,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/cskvslsg-ms-dhoni-thanks-lucknow-crowd-for-huge-support/",
     "featured": false
   },
@@ -5441,7 +5291,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/daryl-mitchell-set-to-miss-mlc-2024-for-texas-super-kings/",
     "featured": false
   },
@@ -5456,7 +5306,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/days-after-ms-dhonis-new-season-new-role-post-created-flutter-csk-captain-reveals-details/",
     "featured": false
   },
@@ -5471,7 +5321,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/dc-vs-csk-ipl-2024-preview-playing-11-prediction-venue-faqs/",
     "featured": false
   },
@@ -5486,7 +5336,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/deepak-chahar-remains-hopeful-about-csk-buying-him-in-ipl-2025-mega-auction/",
     "featured": false
   },
@@ -5501,7 +5351,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/determined-to-keep-ms-dhoni-csk-awaits-release-of-ipl-retention-rules/",
     "featured": false
   },
@@ -5516,7 +5366,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/devon-conway-opts-out-of-new-zealand-central-contract/",
     "featured": false
   },
@@ -5531,7 +5381,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/devon-conway-puts-new-zealand-in-strong-position-but-equals-an-unwanted-record/",
     "featured": false
   },
@@ -5546,7 +5396,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/dhoni-fans-go-crazy-after-cristiano-rolando-post-uefa-euro-from-fifa-world-cup-thala-touch/",
     "featured": false
   },
@@ -5561,7 +5411,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/duleep-trophy-2024-25-ruturaj-gaikwad-forced-to-retire-on-second-ball-bcci-criticised/",
     "featured": false
   },
@@ -5576,7 +5426,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/dwayne-bravo-leaves-csk-to-join-kkr-as-mentor-ahead-of-ipl-2025/",
     "featured": false
   },
@@ -5591,7 +5441,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/england-all-rounder-moeen-ali-announces-international-retirement/",
     "featured": false
   },
@@ -5606,7 +5456,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/fans-flood-internet-with-thala-for-a-reason-memes-as-donald-trump-wins-usa-presidential-elections-heres-why/",
     "featured": false
   },
@@ -5621,7 +5471,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/gangsters-killed-entire-family-suresh-raina-on-sudden-ipl-2020-season-withdrawal/",
     "featured": false
   },
@@ -5636,7 +5486,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/gautam-gambhirs-bold-ms-dhoni-verdict-puts-all-fan-theories-to-bed/",
     "featured": false
   },
@@ -5651,7 +5501,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/grand-prairie-cricket-stadium/",
     "featured": false
   },
@@ -5666,7 +5516,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/have-spoken-to-dhoni-and-gaikwad-csk-ceo-on-signing-rishabh-pant-ahead-of-ipl-2025-mega-auction/",
     "featured": false
   },
@@ -5681,7 +5531,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/heroic-performances-from-csk-debutants-mustafizur-and-rachin-ravindra-propels-team-to-record-win/",
     "featured": false
   },
@@ -5696,7 +5546,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ambati-rayudu-talks-about-csk/",
     "featured": false
   },
@@ -5711,7 +5561,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-playoffs-record-in-ipl-history/",
     "featured": false
   },
@@ -5726,7 +5576,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-to-finally-join-wpl-new-initiatives-taken-by-franchise-owners-checkout/",
     "featured": false
   },
@@ -5741,7 +5591,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-vs-srh-ipl-2025-preview-playing-11-prediction-venue-faqs/",
     "featured": false
   },
@@ -5756,23 +5606,8 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csks-anshul-kamboj-strikes-on-test-debut-removes-ben-duckett-to-open-account/",
-    "featured": false
-  },
-  {
-    "id": 1384,
-    "slug": "devon-conway",
-    "title": "Devon Conway",
-    "excerpt": "Complete analysis and coverage: Devon Conway. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Sep 20, 2025",
-    "readingTime": "7 min read",
-    "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/devon-conway/",
     "featured": false
   },
   {
@@ -5786,7 +5621,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/gurjapneet-singh-injury-another-injury-scar-for-csk-amid-poor-run-in-ipl-2025/",
     "featured": false
   },
@@ -5801,7 +5636,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2025-mega-auction-rules/",
     "featured": false
   },
@@ -5816,7 +5651,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-batting-lineup/",
     "featured": false
   },
@@ -5831,7 +5666,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mlc-2025-tsk-vs-so-preview-playing-11-prediction-venue-faqs/",
     "featured": false
   },
@@ -5846,7 +5681,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mlc-2025-tsk-vs-waf-preview/",
     "featured": false
   },
@@ -5861,7 +5696,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mlc-2025-tsk-vs-wf-preview/",
     "featured": false
   },
@@ -5876,7 +5711,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-the-chase-captain-cool-shares-screen-with-r-madhavan/",
     "featured": false
   },
@@ -5891,7 +5726,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/rishabh-pant-to-csk-posts-thalaiva-captioned-post-on-instagram/",
     "featured": false
   },
@@ -5906,7 +5741,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/sanju-samson-join-csk/",
     "featured": false
   },
@@ -5921,7 +5756,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/tsk-vs-sfu-highlights/",
     "featured": false
   },
@@ -5936,7 +5771,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 20, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ayush-mhatre-ipl-debut-csks-young-star-smashes-32-off-15-vs-mi/",
     "featured": false
   },
@@ -5951,7 +5786,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/history-of-joburg-super-kings-from-sa20-origins-to-now/",
     "featured": false
   },
@@ -5966,7 +5801,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/how-can-chennai-super-kings-still-qualify-for-playoff-in-ipl-2024/",
     "featured": false
   },
@@ -5981,7 +5816,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/how-can-csk-retain-ms-dhoni-as-uncapped-player-in-ipl/",
     "featured": false
   },
@@ -5996,7 +5831,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/i-dont-know-whether-ms-dhoni-gives-honest-insights-of-relationship-with-virat-kohli/",
     "featured": false
   },
@@ -6011,7 +5846,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ind-vs-ban-1st-test-ravindra-jadeja-alongwith-ashwin-saves-india-after-top-order-collapse/",
     "featured": false
   },
@@ -6026,7 +5861,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ind-vs-zim-ruturaj-gaikwads-brilliant-77-helps-india-crush-zimbabwe-by-100-runs/",
     "featured": false
   },
@@ -6041,7 +5876,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ipl-2024-chennai-super-kings-ceo-kasi-viswanathan-reacts-on-ms-dhoni-stepping-down-from-captaincy/",
     "featured": false
   },
@@ -6056,7 +5891,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2024-sri-lankas-matheesha-pathirana-reaches-chennai-will-join-csk-squad-soon/",
     "featured": false
   },
@@ -6071,7 +5906,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ipls-big-break-for-ranchi-ka-gayle-robin-minz-father-says-dhoni-told-me-if-no-one-picks-him-we-will/",
     "featured": false
   },
@@ -6086,7 +5921,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/irfan-pathan-hookah-controversy/",
     "featured": false
   },
@@ -6101,7 +5936,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/jadeja-surpasses-zaheer-khan-to-become-fourth-highest-wicket-taker-in-test-cricket-for-india/",
     "featured": false
   },
@@ -6116,7 +5951,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/jadejas-special-tribute-from-chepauk-crowd-coincides-with-rachins-onslaught-as-csk-clarify-ravindra-confusion/",
     "featured": false
   },
@@ -6131,7 +5966,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/jamnagar-ms-dhoni-blazes-it-in-style-at-anant-ambani-wedding/",
     "featured": false
   },
@@ -6146,7 +5981,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/joburg-super-kings-full-squad-for-sa20/",
     "featured": false
   },
@@ -6161,7 +5996,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/kedar-jadhav-announces-retirement-from-all-forms-of-cricket/",
     "featured": false
   },
@@ -6176,7 +6011,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-vs-pr-sa20-2025-preview-predicted-11-venue-faqs/",
     "featured": false
   },
@@ -6191,7 +6026,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-vs-pc-donovan-ferrieras-fifty-helps-super-kings-register-first-win-this-season/",
     "featured": false
   },
@@ -6206,7 +6041,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-vs-mict-sa20-2025-preview-predicted-11-venue-faqs-2/",
     "featured": false
   },
@@ -6221,7 +6056,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-sings-matheesha-the-undertaker-pathirana-for-sa20-2025/",
     "featured": false
   },
@@ -6236,7 +6071,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/joburg-super-kings-retained-players-2026-full-sa20-retention-list/",
     "featured": false
   },
@@ -6251,7 +6086,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 22, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-retention-list-for-sa20-2026/",
     "featured": false
   },
@@ -6266,7 +6101,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mitchell-santner/",
     "featured": false
   },
@@ -6281,7 +6116,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-allegedly-duped-of-%e2%82%b915-crore-files-case-against-2-former-business-partners/",
     "featured": false
   },
@@ -6296,7 +6131,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-breaks-suresh-rainas-ipl-record-in-chepauk-stadium/",
     "featured": false
   },
@@ -6311,7 +6146,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-enjoys-a-little-piece-of-cake-celebrating-friends-birthday-at-gym/",
     "featured": false
   },
@@ -6326,7 +6161,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-flaunts-new-hairstyle-amid-ipl-retirement-rumours/",
     "featured": false
   },
@@ -6341,7 +6176,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-i-like-his-coolness-adam-gilchrist-names-top-3-wicket-keeper-batters/",
     "featured": false
   },
@@ -6356,7 +6191,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-punched-a-tv-screen-harbhajan-singh-reveals-thala-lost-his-cool/",
     "featured": false
   },
@@ -6371,7 +6206,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-reveals-he-batted-at-8-in-ipl-2024-to-give-shivam-dube-jadeja-more-chance-ahead-of-t20-wc/",
     "featured": false
   },
@@ -6386,7 +6221,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-slams-37-not-out-off-16-on-ipl-2024-batting-debut-internet-on-overdrive/",
     "featured": false
   },
@@ -6401,7 +6236,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-smashes-hardik-pandya-for-3-consecutive-sixes-in-vintage-mahi-style/",
     "featured": false
   },
@@ -6416,7 +6251,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/my-aim-is-to-play-100-test-matches-ajinkya-rahane/",
     "featured": false
   },
@@ -6431,7 +6266,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/my-heart-is-in-chennai-shivam-dube-visits-kateel-temple-expresses-gratitude-for-the-love/",
     "featured": false
   },
@@ -6446,7 +6281,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/my-heart-rate-was-up-ms-dhoni-reacts-after-team-india-clinch-icc-t20-world-cup-2024/",
     "featured": false
   },
@@ -6461,7 +6296,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/odi-world-cup-2023-ben-stokes-is-on-track-to-return-to-englands-xi-against-south-africa-on-saturday/",
     "featured": false
   },
@@ -6476,7 +6311,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/on-mis-loss-vs-csk-hardik-pandyas-huge-man-behind-the-stumps-take-on-ms-dhoni/",
     "featured": false
   },
@@ -6491,7 +6326,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/rachin-ravindra-scores-maiden-champions-trophy-century-against-bangladesh/",
     "featured": false
   },
@@ -6506,7 +6341,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/ranji-trophy-shardul-thakur-shivam-dube-shine-for-mumbai-against-hapless-assam/",
     "featured": false
   },
@@ -6521,7 +6356,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ravindra-jadeja-surpasses-ishant-sharma-to-become-indias-fifth-highest-wicket-taker-in-test/",
     "featured": false
   },
@@ -6536,7 +6371,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ravindra-jadeja-virat-kohli-among-4-nominees-for-icc-mens-cricketer-of-the-year-2023/",
     "featured": false
   },
@@ -6551,7 +6386,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/rinku-singh-shares-ms-dhoni-advice-that-helped-him-rescue-india-after-top-order-collapse-against-bangladesh/",
     "featured": false
   },
@@ -6566,7 +6401,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-becomes-first-indian-batter-to-reach-2000-ipl-runs/",
     "featured": false
   },
@@ -6581,7 +6416,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-continues-to-shine-again-in-ranji-trophy-2024-with-scintillating-145-against-mumbai/",
     "featured": false
   },
@@ -6596,7 +6431,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-csks-rising-cricket-star-celebrates-another-year/",
     "featured": false
   },
@@ -6611,7 +6446,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-hits-century-in-deodhar-trophy/",
     "featured": false
   },
@@ -6626,7 +6461,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-in-doubt-for-csk-vs-delhi-capitals/",
     "featured": false
   },
@@ -6641,7 +6476,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-misses-out-on-well-deserved-century-in-comeback-ranji-trophy-match/",
     "featured": false
   },
@@ -6656,7 +6491,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-named-roi-team-captain-for-irani-trophy-2023-24/",
     "featured": false
   },
@@ -6671,7 +6506,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-set-to-lead-maharashtra-in-smat-2024-25/",
     "featured": false
   },
@@ -6686,7 +6521,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mithun-manhas-bcci-president/",
     "featured": false
   },
@@ -6701,7 +6536,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/texas-super-kings-name-faf-du-plessis-as-captain/",
     "featured": false
   },
@@ -6716,7 +6551,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mlc-2023-tsk-vs-so-match-10-faf-du-plessis-led-kings-face-abashing-8-wicket-loss/",
     "featured": false
   },
@@ -6731,7 +6566,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 23, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mlc-2023-eliminator-mi-new-york-beat-texas-super-kings-to-enter-final/",
     "featured": false
   },
@@ -6746,7 +6581,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/sa20-faf-du-plessis-explosive-20-ball-50-helps-joburg-super-kings-defeat-mi-cape-town/",
     "featured": false
   },
@@ -6761,7 +6596,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/sa20-joburg-super-kings-squad-2024-updated/",
     "featured": false
   },
@@ -6776,7 +6611,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/shame-to-even-appeal-ruturaj-gaikwad-fumes-over-pathetic-dismissal-in-ranji-trophy/",
     "featured": false
   },
@@ -6791,7 +6626,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/shardul-thakur-undergoes-successful-foot-surgery-set-to-miss-3-months-of-cricket/",
     "featured": false
   },
@@ -6806,7 +6641,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/shivam-dube-welcomed-by-tamil-nadu-college-crowd-with-dhoni-dhoni-chants/",
     "featured": false
   },
@@ -6821,7 +6656,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/shivam-dubes-all-round-show-gives-india-six-wicket-win-over-afghanistan-in-first-t20/",
     "featured": false
   },
@@ -6836,7 +6671,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/shivam-dubes-rise-in-ipl-2024-ignites-t20-world-cup-selection-chances/",
     "featured": false
   },
@@ -6851,7 +6686,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/srh-vs-csk-ipl-2024-preview-playing-11-prediction-venue-faqs/",
     "featured": false
   },
@@ -6866,7 +6701,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/super-debut-for-noor-ahmad-khaleel-ahmed-restrict-mi-to-155/",
     "featured": false
   },
@@ -6881,7 +6716,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/tamil-actor-vijay-incurs-ms-dhoni-definitely-not-reference-in-goat-movie-trailer-fans-go-berserk/",
     "featured": false
   },
@@ -6896,7 +6731,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/temporary-hearing-loss-lsg-stars-wife-issues-warning-on-ms-dhonis-entry/",
     "featured": false
   },
@@ -6911,7 +6746,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/tennis-ace-leander-paes-hails-thala-dhoni-on-instagram-ahead-of-ipl-2024/",
     "featured": false
   },
@@ -6926,7 +6761,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/texas-super-kings-announce-daryl-mitchell-as-their-overseas-signing-for-mlc-2024/",
     "featured": false
   },
@@ -6941,7 +6776,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/texas-super-kings-csk-buys-texas-franchise-in-major-league-cricket/",
     "featured": false
   },
@@ -6956,7 +6791,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/the-hundred-csk-and-kkr-engage-in-fiery-battle-to-attain-manchester-originals/",
     "featured": false
   },
@@ -6971,7 +6806,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/top-5-wild-card-picks-csk-could-target-for-ipl-2026-auction/",
     "featured": false
   },
@@ -6986,7 +6821,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/tsk-vs-lakr-mlc-2024-devon-conways-fifty-goes-in-vain-as-knight-riders-take-down-super-kings-by-12-runs/",
     "featured": false
   },
@@ -7001,7 +6836,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/tsk-vs-waf-mlc-2024-preview-playing-11-prediction-venue-faqs/",
     "featured": false
   },
@@ -7016,7 +6851,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/tushar-deshpande-gets-married-to-nabha-gaddamwar/",
     "featured": false
   },
@@ -7031,7 +6866,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/urvil-patel-shines-bright-on-ipl-debut/",
     "featured": false
   },
@@ -7046,7 +6881,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/video-of-ms-dhoni-smoking-hookah-on-new-year-party-goes-viral/",
     "featured": false
   },
@@ -7061,7 +6896,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/wanderers-stadium/",
     "featured": false
   },
@@ -7076,7 +6911,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/watch-ajinkya-rahane-rachin-ravindra-pull-off-splendid-relay-catch-to-dismiss-big-fish-virat-kohli/",
     "featured": false
   },
@@ -7091,7 +6926,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/watch-ms-dhoni-enjoys-family-time-in-ancestral-village-takes-blessings-from-elders/",
     "featured": false
   },
@@ -7106,7 +6941,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/watch-ms-dhonis-nostalgic-encounter-with-the-2011-world-cup-trophy/",
     "featured": false
   },
@@ -7121,7 +6956,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/watch-ravindra-jadeja-dismisses-steve-smith-with-a-stunner-leaving-everyone-stunned/",
     "featured": false
   },
@@ -7136,7 +6971,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/watch-ruturaj-gaikwad-recreates-iconic-sweep-against-australia-internet-cant-stop-talking-about-it/",
     "featured": false
   },
@@ -7151,7 +6986,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ziva-dhoni-shares-heartwarming-fathers-day-video-for-ms-dhoni/",
     "featured": false
   },
@@ -7166,23 +7001,8 @@ export const SITEMAP_POSTS = [
     "date": "Sep 24, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/will-ms-dhoni-make-his-first-movie-appearance-with-goat-director-drops-a-cryptic-hint/",
-    "featured": false
-  },
-  {
-    "id": 1478,
-    "slug": "imran-tahir",
-    "title": "Imran Tahir",
-    "excerpt": "Complete analysis and coverage: Imran Tahir. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Sep 25, 2025",
-    "readingTime": "6 min read",
-    "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/imran-tahir/",
     "featured": false
   },
   {
@@ -7196,23 +7016,8 @@ export const SITEMAP_POSTS = [
     "date": "Sep 25, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/ravindra-jadeja-vice-captain/",
-    "featured": false
-  },
-  {
-    "id": 1480,
-    "slug": "noor-ahmed",
-    "title": "Noor Ahmed",
-    "excerpt": "Complete analysis and coverage: Noor Ahmed. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Sep 27, 2025",
-    "readingTime": "3 min read",
-    "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/noor-ahmed/",
     "featured": false
   },
   {
@@ -7226,7 +7031,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 28, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-ipl-2026-will-csk-icon-play-his-final-season/",
     "featured": false
   },
@@ -7241,7 +7046,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 30, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-hundreds-and-fifties/",
     "featured": false
   },
@@ -7256,7 +7061,7 @@ export const SITEMAP_POSTS = [
     "date": "Oct 1, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/chennai-super-kings-year-by-year-performance-in-ipl/",
     "featured": false
   },
@@ -7271,23 +7076,8 @@ export const SITEMAP_POSTS = [
     "date": "Oct 3, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/top-5-players-jsk/",
-    "featured": false
-  },
-  {
-    "id": 1485,
-    "slug": "dewald-brevis",
-    "title": "Dewald Brevis",
-    "excerpt": "Complete analysis and coverage: Dewald Brevis. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Oct 3, 2025",
-    "readingTime": "3 min read",
-    "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/dewald-brevis/",
     "featured": false
   },
   {
@@ -7301,7 +7091,7 @@ export const SITEMAP_POSTS = [
     "date": "Oct 3, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-released-players-2025-who-may-exit-before-ipl-2026/",
     "featured": false
   },
@@ -7316,7 +7106,7 @@ export const SITEMAP_POSTS = [
     "date": "Oct 3, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-trial-camp/",
     "featured": false
   },
@@ -7331,7 +7121,7 @@ export const SITEMAP_POSTS = [
     "date": "Oct 3, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/list-players-who-represented-both-mi-and-csk-in-ipl/",
     "featured": false
   },
@@ -7346,7 +7136,7 @@ export const SITEMAP_POSTS = [
     "date": "Oct 3, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/list-players-with-most-appearances-for-chennai-super-kings-in-ipl/",
     "featured": false
   },
@@ -7361,7 +7151,7 @@ export const SITEMAP_POSTS = [
     "date": "Oct 3, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/marcus-stoinis-joins-texas-super-kings-ahead-of-mlc-season-2/",
     "featured": false
   },
@@ -7376,7 +7166,7 @@ export const SITEMAP_POSTS = [
     "date": "Oct 3, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/matthew-hayden-says-ms-dhoni-is-number-one-player-of-csk/",
     "featured": false
   },
@@ -7391,7 +7181,7 @@ export const SITEMAP_POSTS = [
     "date": "Oct 3, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mitchell-santner-takes-a-flying-catch-in-the-hundred-watch-viral-video/",
     "featured": false
   },
@@ -7406,7 +7196,7 @@ export const SITEMAP_POSTS = [
     "date": "Oct 3, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mitchell-santner-with-7-wicket-haul-traps-indian-batters-in-his-spin-web-in-pune-test/",
     "featured": false
   },
@@ -7421,38 +7211,8 @@ export const SITEMAP_POSTS = [
     "date": "Oct 3, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-appreciates-aggressive-result-oriented-approach-of-modern-day-test-cricket/",
-    "featured": false
-  },
-  {
-    "id": 1495,
-    "slug": "khaleel-ahmed",
-    "title": "Khaleel Ahmed",
-    "excerpt": "Complete analysis and coverage: Khaleel Ahmed. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Oct 8, 2025",
-    "readingTime": "3 min read",
-    "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/khaleel-ahmed/",
-    "featured": false
-  },
-  {
-    "id": 1496,
-    "slug": "wiaan-mulder",
-    "title": "Wiaan Mulder",
-    "excerpt": "Complete analysis and coverage: Wiaan Mulder. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Oct 11, 2025",
-    "readingTime": "4 min read",
-    "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/wiaan-mulder/",
     "featured": false
   },
   {
@@ -7466,7 +7226,7 @@ export const SITEMAP_POSTS = [
     "date": "Oct 22, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/washington-sundar-trade-deal/",
     "featured": false
   },
@@ -7481,7 +7241,7 @@ export const SITEMAP_POSTS = [
     "date": "Oct 28, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/andre-siddharth-century-ranji-trophy-set-for-ipl-2025-with-csk/",
     "featured": false
   },
@@ -7496,7 +7256,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 4, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-champions-league-trophy-wins/",
     "featured": false
   },
@@ -7511,7 +7271,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 14, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/joburg-super-kings-stats-most-runs-scorers-highest-wicket-takers-for-jsk-in-sa20/",
     "featured": false
   },
@@ -7526,7 +7286,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 15, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-scores-another-century/",
     "featured": false
   },
@@ -7541,7 +7301,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 15, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/washington-sundar-to-csk-trade-talks-called-off-reports/",
     "featured": false
   },
@@ -7556,7 +7316,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 15, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-recieve-india-a-call-up/",
     "featured": false
   },
@@ -7571,7 +7331,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 16, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-remaining-purse/",
     "featured": false
   },
@@ -7586,7 +7346,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 16, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/jadeja-samson-trade-deal/",
     "featured": false
   },
@@ -7601,7 +7361,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 21, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/donovan-ferreira-player-profile/",
     "featured": false
   },
@@ -7616,7 +7376,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 24, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/sanju-samson-to-lead-kerala-in-smat-2025-26/",
     "featured": false
   },
@@ -7631,7 +7391,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 24, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-named-in-indias-odi-squad-for-sa-series/",
     "featured": false
   },
@@ -7646,7 +7406,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 24, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/maharashtra-announce-ruturaj-gaikwad-as-captain-for-smat-2025-26/",
     "featured": false
   },
@@ -7661,7 +7421,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 24, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/top-5-replacements-for-ravindra-jadeja-in-csk/",
     "featured": false
   },
@@ -7676,7 +7436,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 24, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-rivalry-matches/",
     "featured": false
   },
@@ -7691,7 +7451,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 26, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/indian-replacement-for-jadeja/",
     "featured": false
   },
@@ -7706,7 +7466,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 26, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/overseas-replacements-of-jadeja/",
     "featured": false
   },
@@ -7721,7 +7481,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 26, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/urvil-patel-century-in-smat-csk-opener-smashes-31-ball-ton/",
     "featured": false
   },
@@ -7736,7 +7496,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 28, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mhatre-named-captain-for-asia-cup/",
     "featured": false
   },
@@ -7751,7 +7511,7 @@ export const SITEMAP_POSTS = [
     "date": "Nov 28, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ayush-mhatre-hit-maiden-t20-century-in-smat/",
     "featured": false
   },
@@ -7766,7 +7526,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 1, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/why-is-csk-not-a-part-of-wpl/",
     "featured": false
   },
@@ -7781,7 +7541,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 2, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mhatre-smashes-another-smat-hundred/",
     "featured": false
   },
@@ -7796,7 +7556,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 6, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/dewald-brevis-maiden-odi-fifty/",
     "featured": false
   },
@@ -7811,7 +7571,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 6, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-scores-maiden-odi-century-in-raipur/",
     "featured": false
   },
@@ -7826,7 +7586,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 9, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/joburg-super-kings/",
     "featured": false
   },
@@ -7841,23 +7601,8 @@ export const SITEMAP_POSTS = [
     "date": "Dec 9, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/matthew-de-villiers-in-jsk/",
-    "featured": false
-  },
-  {
-    "id": 1523,
-    "slug": "shardul-thakur",
-    "title": "Shardul Thakur",
-    "excerpt": "Complete analysis and coverage: Shardul Thakur. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Dec 9, 2025",
-    "readingTime": "6 min read",
-    "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/shardul-thakur/",
     "featured": false
   },
   {
@@ -7871,7 +7616,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 9, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/anshul-kamboj-joins-india-squad-ahead-of-4th-test-vs-england/",
     "featured": false
   },
@@ -7886,7 +7631,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 13, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
+    "featuredImage": "/uploads/2023/10/Website-feature-photo-9.png",
     "url": "https://superkingsden.com/why-csk-let-ravindra-jadeja-go/",
     "featured": false
   },
@@ -7901,7 +7646,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 15, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/sanju-samsons-fifty-sets-tone-as-kerala-chase-big-total/",
     "featured": false
   },
@@ -7916,7 +7661,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 18, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/most-expensive-players-bought-by-chennai-super-kings-in-ipl-history/",
     "featured": false
   },
@@ -7931,7 +7676,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 22, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-sign-duan-jansen-as-replacement-of-van-schalkwyk/",
     "featured": false
   },
@@ -7946,7 +7691,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 22, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/prashant-veer-and-kartik-sharma-become-highest-paid-uncapped-players-in-ipl/",
     "featured": false
   },
@@ -7961,7 +7706,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 24, 2025",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-auction-buys/",
     "featured": false
   },
@@ -7976,7 +7721,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 25, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/sanju-samson-shivam-dube-retain-spots-in-indias-2026-t20-world-cup-squad/",
     "featured": false
   },
@@ -7991,7 +7736,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 25, 2025",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-home-ground/",
     "featured": false
   },
@@ -8006,7 +7751,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 25, 2025",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-emerging-players/",
     "featured": false
   },
@@ -8021,23 +7766,8 @@ export const SITEMAP_POSTS = [
     "date": "Dec 26, 2025",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/rivaldo-moonsamy/",
-    "featured": false
-  },
-  {
-    "id": 1535,
-    "slug": "who-is-matthew-de-villiers",
-    "title": "Who Is Matthew De Villiers",
-    "excerpt": "Complete analysis and coverage: Who Is Matthew De Villiers. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Dec 28, 2025",
-    "readingTime": "3 min read",
-    "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/who-is-matthew-de-villiers/",
     "featured": false
   },
   {
@@ -8051,7 +7781,7 @@ export const SITEMAP_POSTS = [
     "date": "Dec 29, 2025",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/sa20-jsk-match-results/",
     "featured": false
   },
@@ -8066,7 +7796,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 6, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-overtakes-virat-kohli-to-become-indias-top-list-a-batter/",
     "featured": false
   },
@@ -8081,7 +7811,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 6, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/duan-jansen-picks-4-fer-on-debut/",
     "featured": false
   },
@@ -8096,7 +7826,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 6, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-dropped-from-india-odi-squad/",
     "featured": false
   },
@@ -8111,7 +7841,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 6, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-beat-dsg-in-super-over-make-it-three-wins-in-a-row/",
     "featured": false
   },
@@ -8126,7 +7856,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 6, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-continue-perfect-start-clinch-bonus-point-win-over-durban/",
     "featured": false
   },
@@ -8141,7 +7871,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 6, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ayush-mhatre-appointed-india-u-19-captain-for-2026-world-cup/",
     "featured": false
   },
@@ -8156,7 +7886,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 8, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/sarfaraz-khan-creates-history-with-fastest-fifty-and-30-run-over-in-vijay-hazare-trophy/",
     "featured": false
   },
@@ -8171,7 +7901,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 13, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsks-rossouw-ruled-out-sa20-2025-26-jansen-named-as-replacement/",
     "featured": false
   },
@@ -8186,7 +7916,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 13, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-list-a-records-a-vijay-hazare-trophy-run-that-keeps-growing/",
     "featured": false
   },
@@ -8201,7 +7931,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 13, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/donovan-ferreira-named-jsk-captain-leus-du-plooy-named-replacement/",
     "featured": false
   },
@@ -8216,23 +7946,8 @@ export const SITEMAP_POSTS = [
     "date": "Jan 18, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/how-can-jsk-qualify-for-the-sa20-playoffs/",
-    "featured": false
-  },
-  {
-    "id": 1548,
-    "slug": "leus-du-plooy-everything-you-need-to-know-about-joburg-super-kings-batting-sensation",
-    "title": "Leus Du Plooy Everything You Need To Know About Joburg Super Kings Batting Sensation",
-    "excerpt": "Complete analysis and coverage: Leus Du Plooy Everything You Need To Know About Joburg Super Kings Batting Sensation. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "JSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Jan 19, 2026",
-    "readingTime": "6 min read",
-    "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/leus-du-plooy-everything-you-need-to-know-about-joburg-super-kings-batting-sensation/",
     "featured": false
   },
   {
@@ -8246,7 +7961,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 27, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/why-is-ms-dhoni-called-thala/",
     "featured": false
   },
@@ -8261,7 +7976,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 27, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/nathan-ellis-injury-rocks-hobart-hurricanes-ahead-of-bbl-finals/",
     "featured": false
   },
@@ -8276,7 +7991,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 27, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/sa20-joburg-super-kings-campaign-ends-in-eliminator-defeat-to-paarl-royals/",
     "featured": false
   },
@@ -8291,7 +8006,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 27, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-may-not-play-all-home-matches-at-chepauk/",
     "featured": false
   },
@@ -8306,7 +8021,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-2008-squad/",
     "featured": false
   },
@@ -8321,7 +8036,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/list-of-players-csk-bought-in-ipl-2025-mega-auction/",
     "featured": false
   },
@@ -8336,7 +8051,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-released-players-2026/",
     "featured": false
   },
@@ -8351,7 +8066,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 29, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-players-in-irani-cup-2025/",
     "featured": false
   },
@@ -8366,7 +8081,7 @@ export const SITEMAP_POSTS = [
     "date": "Jan 31, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/shivam-dubes-third-fastest-t20i-fifty-in-vain-as-india-lose-fourth-t20i-by-50-runs/",
     "featured": false
   },
@@ -8381,7 +8096,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 2, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-openers-best-opening-options/",
     "featured": false
   },
@@ -8396,38 +8111,8 @@ export const SITEMAP_POSTS = [
     "date": "Feb 2, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/andre-russell-reacts-to-ms-dhoni-entrance-ipl-2024/",
-    "featured": false
-  },
-  {
-    "id": 1560,
-    "slug": "steve-stolk",
-    "title": "Steve Stolk",
-    "excerpt": "Complete analysis and coverage: Steve Stolk. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Feb 2, 2026",
-    "readingTime": "3 min read",
-    "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/steve-stolk/",
-    "featured": false
-  },
-  {
-    "id": 1561,
-    "slug": "aman-khan",
-    "title": "Aman Khan",
-    "excerpt": "Complete analysis and coverage: Aman Khan. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Feb 10, 2026",
-    "readingTime": "4 min read",
-    "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/aman-khan/",
     "featured": false
   },
   {
@@ -8441,38 +8126,8 @@ export const SITEMAP_POSTS = [
     "date": "Feb 10, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ayush-mhatre-leads-india-to-7th-u-19-world-cup-final/",
-    "featured": false
-  },
-  {
-    "id": 1563,
-    "slug": "zak-foulkes",
-    "title": "Zak Foulkes",
-    "excerpt": "Complete analysis and coverage: Zak Foulkes. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Feb 10, 2026",
-    "readingTime": "6 min read",
-    "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/zak-foulkes/",
-    "featured": false
-  },
-  {
-    "id": 1564,
-    "slug": "sarfaraz-khan",
-    "title": "Sarfaraz Khan",
-    "excerpt": "Complete analysis and coverage: Sarfaraz Khan. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Feb 10, 2026",
-    "readingTime": "7 min read",
-    "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/sarfaraz-khan/",
     "featured": false
   },
   {
@@ -8486,7 +8141,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 12, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/who-is-prashant-veer/",
     "featured": false
   },
@@ -8501,113 +8156,8 @@ export const SITEMAP_POSTS = [
     "date": "Feb 16, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-csk-player-profile-background-and-stats-in-ipl/",
-    "featured": false
-  },
-  {
-    "id": 1567,
-    "slug": "gurjapneet-singh",
-    "title": "Gurjapneet Singh",
-    "excerpt": "Complete analysis and coverage: Gurjapneet Singh. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Feb 16, 2026",
-    "readingTime": "5 min read",
-    "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/gurjapneet-singh/",
-    "featured": false
-  },
-  {
-    "id": 1568,
-    "slug": "james-vince",
-    "title": "James Vince",
-    "excerpt": "Complete analysis and coverage: James Vince. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Feb 16, 2026",
-    "readingTime": "6 min read",
-    "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/james-vince/",
-    "featured": false
-  },
-  {
-    "id": 1569,
-    "slug": "reece-toopley",
-    "title": "Reece Toopley",
-    "excerpt": "Complete analysis and coverage: Reece Toopley. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Feb 16, 2026",
-    "readingTime": "7 min read",
-    "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/reece-toopley/",
-    "featured": false
-  },
-  {
-    "id": 1570,
-    "slug": "prenelen-subrayen",
-    "title": "Prenelen Subrayen",
-    "excerpt": "Complete analysis and coverage: Prenelen Subrayen. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Feb 16, 2026",
-    "readingTime": "3 min read",
-    "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/prenelen-subrayen/",
-    "featured": false
-  },
-  {
-    "id": 1571,
-    "slug": "shreyas-gopal",
-    "title": "Shreyas Gopal",
-    "excerpt": "Complete analysis and coverage: Shreyas Gopal. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Feb 16, 2026",
-    "readingTime": "4 min read",
-    "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/shreyas-gopal/",
-    "featured": false
-  },
-  {
-    "id": 1572,
-    "slug": "rahul-chahar",
-    "title": "Rahul Chahar",
-    "excerpt": "Complete analysis and coverage: Rahul Chahar. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Feb 17, 2026",
-    "readingTime": "5 min read",
-    "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/rahul-chahar/",
-    "featured": false
-  },
-  {
-    "id": 1573,
-    "slug": "matt-henry",
-    "title": "Matt Henry",
-    "excerpt": "Complete analysis and coverage: Matt Henry. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Feb 17, 2026",
-    "readingTime": "6 min read",
-    "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/matt-henry/",
     "featured": false
   },
   {
@@ -8621,7 +8171,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 17, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/saiteja-mukkamalla-and-shubham-ranjane-shine-in-usas-93-run-win-over-netherlands/",
     "featured": false
   },
@@ -8636,7 +8186,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 17, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/nathan-ellis-4-23-powers-australia-to-67-run-win-over-ireland-in-t20-world-cup-2026/",
     "featured": false
   },
@@ -8651,7 +8201,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 17, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/our-first-target-will-be-womens-cricket-ceo-kasi-vishwanathan-on-csks-wpl-team/",
     "featured": false
   },
@@ -8666,7 +8216,7 @@ export const SITEMAP_POSTS = [
     "date": "Feb 17, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/leus-du-plooys-fifty-secures-fourth-playoff-spot-for-jsk/",
     "featured": false
   },
@@ -8681,23 +8231,8 @@ export const SITEMAP_POSTS = [
     "date": "Feb 17, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/daryl-mitchell-breaks-odi-records/",
-    "featured": false
-  },
-  {
-    "id": 1579,
-    "slug": "ms-dhoni",
-    "title": "MS Dhoni",
-    "excerpt": "Complete analysis and coverage: MS Dhoni. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Feb 22, 2026",
-    "readingTime": "7 min read",
-    "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
-    "url": "https://superkingsden.com/ms-dhoni/",
     "featured": false
   },
   {
@@ -8711,7 +8246,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 6, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/sanju-samson-equals-virat-kohlis-t20-world-cup-knockout-record/",
     "featured": false
   },
@@ -8726,7 +8261,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 6, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2026-james-foster-joins-csk-as-fielding-coach/",
     "featured": false
   },
@@ -8741,7 +8276,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 11, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/sanju-samson-wins-player-of-the-tournament-as-india-lift-icc-mens-t20-world-cup-title/",
     "featured": false
   },
@@ -8756,7 +8291,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 11, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/sanju-samson-smashes-97-vs-west-indies-takes-india-into-semis/",
     "featured": false
   },
@@ -8771,7 +8306,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 11, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-new-jersey/",
     "featured": false
   },
@@ -8786,7 +8321,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 11, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-duo-forrester-subrayen-named-in-sa-t20i-squad/",
     "featured": false
   },
@@ -8801,7 +8336,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 11, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/t20-world-cup-shivam-dube-shines-with-career-best-66-25-vs-netherlands/",
     "featured": false
   },
@@ -8816,7 +8351,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 11, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/list-new-zealand-player-to-play-for-csk-in-ipl/",
     "featured": false
   },
@@ -8831,7 +8366,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 14, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-court-case-sun-tv-network-files-lawsuit-over-use-of-rajinikanth-songs-in-jersey-promo/",
     "featured": false
   },
@@ -8846,23 +8381,8 @@ export const SITEMAP_POSTS = [
     "date": "Mar 14, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ayush-mhatre-leads-india-to-record-sixth-u-19-world-cup-title/",
-    "featured": false
-  },
-  {
-    "id": 1590,
-    "slug": "neil-timmers",
-    "title": "Neil Timmers",
-    "excerpt": "Complete analysis and coverage: Neil Timmers. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Mar 19, 2026",
-    "readingTime": "3 min read",
-    "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/neil-timmers/",
     "featured": false
   },
   {
@@ -8876,7 +8396,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 19, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/matthew-de-villiers-133-drives-warriors-to-big-win-over-boland/",
     "featured": false
   },
@@ -8891,7 +8411,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 23, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/suresh-raina-and-matthew-hayden-become-first-inductees-in-chennai-super-kings-hall-of-fame/",
     "featured": false
   },
@@ -8906,7 +8426,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 23, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/nathan-ellis-ruled-out-of-ipl-2026-in-major-blow-to-csk/",
     "featured": false
   },
@@ -8921,7 +8441,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 24, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/rishabh-pant-equals-ms-dhoni-for-smashing-most-test-centuries-as-indian-wicket-keeper/",
     "featured": false
   },
@@ -8936,7 +8456,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 24, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/faf-du-plessis-ipl-veteran-opener-withdraws-from-2026-auction/",
     "featured": false
   },
@@ -8951,7 +8471,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 24, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/andre-siddarth-ranji-trophy-scores/",
     "featured": false
   },
@@ -8966,7 +8486,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 25, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/spencer-johnson-replaces-nathan-ellis-in-chennai-super-kings-squad-for-ipl-2026/",
     "featured": false
   },
@@ -8981,7 +8501,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 25, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/donovan-ferreira-injury-deepens-joburg-super-kings-sa20-crisis/",
     "featured": false
   },
@@ -8996,7 +8516,7 @@ export const SITEMAP_POSTS = [
     "date": "Mar 25, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/faf-du-plessis-injury-sa20/",
     "featured": false
   },
@@ -9011,7 +8531,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 3, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-injury-blow-csk-star-ruled-out-for-two-weeks-in-ipl-2026/",
     "featured": false
   },
@@ -9026,7 +8546,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 3, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/dewald-brevis-adds-to-chennai-super-kings-injury-concerns-ahead-of-ipl-2026-opener/",
     "featured": false
   },
@@ -9041,7 +8561,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 3, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2026-chennai-super-kings-crumble-in-87-run-loss-to-rajasthan-royals/",
     "featured": false
   },
@@ -9056,7 +8576,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 3, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-vs-pbks-head-to-head-record-in-ipl/",
     "featured": false
   },
@@ -9071,7 +8591,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 4, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ma-chidambaram-ipl-records-know-highest-and-lowest-scores-most-runs-and-most-wickets-by-individuals-at-chepauk/",
     "featured": false
   },
@@ -9086,7 +8606,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 4, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/chennai-super-kings-full-list-of-coaches-updated/",
     "featured": false
   },
@@ -9101,7 +8621,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 4, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-batting/",
     "featured": false
   },
@@ -9116,7 +8636,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 6, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/why-was-csk-banned/",
     "featured": false
   },
@@ -9131,7 +8651,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 6, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/chennai-super-kings-anthem-in-ipl-know-whistle-podu-song-lyrics/",
     "featured": false
   },
@@ -9146,7 +8666,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 7, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2026-ayush-mhatres-73-in-vain-as-bowling-collapse-hands-csk-another-defeat/",
     "featured": false
   },
@@ -9161,7 +8681,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 7, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/what-is-meaning-of-chepauk/",
     "featured": false
   },
@@ -9176,7 +8696,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 7, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/texas-super-kings-owners/",
     "featured": false
   },
@@ -9191,7 +8711,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 7, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/list-teams-owned-by-chennai-super-kings/",
     "featured": false
   },
@@ -9206,7 +8726,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 10, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/tsk-overseas-players/",
     "featured": false
   },
@@ -9221,7 +8741,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 10, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/chennai-super-kings-boosted-as-dewald-brevis-and-ms-dhoni-near-return/",
     "featured": false
   },
@@ -9236,7 +8756,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 15, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2026-noor-ahmad-akeal-hosein-lead-csk-to-crucial-32-run-win/",
     "featured": false
   },
@@ -9251,7 +8771,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 16, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/youngest-player-csk/",
     "featured": false
   },
@@ -9266,7 +8786,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 17, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2026-schedule-change-csk-vs-gt-fixtures-swapped-due-to-ahmedabad-elections/",
     "featured": false
   },
@@ -9281,7 +8801,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 18, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/akash-madhwal-emerges-as-frontrunner-to-replace-khaleel-ahmed-at-chennai-super-kings/",
     "featured": false
   },
@@ -9296,7 +8816,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 20, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/anshul-kamboj-rises-to-purple-cap-lead-in-ipl-2026/",
     "featured": false
   },
@@ -9311,7 +8831,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 21, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/best-bowling-performances-csk/",
     "featured": false
   },
@@ -9326,7 +8846,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 21, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ayush-mhatre-ruled-out-of-ipl-2026-massive-setback-for-chennai-super-kings/",
     "featured": false
   },
@@ -9341,7 +8861,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 22, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/spencer-johnson-set-for-csk-debut-as-chennai-super-kings-get-timely-boost/",
     "featured": false
   },
@@ -9356,23 +8876,8 @@ export const SITEMAP_POSTS = [
     "date": "Apr 25, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-all-rounders-role-in-ipl-2026-success/",
-    "featured": false
-  },
-  {
-    "id": 1624,
-    "slug": "ramakrishna-ghosh",
-    "title": "Ramakrishna Ghosh",
-    "excerpt": "Complete analysis and coverage: Ramakrishna Ghosh. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Apr 25, 2026",
-    "readingTime": "7 min read",
-    "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/ramakrishna-ghosh/",
     "featured": false
   },
   {
@@ -9386,7 +8891,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 25, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/bonbloc-becomes-official-ai-partner-of-chennai-super-kings/",
     "featured": false
   },
@@ -9401,7 +8906,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 25, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-reveals-sanju-samson-always-wanted-to-join-chennai-super-kings/",
     "featured": false
   },
@@ -9416,7 +8921,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 25, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/sanju-samson-wins-icc-player-of-the-month-after-t20-world-cup-heroics/",
     "featured": false
   },
@@ -9431,7 +8936,7 @@ export const SITEMAP_POSTS = [
     "date": "Apr 25, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/rr-vs-csk-sanju-samson-faces-former-team-in-ipl-2026-opener/",
     "featured": false
   },
@@ -9446,7 +8951,7 @@ export const SITEMAP_POSTS = [
     "date": "May 4, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-comeback-2026-play-after-csk-exit-ashwin-hint/",
     "featured": false
   },
@@ -9461,7 +8966,7 @@ export const SITEMAP_POSTS = [
     "date": "May 4, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ramakrishna-ghosh-ruled-out-after-lone-appearance-for-chennai-super-kings/",
     "featured": false
   },
@@ -9476,7 +8981,7 @@ export const SITEMAP_POSTS = [
     "date": "May 5, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/khaleel-ahmed-ruled-out-of-ipl-2026-big-blow-for-chennai-super-kings/",
     "featured": false
   },
@@ -9491,7 +8996,7 @@ export const SITEMAP_POSTS = [
     "date": "May 5, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ipl-2026-csk-compain-to-bcci-over-dj-remarks-during-rcb-clash/",
     "featured": false
   },
@@ -9506,7 +9011,7 @@ export const SITEMAP_POSTS = [
     "date": "May 6, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/sanju-samson-leads-csk-chase-with-match-winning-knock-vs-dc/",
     "featured": false
   },
@@ -9521,7 +9026,7 @@ export const SITEMAP_POSTS = [
     "date": "May 8, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csks-bowling-turnaround-from-early-season-chaos-to-the-best-economy-rate-in-ipl-2026/",
     "featured": false
   },
@@ -9536,7 +9041,7 @@ export const SITEMAP_POSTS = [
     "date": "May 8, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/sanju-samson-century-akeal-hosein-star-in-103-run-win-over-mumbai-india/",
     "featured": false
   },
@@ -9551,7 +9056,7 @@ export const SITEMAP_POSTS = [
     "date": "May 9, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/texas-super-kings/",
     "featured": false
   },
@@ -9566,38 +9071,8 @@ export const SITEMAP_POSTS = [
     "date": "May 9, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/sanju-samson-in-the-race-for-indias-next-t20-captain-and-leads-the-top-contender-shreyas-iyer/",
-    "featured": false
-  },
-  {
-    "id": 1638,
-    "slug": "urvil-patel",
-    "title": "Urvil Patel",
-    "excerpt": "Complete analysis and coverage: Urvil Patel. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "May 11, 2026",
-    "readingTime": "6 min read",
-    "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/urvil-patel/",
-    "featured": false
-  },
-  {
-    "id": 1639,
-    "slug": "mukesh-choudary",
-    "title": "Mukesh Choudary",
-    "excerpt": "Complete analysis and coverage: Mukesh Choudary. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "May 11, 2026",
-    "readingTime": "7 min read",
-    "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/mukesh-choudary/",
     "featured": false
   },
   {
@@ -9611,7 +9086,7 @@ export const SITEMAP_POSTS = [
     "date": "May 12, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/urvil-patel-the-new-avenger-for-csk-today/",
     "featured": false
   },
@@ -9626,7 +9101,7 @@ export const SITEMAP_POSTS = [
     "date": "May 12, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/a-sons-true-promise-to-father/",
     "featured": false
   },
@@ -9641,7 +9116,7 @@ export const SITEMAP_POSTS = [
     "date": "May 12, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/why-joburg-super-kings-could-win-sa20-2025/",
     "featured": false
   },
@@ -9656,7 +9131,7 @@ export const SITEMAP_POSTS = [
     "date": "May 13, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/karnataka-all-rounder-macneil-noronha-set-to-replace-injured-ghosh-in-csk-squad/",
     "featured": false
   },
@@ -9671,7 +9146,7 @@ export const SITEMAP_POSTS = [
     "date": "May 14, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jamie-overton-ruled-out-of-ipl-2026-in-massive-blow-to-csk/",
     "featured": false
   },
@@ -9686,7 +9161,7 @@ export const SITEMAP_POSTS = [
     "date": "May 14, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/chennai-super-kings-ropes-in-dian-forrester-as-jamie-overtons-replacement/",
     "featured": false
   },
@@ -9701,7 +9176,7 @@ export const SITEMAP_POSTS = [
     "date": "May 17, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/kartik-sharmas-fifty-in-vain-as-lsg-conquers-csk/",
     "featured": false
   },
@@ -9716,7 +9191,7 @@ export const SITEMAP_POSTS = [
     "date": "May 18, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-signs-kuldip-yadav-as-khaleels-replacement/",
     "featured": false
   },
@@ -9731,7 +9206,7 @@ export const SITEMAP_POSTS = [
     "date": "May 19, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-on-the-edge-of-elimination-as-they-lost-to-srh-in-a-must-win-game/",
     "featured": false
   },
@@ -9746,7 +9221,7 @@ export const SITEMAP_POSTS = [
     "date": "May 20, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/sanjus-msd-like-quick-stumping-frustrates-klaseen/",
     "featured": false
   },
@@ -9761,7 +9236,7 @@ export const SITEMAP_POSTS = [
     "date": "May 20, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/will-dhoni-play-in-ipl-2026-or-not/",
     "featured": false
   },
@@ -9776,7 +9251,7 @@ export const SITEMAP_POSTS = [
     "date": "May 23, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/chennai-super-kings-eliminated-from-ipl-2026/",
     "featured": false
   },
@@ -9791,7 +9266,7 @@ export const SITEMAP_POSTS = [
     "date": "May 26, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-pacer-duan-jansen-joins-glasgow-cosmic-in-etpl/",
     "featured": false
   },
@@ -9806,7 +9281,7 @@ export const SITEMAP_POSTS = [
     "date": "May 27, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/texas-super-kings-batting/",
     "featured": false
   },
@@ -9821,7 +9296,7 @@ export const SITEMAP_POSTS = [
     "date": "May 28, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-star-dian-forrester-shines-in-debut-as-kent-beats-sussex-in-a-high-scoring-thriller/",
     "featured": false
   },
@@ -9836,7 +9311,7 @@ export const SITEMAP_POSTS = [
     "date": "May 28, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-to-decide-his-ipl-future/",
     "featured": false
   },
@@ -9851,7 +9326,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 3, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/mulder-and-pepper-power-essex-to-an-easy-win-over-kent/",
     "featured": false
   },
@@ -9866,7 +9341,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 3, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/shivam-dubes-stunning-spell-steals-the-game-for-arcs/",
     "featured": false
   },
@@ -9881,23 +9356,8 @@ export const SITEMAP_POSTS = [
     "date": "Jun 3, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-returns-home-ahead-of-gt-clash/",
-    "featured": false
-  },
-  {
-    "id": 1659,
-    "slug": "akeal-hosein",
-    "title": "Akeal Hosein",
-    "excerpt": "Complete analysis and coverage: Akeal Hosein. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Jun 5, 2026",
-    "readingTime": "7 min read",
-    "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/akeal-hosein/",
     "featured": false
   },
   {
@@ -9911,7 +9371,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 5, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/a-homecoming-r-ashwin-returns-to-csk-ahead-of-ipl-2025/",
     "featured": false
   },
@@ -9926,7 +9386,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 5, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/texas-super-kings-schedule/",
     "featured": false
   },
@@ -9941,23 +9401,8 @@ export const SITEMAP_POSTS = [
     "date": "Jun 7, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/sarfraz-khan-scores-joint-fastest-fifty-of-the-mumbai-t20-league/",
-    "featured": false
-  },
-  {
-    "id": 1663,
-    "slug": "ravindra-jadeja",
-    "title": "Ravindra Jadeja",
-    "excerpt": "Complete analysis and coverage: Ravindra Jadeja. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Jun 8, 2026",
-    "readingTime": "6 min read",
-    "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2023/10/Website-feature-photo-9.png",
-    "url": "https://superkingsden.com/ravindra-jadeja/",
     "featured": false
   },
   {
@@ -9971,7 +9416,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 8, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/sanju-samson-115-first-ipl-2026-century-for-csk/",
     "featured": false
   },
@@ -9986,7 +9431,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 8, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/top-5-players-to-watch-from-texas-super-kings-in-2025/",
     "featured": false
   },
@@ -10001,7 +9446,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 9, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-overseas-players/",
     "featured": false
   },
@@ -10016,7 +9461,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 9, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/who-is-kartik-sharma/",
     "featured": false
   },
@@ -10031,7 +9476,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 9, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-bowling-attack/",
     "featured": false
   },
@@ -10046,7 +9491,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 11, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-shines-in-another-high-scoring-innings-in-the-list-a-tri-series/",
     "featured": false
   },
@@ -10061,7 +9506,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 11, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturajs-masterclass-saves-india-a-from-a-great-damage/",
     "featured": false
   },
@@ -10076,7 +9521,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 15, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/shivam-dube-powers-arcs-andheri-into-mumbai-t20-2026-final/",
     "featured": false
   },
@@ -10091,7 +9536,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 17, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/tsk-vs-so-mlc-preview/",
     "featured": false
   },
@@ -10106,7 +9551,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 18, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-vs-pbks-super-kings-suffer-another-disappointing-loss-by-18-runs-in-ipl-2025/",
     "featured": false
   },
@@ -10121,38 +9566,8 @@ export const SITEMAP_POSTS = [
     "date": "Jun 18, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/good-news-for-csk-pathirana-theekshana-set-to-rejoin-team-after-completing-visa-process-for-world-cup/",
-    "featured": false
-  },
-  {
-    "id": 1675,
-    "slug": "dian-forrester",
-    "title": "Dian Forrester",
-    "excerpt": "Complete analysis and coverage: Dian Forrester. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Jun 19, 2026",
-    "readingTime": "3 min read",
-    "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/dian-forrester/",
-    "featured": false
-  },
-  {
-    "id": 1676,
-    "slug": "janco-smit",
-    "title": "Janco Smit",
-    "excerpt": "Complete analysis and coverage: Janco Smit. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Jun 19, 2026",
-    "readingTime": "4 min read",
-    "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/janco-smit/",
     "featured": false
   },
   {
@@ -10166,23 +9581,8 @@ export const SITEMAP_POSTS = [
     "date": "Jun 19, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/tsk-kick-off-the-mlc-opener-in-style-with-a-thrilling-chase/",
-    "featured": false
-  },
-  {
-    "id": 1678,
-    "slug": "shivam-dube",
-    "title": "Shivam Dube",
-    "excerpt": "Complete analysis and coverage: Shivam Dube. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Jun 19, 2026",
-    "readingTime": "6 min read",
-    "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
-    "url": "https://superkingsden.com/shivam-dube/",
     "featured": false
   },
   {
@@ -10196,7 +9596,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 19, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/best-playing-xi-for-texas-super-kings/",
     "featured": false
   },
@@ -10211,7 +9611,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 19, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/fafs-golden-milestone-adds-a-memorable-chapter-to-his-t20-cricket-career/",
     "featured": false
   },
@@ -10226,7 +9626,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 21, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/tsk-outplayed-by-sfus-ruthless-all-round-show-that-handed-them-the-first-loss-of-the-tournament/",
     "featured": false
   },
@@ -10241,7 +9641,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 22, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/another-defeat-in-the-tournament-for-tsk-as-they-failed-to-overcome-the-mightiest-miny/",
     "featured": false
   },
@@ -10256,7 +9656,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 22, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/faf-du-plessis-absence-hurts-texas-super-kings-as-they-face-second-straight-defeat-in-the-campaign/",
     "featured": false
   },
@@ -10271,7 +9671,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 24, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/stephen-fleming-to-continue-as-the-head-coach-of-chennai-super-kings-despite-exit-speculation/",
     "featured": false
   },
@@ -10286,7 +9686,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 24, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/tsk-vs-sfu-preview/",
     "featured": false
   },
@@ -10301,7 +9701,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 24, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/nandre-burger-ruled-out-of-mlc-2026-with-a-lower-back-injury/",
     "featured": false
   },
@@ -10316,7 +9716,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 25, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/amshi-de-silvas-stunning-spell-guides-tsk-to-an-emphatic-victory-over-sfu/",
     "featured": false
   },
@@ -10331,7 +9731,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 27, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ferreiras-fiery-three-fer-helps-tsk-overcome-miny/",
     "featured": false
   },
@@ -10346,7 +9746,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 28, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/wf-stuns-tsk-in-a-high-voltage-mlc-encounter/",
     "featured": false
   },
@@ -10361,7 +9761,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 29, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/australians-to-play-for-csk/",
     "featured": false
   },
@@ -10376,7 +9776,7 @@ export const SITEMAP_POSTS = [
     "date": "Jun 29, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/milestone-alert-akeal-hosein-delivers-the-first-hat-trick-of-the-major-cricket-league/",
     "featured": false
   },
@@ -10391,7 +9791,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 1, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ayush-mhatre-injury-blow-hits-chennai-super-kings-at-crucial-stage-of-ipl-2026/",
     "featured": false
   },
@@ -10406,7 +9806,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 1, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/samsons-journey-from-rr-to-csk/",
     "featured": false
   },
@@ -10421,7 +9821,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 1, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csks-retention-list-2026-who-will-stay-who-might-go/",
     "featured": false
   },
@@ -10436,7 +9836,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-enters-the-race-to-acquire-hardik-pandya-in-the-potential-ipl-biggest-blockbuster-trade-ever/",
     "featured": false
   },
@@ -10451,7 +9851,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/purple-cap-winners-for-chennai-super-kings/",
     "featured": false
   },
@@ -10466,7 +9866,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 2, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-ipl-salary/",
     "featured": false
   },
@@ -10481,7 +9881,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 3, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/la-knight-riders-vs-texas-super-kings/",
     "featured": false
   },
@@ -10496,7 +9896,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 3, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/samson-joins-csk/",
     "featured": false
   },
@@ -10511,7 +9911,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 3, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/meaning-of-anbuden/",
     "featured": false
   },
@@ -10526,7 +9926,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 3, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/texas-super-kings-squad/",
     "featured": false
   },
@@ -10541,38 +9941,8 @@ export const SITEMAP_POSTS = [
     "date": "Jul 4, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/tsk-suffers-another-shocking-defeat-in-mlc-against-lakr/",
-    "featured": false
-  },
-  {
-    "id": 1703,
-    "slug": "matthew-short",
-    "title": "Matthew Short",
-    "excerpt": "Complete analysis and coverage: Matthew Short. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Jul 4, 2026",
-    "readingTime": "6 min read",
-    "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/matthew-short/",
-    "featured": false
-  },
-  {
-    "id": 1704,
-    "slug": "ayush-mhatre",
-    "title": "Ayush Mhatre",
-    "excerpt": "Complete analysis and coverage: Ayush Mhatre. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Jul 4, 2026",
-    "readingTime": "7 min read",
-    "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/ayush-mhatre/",
     "featured": false
   },
   {
@@ -10586,23 +9956,8 @@ export const SITEMAP_POSTS = [
     "date": "Jul 6, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/tsk-faces-hat-trick-of-losses-in-mlc-as-they-get-thrashed-by-so/",
-    "featured": false
-  },
-  {
-    "id": 1706,
-    "slug": "richard-gleeson",
-    "title": "Richard Gleeson",
-    "excerpt": "Complete analysis and coverage: Richard Gleeson. Explore latest updates, stats, and tactical insights from Super Kings Den.",
-    "category": "CSK News",
-    "franchise": "CSK",
-    "author": "Super Kings Den Editorial Desk",
-    "date": "Jul 6, 2026",
-    "readingTime": "4 min read",
-    "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
-    "url": "https://superkingsden.com/richard-gleeson/",
     "featured": false
   },
   {
@@ -10616,7 +9971,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 9, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/sanju-samsons-omission-from-the-t20i-squad-for-the-zimbabwe-tour-shocks-fans/",
     "featured": false
   },
@@ -10631,7 +9986,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 10, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/chepauk-to-host-the-first-game-of-the-upcoming-bbl-season/",
     "featured": false
   },
@@ -10646,7 +10001,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 11, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/tsk-vs-wf/",
     "featured": false
   },
@@ -10661,7 +10016,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 11, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/matthew-haydens-mongoose-bat/",
     "featured": false
   },
@@ -10676,7 +10031,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 12, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/tsks-mlc-campaign-comes-to-an-end-after-losing-a-close-battle-with-wf/",
     "featured": false
   },
@@ -10691,7 +10046,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 14, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/stephen-fleming-coaching-legacy-csk-full-story/",
     "featured": false
   },
@@ -10706,7 +10061,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 14, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/ranjanes-fighting-knock-in-vain-as-tsk-finishes-at-last-position-in-mlc-2026/",
     "featured": false
   },
@@ -10721,7 +10076,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 14, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-decides-to-part-ways-with-stephen-fleming-to-end-the-remarkable-18-year-old-partnership/",
     "featured": false
   },
@@ -10736,7 +10091,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 14, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/tsk-vs-so-preview/",
     "featured": false
   },
@@ -10751,7 +10106,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 16, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/aman-khan-registers-highest-ever-score-in-ppl-history-with-a-landmark-129/",
     "featured": false
   },
@@ -10766,7 +10121,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 17, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/samson-reveals-the-reason-behind-choosing-csk-despite-multiple-franchises/",
     "featured": false
   },
@@ -10781,7 +10136,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 21, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/csk-captain-ruturaj-gaikwad-to-lead-west-zone-in-the-upcoming-duleep-trophy/",
     "featured": false
   },
@@ -10796,7 +10151,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 24, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/sanju-samson-reveals-why-he-left-rr-for-csk-despite-risks/",
     "featured": false
   },
@@ -10811,7 +10166,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 28, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/saiteja-mukkamallas-patient-fifty-guides-vipers-to-a-dominant-victory-over-sfu/",
     "featured": false
   },
@@ -10826,7 +10181,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 29, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-players-called-up-for-a-physical-fitness-camp-ahead-of-making-trade-decisions-amid-hardik-pandya-rumours/",
     "featured": false
   },
@@ -10841,7 +10196,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 30, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-appoints-albie-morkel-as-their-new-head-coach-ahead-of-upcoming-sa20-edition/",
     "featured": false
   },
@@ -10856,7 +10211,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 30, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/stephen-fleming-emerges-as-the-front-runner-to-take-over-the-role-of-england-test-head-coach/",
     "featured": false
   },
@@ -10871,7 +10226,7 @@ export const SITEMAP_POSTS = [
     "date": "Jul 31, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/anbuden-meaning-what-is-the-meaning-of-hashtag-used-by-csk-on-social-media/",
     "featured": false
   },
@@ -10886,7 +10241,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 5, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/matthew-shorts-heroics-guides-welsh-fire-towards-their-4th-victory-of-the-league/",
     "featured": false
   },
@@ -10901,7 +10256,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 5, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/whistle-podu-meaning/",
     "featured": false
   },
@@ -10916,7 +10271,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 5, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/how-can-csk-qualify-for-the-ipl-playoffs/",
     "featured": false
   },
@@ -10931,7 +10286,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 5, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-home-ground/",
     "featured": false
   },
@@ -10946,7 +10301,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 5, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-bowling/",
     "featured": false
   },
@@ -10961,7 +10316,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 5, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-release-faf-du-plessis-ahead-of-sa20-2027/",
     "featured": false
   },
@@ -10976,7 +10331,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 6, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-retained-players/",
     "featured": false
   },
@@ -10991,7 +10346,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 6, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/jsk-released-players/",
     "featured": false
   },
@@ -11006,7 +10361,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 6, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/wiaan-mulders-shock-release-by-jsk-headlines-the-sa20-2027-auction-build-up/",
     "featured": false
   },
@@ -11021,7 +10376,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 6, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/complete-history-of-chennai-super-kings/",
     "featured": false
   },
@@ -11036,7 +10391,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 7, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/who-will-be-csks-next-head-coach/",
     "featured": false
   },
@@ -11051,7 +10406,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 7, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/joburg-super-kings-coaching-staff/",
     "featured": false
   },
@@ -11066,7 +10421,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 8, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/cricket-australia-set-to-allow-mitchell-marsh-and-matt-short-to-participate-in-sa20-only-after-bbl-commitments/",
     "featured": false
   },
@@ -11081,7 +10436,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 8, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhonis-new-csk-role-for-ipl-2027-what-we-know/",
     "featured": false
   },
@@ -11096,7 +10451,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 10, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/sarfaraz-khan-returns-to-indias-test-squad-nearly-after-two-long-years/",
     "featured": false
   },
@@ -11111,7 +10466,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 11, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-to-appoint-an-overseas-legend-as-their-new-head-coach/",
     "featured": false
   },
@@ -11126,7 +10481,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 12, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-news-today/",
     "featured": false
   },
@@ -11141,7 +10496,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 13, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-trade-news/",
     "featured": false
   },
@@ -11156,7 +10511,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 13, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/hardik-pandya-csk-trade/",
     "featured": false
   },
@@ -11171,7 +10526,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 14, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/eoin-morgan-as-csk-coach/",
     "featured": false
   },
@@ -11186,7 +10541,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 14, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-retained-players-2027/",
     "featured": false
   },
@@ -11201,7 +10556,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 17, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/latest-news-about-csk-this-weeks-headlines/",
     "featured": false
   },
@@ -11216,7 +10571,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 17, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-news-today-weekly-update/",
     "featured": false
   },
@@ -11231,7 +10586,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 17, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/noor-ahmad-and-leus-du-plooy-shine-as-manchester-super-giants-claim-hundred-crown/",
     "featured": false
   },
@@ -11246,7 +10601,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 19, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-coaching-staff-changes/",
     "featured": false
   },
@@ -11261,7 +10616,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 20, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/duleep-trophy-final-to-be-held-in-chennai/",
     "featured": false
   },
@@ -11276,7 +10631,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 21, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-trophies/",
     "featured": false
   },
@@ -11291,7 +10646,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 22, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/michael-hussey-set-to-join-england-as-batting-coach/",
     "featured": false
   },
@@ -11306,7 +10661,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 25, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhonis-bond-with-csk-under-strain/",
     "featured": false
   },
@@ -11321,7 +10676,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 25, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/gaikwads-half-century-puts-west-zone-on-the-front-foot/",
     "featured": false
   },
@@ -11336,7 +10691,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 29, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/list-of-csk-captain-from-ipl/",
     "featured": false
   },
@@ -11351,7 +10706,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 29, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-released-players/",
     "featured": false
   },
@@ -11366,7 +10721,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 30, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-news-today-end-of-month-wrap/",
     "featured": false
   },
@@ -11381,7 +10736,7 @@ export const SITEMAP_POSTS = [
     "date": "Aug 31, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/shreyas-gopals-magnificent-88-gives-south-zone-crucial-edge-in-the-duleep-trophy-semi-final-clash-against-nzone/",
     "featured": false
   },
@@ -11396,7 +10751,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 2, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-breaks-silence-on-csk-planning-to-appoint-a-new-head-coach/",
     "featured": false
   },
@@ -11411,7 +10766,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 4, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/prashant-veers-masterclass-powers-nsk-to-a-thrilling-win-against-kr-in-the-eliminator-of-up-t20-league/",
     "featured": false
   },
@@ -11426,7 +10781,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 8, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/dewald-brevis-dropped-from-south-africas-odi-squad-for-the-upcoming-home-series-against-australia/",
     "featured": false
   },
@@ -11441,7 +10796,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 9, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-first-captain-2008/",
     "featured": false
   },
@@ -11456,7 +10811,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 10, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/eoin-morgan-considered-for-csk-head-coach-role-with-salary-demands-remaining-a-major-hurdle/",
     "featured": false
   },
@@ -11471,7 +10826,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 12, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-owner/",
     "featured": false
   },
@@ -11486,7 +10841,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 14, 2026",
     "readingTime": "3 min read",
     "views": "5.0K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2024/02/MS-Dhoni.jpg",
+    "featuredImage": "/uploads/2024/02/MS-Dhoni.jpg",
     "url": "https://superkingsden.com/ms-dhoni-csk-stakes/",
     "featured": false
   },
@@ -11501,7 +10856,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 16, 2026",
     "readingTime": "4 min read",
     "views": "14.1K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/nathan-ellis-five-fer-powers-australia-to-a-thrilling-victory-over-zimbabwe/",
     "featured": false
   },
@@ -11516,7 +10871,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 16, 2026",
     "readingTime": "5 min read",
     "views": "23.2K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/02/Website-feature-photo-30.png",
+    "featuredImage": "/uploads/2026/02/Website-feature-photo-30.png",
     "url": "https://superkingsden.com/sanju-samsons-quick-fire-fifty-guides-india-to-a-convincing-win-over-afghanistan/",
     "featured": false
   },
@@ -11531,7 +10886,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 17, 2026",
     "readingTime": "6 min read",
     "views": "32.3K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/01/Website-feature-photo-22.png",
+    "featuredImage": "/uploads/2026/01/Website-feature-photo-22.png",
     "url": "https://superkingsden.com/ruturaj-gaikwad-selected-in-indias-odi-squad-ahead-of-the-upcoming-home-series-against-west-indies/",
     "featured": false
   },
@@ -11546,7 +10901,7 @@ export const SITEMAP_POSTS = [
     "date": "Sep 17, 2026",
     "readingTime": "7 min read",
     "views": "41.4K",
-    "featuredImage": "https://superkingsden.com/wp-content/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
+    "featuredImage": "/uploads/2026/06/Chennai-Super-Kings-2026.jpg",
     "url": "https://superkingsden.com/csk-ban-2016-2017/",
     "featured": false
   }

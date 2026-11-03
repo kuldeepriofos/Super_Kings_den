@@ -45,7 +45,7 @@ export default function QuizCard() {
           <h2 className="text-xl sm:text-2xl font-semibold uppercase font-heading tracking-tight text-slate-900 dark:text-white flex items-center">
             CSK Fan IQ Quiz &bull; Trivia Challenge
           </h2>
-          <p className="text-xs text-slate-500 dark:text-slate-400">
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 sm:mt-1.5">
             Test how well you know the history, records, and thrilling moments of Chennai Super Kings
           </p>
         </div>
