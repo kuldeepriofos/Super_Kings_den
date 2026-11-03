@@ -492,9 +492,53 @@ export async function fetchAllSlugs() {
  * Fetch static WordPress page by slug (about-us, privacy-policy, terms, etc.).
  * Checks MongoDB first, with instant fallback to static pagesData.
  */
+export const CORE_RESERVED_SLUGS = [
+  'chennai-super-kings',
+  'joburg-super-kings',
+  'texas-super-kings',
+  'csk',
+  'jsk',
+  'tsk',
+  'csk-fixtures',
+  'jsk-fixtures',
+  'tsk-fixtures',
+  'csk-team',
+  'jsk-team',
+  'tsk-team',
+  'csk-news',
+  'jsk-news',
+  'tsk-news',
+  'csk-trophies',
+  'news',
+  'all-time-xi',
+  'squad',
+  'quiz',
+  'standings',
+  'stats',
+  'contact-us',
+  'search',
+  'home',
+  'trophy',
+  'api',
+  'admin',
+  'player',
+  'players',
+  'category',
+  'web-stories',
+  'robots.txt',
+  'sitemap.xml',
+  'favicon.ico',
+  'llms.txt',
+  'icon.png',
+  'apple-icon.png',
+];
+
 export const fetchPageBySlug = cache(async (slug) => {
   if (!slug) return null;
   const cleanSlug = String(slug).replace(/\/+$/, '').trim().toLowerCase();
+
+  // If this slug belongs to a dedicated app route or core system route, never treat as static page
+  if (CORE_RESERVED_SLUGS.includes(cleanSlug)) return null;
 
   if (typeof window === 'undefined') {
     try {
@@ -504,6 +548,7 @@ export const fetchPageBySlug = cache(async (slug) => {
       const pageDoc = await Page.findOne({
         slug: cleanSlug,
         isPublished: { $ne: false },
+        pageType: { $ne: 'core_route' },
       }).lean();
 
       if (pageDoc) {
@@ -518,11 +563,15 @@ export const fetchPageBySlug = cache(async (slug) => {
     }
   }
 
-  return pagesData.find(p => p.slug.toLowerCase() === cleanSlug) || null;
+  const staticPage = pagesData.find(p => p.slug.toLowerCase() === cleanSlug);
+  if (staticPage && !CORE_RESERVED_SLUGS.includes(cleanSlug)) {
+    return staticPage;
+  }
+  return null;
 });
 
 /**
- * Fetch all static page slugs.
+ * Fetch all static page slugs (excluding core system routes).
  */
 export async function fetchAllPageSlugs() {
   if (typeof window === 'undefined') {
@@ -530,13 +579,20 @@ export async function fetchAllPageSlugs() {
       const connectToDatabase = (await import('../lib/mongodb.js')).default;
       const Page = (await import('../models/Page.js')).default;
       await connectToDatabase();
-      const slugs = await Page.distinct('slug', { isPublished: { $ne: false } });
-      if (slugs && slugs.length > 0) return slugs;
+      const slugs = await Page.distinct('slug', {
+        isPublished: { $ne: false },
+        pageType: { $ne: 'core_route' },
+      });
+      if (slugs && slugs.length > 0) {
+        return slugs.filter(s => s && !CORE_RESERVED_SLUGS.includes(s.toLowerCase()));
+      }
     } catch (err) {
       // fallback
     }
   }
-  return pagesData.map(p => p.slug);
+  return pagesData
+    .map(p => p.slug)
+    .filter(s => s && !CORE_RESERVED_SLUGS.includes(s.toLowerCase()));
 }
 
 /**

@@ -18,29 +18,53 @@ import {
 } from '../../services/api';
 
 const RESERVED_ROUTES = new Set([
-  'news',
-  'all-time-xi',
-  'csk-trophies',
-  'squad',
-  'quiz',
-  'standings',
-  'api',
-  'robots.txt',
-  'sitemap.xml',
-  'favicon.ico',
-  'players',
-  'player',
-  'category',
-  'web-stories',
-  'csk-news',
-  'jsk-news',
-  'tsk-news',
-  'csk-team',
+  // Core Franchise Hubs
+  'chennai-super-kings',
+  'joburg-super-kings',
+  'texas-super-kings',
   'csk',
   'jsk',
   'tsk',
-  'trophy',
+
+  // Franchise Subpages
+  'csk-fixtures',
+  'jsk-fixtures',
+  'tsk-fixtures',
+  'csk-team',
+  'jsk-team',
+  'tsk-team',
+  'csk-news',
+  'jsk-news',
+  'tsk-news',
+  'csk-trophies',
+
+  // Core Sections & Standalone Pages
+  'news',
+  'all-time-xi',
+  'squad',
+  'quiz',
+  'standings',
+  'stats',
+  'contact-us',
   'search',
+  'home',
+  'trophy',
+
+  // Dynamic / System Route Prefixes & Handlers
+  'api',
+  'admin',
+  'player',
+  'players',
+  'category',
+  'web-stories',
+
+  // System & Meta Files
+  'robots.txt',
+  'sitemap.xml',
+  'favicon.ico',
+  'llms.txt',
+  'icon.png',
+  'apple-icon.png',
 ]);
 
 // Incremental Static Regeneration: pages refresh in the background every 5 min
