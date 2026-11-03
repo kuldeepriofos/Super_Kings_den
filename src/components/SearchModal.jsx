@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import SmartImage from './SmartImage';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Search, X, ChevronRight, ArrowRight } from 'lucide-react';
@@ -162,15 +163,14 @@ export default function SearchModal({ isOpen, onClose, posts = [], onSelectPost 
                 className="group flex items-center justify-between p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-white/5 cursor-pointer transition block"
               >
                 <div className="flex items-center space-x-3 min-w-0">
-                  <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-slate-200 dark:bg-slate-800">
-                    <img 
-                      src={post.featuredImage} 
-                      alt={post.title} 
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        e.target.src = "/uploads/2026/06/Chennai-Super-Kings-2026.jpg";
-                      }}
-                    />
+                  <div className="relative w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-slate-200 dark:bg-slate-800">
+                    <SmartImage
+                src={post.featuredImage}
+                alt={post.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
+                className="object-cover"
+              />
                   </div>
                   <div className="min-w-0">
                     <span className="text-[10px] font-bold uppercase text-amber-700 dark:text-csk-yellow block">

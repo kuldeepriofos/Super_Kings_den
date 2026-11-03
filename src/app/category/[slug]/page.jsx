@@ -7,6 +7,9 @@ import NewsGrid from '../../../components/NewsGrid';
 import CategoryHeader from '../../../components/CategoryHeader';
 import { fetchLivePosts, fetchCategoryBySlug, fetchAllCategories } from '../../../services/api';
 
+export const revalidate = 300;
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   const categories = await fetchAllCategories();
   return (categories || []).map((cat) => ({ slug: cat.slug }));

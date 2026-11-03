@@ -4,6 +4,7 @@ import connectToDatabase from '../../../../../lib/mongodb';
 import { getAdminSession } from '../../../../../lib/auth';
 import Fixture from '../../../../../models/Fixture';
 import { syncMockDataFixtures } from '../../../../../lib/syncFixtures';
+import { invalidateFixturesCache } from '../../../../../services/api';
 
 async function findFixture(idParam) {
   if (mongoose.Types.ObjectId.isValid(idParam)) {
@@ -118,6 +119,7 @@ export async function PUT(request, { params }) {
     });
 
     await fixture.save();
+    invalidateFixturesCache();
 
     return NextResponse.json({
       success: true,
@@ -157,6 +159,7 @@ export async function DELETE(request, { params }) {
       fixture.isActive = false;
       await fixture.save();
     }
+    invalidateFixturesCache();
 
     return NextResponse.json({
       success: true,

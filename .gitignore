@@ -38,3 +38,12 @@ next-env.d.ts
 *.zip
 *.tar.gz
 *.rar
+
+# Uploaded media should live on a CDN / object store, not in git.
+# (Existing tracked files under public/uploads remain until migrated off;
+#  this prevents NEW uploads from bloating the repo.)
+/public/uploads/
+
+# Runtime-generated .htaccess (managed from /admin/site-files; source of truth
+# is the DB + src/data/siteFiles.json).
+/.htaccess

@@ -12,7 +12,7 @@ export default function StatsHub({ franchise = 'CSK', className = 'mb-8 sm:mb-10
     let isMounted = true;
     async function loadLiveStats() {
       try {
-        const res = await fetch(`/api/admin/franchise-stats?franchise=${franchise}`);
+        const res = await fetch(`/api/franchise-stats?franchise=${franchise}`);
         if (res.ok) {
           const json = await res.json();
           if (isMounted && json.data && json.data.overview) {

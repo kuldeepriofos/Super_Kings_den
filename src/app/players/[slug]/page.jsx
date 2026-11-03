@@ -1,9 +1,13 @@
 import { redirect, notFound } from 'next/navigation';
 import { fetchPlayerBySlug, fetchAllPlayerSlugs } from '../../../services/api';
 
+// Player profiles render on demand and are cached via ISR, avoiding a large
+// prebuild of every slug (+ its -1/1 variants).
+export const revalidate = 300;
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
-  const slugs = await fetchAllPlayerSlugs();
-  return slugs.map((slug) => ({ slug }));
+  return [];
 }
 
 export const metadata = {

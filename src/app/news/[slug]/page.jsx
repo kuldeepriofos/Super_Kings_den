@@ -3,9 +3,17 @@ import { notFound } from 'next/navigation';
 import ArticleDetailView from '../../../components/ArticleDetailView';
 import { fetchPostBySlug, fetchLivePosts, fetchAllSlugs } from '../../../services/api';
 
+export const revalidate = 300;
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
-  const slugs = await fetchAllSlugs();
-  return slugs.map(slug => ({ slug }));
+  // Prerender recent articles only; older ones render on demand via ISR.
+  const recent = await fetchLivePosts();
+  return (recent || [])
+    .slice(0, 40)
+    .map((p) => p.slug)
+    .filter(Boolean)
+    .map((slug) => ({ slug }));
 }
 
 // Dynamic SEO Metadata generation for Google, Twitter & OpenGraph

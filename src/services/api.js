@@ -1,24 +1,43 @@
 import { cache } from 'react';
+import { unstable_cache, revalidateTag } from 'next/cache';
 import { SQUAD_PLAYERS } from '../data/mockData';
 import { JSK_ROSTER_PLAYERS, TSK_ROSTER_PLAYERS } from '../data/franchiseRosters';
 import postsIndex from '../data/postsIndex.json';
 
+// Cache tags for Next.js on-demand revalidation (shared across all instances,
+// unlike the previous per-process module-memory caches).
+export const CACHE_TAGS = {
+  posts: 'skd-posts',
+  fixtures: 'skd-fixtures',
+  categories: 'skd-categories',
+};
+
 // Cached posts data for instant O(1) slug lookup on server
 let _postsDataMap = null;
-let _livePostsCache = null;
-let _livePostsCacheTime = 0;
-let _fixturesCache = null;
-let _fixturesCacheTime = 0;
 
 export function invalidatePostsCache() {
   _postsDataMap = null;
-  _livePostsCache = null;
-  _livePostsCacheTime = 0;
+  try {
+    revalidateTag(CACHE_TAGS.posts);
+  } catch (e) {
+    // revalidateTag is only valid inside route handlers / server actions
+  }
 }
 
 export function invalidateFixturesCache() {
-  _fixturesCache = null;
-  _fixturesCacheTime = 0;
+  try {
+    revalidateTag(CACHE_TAGS.fixtures);
+  } catch (e) {
+    /* no-op outside request scope */
+  }
+}
+
+export function invalidateCategoriesCache() {
+  try {
+    revalidateTag(CACHE_TAGS.categories);
+  } catch (e) {
+    /* no-op outside request scope */
+  }
 }
 
 function getPostsDataMap() {
@@ -75,58 +94,47 @@ export function decodeHtmlEntities(str) {
 }
 
 /**
- * Fetch all published posts (all 814 articles exported from WordPress).
- * Non-blocking stale-while-revalidate caching: returns instantly in 0ms!
+ * Internal: read published posts from MongoDB, wrapped in Next's data cache.
+ * Returns null on any failure so the caller can fall back to the bundled index.
+ * Cached across requests/instances and invalidated on edit via CACHE_TAGS.posts.
+ */
+const getPublishedPostsFromDb = unstable_cache(
+  async () => {
+    try {
+      const connectToDatabase = (await import('../lib/mongodb')).default;
+      const Post = (await import('../models/Post')).default;
+      await connectToDatabase();
+      const dbPosts = await Post.find({ isPublished: { $ne: false } })
+        .select('-content')
+        .sort({ publishedAt: -1, id: -1 })
+        .lean()
+        .maxTimeMS(3500);
+
+      if (dbPosts && dbPosts.length > 0) {
+        return dbPosts.map((p) => ({
+          ...p,
+          id: p.id || String(p._id),
+          _id: String(p._id),
+          isMostViewed: Boolean(p.isMostViewed),
+        }));
+      }
+    } catch (err) {
+      // fall back
+    }
+    return null;
+  },
+  ['skd-live-posts'],
+  { tags: [CACHE_TAGS.posts], revalidate: 300 }
+);
+
+/**
+ * Fetch all published posts. Served from the Next data cache (shared, revalidated
+ * on edit) with an instant static fallback when the DB is unavailable.
  */
 export async function fetchLivePosts() {
-  const now = Date.now();
-
-  // If memory cache is fresh, return immediately in 0ms
-  if (_livePostsCache && (now - _livePostsCacheTime < 60000)) {
-    return _livePostsCache;
-  }
-
-  // Pre-seed with bundled index immediately so SSR is NEVER blocked
-  if (!_livePostsCache) {
-    _livePostsCache = postsIndex;
-  }
-
-  if (typeof window === 'undefined') {
-    const syncDbPosts = async () => {
-      try {
-        const connectToDatabase = (await import('../lib/mongodb')).default;
-        const Post = (await import('../models/Post')).default;
-        await connectToDatabase();
-        const dbPosts = await Post.find({ isPublished: { $ne: false } })
-          .select('-content')
-          .sort({ publishedAt: -1, id: -1 })
-          .lean()
-          .maxTimeMS(3500);
-
-        if (dbPosts && dbPosts.length > 0) {
-          _livePostsCache = dbPosts.map((p) => ({
-            ...p,
-            id: p.id || String(p._id),
-            _id: String(p._id),
-            isMostViewed: Boolean(p.isMostViewed),
-          }));
-          _livePostsCacheTime = Date.now();
-        }
-      } catch (err) {
-        // Keep in-memory cache on any network/timeout error
-      }
-    };
-
-    // If cache already has posts, run DB refresh in background without stalling the user
-    if (_livePostsCache && _livePostsCache.length > 0) {
-      syncDbPosts().catch(() => {});
-      return _livePostsCache;
-    }
-
-    await syncDbPosts();
-  }
-
-  return _livePostsCache || postsIndex;
+  if (typeof window !== 'undefined') return postsIndex;
+  const dbPosts = await getPublishedPostsFromDb();
+  return dbPosts && dbPosts.length > 0 ? dbPosts : postsIndex;
 }
 
 /**
@@ -535,15 +543,15 @@ export async function fetchAllPageSlugs() {
  * Fetch all categories.
  * Queries MongoDB live with fallback to static categoriesData.
  */
-export async function fetchAllCategories() {
-  if (typeof window === 'undefined') {
+const getCategoriesFromDb = unstable_cache(
+  async () => {
     try {
       const connectToDatabase = (await import('../lib/mongodb')).default;
       const Category = (await import('../models/Category')).default;
       await connectToDatabase();
-      const cats = await Category.find().sort({ count: -1 }).lean();
+      const cats = await Category.find().sort({ count: -1 }).lean().maxTimeMS(2000);
       if (cats && cats.length > 0) {
-        return cats.map(c => ({
+        return cats.map((c) => ({
           ...c,
           id: c.id || String(c._id),
           _id: String(c._id),
@@ -552,8 +560,16 @@ export async function fetchAllCategories() {
     } catch (err) {
       console.warn('MongoDB categories fetch fallback:', err.message);
     }
-  }
-  return categoriesData;
+    return null;
+  },
+  ['skd-categories'],
+  { tags: [CACHE_TAGS.categories], revalidate: 600 }
+);
+
+export async function fetchAllCategories() {
+  if (typeof window !== 'undefined') return categoriesData;
+  const cats = await getCategoriesFromDb();
+  return cats && cats.length > 0 ? cats : categoriesData;
 }
 
 /**
@@ -605,18 +621,11 @@ export async function fetchWebStoryBySlug(slug) {
 }
 
 /**
- * Fetch fixtures dynamically with fast memory caching (0-1ms).
+ * Internal: read active fixtures from MongoDB via Next's data cache.
+ * Invalidated on edit via CACHE_TAGS.fixtures.
  */
-export async function fetchLiveFixtures(franchise = 'ALL') {
-  const now = Date.now();
-  if (_fixturesCache && (now - _fixturesCacheTime < 60000)) {
-    if (franchise && franchise !== 'ALL') {
-      return _fixturesCache.filter(f => f.franchise === franchise);
-    }
-    return _fixturesCache;
-  }
-
-  if (typeof window === 'undefined') {
+const getActiveFixturesFromDb = unstable_cache(
+  async () => {
     try {
       const connectToDatabase = (await import('../lib/mongodb')).default;
       const Fixture = (await import('../models/Fixture')).default;
@@ -627,22 +636,31 @@ export async function fetchLiveFixtures(franchise = 'ALL') {
         .maxTimeMS(2500);
 
       if (raw && raw.length > 0) {
-        _fixturesCache = raw.map((f) => ({
+        return raw.map((f) => ({
           ...f,
           id: f.id || String(f._id),
           _id: String(f._id),
         }));
-        _fixturesCacheTime = now;
-        if (franchise && franchise !== 'ALL') {
-          return _fixturesCache.filter(f => f.franchise === franchise);
-        }
-        return _fixturesCache;
       }
     } catch (err) {
       console.warn('MongoDB live fixtures fetch fallback:', err.message);
     }
+    return [];
+  },
+  ['skd-live-fixtures'],
+  { tags: [CACHE_TAGS.fixtures], revalidate: 300 }
+);
+
+/**
+ * Fetch fixtures from the shared data cache, filtered by franchise.
+ */
+export async function fetchLiveFixtures(franchise = 'ALL') {
+  if (typeof window !== 'undefined') return [];
+  const all = await getActiveFixturesFromDb();
+  if (franchise && franchise !== 'ALL') {
+    return all.filter((f) => f.franchise === franchise);
   }
-  return _fixturesCache || [];
+  return all;
 }
 
 

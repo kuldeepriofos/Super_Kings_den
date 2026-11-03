@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import connectToDatabase from '../../../../lib/mongodb.js';
 import Standing from '../../../../models/Standing.js';
+import { getAdminSession, requirePermission } from '../../../../lib/auth.js';
 import { IPL_STANDINGS, SA20_STANDINGS, MLC_STANDINGS } from '../../../../data/franchiseStandingsData.js';
 
 const STANDINGS_FILE = path.join(process.cwd(), 'src', 'data', 'standingsData.json');
@@ -28,6 +29,11 @@ function writeFallbackStandings(data) {
 
 export async function GET(req) {
   try {
+    const session = await getAdminSession(req);
+    if (!session) {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+    }
+
     const { searchParams } = new URL(req.url);
     const franchiseParam = (searchParams.get('franchise') || '').toUpperCase();
     const tournamentParam = searchParams.get('tournament') || '';
@@ -68,6 +74,11 @@ export async function GET(req) {
 
 export async function PUT(req) {
   try {
+    const session = await requirePermission(req, 'manageMatches');
+    if (!session) {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+    }
+
     const body = await req.json();
     const { standings, tournament: specifiedTournament } = body;
 

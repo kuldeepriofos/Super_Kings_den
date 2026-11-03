@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import connectToDatabase from '../../../../lib/mongodb.js';
 import FranchiseStat from '../../../../models/FranchiseStat.js';
+import { getAdminSession, requirePermission } from '../../../../lib/auth.js';
 
 const STATS_FILE = path.join(process.cwd(), 'src', 'data', 'franchiseStatsData.json');
 
@@ -27,6 +28,11 @@ function writeFallbackStats(data) {
 
 export async function GET(req) {
   try {
+    const session = await getAdminSession(req);
+    if (!session) {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+    }
+
     const { searchParams } = new URL(req.url);
     const franchise = searchParams.get('franchise')?.toUpperCase();
 
@@ -59,6 +65,11 @@ export async function GET(req) {
 
 export async function PUT(req) {
   try {
+    const session = await requirePermission(req, 'manageMatches');
+    if (!session) {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+    }
+
     const body = await req.json();
     const { franchise, overview, batting, bowling, records, teamName, league } = body;
 

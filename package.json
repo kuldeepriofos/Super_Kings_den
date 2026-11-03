@@ -20,6 +20,7 @@
     "@tiptap/starter-kit": "^3.32.1",
     "bcryptjs": "^3.0.3",
     "dompurify": "^3.4.17",
+    "jose": "^5.9.6",
     "jsonwebtoken": "^9.0.3",
     "lucide-react": "^0.475.0",
     "mongoose": "^9.11.4",
@@ -31,7 +32,7 @@
   "devDependencies": {
     "@types/dompurify": "^3.0.5",
     "@types/node": "^26.6.6",
-    "@types/react": "^19.3.0",
+    "@types/react": "^18.3.12",
     "autoprefixer": "^10.4.20",
     "pngjs": "^7.0.0",
     "postcss": "^8.4.49",

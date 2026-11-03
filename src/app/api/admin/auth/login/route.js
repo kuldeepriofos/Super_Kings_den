@@ -74,11 +74,14 @@ export async function POST(request) {
     const cleanUsername = String(username).trim().toLowerCase();
     const cleanPassword = String(password).trim();
 
-    const envUser = (process.env.ADMIN_USERNAME || 'admin').toLowerCase();
-    const envPass = process.env.ADMIN_PASSWORD || 'superkings2026';
+    // Env-based bootstrap admin. Only enabled when BOTH vars are explicitly set
+    // (no hardcoded default password) — intended for first-run seeding only.
+    const envUser = (process.env.ADMIN_USERNAME || '').toLowerCase();
+    const envPass = process.env.ADMIN_PASSWORD || '';
 
     let authenticated = false;
     let userRole = 'superadmin';
+    let userPermissions = null;
 
     // 1. Try MongoDB AdminUser (by username or email)
     try {
@@ -100,6 +103,7 @@ export async function POST(request) {
         if (isMatch) {
           authenticated = true;
           userRole = dbUser.role || 'superadmin';
+          userPermissions = dbUser.permissions || null;
           dbUser.lastLogin = new Date();
           dbUser.lastLoginIp = clientIp;
           dbUser.loginCount = (dbUser.loginCount || 0) + 1;
@@ -110,8 +114,8 @@ export async function POST(request) {
       console.warn('MongoDB check during login fallback to env:', dbErr.message);
     }
 
-    // 2. Fallback check against env credentials
-    if (!authenticated && cleanUsername === envUser && cleanPassword === envPass) {
+    // 2. Fallback check against env credentials (only when configured)
+    if (!authenticated && envUser && envPass && cleanUsername === envUser && cleanPassword === envPass) {
       authenticated = true;
       userRole = 'superadmin';
     }
@@ -131,6 +135,7 @@ export async function POST(request) {
     const token = signAdminToken({
       username: cleanUsername,
       role: userRole,
+      permissions: userPermissions || undefined,
     });
 
     const response = NextResponse.json({

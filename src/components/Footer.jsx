@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import SmartImage from './SmartImage';
 import Link from 'next/link';
 import { Flame, Twitter, Facebook, Instagram, Youtube, Heart } from 'lucide-react';
 import { useApp } from '../context/AppContext';
@@ -28,9 +29,11 @@ export default function Footer({ onSelectFranchise: propOnSelect }) {
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-3">
               <div className="h-14 px-3 py-1 bg-white rounded-xl shadow-md border border-amber-400/40 flex items-center justify-center">
-                <img 
-                  src="/superkingsden-1.png" 
-                  alt="Super King's Den Official Logo" 
+                <SmartImage
+                  src="/superkingsden-1.png"
+                  alt="Super King's Den Official Logo"
+                  width={300}
+                  height={300}
                   className="h-11 w-auto object-contain"
                 />
               </div>

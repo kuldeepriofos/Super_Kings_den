@@ -5,6 +5,7 @@ import connectToDatabase from '../../../../lib/mongodb';
 import { getAdminSession } from '../../../../lib/auth';
 import Category from '../../../../models/Category';
 import Post from '../../../../models/Post';
+import { invalidateCategoriesCache } from '../../../../services/api';
 
 function syncCategoriesJson(category, action = 'upsert') {
   try {
@@ -111,6 +112,7 @@ export async function POST(request) {
     });
 
     syncCategoriesJson(newCategory, 'upsert');
+    invalidateCategoriesCache();
 
     return NextResponse.json({
       success: true,

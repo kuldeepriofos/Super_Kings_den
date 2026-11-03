@@ -2,8 +2,40 @@ import { NextResponse } from 'next/server';
 import connectToDatabase from '../../../lib/mongodb';
 import Lead from '../../../models/Lead';
 
+// Simple in-memory IP rate limiter to deter contact-form spam/floods.
+// NOTE: per-instance only; back with Redis/Upstash for multi-instance deploys.
+const submissionsMap = new Map();
+const MAX_SUBMISSIONS = 5;
+const WINDOW_MS = 10 * 60 * 1000; // 5 submissions / 10 minutes per IP
+
+function getClientIp(request) {
+  const forwarded = request.headers.get('x-forwarded-for');
+  if (forwarded) return forwarded.split(',')[0].trim();
+  return request.headers.get('x-real-ip') || 'unknown-ip';
+}
+
+function checkLeadRateLimit(ip) {
+  const now = Date.now();
+  const record = submissionsMap.get(ip);
+  if (!record || now - record.firstAt > WINDOW_MS) {
+    submissionsMap.set(ip, { count: 1, firstAt: now });
+    return true;
+  }
+  if (record.count >= MAX_SUBMISSIONS) return false;
+  record.count += 1;
+  return true;
+}
+
 export async function POST(request) {
   try {
+    const clientIp = getClientIp(request);
+    if (!checkLeadRateLimit(clientIp)) {
+      return NextResponse.json(
+        { success: false, error: 'Too many submissions. Please try again later.' },
+        { status: 429 }
+      );
+    }
+
     const body = await request.json();
 
     // 1. Honeypot Anti-Spam Check (hidden field filled by bots)

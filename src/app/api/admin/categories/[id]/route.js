@@ -6,6 +6,7 @@ import connectToDatabase from '../../../../../lib/mongodb';
 import { getAdminSession } from '../../../../../lib/auth';
 import Category from '../../../../../models/Category';
 import { handleSlugChangeRedirect } from '../../../../../lib/pagesManager';
+import { invalidateCategoriesCache } from '../../../../../services/api';
 
 function syncCategoriesJson(category, action = 'upsert') {
   try {
@@ -138,6 +139,7 @@ export async function PUT(request, { params }) {
 
     await category.save();
     syncCategoriesJson(category, 'upsert');
+    invalidateCategoriesCache();
 
     return NextResponse.json({
       success: true,
@@ -169,6 +171,7 @@ export async function DELETE(request, { params }) {
     const deletedCopy = { ...category.toObject() };
     await category.deleteOne();
     syncCategoriesJson(deletedCopy, 'delete');
+    invalidateCategoriesCache();
 
     return NextResponse.json({
       success: true,

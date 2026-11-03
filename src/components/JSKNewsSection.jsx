@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useMemo } from 'react';
+import SmartImage from './SmartImage';
 import Link from 'next/link';
 import { Flame, Clock, ChevronRight, User, ArrowRight } from 'lucide-react';
 import postsIndex from '../data/postsIndex.json';
@@ -75,13 +76,12 @@ export default function JSKNewsSection({ posts = null, className = "mb-8 sm:mb-1
           >
             {/* Background Image with Dynamic Gradient Overlay */}
             <div className="absolute inset-0 z-0 overflow-hidden">
-              <img 
-                src={leadStory.featuredImage} 
+              <SmartImage
+                src={leadStory.featuredImage}
                 alt={leadStory.title}
-                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-90"
-                onError={(e) => {
-                  e.target.src = "/uploads/2026/06/Chennai-Super-Kings-2026.jpg";
-                }}
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-90"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-transparent"></div>
             </div>
@@ -136,14 +136,13 @@ export default function JSKNewsSection({ posts = null, className = "mb-8 sm:mb-1
             >
               {/* Thumbnail */}
               <div className="relative w-24 h-24 sm:w-28 sm:h-24 rounded-lg overflow-hidden flex-shrink-0 border border-slate-200 dark:border-white/10">
-                <img 
-                  src={post.featuredImage} 
-                  alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                  onError={(e) => {
-                    e.target.src = "/uploads/2026/06/Chennai-Super-Kings-2026.jpg";
-                  }}
-                />
+                <SmartImage
+                src={post.featuredImage}
+                alt={post.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
+                className="object-cover group-hover:scale-110 transition duration-500"
+              />
                 <span className="absolute top-1 left-1 px-1.5 py-0.5 rounded text-[9px] font-bold uppercase bg-slate-900/90 text-csk-yellow border border-csk-yellow/40">
                   JSK
                 </span>

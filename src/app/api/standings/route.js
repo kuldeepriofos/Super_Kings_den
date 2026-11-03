@@ -5,6 +5,8 @@ import connectToDatabase from '../../../lib/mongodb.js';
 import Standing from '../../../models/Standing.js';
 import { getFranchiseStandings, IPL_STANDINGS, SA20_STANDINGS, MLC_STANDINGS } from '../../../data/franchiseStandingsData.js';
 
+export const dynamic = 'force-dynamic';
+
 function getFallbackForFranchise(franchise = 'CSK') {
   const norm = (franchise || 'CSK').toUpperCase();
   if (norm === 'JSK') return SA20_STANDINGS;

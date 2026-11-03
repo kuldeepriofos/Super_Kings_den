@@ -5,6 +5,8 @@ import Post from '../../../../models/Post';
 import Player from '../../../../models/Player';
 import Category from '../../../../models/Category';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request) {
   try {
     const session = await getAdminSession(request);

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import SmartImage from './SmartImage';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { 
@@ -325,9 +326,12 @@ export default function Navbar() {
             className="flex items-center cursor-pointer group flex-shrink-0"
           >
             <div className="h-11 sm:h-13 px-3 py-1 bg-white rounded-xl shadow-md border border-amber-400/40 hover:border-csk-yellow transition-all duration-300 flex items-center justify-center group-hover:scale-105">
-              <img 
-                src="/superkingsden-1.png" 
-                alt="Super King's Den Official Logo" 
+              <SmartImage
+                src="/superkingsden-1.png"
+                alt="Super King's Den Official Logo"
+                width={300}
+                height={300}
+                priority
                 className="h-9 sm:h-11 w-auto object-contain"
               />
             </div>

@@ -14,7 +14,10 @@ const PostSchema = new mongoose.Schema(
     publishedAt: { type: Date, index: true },
     modified: { type: String },
     readingTime: { type: String, default: '3 min read' },
+    // `views` is the legacy display string (e.g. "1.2K"); `viewCount` is the
+    // real, sortable/aggregatable counter incremented on article view.
     views: { type: mongoose.Schema.Types.Mixed, default: '1.2K' },
+    viewCount: { type: Number, default: 0, index: true },
     featuredImage: { type: String, default: '' },
     remoteImage: { type: String, default: '' },
     canonicalUrl: { type: String, default: '' },

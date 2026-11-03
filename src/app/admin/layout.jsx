@@ -29,6 +29,7 @@ import {
   Share2,
   Trophy,
   TrendingUp,
+  FileCode2,
 } from 'lucide-react';
 
 export default function AdminLayout({ children }) {
@@ -185,6 +186,7 @@ export default function AdminLayout({ children }) {
       group: 'System & Routing',
       items: [
         { name: 'Head & Body Code', href: '/admin/code-snippets', icon: Code },
+        { name: 'SEO & Server Files', href: '/admin/site-files', icon: FileCode2 },
         { name: '301/302 Redirects', href: '/admin/redirects', icon: ArrowRightLeft },
         { name: 'Database & Backups', href: '/admin/sync', icon: Database },
       ],

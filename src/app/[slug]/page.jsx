@@ -43,14 +43,25 @@ const RESERVED_ROUTES = new Set([
   'search',
 ]);
 
+// Incremental Static Regeneration: pages refresh in the background every 5 min
+// and unknown slugs render on demand (then cache), instead of prerendering all
+// ~2,400 routes at build time.
+export const revalidate = 300;
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
-  const [postSlugs, pageSlugs, playerSlugs] = await Promise.all([
-    fetchAllSlugs(),
+  // Prerender static pages + the most recent posts only. Older posts and player
+  // profiles render on first request and are then cached via ISR.
+  const [recentPosts, pageSlugs] = await Promise.all([
+    fetchLivePosts(),
     fetchAllPageSlugs(),
-    fetchAllPlayerSlugs(),
   ]);
-  const all = Array.from(new Set([...postSlugs, ...pageSlugs, ...playerSlugs])).filter(s => !RESERVED_ROUTES.has(s));
-  return all.map(slug => ({ slug }));
+  const recentSlugs = (recentPosts || [])
+    .slice(0, 40)
+    .map((p) => p.slug)
+    .filter(Boolean);
+  const all = Array.from(new Set([...recentSlugs, ...pageSlugs])).filter((s) => !RESERVED_ROUTES.has(s));
+  return all.map((slug) => ({ slug }));
 }
 
 // Dynamic SEO Metadata for direct URLs matching the exact sitemap URLs

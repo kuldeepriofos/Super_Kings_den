@@ -1,14 +1,36 @@
 import jwt from 'jsonwebtoken';
 import { cookies } from 'next/headers';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'superkingsden_jwt_secret_fallback_key_2026';
 export const AUTH_COOKIE_NAME = 'skd_admin_token';
+
+/**
+ * Resolve the JWT secret.
+ * - Production: a real JWT_SECRET env var is mandatory; we throw if it is
+ *   missing so the app never signs tokens with a public, hardcoded key.
+ * - Development: fall back to a clearly-labelled dev key (with a warning) so
+ *   the app still runs locally without a .env file.
+ */
+function getJwtSecret() {
+  const secret = process.env.JWT_SECRET;
+  if (secret && secret.trim()) return secret;
+
+  if (process.env.NODE_ENV === 'production') {
+    throw new Error(
+      'JWT_SECRET is not set. Refusing to start admin auth with an insecure fallback in production.'
+    );
+  }
+
+  console.warn(
+    '[auth] JWT_SECRET is not set — using an INSECURE development-only key. Set JWT_SECRET in .env.local.'
+  );
+  return 'dev-only-insecure-jwt-secret-do-not-use-in-production';
+}
 
 /**
  * Sign JWT token for admin session (valid for 7 days)
  */
 export function signAdminToken(payload) {
-  return jwt.sign(payload, JWT_SECRET, { expiresIn: '7d' });
+  return jwt.sign(payload, getJwtSecret(), { expiresIn: '7d' });
 }
 
 /**
@@ -16,7 +38,7 @@ export function signAdminToken(payload) {
  */
 export function verifyAdminToken(token) {
   try {
-    return jwt.verify(token, JWT_SECRET);
+    return jwt.verify(token, getJwtSecret());
   } catch (err) {
     return null;
   }
@@ -53,4 +75,20 @@ export async function getAdminSession(request) {
   if (!token) return null;
 
   return verifyAdminToken(token);
+}
+
+/**
+ * Enforce that the current session holds a given permission (or role).
+ * Returns the session on success, or null when access should be denied.
+ *
+ * `superadmin` always passes. Otherwise the AdminUser.permissions flag named
+ * by `permission` must be truthy on the token (see signAdminToken payload).
+ */
+export async function requirePermission(request, permission) {
+  const session = await getAdminSession(request);
+  if (!session) return null;
+  if (session.role === 'superadmin') return session;
+  if (!permission) return session;
+  const perms = session.permissions || {};
+  return perms[permission] ? session : null;
 }

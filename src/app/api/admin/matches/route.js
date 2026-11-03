@@ -3,6 +3,7 @@ import connectToDatabase from '../../../../lib/mongodb';
 import { getAdminSession } from '../../../../lib/auth';
 import Fixture from '../../../../models/Fixture';
 import { syncMockDataFixtures } from '../../../../lib/syncFixtures';
+import { invalidateFixturesCache } from '../../../../services/api';
 
 export async function GET(request) {
   try {
@@ -111,6 +112,7 @@ export async function POST(request) {
       isDeleted: false,
     });
 
+    invalidateFixturesCache();
     return NextResponse.json({
       success: true,
       message: `${franchise} match created successfully`,
@@ -174,6 +176,7 @@ export async function PUT(request) {
       });
     }
 
+    invalidateFixturesCache();
     return NextResponse.json({
       success: true,
       message: `${franchise} Match Center updated successfully`,

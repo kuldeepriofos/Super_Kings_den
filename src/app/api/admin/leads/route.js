@@ -3,6 +3,8 @@ import connectToDatabase from '../../../../lib/mongodb';
 import { getAdminSession } from '../../../../lib/auth';
 import Lead from '../../../../models/Lead';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request) {
   try {
     const session = await getAdminSession(request);

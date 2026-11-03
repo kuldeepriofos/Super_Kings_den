@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { sanitizeHtml } from '../lib/sanitizeHtml';
 import { 
   Shield, 
   FileText, 
@@ -140,7 +141,7 @@ export default function StaticPageView({ page }) {
             {page.content ? (
               <div 
                 className="sports-article-content text-slate-700 dark:text-slate-200 leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: page.content }}
+                dangerouslySetInnerHTML={{ __html: sanitizeHtml(page.content) }}
               />
             ) : (
               <p className="text-slate-500">No content available.</p>

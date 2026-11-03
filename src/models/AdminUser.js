@@ -36,9 +36,10 @@ const AdminUserSchema = new mongoose.Schema(
   }
 );
 
-// Delete model from mongoose.models cache so schema updates apply cleanly in dev and runtime
-if (mongoose.models && mongoose.models.AdminUser) {
+// Only clear the cached model during development hot-reloads so schema edits
+// apply; never recompile the schema on every import in production.
+if (process.env.NODE_ENV !== 'production') {
   delete mongoose.models.AdminUser;
 }
 
-export default mongoose.model('AdminUser', AdminUserSchema);
+export default mongoose.models.AdminUser || mongoose.model('AdminUser', AdminUserSchema);

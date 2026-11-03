@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Clock, Calendar, User, ChevronRight, Share2, ArrowLeft, Flame, Sparkles, Shield } from 'lucide-react';
+import { sanitizeHtml } from '../lib/sanitizeHtml';
 
 
 export default function ArticleDetailView({ post, relatedPosts = [] }) {
@@ -20,6 +21,25 @@ export default function ArticleDetailView({ post, relatedPosts = [] }) {
       } catch (e) {
         // Storage disabled or quota exceeded
       }
+    }
+  }, [post?.slug]);
+
+  // Best-effort view counter: ping the server at most once per session per
+  // article so popularity is tracked as a real number (not a static label).
+  React.useEffect(() => {
+    if (!post?.slug || typeof window === 'undefined') return;
+    try {
+      const seenKey = `skd_viewed_${post.slug}`;
+      if (sessionStorage.getItem(seenKey)) return;
+      sessionStorage.setItem(seenKey, '1');
+      fetch('/api/posts/view/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slug: post.slug }),
+        keepalive: true,
+      }).catch(() => {});
+    } catch (e) {
+      // storage disabled — skip view ping
     }
   }, [post?.slug]);
 
@@ -201,7 +221,7 @@ export default function ArticleDetailView({ post, relatedPosts = [] }) {
             {/* Main Content HTML (Rendered from WordPress or Catalog) */}
             <div
               className="sports-article-content text-slate-800 dark:text-slate-200 leading-relaxed space-y-5 text-base sm:text-lg font-normal mb-10"
-              dangerouslySetInnerHTML={{ __html: post.content }}
+              dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.content) }}
             />
 
             {/* Social Share Bar */}

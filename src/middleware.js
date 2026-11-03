@@ -1,9 +1,16 @@
 import { NextResponse } from 'next/server';
 import fallbackRedirects from './data/redirectsData.json';
+import { verifyEdgeToken } from './lib/edgeAuth';
 
 // Static assets pattern to bypass middleware execution
 const PUBLIC_FILE = /\.(.*)$/;
 const AUTH_COOKIE_NAME = 'skd_admin_token';
+
+// Short-lived, per-instance cache of active redirect rules so we match
+// DB-managed redirects live (within TTL) without a DB round-trip per request.
+let _rulesCache = null;
+let _rulesCacheAt = 0;
+const RULES_TTL_MS = 30000;
 
 function applySecurityHeaders(res) {
   res.headers.set('X-Frame-Options', 'SAMEORIGIN');
@@ -11,6 +18,32 @@ function applySecurityHeaders(res) {
   res.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   res.headers.set('X-XSS-Protection', '1; mode=block');
   return res;
+}
+
+async function getActiveRules(request) {
+  const now = Date.now();
+  if (_rulesCache && now - _rulesCacheAt < RULES_TTL_MS) {
+    return _rulesCache;
+  }
+
+  try {
+    const res = await fetch(new URL('/api/redirects/active/', request.url).toString(), {
+      headers: { 'x-skd-internal': 'middleware-rules' },
+    });
+    if (res.ok) {
+      const data = await res.json();
+      if (Array.isArray(data.rules)) {
+        _rulesCache = data.rules;
+        _rulesCacheAt = now;
+        return _rulesCache;
+      }
+    }
+  } catch (e) {
+    // fall through to bundled seed
+  }
+
+  // Serve the last good cache, else the bundled JSON seed.
+  return _rulesCache || (Array.isArray(fallbackRedirects) ? fallbackRedirects : []);
 }
 
 export async function middleware(request) {
@@ -32,17 +65,18 @@ export async function middleware(request) {
   // 2. Strict Edge Protection for Admin Dashboard Pages (/admin/*)
   if (pathname.startsWith('/admin')) {
     const isLoginPage = pathname === '/admin/login' || pathname === '/admin/login/';
+    const session = token ? await verifyEdgeToken(token) : null;
 
     if (isLoginPage) {
-      // If already logged in, redirect directly to admin overview
-      if (token) {
+      // If already logged in with a VALID token, go straight to the dashboard.
+      if (session) {
         return applySecurityHeaders(NextResponse.redirect(new URL('/admin/', request.url)));
       }
       return applySecurityHeaders(NextResponse.next());
     }
 
-    // Unauthenticated access to /admin/* immediately redirects to /admin/login/
-    if (!token) {
+    // Any non-login admin page requires a cryptographically valid session.
+    if (!session) {
       const loginUrl = new URL('/admin/login/', request.url);
       const redirectRes = NextResponse.redirect(loginUrl);
       redirectRes.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate');
@@ -60,12 +94,15 @@ export async function middleware(request) {
 
     if (!isPublicAuthApi) {
       const authHeader = request.headers.get('authorization');
-      const hasBearer = authHeader && authHeader.startsWith('Bearer ');
+      const bearer = authHeader && authHeader.startsWith('Bearer ') ? authHeader.split(' ')[1] : null;
 
-      if (!token && !hasBearer) {
+      // Verify the signature of whichever credential is present.
+      const session = (await verifyEdgeToken(token)) || (await verifyEdgeToken(bearer));
+
+      if (!session) {
         return applySecurityHeaders(
           NextResponse.json(
-            { success: false, error: 'Unauthorized: Admin session required' },
+            { success: false, error: 'Unauthorized: valid admin session required' },
             { status: 401 }
           )
         );
@@ -83,8 +120,8 @@ export async function middleware(request) {
   // 5. Normalize requested path (strip trailing slash for comparison)
   const cleanReq = pathname === '/' ? '/' : pathname.endsWith('/') ? pathname.slice(0, -1).toLowerCase() : pathname.toLowerCase();
 
-  // 6. Match against active redirect rules
-  const rules = Array.isArray(fallbackRedirects) ? fallbackRedirects : [];
+  // 6. Match against active redirect rules (DB-backed, TTL-cached)
+  const rules = await getActiveRules(request);
 
   for (const rule of rules) {
     if (!rule.isActive) continue;

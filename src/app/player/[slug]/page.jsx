@@ -1,9 +1,12 @@
 import { redirect, notFound } from 'next/navigation';
 import { fetchPlayerBySlug, fetchAllPlayerSlugs } from '../../../services/api';
 
+// Rendered on demand + cached via ISR (this route also redirects legacy URLs).
+export const revalidate = 300;
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
-  const slugs = await fetchAllPlayerSlugs();
-  return slugs.map((slug) => ({ slug }));
+  return [];
 }
 
 export const metadata = {

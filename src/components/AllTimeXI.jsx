@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import SmartImage from './SmartImage';
 import { Trophy, CheckCircle2, UserCheck, Shield, Sparkles, Send, Plane } from 'lucide-react';
 import { ALL_TIME_CANDIDATES } from '../data/rivalriesData';
 
@@ -114,7 +115,13 @@ export default function AllTimeXI() {
               {/* Player Avatar & Name */}
               <div className="flex items-center space-x-3 mb-3">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-csk-yellow/50 shadow-sm flex-shrink-0 bg-slate-200 dark:bg-slate-800">
-                  <img src={player.avatar} alt={player.name} className="w-full h-full object-cover group-hover:scale-105 transition" />
+                  <SmartImage
+                src={player.avatar}
+                alt={player.name}
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
+                className="object-cover group-hover:scale-105 transition"
+              />
                 </div>
                 <div className="min-w-0">
                     <h3 className="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-csk-yellow transition font-heading truncate">

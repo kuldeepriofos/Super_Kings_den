@@ -4,6 +4,9 @@ import { notFound } from 'next/navigation';
 import { ArrowLeft, Share2, Layers } from 'lucide-react';
 import { fetchWebStoryBySlug, fetchWebStories } from '../../../services/api';
 
+export const revalidate = 300;
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   const stories = await fetchWebStories();
   return (stories || []).map(s => ({ slug: s.slug }));

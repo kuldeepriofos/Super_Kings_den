@@ -1,30 +1,22 @@
 import { NextResponse } from 'next/server';
+import { unstable_cache } from 'next/cache';
 import connectToDatabase from '../../../lib/mongodb';
 import Post from '../../../models/Post';
 import Player from '../../../models/Player';
 import postsIndex from '../../../data/postsIndex.json';
 import { SQUAD_PLAYERS } from '../../../data/mockData';
+import { CACHE_TAGS } from '../../../services/api';
 
-// In-memory dataset cache for instant sub-10ms search results
-let cachedPosts = null;
-let cachedPlayers = null;
-let lastSyncTime = 0;
-const CACHE_TTL_MS = 60 * 1000; // 60 seconds
+export const dynamic = 'force-dynamic';
 
-async function getSearchDataset() {
-  const now = Date.now();
-
-  // If cache is fresh, return immediately (0ms)
-  if (cachedPosts && cachedPlayers && (now - lastSyncTime < CACHE_TTL_MS)) {
-    return { allPosts: cachedPosts, allPlayers: cachedPlayers };
-  }
-
-  // Initialize with local index immediately so response is NEVER blocked
-  if (!cachedPosts) cachedPosts = postsIndex;
-  if (!cachedPlayers) cachedPlayers = SQUAD_PLAYERS;
-
-  // Background non-blocking sync from MongoDB Atlas
-  const syncWithDb = async () => {
+// Shared, tag-revalidated search dataset (replaces the old per-instance module
+// cache + fire-and-forget sync, which was unreliable under horizontal scaling).
+// Substring scoring is retained below for partial / type-ahead matches, which a
+// MongoDB $text index cannot do; Atlas Search is the path for larger corpora.
+const getSearchDataset = unstable_cache(
+  async () => {
+    let allPosts = postsIndex;
+    let allPlayers = SQUAD_PLAYERS;
     try {
       await connectToDatabase();
       const [dbPosts, dbPlayers] = await Promise.all([
@@ -40,22 +32,19 @@ async function getSearchDataset() {
       ]);
 
       if (dbPosts && dbPosts.length > 0) {
-        cachedPosts = dbPosts.map((p) => ({ ...p, id: p.id || String(p._id), _id: String(p._id) }));
+        allPosts = dbPosts.map((p) => ({ ...p, id: p.id || String(p._id), _id: String(p._id) }));
       }
       if (dbPlayers && dbPlayers.length > 0) {
-        cachedPlayers = dbPlayers.map((p) => ({ ...p, id: p.id || String(p._id), _id: String(p._id) }));
+        allPlayers = dbPlayers.map((p) => ({ ...p, id: p.id || String(p._id), _id: String(p._id) }));
       }
-      lastSyncTime = Date.now();
     } catch (e) {
-      // Retain in-memory cache on any network/timeout error
+      // keep bundled fallback dataset on any error
     }
-  };
-
-  // Run DB sync in background; do not block search response!
-  syncWithDb().catch(() => {});
-
-  return { allPosts: cachedPosts, allPlayers: cachedPlayers };
-}
+    return { allPosts, allPlayers };
+  },
+  ['skd-search-dataset'],
+  { tags: [CACHE_TAGS.posts], revalidate: 120 }
+);
 
 export async function GET(request) {
   try {
