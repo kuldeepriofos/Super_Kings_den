@@ -3,58 +3,7 @@ import bcrypt from 'bcryptjs';
 import connectToDatabase from '../../../../lib/mongodb';
 import AdminUser from '../../../../models/AdminUser';
 import { getAdminSession } from '../../../../lib/auth';
-
-// Helper: default permissions per role
-function getDefaultPermissions(role) {
-  switch (role) {
-    case 'superadmin':
-      return {
-        managePosts: true,
-        managePlayers: true,
-        manageMatches: true,
-        manageMedia: true,
-        manageRedirects: true,
-        manageUsers: true,
-      };
-    case 'admin':
-      return {
-        managePosts: true,
-        managePlayers: true,
-        manageMatches: true,
-        manageMedia: true,
-        manageRedirects: true,
-        manageUsers: false,
-      };
-    case 'editor':
-      return {
-        managePosts: true,
-        managePlayers: true,
-        manageMatches: true,
-        manageMedia: true,
-        manageRedirects: false,
-        manageUsers: false,
-      };
-    case 'author':
-      return {
-        managePosts: true,
-        managePlayers: false,
-        manageMatches: false,
-        manageMedia: true,
-        manageRedirects: false,
-        manageUsers: false,
-      };
-    case 'viewer':
-    default:
-      return {
-        managePosts: false,
-        managePlayers: false,
-        manageMatches: false,
-        manageMedia: false,
-        manageRedirects: false,
-        manageUsers: false,
-      };
-  }
-}
+import { getPermissionsForRole } from '../../../../lib/rolePermissions';
 
 /**
  * GET /api/admin/users/
@@ -197,9 +146,8 @@ export async function POST(request) {
     // Hash password with salt 10
     const passwordHash = await bcrypt.hash(String(password).trim(), 10);
 
-    // Merge default permissions with any custom overrides
-    const defaultPerms = getDefaultPermissions(role);
-    const finalPermissions = permissions ? { ...defaultPerms, ...permissions } : defaultPerms;
+    // Role-based permissions: automatically assigned from the role's configured rights
+    const finalPermissions = await getPermissionsForRole(role);
 
     const newUser = await AdminUser.create({
       username: cleanUsername,

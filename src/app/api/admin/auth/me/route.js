@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { getAdminSession, AUTH_COOKIE_NAME } from '../../../../../lib/auth';
 import connectToDatabase, { isDatabaseConnected } from '../../../../../lib/mongodb';
 import AdminUser from '../../../../../models/AdminUser';
+import { getPermissionsForRole } from '../../../../../lib/rolePermissions';
 
 export const dynamic = 'force-dynamic';
 
@@ -56,12 +57,14 @@ export async function GET(request) {
             return suspendedRes;
           }
 
+          const rolePermissions = await getPermissionsForRole(dbUser.role || 'viewer');
+
           liveUser = {
             username: dbUser.username,
             name: dbUser.name || dbUser.username,
             role: dbUser.role || 'viewer',
             status: dbUser.status || 'active',
-            permissions: dbUser.permissions || {},
+            permissions: rolePermissions,
           };
         }
       }

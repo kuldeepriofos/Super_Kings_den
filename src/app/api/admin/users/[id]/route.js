@@ -3,6 +3,7 @@ import bcrypt from 'bcryptjs';
 import connectToDatabase from '../../../../../lib/mongodb';
 import AdminUser from '../../../../../models/AdminUser';
 import { getAdminSession } from '../../../../../lib/auth';
+import { getPermissionsForRole } from '../../../../../lib/rolePermissions';
 
 /**
  * GET /api/admin/users/[id]/
@@ -87,20 +88,13 @@ export async function PUT(request, { params }) {
     if (email !== undefined) targetUser.email = String(email).trim().toLowerCase();
     if (bio !== undefined) targetUser.bio = String(bio).trim();
 
-    // Update role & status if permitted
+    // Update role & status if permitted (permissions automatically sync from role)
     if (role && ['superadmin', 'admin', 'editor', 'author', 'viewer'].includes(role)) {
       targetUser.role = role;
+      targetUser.permissions = await getPermissionsForRole(role);
     }
     if (status && ['active', 'suspended'].includes(status)) {
       targetUser.status = status;
-    }
-
-    // Update granular permissions if passed
-    if (permissions && typeof permissions === 'object') {
-      targetUser.permissions = {
-        ...targetUser.permissions,
-        ...permissions,
-      };
     }
 
     // Password reset if new password provided
