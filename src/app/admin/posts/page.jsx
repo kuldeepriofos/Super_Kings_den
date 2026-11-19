@@ -28,6 +28,8 @@ export default function AdminPostsPage() {
   const [pagination, setPagination] = useState({ page: 1, limit: 15, total: 0, totalPages: 1 });
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [authors, setAuthors] = useState([]);
+  const [selectedAuthor, setSelectedAuthor] = useState('All');
   const [sortBy, setSortBy] = useState('newest'); // 'newest' | 'oldest' | 'title'
   const [loading, setLoading] = useState(true);
   const [categories, setCategories] = useState([]);
@@ -80,12 +82,16 @@ export default function AdminPostsPage() {
         });
         if (search.trim()) params.append('search', search.trim());
         if (selectedCategory && selectedCategory !== 'All') params.append('category', selectedCategory);
+        if (selectedAuthor && selectedAuthor !== 'All') params.append('author', selectedAuthor);
 
         const res = await fetch(`/api/admin/posts/?${params.toString()}`);
         const data = await res.json();
 
         if (data.success) {
           setPosts(data.posts || []);
+          if (data.authors && data.authors.length > 0) {
+            setAuthors(data.authors);
+          }
           setPagination(data.pagination || { page: 1, limit: 15, total: 0, totalPages: 1 });
         }
       } catch (err) {
@@ -94,7 +100,7 @@ export default function AdminPostsPage() {
         setLoading(false);
       }
     },
-    [search, selectedCategory, sortBy]
+    [search, selectedCategory, selectedAuthor, sortBy]
   );
 
   useEffect(() => {
@@ -359,6 +365,20 @@ export default function AdminPostsPage() {
             ))}
           </select>
 
+          {/* Author */}
+          <select
+            value={selectedAuthor}
+            onChange={(e) => setSelectedAuthor(e.target.value)}
+            className="px-3 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-200 focus:border-yellow-400 outline-none max-w-xs truncate cursor-pointer"
+          >
+            <option value="All">All Authors</option>
+            {authors.map((a) => (
+              <option key={a} value={a}>
+                {a}
+              </option>
+            ))}
+          </select>
+
           {/* Sort By (Default: Latest First) */}
           <select
             value={sortBy}
@@ -438,6 +458,7 @@ export default function AdminPostsPage() {
                 </th>
                 <th className="py-3 px-4 w-16">Cover</th>
                 <th className="py-3 px-4">Title & Slug</th>
+                <th className="py-3 px-3">Author</th>
                 <th className="py-3 px-3">Category</th>
                 <th className="py-3 px-3">Date</th>
                 <th className="py-3 px-4 text-right">Actions</th>
@@ -456,6 +477,9 @@ export default function AdminPostsPage() {
                     <td className="py-4 px-4">
                       <div className="h-4 bg-slate-800 rounded w-3/4 mb-1.5" />
                       <div className="h-3 bg-slate-800 rounded w-1/2" />
+                    </td>
+                    <td className="py-4 px-3">
+                      <div className="h-4 bg-slate-800 rounded w-24" />
                     </td>
                     <td className="py-4 px-3">
                       <div className="h-4 bg-slate-800 rounded w-16" />
@@ -543,6 +567,16 @@ export default function AdminPostsPage() {
                         </div>
                       </td>
 
+                      {/* Author */}
+                      <td className="py-3 px-3 text-slate-300 whitespace-nowrap">
+                        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-slate-950 text-slate-200 border border-slate-800 text-[11px] font-medium">
+                          <User className="w-3 h-3 text-yellow-400 shrink-0" />
+                          <span className="truncate max-w-[130px]" title={post.author || 'Super Kings Den Team'}>
+                            {post.author || 'Super Kings Den Team'}
+                          </span>
+                        </span>
+                      </td>
+
                       {/* Category */}
                       <td className="py-3 px-3 text-slate-300 whitespace-nowrap">
                         <span className="px-2 py-0.5 rounded-md bg-slate-800 text-slate-300 border border-slate-700/60 text-[11px]">
@@ -587,7 +621,7 @@ export default function AdminPostsPage() {
                 })
               ) : (
                 <tr>
-                  <td colSpan={6} className="py-12 text-center text-slate-500">
+                  <td colSpan={7} className="py-12 text-center text-slate-500">
                     No articles found matching your criteria.
                   </td>
                 </tr>

@@ -120,6 +120,7 @@ export async function GET(request) {
     const limit = Math.max(1, Math.min(100, parseInt(searchParams.get('limit') || '15', 10)));
     const search = (searchParams.get('search') || '').trim();
     const category = (searchParams.get('category') || '').trim();
+    const author = (searchParams.get('author') || '').trim();
     const franchise = (searchParams.get('franchise') || '').trim();
     const sortBy = (searchParams.get('sortBy') || 'newest').trim();
 
@@ -130,11 +131,16 @@ export async function GET(request) {
         { title: { $regex: search, $options: 'i' } },
         { slug: { $regex: search, $options: 'i' } },
         { excerpt: { $regex: search, $options: 'i' } },
+        { author: { $regex: search, $options: 'i' } },
       ];
     }
 
     if (category && category !== 'All') {
       filter.category = category;
+    }
+
+    if (author && author !== 'All') {
+      filter.author = author;
     }
 
     if (franchise && franchise !== 'All') {
@@ -152,15 +158,19 @@ export async function GET(request) {
     const totalPages = Math.ceil(total / limit) || 1;
     const skip = (page - 1) * limit;
 
-    const posts = await Post.find(filter)
-      .sort(sortObj)
-      .skip(skip)
-      .limit(limit)
-      .lean();
+    const [posts, distinctAuthors] = await Promise.all([
+      Post.find(filter)
+        .sort(sortObj)
+        .skip(skip)
+        .limit(limit)
+        .lean(),
+      Post.distinct('author'),
+    ]);
 
     return NextResponse.json({
       success: true,
       posts,
+      authors: (distinctAuthors || []).filter(Boolean).sort(),
       pagination: {
         page,
         limit,
