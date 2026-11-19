@@ -6,6 +6,41 @@ import { getAdminSession } from '../../../../lib/auth';
 import Post from '../../../../models/Post';
 import Fixture from '../../../../models/Fixture';
 import { syncMockDataFixtures } from '../../../../lib/syncFixtures';
+import { invalidatePostsCache } from '../../../../services/api';
+
+const UPLOADS_DIR = path.join(process.cwd(), 'public', 'uploads');
+
+async function downloadImage(url) {
+  if (!url || typeof url !== 'string') return '';
+  try {
+    const cleanUrl = url.split('?')[0];
+    const match = cleanUrl.match(/\/wp-content\/uploads\/(.+)$/);
+    if (!match) return '';
+
+    const relPath = match[1];
+    const targetFile = path.join(UPLOADS_DIR, ...relPath.split('/'));
+    const targetDir = path.dirname(targetFile);
+
+    if (fs.existsSync(targetFile) && fs.statSync(targetFile).size > 0) {
+      return `/uploads/${relPath}`;
+    }
+
+    fs.mkdirSync(targetDir, { recursive: true });
+    const res = await fetch(cleanUrl, {
+      headers: { 'User-Agent': 'Mozilla/5.0 SuperKingsDen/2.0' },
+      signal: AbortSignal.timeout(10000),
+    });
+
+    if (res.ok) {
+      const buffer = Buffer.from(await res.arrayBuffer());
+      fs.writeFileSync(targetFile, buffer);
+    }
+    return `/uploads/${relPath}`;
+  } catch (err) {
+    const m = url.match(/\/wp-content\/uploads\/(.+)$/);
+    return m ? `/uploads/${m[1].split('?')[0]}` : '';
+  }
+}
 
 function decodeHtmlEntities(str) {
   if (!str) return '';
@@ -153,8 +188,13 @@ export async function POST(request) {
       let featuredImage = '';
       const media = post._embedded?.['wp:featuredmedia']?.[0];
       if (media?.source_url) {
-        const cleanMediaUrl = media.source_url.split('?')[0];
-        featuredImage = cleanMediaUrl.replace(/^https?:\/\/superkingsden\.com\/wp-content\/uploads\//, '/uploads/');
+        featuredImage = await downloadImage(media.source_url);
+      }
+
+      // Download content images
+      const contentImageMatches = (post.content?.rendered || '').match(/https?:\/\/superkingsden\.com\/wp-content\/uploads\/[^\s"'<>)]+/g) || [];
+      for (const imgUrl of contentImageMatches) {
+        await downloadImage(imgUrl);
       }
 
       const existing = await Post.findOne({ $or: [{ id: post.id }, { slug }] });
@@ -169,7 +209,7 @@ export async function POST(request) {
           existing.content = content;
           changed = true;
         }
-        if (featuredImage && !existing.featuredImage) {
+        if (featuredImage && (!existing.featuredImage || existing.featuredImage !== featuredImage)) {
           existing.featuredImage = featuredImage;
           changed = true;
         }
@@ -199,6 +239,10 @@ export async function POST(request) {
         });
         addedCount++;
       }
+    }
+
+    if (addedCount > 0 || updatedCount > 0) {
+      invalidatePostsCache();
     }
 
     const newTotal = await Post.countDocuments();

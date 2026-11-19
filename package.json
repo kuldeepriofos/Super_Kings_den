@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "sync:blogs": "node scripts/syncBlogs.js"
   },
   "dependencies": {
     "@tiptap/extension-image": "^3.32.1",
