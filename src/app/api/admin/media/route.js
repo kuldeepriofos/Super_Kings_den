@@ -217,9 +217,12 @@ export async function POST(request) {
 
 export async function DELETE(request) {
   try {
-    const session = await getAdminSession(request);
+    const session = await requirePermission(request, 'manageMedia');
     if (!session) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json(
+        { success: false, error: 'Permission denied: manageMedia permission required.' },
+        { status: 403 }
+      );
     }
 
     const body = await request.json();

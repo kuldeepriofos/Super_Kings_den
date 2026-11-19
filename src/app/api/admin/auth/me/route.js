@@ -58,10 +58,48 @@ export async function GET(request) {
           }
 
           const rolePermissions = await getPermissionsForRole(dbUser.role || 'viewer');
+          const userPerms = dbUser.permissions || {};
           const effectivePermissions = {
             ...rolePermissions,
-            ...(dbUser.permissions || {}),
+            ...userPerms,
           };
+
+          // Synchronize core flags with granular settings
+          if (userPerms.articles_edit !== undefined || userPerms.categories_edit !== undefined || userPerms.pages_edit !== undefined) {
+            effectivePermissions.managePosts = Boolean(userPerms.articles_edit || userPerms.categories_edit || userPerms.pages_edit);
+          } else if (userPerms.managePosts !== undefined) {
+            effectivePermissions.managePosts = Boolean(userPerms.managePosts);
+          }
+
+          if (userPerms.players_edit !== undefined) {
+            effectivePermissions.managePlayers = Boolean(userPerms.players_edit);
+          } else if (userPerms.managePlayers !== undefined) {
+            effectivePermissions.managePlayers = Boolean(userPerms.managePlayers);
+          }
+
+          if (userPerms.matches_edit !== undefined || userPerms.standings_edit !== undefined || userPerms.stats_edit !== undefined) {
+            effectivePermissions.manageMatches = Boolean(userPerms.matches_edit || userPerms.standings_edit || userPerms.stats_edit);
+          } else if (userPerms.manageMatches !== undefined) {
+            effectivePermissions.manageMatches = Boolean(userPerms.manageMatches);
+          }
+
+          if (userPerms.media_edit !== undefined || userPerms.media_delete !== undefined) {
+            effectivePermissions.manageMedia = Boolean(userPerms.media_edit || userPerms.media_delete);
+          } else if (userPerms.manageMedia !== undefined) {
+            effectivePermissions.manageMedia = Boolean(userPerms.manageMedia);
+          }
+
+          if (userPerms.redirects_edit !== undefined) {
+            effectivePermissions.manageRedirects = Boolean(userPerms.redirects_edit);
+          } else if (userPerms.manageRedirects !== undefined) {
+            effectivePermissions.manageRedirects = Boolean(userPerms.manageRedirects);
+          }
+
+          if (userPerms.users_edit !== undefined) {
+            effectivePermissions.manageUsers = Boolean(userPerms.users_edit);
+          } else if (userPerms.manageUsers !== undefined) {
+            effectivePermissions.manageUsers = Boolean(userPerms.manageUsers);
+          }
 
           liveUser = {
             username: dbUser.username,

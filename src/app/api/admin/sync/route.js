@@ -79,6 +79,13 @@ export async function GET(request) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
     }
 
+    if (session.role !== 'superadmin' && session.role !== 'admin') {
+      return NextResponse.json(
+        { success: false, error: 'Permission denied: Super Admin privilege required for database sync.' },
+        { status: 403 }
+      );
+    }
+
     await connectToDatabase();
     const totalPosts = await Post.countDocuments();
     const latestPost = await Post.findOne().sort({ publishedAt: -1, id: -1 }).lean();
@@ -112,6 +119,13 @@ export async function POST(request) {
     const session = await getAdminSession(request);
     if (!session) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+    }
+
+    if (session.role !== 'superadmin' && session.role !== 'admin') {
+      return NextResponse.json(
+        { success: false, error: 'Permission denied: Super Admin privilege required for database sync.' },
+        { status: 403 }
+      );
     }
 
     await connectToDatabase();

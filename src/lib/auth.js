@@ -1,5 +1,4 @@
 import jwt from 'jsonwebtoken';
-import { cookies } from 'next/headers';
 
 export const AUTH_COOKIE_NAME = 'skd_admin_token';
 
@@ -52,6 +51,7 @@ export async function getAdminSession(request) {
 
   // 1. Check cookies() in Next.js Server Components / Route Handlers
   try {
+    const { cookies } = await import('next/headers');
     const cookieStore = cookies();
     token = cookieStore.get(AUTH_COOKIE_NAME)?.value;
   } catch (e) {
@@ -92,10 +92,10 @@ export async function requirePermission(request, permission) {
 
   // 1. Role-based permission evaluation (live check against configured role permissions)
   try {
-    const connectToDatabase = (await import('./mongodb')).default;
+    const connectToDatabase = (await import('./mongodb.js')).default;
     await connectToDatabase();
-    const AdminUser = (await import('../models/AdminUser')).default;
-    const { getPermissionsForRole } = await import('./rolePermissions');
+    const AdminUser = (await import('../models/AdminUser.js')).default;
+    const { getPermissionsForRole } = await import('./rolePermissions.js');
 
     const dbUser = await AdminUser.findOne({
       username: { $regex: new RegExp(`^${session.username}$`, 'i') },
@@ -104,11 +104,38 @@ export async function requirePermission(request, permission) {
 
     if (dbUser) {
       if (dbUser.role === 'superadmin') return { ...session, role: 'superadmin' };
-      // Check user-level permissions override first
-      if (dbUser.permissions && dbUser.permissions[permission]) {
-        return { ...session, role: dbUser.role, permissions: dbUser.permissions };
+
+      // 1. Check user-level explicit permissions override
+      if (dbUser.permissions && typeof dbUser.permissions[permission] === 'boolean') {
+        if (dbUser.permissions[permission] === true) {
+          return { ...session, role: dbUser.role, permissions: dbUser.permissions };
+        }
+        // Explicitly revoked on user level: strictly DENY
+        return null;
       }
-      // Fallback to role-level configured permissions
+
+      // 2. Check granular mapped keys if permission is managePosts, managePlayers, etc.
+      const granularKeyMap = {
+        managePosts: ['articles_edit', 'categories_edit', 'pages_edit'],
+        managePlayers: ['players_edit'],
+        manageMatches: ['matches_edit', 'standings_edit', 'stats_edit'],
+        manageMedia: ['media_edit', 'media_delete'],
+        manageRedirects: ['redirects_edit'],
+        manageUsers: ['users_edit'],
+      };
+      const mappedKeys = granularKeyMap[permission];
+      if (mappedKeys && dbUser.permissions) {
+        const hasAnyExplicit = mappedKeys.some((k) => typeof dbUser.permissions[k] === 'boolean');
+        if (hasAnyExplicit) {
+          const isAllowed = mappedKeys.some((k) => dbUser.permissions[k] === true);
+          if (isAllowed) {
+            return { ...session, role: dbUser.role, permissions: dbUser.permissions };
+          }
+          return null;
+        }
+      }
+
+      // 3. Fallback to role-level configured permissions
       const rolePerms = await getPermissionsForRole(dbUser.role || 'viewer');
       if (rolePerms && rolePerms[permission]) {
         return { ...session, role: dbUser.role, permissions: rolePerms };

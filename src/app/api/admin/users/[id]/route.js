@@ -106,24 +106,41 @@ export async function PUT(request, { params }) {
         ...permissions,
       };
 
-      // Ensure core system flags are kept in sync with granular module edit flags
-      if (permissions.articles_edit !== undefined || permissions.categories_edit !== undefined) {
-        merged.managePosts = Boolean(merged.articles_edit || merged.categories_edit || merged.pages_edit || merged.managePosts);
+      // Ensure core system flags are accurately synchronized with granular module edit flags
+      if (permissions.articles_edit !== undefined || permissions.categories_edit !== undefined || permissions.pages_edit !== undefined) {
+        merged.managePosts = Boolean(permissions.articles_edit || permissions.categories_edit || permissions.pages_edit);
+      } else if (permissions.managePosts !== undefined) {
+        merged.managePosts = Boolean(permissions.managePosts);
       }
+
       if (permissions.players_edit !== undefined) {
-        merged.managePlayers = Boolean(merged.players_edit || merged.managePlayers);
+        merged.managePlayers = Boolean(permissions.players_edit);
+      } else if (permissions.managePlayers !== undefined) {
+        merged.managePlayers = Boolean(permissions.managePlayers);
       }
-      if (permissions.matches_edit !== undefined || permissions.standings_edit !== undefined) {
-        merged.manageMatches = Boolean(merged.matches_edit || merged.standings_edit || merged.manageMatches);
+
+      if (permissions.matches_edit !== undefined || permissions.standings_edit !== undefined || permissions.stats_edit !== undefined) {
+        merged.manageMatches = Boolean(permissions.matches_edit || permissions.standings_edit || permissions.stats_edit);
+      } else if (permissions.manageMatches !== undefined) {
+        merged.manageMatches = Boolean(permissions.manageMatches);
       }
+
       if (permissions.media_edit !== undefined || permissions.media_delete !== undefined) {
-        merged.manageMedia = Boolean(merged.media_edit || merged.media_delete || merged.manageMedia);
+        merged.manageMedia = Boolean(permissions.media_edit || permissions.media_delete);
+      } else if (permissions.manageMedia !== undefined) {
+        merged.manageMedia = Boolean(permissions.manageMedia);
       }
+
       if (permissions.redirects_edit !== undefined) {
-        merged.manageRedirects = Boolean(merged.redirects_edit || merged.manageRedirects);
+        merged.manageRedirects = Boolean(permissions.redirects_edit);
+      } else if (permissions.manageRedirects !== undefined) {
+        merged.manageRedirects = Boolean(permissions.manageRedirects);
       }
+
       if (permissions.users_edit !== undefined) {
-        merged.manageUsers = Boolean(merged.users_edit || merged.manageUsers);
+        merged.manageUsers = Boolean(permissions.users_edit);
+      } else if (permissions.manageUsers !== undefined) {
+        merged.manageUsers = Boolean(permissions.manageUsers);
       }
 
       targetUser.permissions = merged;

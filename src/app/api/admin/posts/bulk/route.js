@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import mongoose from 'mongoose';
 import connectToDatabase from '../../../../../lib/mongodb';
-import { getAdminSession } from '../../../../../lib/auth';
+import { getAdminSession, requirePermission } from '../../../../../lib/auth';
 import Post from '../../../../../models/Post';
 import { invalidatePostsCache } from '../../../../../services/api';
 
@@ -92,9 +92,12 @@ function buildOrFilter(ids) {
 // Bulk Edit / Update (WordPress style)
 export async function PUT(request) {
   try {
-    const session = await getAdminSession(request);
+    const session = await requirePermission(request, 'managePosts');
     if (!session) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json(
+        { success: false, error: 'Permission denied: managePosts permission required.' },
+        { status: 403 }
+      );
     }
 
     await connectToDatabase();
@@ -176,9 +179,12 @@ export async function PUT(request) {
 // Bulk Delete
 export async function DELETE(request) {
   try {
-    const session = await getAdminSession(request);
+    const session = await requirePermission(request, 'managePosts');
     if (!session) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json(
+        { success: false, error: 'Permission denied: managePosts permission required.' },
+        { status: 403 }
+      );
     }
 
     await connectToDatabase();

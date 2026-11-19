@@ -128,9 +128,12 @@ export async function POST(request) {
 
 export async function PUT(request) {
   try {
-    const session = await getAdminSession(request);
+    const session = await requirePermission(request, 'manageMatches');
     if (!session) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json(
+        { success: false, error: 'Permission denied: manageMatches permission required.' },
+        { status: 403 }
+      );
     }
 
     await connectToDatabase();

@@ -29,9 +29,9 @@ export async function PUT(request) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
     }
 
-    if (session.role === 'viewer') {
+    if (session.role !== 'superadmin' && session.role !== 'admin') {
       return NextResponse.json(
-        { success: false, error: 'Viewers cannot modify site files.' },
+        { success: false, error: 'Permission denied: Administrator privilege required to modify site SEO files.' },
         { status: 403 }
       );
     }

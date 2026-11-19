@@ -1,14 +1,17 @@
 import { NextResponse } from 'next/server';
 import connectToDatabase from '../../../../../lib/mongodb';
-import { getAdminSession } from '../../../../../lib/auth';
+import { getAdminSession, requirePermission } from '../../../../../lib/auth';
 import Redirect from '../../../../../models/Redirect';
 import { normalizePath, syncRedirectsJson } from '../../../../../lib/redirects';
 
 export async function POST(request) {
   try {
-    const session = await getAdminSession(request);
+    const session = await requirePermission(request, 'manageRedirects');
     if (!session) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json(
+        { success: false, error: 'Permission denied: manageRedirects permission required.' },
+        { status: 403 }
+      );
     }
 
     const body = await request.json();

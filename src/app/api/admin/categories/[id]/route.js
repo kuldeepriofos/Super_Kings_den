@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import mongoose from 'mongoose';
 import connectToDatabase from '../../../../../lib/mongodb';
-import { getAdminSession } from '../../../../../lib/auth';
+import { getAdminSession, requirePermission } from '../../../../../lib/auth';
 import Category from '../../../../../models/Category';
 import { handleSlugChangeRedirect } from '../../../../../lib/pagesManager';
 import { invalidateCategoriesCache } from '../../../../../services/api';
@@ -86,9 +86,12 @@ export async function GET(request, { params }) {
 
 export async function PUT(request, { params }) {
   try {
-    const session = await getAdminSession(request);
+    const session = await requirePermission(request, 'managePosts');
     if (!session) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json(
+        { success: false, error: 'Permission denied: managePosts permission required.' },
+        { status: 403 }
+      );
     }
 
     await connectToDatabase();
@@ -156,9 +159,12 @@ export async function PUT(request, { params }) {
 
 export async function DELETE(request, { params }) {
   try {
-    const session = await getAdminSession(request);
+    const session = await requirePermission(request, 'managePosts');
     if (!session) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json(
+        { success: false, error: 'Permission denied: managePosts permission required.' },
+        { status: 403 }
+      );
     }
 
     await connectToDatabase();

@@ -34,10 +34,10 @@ export async function POST(request) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
     }
 
-    // Role verification
-    if (session.role === 'viewer') {
+    // Security: Only superadmin or admin can modify site custom head/body scripts
+    if (session.role !== 'superadmin' && session.role !== 'admin') {
       return NextResponse.json(
-        { success: false, error: 'Viewers cannot modify custom code snippets.' },
+        { success: false, error: 'Permission denied: Administrator privilege required to modify custom code.' },
         { status: 403 }
       );
     }

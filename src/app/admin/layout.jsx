@@ -170,12 +170,13 @@ export default function AdminLayout({ children }) {
   const role = adminUser?.role || 'viewer';
   const perms = adminUser?.permissions || {};
   const isSuperAdmin = role === 'superadmin';
-  const canManagePosts = isSuperAdmin || (perms.managePosts !== false && role !== 'viewer');
-  const canManagePlayers = isSuperAdmin || (perms.managePlayers !== false && role !== 'author' && role !== 'viewer');
-  const canManageMatches = isSuperAdmin || (perms.manageMatches !== false && role !== 'author' && role !== 'viewer');
-  const canManageMedia = isSuperAdmin || (perms.manageMedia !== false && role !== 'viewer');
-  const canManageRedirects = isSuperAdmin || Boolean(perms.manageRedirects);
-  const canManageUsers = isSuperAdmin || role === 'admin' || Boolean(perms.manageUsers);
+  const canManagePosts = isSuperAdmin || Boolean(perms.managePosts) || Boolean(perms.articles_view) || Boolean(perms.articles_edit);
+  const canManagePlayers = isSuperAdmin || Boolean(perms.managePlayers) || Boolean(perms.players_view) || Boolean(perms.players_edit);
+  const canManageMatches = isSuperAdmin || Boolean(perms.manageMatches) || Boolean(perms.matches_view) || Boolean(perms.matches_edit);
+  const canManageMedia = isSuperAdmin || Boolean(perms.manageMedia) || Boolean(perms.media_view) || Boolean(perms.media_edit);
+  const canManageRedirects = isSuperAdmin || Boolean(perms.manageRedirects) || Boolean(perms.redirects_view) || Boolean(perms.redirects_edit);
+  const canManageUsers = isSuperAdmin || role === 'admin' || Boolean(perms.manageUsers) || Boolean(perms.users_view) || Boolean(perms.users_edit);
+  const canManageLeads = isSuperAdmin || role === 'admin' || role === 'editor' || Boolean(perms.leads_view) || Boolean(perms.leads_edit);
 
   const navSections = [
     {
@@ -200,16 +201,20 @@ export default function AdminLayout({ children }) {
         ...(canManageMedia ? [{ name: 'Media Library', href: '/admin/media', icon: ImageIcon }] : []),
       ],
     },
-    {
-      group: 'Cricket & Players',
-      items: [
-        { name: 'Players', href: '/admin/players', icon: Users },
-        { name: 'Match Center', href: '/admin/matches', icon: Calendar },
-        { name: 'Points Table / Standings', href: '/admin/standings', icon: Trophy },
-        { name: 'Franchise Stats & Records', href: '/admin/stats', icon: TrendingUp },
-      ],
-    },
-    ...((isSuperAdmin || role === 'admin' || role === 'editor') ? [
+    ...((canManagePlayers || canManageMatches || isSuperAdmin) ? [
+      {
+        group: 'Cricket & Players',
+        items: [
+          ...(canManagePlayers ? [{ name: 'Players', href: '/admin/players', icon: Users }] : []),
+          ...(canManageMatches ? [
+            { name: 'Match Center', href: '/admin/matches', icon: Calendar },
+            { name: 'Points Table / Standings', href: '/admin/standings', icon: Trophy },
+            { name: 'Franchise Stats & Records', href: '/admin/stats', icon: TrendingUp },
+          ] : []),
+        ],
+      }
+    ] : []),
+    ...((canManageLeads || isSuperAdmin || role === 'admin') ? [
       {
         group: 'CRM & Fan Desk',
         items: [

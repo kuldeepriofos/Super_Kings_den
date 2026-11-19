@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import mongoose from 'mongoose';
 import connectToDatabase from '../../../../../lib/mongodb';
-import { getAdminSession } from '../../../../../lib/auth';
+import { getAdminSession, requirePermission } from '../../../../../lib/auth';
 import Fixture from '../../../../../models/Fixture';
 import { syncMockDataFixtures } from '../../../../../lib/syncFixtures';
 import { invalidateFixturesCache } from '../../../../../services/api';
@@ -37,9 +37,12 @@ export async function GET(request, { params }) {
 
 export async function PUT(request, { params }) {
   try {
-    const session = await getAdminSession(request);
+    const session = await requirePermission(request, 'manageMatches');
     if (!session) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json(
+        { success: false, error: 'Permission denied: manageMatches permission required.' },
+        { status: 403 }
+      );
     }
 
     await connectToDatabase();
@@ -133,9 +136,12 @@ export async function PUT(request, { params }) {
 
 export async function DELETE(request, { params }) {
   try {
-    const session = await getAdminSession(request);
+    const session = await requirePermission(request, 'manageMatches');
     if (!session) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json(
+        { success: false, error: 'Permission denied: manageMatches permission required.' },
+        { status: 403 }
+      );
     }
 
     await connectToDatabase();
