@@ -246,146 +246,151 @@ export default function MatchCenter({ selectedFranchise = 'ALL', className = "mb
             </div>
 
             {/* Scorecard Clashing Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center py-4 sm:py-6 bg-slate-50 dark:bg-slate-950/70 rounded-2xl border border-slate-200 dark:border-white/5 px-4 sm:px-6">
+            <div className="py-4 sm:py-6 bg-slate-50 dark:bg-slate-950/70 rounded-2xl border border-slate-200 dark:border-white/5 px-3 sm:px-6">
               
-              {/* Home Team Score (4 cols) */}
-              <div className={`md:col-span-4 flex items-center gap-4 p-3 rounded-2xl transition-all ${
-                isHomeWinner
-                  ? 'bg-emerald-500/10 dark:bg-emerald-950/40 border border-emerald-500/40 ring-1 ring-emerald-500/30 shadow-lg shadow-emerald-500/5'
-                  : isAwayWinner
-                  ? 'opacity-65'
-                  : ''
-              }`}>
-                <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center p-2 shrink-0 transition-all ${
+              {/* Teams Clash Arena */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-6 items-center">
+                
+                {/* Home Team Score (sm: 1 col (50%), lg: 4 cols) */}
+                <div className={`sm:col-span-1 lg:col-span-4 order-1 flex items-center gap-3 sm:gap-4 p-3 sm:p-3.5 rounded-2xl transition-all ${
                   isHomeWinner
-                    ? 'bg-white dark:bg-slate-900 border-2 border-emerald-500 dark:border-emerald-400 ring-4 ring-emerald-500/25 shadow-md shadow-emerald-500/20'
-                    : 'bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-white/10 shadow-sm'
+                    ? 'bg-emerald-500/10 dark:bg-emerald-950/40 border border-emerald-500/40 ring-1 ring-emerald-500/30 shadow-lg shadow-emerald-500/5'
+                    : isAwayWinner
+                    ? 'opacity-70'
+                    : 'bg-white/60 dark:bg-slate-900/60 border border-slate-200/60 dark:border-white/5'
                 }`}>
-                  {getTeamLogo(completedMatchData.homeTeam || completedMatchData.homeShort) ? (
-                    <img 
-                      src={getTeamLogo(completedMatchData.homeTeam || completedMatchData.homeShort)} 
-                      alt={completedMatchData.homeTeam} 
-                      className="w-full h-full object-contain" 
-                    />
-                  ) : (
-                    <span className="font-black text-2xl text-amber-600 dark:text-csk-yellow font-display">
-                      {completedMatchData.homeShort}
-                    </span>
-                  )}
-                </div>
-                <div className="min-w-0">
-                  <div className="flex items-center gap-2 mb-0.5">
-                    <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 block">
-                      {completedMatchData.homeRole || 'HOSTS'}
-                    </span>
-                    {isHomeWinner && (
-                      <span className="px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-emerald-500 text-slate-950 flex items-center gap-1 shadow-sm">
-                        <Trophy className="w-2.5 h-2.5" /> WINNER
+                  <div className={`w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-2xl flex items-center justify-center p-2 shrink-0 transition-all ${
+                    isHomeWinner
+                      ? 'bg-white dark:bg-slate-900 border-2 border-emerald-500 dark:border-emerald-400 ring-2 sm:ring-4 ring-emerald-500/25 shadow-md shadow-emerald-500/20'
+                      : 'bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-white/10 shadow-sm'
+                  }`}>
+                    {getTeamLogo(completedMatchData.homeTeam || completedMatchData.homeShort) ? (
+                      <img 
+                        src={getTeamLogo(completedMatchData.homeTeam || completedMatchData.homeShort)} 
+                        alt={completedMatchData.homeTeam} 
+                        className="w-full h-full object-contain" 
+                      />
+                    ) : (
+                      <span className="font-black text-xl sm:text-2xl text-amber-600 dark:text-csk-yellow font-display">
+                        {completedMatchData.homeShort}
                       </span>
                     )}
                   </div>
-                  <h3 className={`text-base sm:text-lg font-black leading-tight truncate ${
-                    isHomeWinner
-                      ? 'text-emerald-600 dark:text-emerald-400'
-                      : 'text-slate-900 dark:text-white'
-                  }`}>
-                    {completedMatchData.homeTeam}
-                  </h3>
-                  <div className="flex items-baseline gap-1.5 mt-1">
-                    <span className={`text-2xl sm:text-3xl font-black font-mono tracking-tight ${
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-1.5 sm:gap-2 mb-0.5">
+                      <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 block shrink-0">
+                        {completedMatchData.homeRole || 'HOSTS'}
+                      </span>
+                      {isHomeWinner && (
+                        <span className="px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-emerald-500 text-slate-950 flex items-center gap-1 shadow-sm shrink-0">
+                          <Trophy className="w-2.5 h-2.5" /> WINNER
+                        </span>
+                      )}
+                    </div>
+                    <h3 className={`text-sm sm:text-base lg:text-lg font-black leading-tight break-words ${
                       isHomeWinner
                         ? 'text-emerald-600 dark:text-emerald-400'
-                        : 'text-slate-700 dark:text-slate-300'
-                    }`}>
-                      {completedMatchData.homeScore || '176/6'}
-                    </span>
-                    <span className="text-xs text-slate-500 dark:text-slate-400 font-semibold">
-                      ({completedMatchData.homeOvers || '20.0 ov'})
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Center Match Outcome Banner & POTM (4 cols) */}
-              <div className="md:col-span-4 flex flex-col items-center justify-center text-center space-y-2 py-4 md:py-0 border-y md:border-y-0 md:border-x border-slate-200 dark:border-white/10 px-4">
-                <div className="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-500/20 via-yellow-500/30 to-amber-500/20 border border-csk-yellow/50 shadow-sm text-center">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-amber-700 dark:text-csk-yellow block">
-                    MATCH OUTCOME
-                  </span>
-                  <span className="text-sm sm:text-base font-black text-slate-900 dark:text-white block mt-0.5">
-                    🏆 {completedMatchData.resultText || `${completedMatchData.winner || completedMatchData.homeShort} Won`}
-                  </span>
-                </div>
-
-                {completedMatchData.potm && (
-                  <div className="text-[11px] text-slate-600 dark:text-slate-300 font-semibold flex items-center gap-1.5">
-                    <Award className="w-4 h-4 text-csk-yellow shrink-0" />
-                    <span>POTM: <strong className="text-slate-900 dark:text-white">{completedMatchData.potm}</strong></span>
-                  </div>
-                )}
-                {completedMatchData.note && (
-                  <p className="text-[10px] text-slate-500 dark:text-slate-400 italic line-clamp-1">
-                    &ldquo;{completedMatchData.note}&rdquo;
-                  </p>
-                )}
-              </div>
-
-              {/* Away Team Score (4 cols) */}
-              <div className={`md:col-span-4 flex items-center justify-end gap-4 text-right p-3 rounded-2xl transition-all ${
-                isAwayWinner
-                  ? 'bg-emerald-500/10 dark:bg-emerald-950/40 border border-emerald-500/40 ring-1 ring-emerald-500/30 shadow-lg shadow-emerald-500/5'
-                  : isHomeWinner
-                  ? 'opacity-65'
-                  : ''
-              }`}>
-                <div className="min-w-0">
-                  <div className="flex items-center justify-end gap-2 mb-0.5">
-                    {isAwayWinner && (
-                      <span className="px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-emerald-500 text-slate-950 flex items-center gap-1 shadow-sm">
-                        <Trophy className="w-2.5 h-2.5" /> WINNER
+                        : 'text-slate-900 dark:text-white'
+                    }`} title={completedMatchData.homeTeam}>
+                      {completedMatchData.homeTeam}
+                    </h3>
+                    <div className="flex items-baseline gap-1.5 mt-1 flex-wrap">
+                      <span className={`text-xl sm:text-2xl lg:text-3xl font-black font-mono tracking-tight shrink-0 ${
+                        isHomeWinner
+                          ? 'text-emerald-600 dark:text-emerald-400'
+                          : 'text-slate-700 dark:text-slate-300'
+                      }`}>
+                        {completedMatchData.homeScore || '176/6'}
                       </span>
-                    )}
-                    <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 block">
-                      {completedMatchData.awayRole || 'CHALLENGERS'}
-                    </span>
+                      <span className="text-xs text-slate-500 dark:text-slate-400 font-semibold whitespace-nowrap">
+                        ({completedMatchData.homeOvers || '20.0 ov'})
+                      </span>
+                    </div>
                   </div>
-                  <h3 className={`text-base sm:text-lg font-black leading-tight truncate ${
-                    isAwayWinner
-                      ? 'text-emerald-600 dark:text-emerald-400'
-                      : 'text-slate-900 dark:text-white'
-                  }`}>
-                    {completedMatchData.awayTeam}
-                  </h3>
-                  <div className="flex items-baseline justify-end gap-1.5 mt-1">
-                    <span className={`text-2xl sm:text-3xl font-black font-mono tracking-tight ${
+                </div>
+
+                {/* Away Team Score (sm: 1 col (50%), lg: 4 cols) */}
+                <div className={`sm:col-span-1 lg:col-span-4 order-2 lg:order-3 flex items-center justify-end gap-3 sm:gap-4 text-right p-3 sm:p-3.5 rounded-2xl transition-all ${
+                  isAwayWinner
+                    ? 'bg-emerald-500/10 dark:bg-emerald-950/40 border border-emerald-500/40 ring-1 ring-emerald-500/30 shadow-lg shadow-emerald-500/5'
+                    : isHomeWinner
+                    ? 'opacity-70'
+                    : 'bg-white/60 dark:bg-slate-900/60 border border-slate-200/60 dark:border-white/5'
+                }`}>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center justify-end gap-1.5 sm:gap-2 mb-0.5">
+                      {isAwayWinner && (
+                        <span className="px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-emerald-500 text-slate-950 flex items-center gap-1 shadow-sm shrink-0">
+                          <Trophy className="w-2.5 h-2.5" /> WINNER
+                        </span>
+                      )}
+                      <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 block shrink-0">
+                        {completedMatchData.awayRole || 'CHALLENGERS'}
+                      </span>
+                    </div>
+                    <h3 className={`text-sm sm:text-base lg:text-lg font-black leading-tight break-words ${
                       isAwayWinner
                         ? 'text-emerald-600 dark:text-emerald-400'
-                        : 'text-slate-700 dark:text-slate-300'
-                    }`}>
-                      {completedMatchData.awayScore || '161/7'}
-                    </span>
-                    <span className="text-xs text-slate-500 dark:text-slate-400 font-semibold">
-                      ({completedMatchData.awayOvers || '20.0 ov'})
-                    </span>
+                        : 'text-slate-900 dark:text-white'
+                    }`} title={completedMatchData.awayTeam}>
+                      {completedMatchData.awayTeam}
+                    </h3>
+                    <div className="flex items-baseline justify-end gap-1.5 mt-1 flex-wrap">
+                      <span className={`text-xl sm:text-2xl lg:text-3xl font-black font-mono tracking-tight shrink-0 ${
+                        isAwayWinner
+                          ? 'text-emerald-600 dark:text-emerald-400'
+                          : 'text-slate-700 dark:text-slate-300'
+                      }`}>
+                        {completedMatchData.awayScore || '161/7'}
+                      </span>
+                      <span className="text-xs text-slate-500 dark:text-slate-400 font-semibold whitespace-nowrap">
+                        ({completedMatchData.awayOvers || '20.0 ov'})
+                      </span>
+                    </div>
+                  </div>
+                  <div className={`w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-2xl flex items-center justify-center p-2 shrink-0 transition-all ${
+                    isAwayWinner
+                      ? 'bg-white dark:bg-slate-900 border-2 border-emerald-500 dark:border-emerald-400 ring-2 sm:ring-4 ring-emerald-500/25 shadow-md shadow-emerald-500/20'
+                      : 'bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-white/10 shadow-sm'
+                  }`}>
+                    {getTeamLogo(completedMatchData.awayTeam || completedMatchData.awayShort) ? (
+                      <img 
+                        src={getTeamLogo(completedMatchData.awayTeam || completedMatchData.awayShort)} 
+                        alt={completedMatchData.awayTeam} 
+                        className="w-full h-full object-contain" 
+                      />
+                    ) : (
+                      <span className="font-black text-xl sm:text-2xl text-blue-600 dark:text-blue-400 font-display">
+                        {completedMatchData.awayShort}
+                      </span>
+                    )}
                   </div>
                 </div>
-                <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center p-2 shrink-0 transition-all ${
-                  isAwayWinner
-                    ? 'bg-white dark:bg-slate-900 border-2 border-emerald-500 dark:border-emerald-400 ring-4 ring-emerald-500/25 shadow-md shadow-emerald-500/20'
-                    : 'bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-white/10 shadow-sm'
-                }`}>
-                  {getTeamLogo(completedMatchData.awayTeam || completedMatchData.awayShort) ? (
-                    <img 
-                      src={getTeamLogo(completedMatchData.awayTeam || completedMatchData.awayShort)} 
-                      alt={completedMatchData.awayTeam} 
-                      className="w-full h-full object-contain" 
-                    />
-                  ) : (
-                    <span className="font-black text-2xl text-blue-600 dark:text-blue-400 font-display">
-                      {completedMatchData.awayShort}
+
+                {/* Center Match Outcome Banner & POTM (sm: spans 2 cols across bottom, lg: 4 cols in center) */}
+                <div className="col-span-1 sm:col-span-2 lg:col-span-4 order-3 lg:order-2 flex flex-col items-center justify-center text-center space-y-2 py-3 lg:py-0 border-t sm:border-t lg:border-t-0 lg:border-x border-slate-200 dark:border-white/10 px-2 sm:px-4">
+                  <div className="w-full py-2 sm:py-2.5 px-3 sm:px-4 rounded-xl bg-gradient-to-r from-amber-500/20 via-yellow-500/30 to-amber-500/20 border border-csk-yellow/50 shadow-sm text-center">
+                    <span className="text-[10px] font-black uppercase tracking-widest text-amber-700 dark:text-csk-yellow block">
+                      MATCH OUTCOME
                     </span>
+                    <span className="text-xs sm:text-sm lg:text-base font-black text-slate-900 dark:text-white block mt-0.5">
+                      🏆 {completedMatchData.resultText || `${completedMatchData.winner || completedMatchData.homeShort} Won`}
+                    </span>
+                  </div>
+
+                  {completedMatchData.potm && (
+                    <div className="text-[11px] text-slate-600 dark:text-slate-300 font-semibold flex items-center justify-center gap-1.5 flex-wrap">
+                      <Award className="w-4 h-4 text-csk-yellow shrink-0" />
+                      <span>POTM: <strong className="text-slate-900 dark:text-white">{completedMatchData.potm}</strong></span>
+                    </div>
+                  )}
+                  {completedMatchData.note && (
+                    <p className="text-[10px] text-slate-500 dark:text-slate-400 italic line-clamp-1">
+                      &ldquo;{completedMatchData.note}&rdquo;
+                    </p>
                   )}
                 </div>
+
               </div>
             </div>
           </div>
