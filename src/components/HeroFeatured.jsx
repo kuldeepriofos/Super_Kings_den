@@ -66,7 +66,7 @@ export default function HeroFeatured({ posts, className = "mb-8 sm:mb-10" }) {
               {leadStory.excerpt}
             </p>
 
-            <div className="flex items-center justify-between pt-4 border-t border-white/20 text-xs text-slate-300">
+            <div className="flex flex-wrap items-center justify-between gap-2 pt-4 border-t border-white/20 text-xs text-slate-300">
               <div className="flex items-center space-x-3">
                 <span className="flex items-center font-medium text-white">
                   <User className="w-3.5 h-3.5 mr-1 text-amber-500 dark:text-csk-yellow" /> {leadStory.author}
