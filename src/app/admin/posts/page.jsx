@@ -55,21 +55,33 @@ export default function AdminPostsPage() {
     isMostViewed: 'NO_CHANGE', // 'NO_CHANGE' | 'true' | 'false'
   });
 
-  // Load categories for filter dropdown
+  const [currentUser, setCurrentUser] = useState(null);
+
+  // Load categories and current user permissions
   useEffect(() => {
-    async function loadCategories() {
+    async function loadMeta() {
       try {
-        const res = await fetch('/api/admin/categories/');
-        const data = await res.json();
-        if (data.categories) {
-          setCategories(data.categories);
+        const [catRes, meRes] = await Promise.all([
+          fetch('/api/admin/categories/').catch(() => null),
+          fetch('/api/admin/auth/me/').catch(() => null),
+        ]);
+        if (catRes && catRes.ok) {
+          const data = await catRes.json();
+          if (data.categories) setCategories(data.categories);
+        }
+        if (meRes && meRes.ok) {
+          const meData = await meRes.json();
+          if (meData.user) setCurrentUser(meData.user);
         }
       } catch (e) {
         // ignore
       }
     }
-    loadCategories();
+    loadMeta();
   }, []);
+
+  const isSuperAdmin = currentUser?.role === 'superadmin';
+  const canManagePosts = isSuperAdmin || (currentUser?.permissions?.managePosts !== false && currentUser?.role !== 'viewer');
 
   const fetchPosts = useCallback(
     async (pageToLoad = 1) => {
@@ -279,13 +291,15 @@ export default function AdminPostsPage() {
             <Folder className="w-3.5 h-3.5 text-yellow-400" />
             <span>Categories</span>
           </Link>
-          <Link
-            href="/admin/posts/new"
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-yellow-400 hover:bg-yellow-300 text-slate-950 text-xs font-bold shadow-lg shadow-yellow-500/20 transition-all cursor-pointer"
-          >
-            <Plus className="w-4 h-4" />
-            <span>Write New Article</span>
-          </Link>
+          {canManagePosts && (
+            <Link
+              href="/admin/posts/new"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-yellow-400 hover:bg-yellow-300 text-slate-950 text-xs font-bold shadow-lg shadow-yellow-500/20 transition-all cursor-pointer"
+            >
+              <Plus className="w-4 h-4" />
+              <span>Write New Article</span>
+            </Link>
+          )}
         </div>
       </div>
 
@@ -323,33 +337,35 @@ export default function AdminPostsPage() {
         {/* Dropdowns & Bulk Actions */}
         <div className="flex flex-wrap items-center gap-2.5">
           {/* WordPress-style Bulk Actions Dropdown */}
-          <div className="flex items-center gap-1.5">
-            <select
-              value={bulkAction}
-              onChange={(e) => setBulkAction(e.target.value)}
-              className="px-3 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-200 focus:border-yellow-400 outline-none cursor-pointer"
-            >
-              <option value="">Bulk Actions</option>
-              <option value="edit">Edit (Bulk Edit)</option>
-              <option value="delete">Move to Trash / Delete</option>
-            </select>
-            <button
-              type="button"
-              onClick={() => {
-                if (selectedIds.length === 0) {
-                  setActionMessage({ type: 'error', text: 'Please select one or more articles first.' });
-                  setTimeout(() => setActionMessage(null), 3000);
-                  return;
-                }
-                if (bulkAction === 'edit') setBulkEditOpen(true);
-                if (bulkAction === 'delete') setBulkDeleteOpen(true);
-              }}
-              disabled={!bulkAction}
-              className="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 disabled:opacity-40 text-xs font-bold text-white transition border border-slate-700 cursor-pointer disabled:pointer-events-none"
-            >
-              Apply
-            </button>
-          </div>
+          {canManagePosts && (
+            <div className="flex items-center gap-1.5">
+              <select
+                value={bulkAction}
+                onChange={(e) => setBulkAction(e.target.value)}
+                className="px-3 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-200 focus:border-yellow-400 outline-none cursor-pointer"
+              >
+                <option value="">Bulk Actions</option>
+                <option value="edit">Edit (Bulk Edit)</option>
+                <option value="delete">Move to Trash / Delete</option>
+              </select>
+              <button
+                type="button"
+                onClick={() => {
+                  if (selectedIds.length === 0) {
+                    setActionMessage({ type: 'error', text: 'Please select one or more articles first.' });
+                    setTimeout(() => setActionMessage(null), 3000);
+                    return;
+                  }
+                  if (bulkAction === 'edit') setBulkEditOpen(true);
+                  if (bulkAction === 'delete') setBulkDeleteOpen(true);
+                }}
+                disabled={!bulkAction}
+                className="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 disabled:opacity-40 text-xs font-bold text-white transition border border-slate-700 cursor-pointer disabled:pointer-events-none"
+              >
+                Apply
+              </button>
+            </div>
+          )}
 
           {/* Category */}
           <select
@@ -607,13 +623,15 @@ export default function AdminPostsPage() {
                           >
                             <ExternalLink className="w-3.5 h-3.5" />
                           </Link>
-                          <button
-                            onClick={() => setDeleteModalPost(post)}
-                            className="p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-red-400 hover:bg-red-950/40 transition-colors"
-                            title="Delete article"
-                          >
-                            <Trash2 className="w-3.5 h-3.5" />
-                          </button>
+                          {canManagePosts && (
+                            <button
+                              onClick={() => setDeleteModalPost(post)}
+                              className="p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-red-400 hover:bg-red-950/40 transition-colors"
+                              title="Delete article"
+                            >
+                              <Trash2 className="w-3.5 h-3.5" />
+                            </button>
+                          )}
                         </div>
                       </td>
                     </tr>

@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import connectToDatabase from '../../../../lib/mongodb';
-import { getAdminSession } from '../../../../lib/auth';
+import { getAdminSession, requirePermission } from '../../../../lib/auth';
 import Player from '../../../../models/Player';
 import { syncMockDataSquad } from '../../../../lib/syncSquad';
 
@@ -85,9 +85,12 @@ export async function GET(request) {
 
 export async function POST(request) {
   try {
-    const session = await getAdminSession(request);
+    const session = await requirePermission(request, 'managePlayers');
     if (!session) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json(
+        { success: false, error: 'Permission denied: managePlayers permission required.' },
+        { status: 403 }
+      );
     }
 
     await connectToDatabase();

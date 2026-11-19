@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
-import { getAdminSession } from '../../../../lib/auth';
+import { getAdminSession, requirePermission } from '../../../../lib/auth';
 
 const UPLOADS_DIR = path.join(process.cwd(), 'public', 'uploads');
 
@@ -133,9 +133,12 @@ export async function GET(request) {
 
 export async function POST(request) {
   try {
-    const session = await getAdminSession(request);
+    const session = await requirePermission(request, 'manageMedia');
     if (!session) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json(
+        { success: false, error: 'Permission denied: manageMedia permission required.' },
+        { status: 403 }
+      );
     }
 
     const formData = await request.formData();

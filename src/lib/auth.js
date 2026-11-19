@@ -89,6 +89,33 @@ export async function requirePermission(request, permission) {
   if (!session) return null;
   if (session.role === 'superadmin') return session;
   if (!permission) return session;
-  const perms = session.permissions || {};
-  return perms[permission] ? session : null;
+
+  // 1. Check token permissions payload
+  if (session.permissions && typeof session.permissions === 'object') {
+    if (session.permissions[permission]) return session;
+  }
+
+  // 2. Live database fallback: guarantees permission or role changes take effect immediately
+  try {
+    const connectToDatabase = (await import('./mongodb')).default;
+    await connectToDatabase();
+    const AdminUser = (await import('../models/AdminUser')).default;
+
+    const dbUser = await AdminUser.findOne({
+      username: { $regex: new RegExp(`^${session.username}$`, 'i') },
+      status: { $ne: 'suspended' },
+    }).lean();
+
+    if (dbUser) {
+      if (dbUser.role === 'superadmin') return { ...session, role: 'superadmin' };
+      const dbPerms = dbUser.permissions || {};
+      if (dbPerms[permission]) {
+        return { ...session, role: dbUser.role, permissions: dbPerms };
+      }
+    }
+  } catch (e) {
+    // Fall back to token evaluation
+  }
+
+  return null;
 }

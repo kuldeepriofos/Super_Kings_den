@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import connectToDatabase from '../../../../../lib/mongodb';
-import { getAdminSession } from '../../../../../lib/auth';
+import { getAdminSession, requirePermission } from '../../../../../lib/auth';
 import Redirect from '../../../../../models/Redirect';
 import {
   normalizePath,
@@ -31,9 +31,12 @@ export async function GET(request, { params }) {
 
 export async function PUT(request, { params }) {
   try {
-    const session = await getAdminSession(request);
+    const session = await requirePermission(request, 'manageRedirects');
     if (!session) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json(
+        { success: false, error: 'Permission denied: manageRedirects permission required.' },
+        { status: 403 }
+      );
     }
 
     const { id } = params;
@@ -118,9 +121,12 @@ export async function PUT(request, { params }) {
 
 export async function DELETE(request, { params }) {
   try {
-    const session = await getAdminSession(request);
+    const session = await requirePermission(request, 'manageRedirects');
     if (!session) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json(
+        { success: false, error: 'Permission denied: manageRedirects permission required.' },
+        { status: 403 }
+      );
     }
 
     const { id } = params;

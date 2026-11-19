@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import connectToDatabase from '../../../../lib/mongodb';
-import { getAdminSession } from '../../../../lib/auth';
+import { getAdminSession, requirePermission } from '../../../../lib/auth';
 import Post from '../../../../models/Post';
 import AdminUser from '../../../../models/AdminUser';
 import { invalidatePostsCache } from '../../../../services/api';
@@ -196,9 +196,12 @@ export async function GET(request) {
 
 export async function POST(request) {
   try {
-    const session = await getAdminSession(request);
+    const session = await requirePermission(request, 'managePosts');
     if (!session) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json(
+        { success: false, error: 'Permission denied: managePosts permission required.' },
+        { status: 403 }
+      );
     }
 
     await connectToDatabase();

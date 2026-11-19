@@ -167,6 +167,16 @@ export default function AdminLayout({ children }) {
     );
   }
 
+  const role = adminUser?.role || 'viewer';
+  const perms = adminUser?.permissions || {};
+  const isSuperAdmin = role === 'superadmin';
+  const canManagePosts = isSuperAdmin || (perms.managePosts !== false && role !== 'viewer');
+  const canManagePlayers = isSuperAdmin || (perms.managePlayers !== false && role !== 'author' && role !== 'viewer');
+  const canManageMatches = isSuperAdmin || (perms.manageMatches !== false && role !== 'author' && role !== 'viewer');
+  const canManageMedia = isSuperAdmin || (perms.manageMedia !== false && role !== 'viewer');
+  const canManageRedirects = isSuperAdmin || Boolean(perms.manageRedirects);
+  const canManageUsers = isSuperAdmin || role === 'admin' || Boolean(perms.manageUsers);
+
   const navSections = [
     {
       group: 'Overview',
@@ -183,11 +193,11 @@ export default function AdminLayout({ children }) {
           icon: FileText,
           children: [
             { name: 'All Articles', href: '/admin/posts', icon: FileText, exact: true },
-            { name: 'Categories', href: '/admin/categories', icon: Folder },
+            ...(canManagePosts ? [{ name: 'Categories', href: '/admin/categories', icon: Folder }] : []),
           ],
         },
-        { name: 'Pages', href: '/admin/pages', icon: Globe },
-        { name: 'Media Library', href: '/admin/media', icon: ImageIcon },
+        ...(canManagePosts || isSuperAdmin ? [{ name: 'Pages', href: '/admin/pages', icon: Globe }] : []),
+        ...(canManageMedia ? [{ name: 'Media Library', href: '/admin/media', icon: ImageIcon }] : []),
       ],
     },
     {
@@ -199,28 +209,36 @@ export default function AdminLayout({ children }) {
         { name: 'Franchise Stats & Records', href: '/admin/stats', icon: TrendingUp },
       ],
     },
-    {
-      group: 'CRM & Fan Desk',
-      items: [
-        { name: 'Leads & Inquiries', href: '/admin/leads', icon: Mail },
-        { name: 'Contact & Social Links', href: '/admin/settings', icon: Share2 },
-      ],
-    },
-    {
-      group: 'Access & Control',
-      items: [
-        { name: 'User Control', href: '/admin/users', icon: UserCheck },
-      ],
-    },
-    {
-      group: 'System & Routing',
-      items: [
-        { name: 'Head & Body Code', href: '/admin/code-snippets', icon: Code },
-        { name: 'SEO & Server Files', href: '/admin/site-files', icon: FileCode2 },
-        { name: '301/302 Redirects', href: '/admin/redirects', icon: ArrowRightLeft },
-        { name: 'Database & Backups', href: '/admin/sync', icon: Database },
-      ],
-    },
+    ...((isSuperAdmin || role === 'admin' || role === 'editor') ? [
+      {
+        group: 'CRM & Fan Desk',
+        items: [
+          { name: 'Leads & Inquiries', href: '/admin/leads', icon: Mail },
+          ...((isSuperAdmin || role === 'admin') ? [{ name: 'Contact & Social Links', href: '/admin/settings', icon: Share2 }] : []),
+        ],
+      }
+    ] : []),
+    ...(canManageUsers ? [
+      {
+        group: 'Access & Control',
+        items: [
+          { name: 'User Control', href: '/admin/users', icon: UserCheck },
+        ],
+      }
+    ] : []),
+    ...((isSuperAdmin || role === 'admin' || canManageRedirects) ? [
+      {
+        group: 'System & Routing',
+        items: [
+          ...((isSuperAdmin || role === 'admin') ? [
+            { name: 'Head & Body Code', href: '/admin/code-snippets', icon: Code },
+            { name: 'SEO & Server Files', href: '/admin/site-files', icon: FileCode2 },
+          ] : []),
+          ...(canManageRedirects ? [{ name: '301/302 Redirects', href: '/admin/redirects', icon: ArrowRightLeft }] : []),
+          ...(isSuperAdmin ? [{ name: 'Database & Backups', href: '/admin/sync', icon: Database }] : []),
+        ],
+      }
+    ] : []),
   ];
 
   const isItemActive = (item) => {
@@ -413,29 +431,35 @@ export default function AdminLayout({ children }) {
           ))}
 
           {/* Quick Actions */}
-          <div className="pt-2 space-y-1 border-t border-slate-800/60">
-            <div className="px-3 py-0.5 text-[10px] font-black text-slate-500 uppercase tracking-widest">
-              Quick Actions
+          {(canManagePosts || canManagePlayers) && (
+            <div className="pt-2 space-y-1 border-t border-slate-800/60">
+              <div className="px-3 py-0.5 text-[10px] font-black text-slate-500 uppercase tracking-widest">
+                Quick Actions
+              </div>
+              <div className="space-y-1.5 pt-0.5">
+                {canManagePosts && (
+                  <Link
+                    href="/admin/posts/new"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-bold text-amber-300 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/20 transition-all"
+                  >
+                    <Plus className="w-3.5 h-3.5 text-yellow-400 flex-shrink-0" />
+                    <span>Write New Post</span>
+                  </Link>
+                )}
+                {canManagePlayers && (
+                  <Link
+                    href="/admin/players/new"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-bold text-yellow-300 bg-yellow-500/10 hover:bg-yellow-500/20 border border-yellow-500/20 transition-all"
+                  >
+                    <Plus className="w-3.5 h-3.5 text-yellow-400 flex-shrink-0" />
+                    <span>Add New Player</span>
+                  </Link>
+                )}
+              </div>
             </div>
-            <div className="space-y-1.5 pt-0.5">
-              <Link
-                href="/admin/posts/new"
-                onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-bold text-amber-300 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/20 transition-all"
-              >
-                <Plus className="w-3.5 h-3.5 text-yellow-400 flex-shrink-0" />
-                <span>Write New Post</span>
-              </Link>
-              <Link
-                href="/admin/players/new"
-                onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-bold text-yellow-300 bg-yellow-500/10 hover:bg-yellow-500/20 border border-yellow-500/20 transition-all"
-              >
-                <Plus className="w-3.5 h-3.5 text-yellow-400 flex-shrink-0" />
-                <span>Add New Player</span>
-              </Link>
-            </div>
-          </div>
+          )}
         </nav>
 
         {/* Bottom Sidebar Info & Logout */}
@@ -545,13 +569,15 @@ export default function AdminLayout({ children }) {
           </div>
 
           <div className="flex items-center gap-4">
-            <Link
-              href="/admin/posts/new"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-slate-950 text-xs font-bold shadow-md shadow-yellow-500/10 transition-all cursor-pointer"
-            >
-              <Plus className="w-3.5 h-3.5" />
-              <span>New Article</span>
-            </Link>
+            {canManagePosts && (
+              <Link
+                href="/admin/posts/new"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-slate-950 text-xs font-bold shadow-md shadow-yellow-500/10 transition-all cursor-pointer"
+              >
+                <Plus className="w-3.5 h-3.5" />
+                <span>New Article</span>
+              </Link>
+            )}
 
             {adminUser && (
               <div className="flex items-center gap-2 pl-3 border-l border-slate-800 text-xs text-slate-300">
