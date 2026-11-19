@@ -64,28 +64,43 @@ export default function AdminLayout({ children }) {
       return;
     }
 
+    let isMounted = true;
+
+    // Safety timeout: never leave user stranded on authenticating screen for more than 5s
+    const authTimeout = setTimeout(() => {
+      if (isMounted) {
+        window.location.replace('/admin/login/');
+      }
+    }, 5000);
+
     async function checkAuth() {
       try {
-        const res = await fetch('/api/admin/auth/me/');
+        const res = await fetch('/api/admin/auth/me/', { cache: 'no-store' });
         if (!res.ok) {
-          router.replace('/admin/login');
+          clearTimeout(authTimeout);
+          window.location.replace('/admin/login/');
           return;
         }
         const data = await res.json();
         if (data.authenticated && data.user) {
-          setAdminUser(data.user);
-          if (data.db) {
-            setDbStatus({
-              connected: Boolean(data.db.connected),
-              error: data.db.error || null,
-            });
+          clearTimeout(authTimeout);
+          if (isMounted) {
+            setAdminUser(data.user);
+            if (data.db) {
+              setDbStatus({
+                connected: Boolean(data.db.connected),
+                error: data.db.error || null,
+              });
+            }
+            setCheckingAuth(false);
           }
-          setCheckingAuth(false);
         } else {
-          router.replace('/admin/login');
+          clearTimeout(authTimeout);
+          window.location.replace('/admin/login/');
         }
       } catch (err) {
-        router.replace('/admin/login');
+        clearTimeout(authTimeout);
+        window.location.replace('/admin/login/');
       }
     }
 
@@ -94,10 +109,10 @@ export default function AdminLayout({ children }) {
     // Re-check live database health every 30 seconds
     const interval = setInterval(async () => {
       try {
-        const res = await fetch('/api/admin/auth/me/');
+        const res = await fetch('/api/admin/auth/me/', { cache: 'no-store' });
         if (res.ok) {
           const data = await res.json();
-          if (data.db) {
+          if (data.db && isMounted) {
             setDbStatus({
               connected: Boolean(data.db.connected),
               error: data.db.error || null,
@@ -105,12 +120,18 @@ export default function AdminLayout({ children }) {
           }
         }
       } catch (err) {
-        setDbStatus({ connected: false, error: err.message || 'Connection lost' });
+        if (isMounted) {
+          setDbStatus({ connected: false, error: err.message || 'Connection lost' });
+        }
       }
     }, 30000);
 
-    return () => clearInterval(interval);
-  }, [pathname, isLoginPage, router]);
+    return () => {
+      isMounted = false;
+      clearTimeout(authTimeout);
+      clearInterval(interval);
+    };
+  }, [pathname, isLoginPage]);
 
   const handleLogout = async () => {
     try {
@@ -119,7 +140,7 @@ export default function AdminLayout({ children }) {
       // ignore
     }
     // Hard refresh navigation ensures complete cleanup of React memory & tokens
-    window.location.href = '/admin/login';
+    window.location.href = '/admin/login/';
   };
 
   // If on login page, render clean container
@@ -130,9 +151,18 @@ export default function AdminLayout({ children }) {
   // Loading barrier while verifying session
   if (checkingAuth) {
     return (
-      <div className="min-h-screen bg-[#070e1b] flex flex-col items-center justify-center text-white">
+      <div className="min-h-screen bg-[#070e1b] flex flex-col items-center justify-center text-white px-4 text-center">
         <div className="w-12 h-12 border-4 border-yellow-500/20 border-t-yellow-400 rounded-full animate-spin mb-4" />
         <p className="text-sm font-medium text-slate-400">Authenticating Super Kings Den Admin Session...</p>
+        <button
+          type="button"
+          onClick={() => {
+            window.location.href = '/admin/login/';
+          }}
+          className="mt-4 text-xs text-yellow-400/80 hover:text-yellow-400 underline transition-colors cursor-pointer"
+        >
+          Taking longer than usual? Click here to Go to Login &rarr;
+        </button>
       </div>
     );
   }

@@ -3,6 +3,8 @@ import { getAdminSession, AUTH_COOKIE_NAME } from '../../../../../lib/auth';
 import connectToDatabase, { isDatabaseConnected } from '../../../../../lib/mongodb';
 import AdminUser from '../../../../../models/AdminUser';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request) {
   try {
     const session = await getAdminSession(request);
