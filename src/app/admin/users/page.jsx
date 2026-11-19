@@ -375,9 +375,9 @@ export default function AdminUsersMasterPage() {
             </div>
             <div>
               <h1 className="text-xl sm:text-2xl font-black text-white tracking-tight flex items-center gap-2">
-                <span>Master User Control &amp; Access</span>
+                <span>User Control &amp; Access</span>
                 <span className="px-2 py-0.5 rounded-lg bg-yellow-400/15 border border-yellow-400/30 text-yellow-400 text-xs font-bold">
-                  Live
+                  {users.length} {users.length === 1 ? 'User' : 'Users'}
                 </span>
               </h1>
               <p className="text-xs text-slate-400 mt-0.5">
@@ -408,69 +408,7 @@ export default function AdminUsersMasterPage() {
         </div>
       </div>
 
-      {/* 2. STATS CARDS */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        {/* Total Users */}
-        <div className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 shadow-md flex items-center gap-3.5">
-          <div className="w-11 h-11 rounded-xl bg-yellow-400/10 border border-yellow-400/20 text-yellow-400 flex items-center justify-center flex-shrink-0">
-            <Users className="w-5 h-5" />
-          </div>
-          <div>
-            <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">
-              Total Users
-            </span>
-            <span className="text-2xl font-black text-white">{stats.total}</span>
-          </div>
-        </div>
-
-        {/* Super Admins & Admins */}
-        <div className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 shadow-md flex items-center gap-3.5">
-          <div className="w-11 h-11 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center flex-shrink-0">
-            <ShieldCheck className="w-5 h-5" />
-          </div>
-          <div>
-            <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">
-              Administrators
-            </span>
-            <span className="text-2xl font-black text-white">
-              {stats.superadmin + stats.admin}
-            </span>
-          </div>
-        </div>
-
-        {/* Editors & Authors */}
-        <div className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 shadow-md flex items-center gap-3.5">
-          <div className="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
-            <Edit3 className="w-5 h-5" />
-          </div>
-          <div>
-            <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">
-              Editors &amp; Authors
-            </span>
-            <span className="text-2xl font-black text-white">
-              {stats.editor + stats.author}
-            </span>
-          </div>
-        </div>
-
-        {/* Active Accounts */}
-        <div className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 shadow-md flex items-center gap-3.5">
-          <div className="w-11 h-11 rounded-xl bg-emerald-400/10 border border-emerald-400/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
-            <span className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse" />
-          </div>
-          <div>
-            <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">
-              Account Status
-            </span>
-            <div className="text-xs font-bold text-slate-200 mt-0.5">
-              <span className="text-emerald-400 font-black">{stats.active}</span> active •{' '}
-              <span className="text-red-400 font-black">{stats.suspended}</span> suspended
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 3. SEARCH & FILTERS BAR */}
+      {/* 2. SEARCH & FILTERS BAR */}
       <div className="p-4 rounded-2xl bg-slate-900/50 border border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs">
         {/* Search Input */}
         <div className="relative flex-1 min-w-[240px]">
