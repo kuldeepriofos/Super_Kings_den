@@ -27,7 +27,95 @@ import {
   EyeOff,
   RefreshCw,
   SlidersHorizontal,
+  FileText,
+  Calendar,
+  Image as ImageIcon,
+  ArrowRightLeft,
+  UserCheck,
+  Info,
 } from 'lucide-react';
+
+export const ROLE_PERMISSIONS_PRESETS = {
+  superadmin: {
+    key: 'superadmin',
+    label: 'Super Admin',
+    badgeColor: 'bg-yellow-500/15 text-yellow-400 border-yellow-500/30',
+    description: 'Full unrestricted root access to all modules, backups, settings & user management.',
+    permissions: {
+      managePosts: true,
+      managePlayers: true,
+      manageMatches: true,
+      manageMedia: true,
+      manageRedirects: true,
+      manageUsers: true,
+    },
+  },
+  admin: {
+    key: 'admin',
+    label: 'Admin',
+    badgeColor: 'bg-blue-500/15 text-blue-400 border-blue-500/30',
+    description: 'Manage all website content, squad, match center, media, and redirects.',
+    permissions: {
+      managePosts: true,
+      managePlayers: true,
+      manageMatches: true,
+      manageMedia: true,
+      manageRedirects: true,
+      manageUsers: false,
+    },
+  },
+  editor: {
+    key: 'editor',
+    label: 'Editor',
+    badgeColor: 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30',
+    description: 'Create, publish & update articles, players, match center fixtures, and media.',
+    permissions: {
+      managePosts: true,
+      managePlayers: true,
+      manageMatches: true,
+      manageMedia: true,
+      manageRedirects: false,
+      manageUsers: false,
+    },
+  },
+  author: {
+    key: 'author',
+    label: 'Author',
+    badgeColor: 'bg-purple-500/15 text-purple-400 border-purple-500/30',
+    description: 'Write, draft & manage blog articles and upload media. Listed in author dropdown.',
+    permissions: {
+      managePosts: true,
+      managePlayers: false,
+      manageMatches: false,
+      manageMedia: true,
+      manageRedirects: false,
+      manageUsers: false,
+    },
+  },
+  viewer: {
+    key: 'viewer',
+    label: 'Viewer',
+    badgeColor: 'bg-slate-500/15 text-slate-300 border-slate-500/30',
+    description: 'Read-only analytics and overview monitoring. No edit or publish permissions.',
+    permissions: {
+      managePosts: false,
+      managePlayers: false,
+      manageMatches: false,
+      manageMedia: false,
+      manageRedirects: false,
+      manageUsers: false,
+    },
+  },
+};
+
+export const PERMISSION_MODULES = [
+  { key: 'managePosts', label: 'Articles & Content', icon: FileText, desc: 'Create, edit, draft & publish articles and categories' },
+  { key: 'managePlayers', label: 'Squad & Players', icon: Users, desc: 'Add team roster, player profiles, stats & legends' },
+  { key: 'manageMatches', label: 'Match Center', icon: Calendar, desc: 'Schedule fixtures, update live scores & standings' },
+  { key: 'manageMedia', label: 'Media Library', icon: ImageIcon, desc: 'Upload, delete & organize media files and photos' },
+  { key: 'manageRedirects', label: '301/302 Redirects', icon: ArrowRightLeft, desc: 'Create & manage SEO redirect rules & aliases' },
+  { key: 'manageUsers', label: 'User Control', icon: UserCheck, desc: 'Manage user accounts, assign roles & reset passwords' },
+];
 
 export default function AdminUsersMasterPage() {
   const [users, setUsers] = useState([]);
@@ -54,6 +142,8 @@ export default function AdminUsersMasterPage() {
   const [editModalUser, setEditModalUser] = useState(null);
   const [passwordModalUser, setPasswordModalUser] = useState(null);
   const [deleteConfirmUser, setDeleteConfirmUser] = useState(null);
+  const [roleMatrixModalOpen, setRoleMatrixModalOpen] = useState(false);
+  const [selectedMatrixRole, setSelectedMatrixRole] = useState('editor');
 
   // Form states for Create User
   const [newUsername, setNewUsername] = useState('');
@@ -63,6 +153,7 @@ export default function AdminUsersMasterPage() {
   const [newRole, setNewRole] = useState('editor');
   const [newStatus, setNewStatus] = useState('active');
   const [newBio, setNewBio] = useState('');
+  const [newPermissions, setNewPermissions] = useState({ ...ROLE_PERMISSIONS_PRESETS.editor.permissions });
   const [showPassword, setShowPassword] = useState(false);
   const [creating, setCreating] = useState(false);
 
@@ -141,6 +232,7 @@ export default function AdminUsersMasterPage() {
           role: newRole,
           status: newStatus,
           bio: newBio,
+          permissions: newPermissions,
         }),
       });
       const data = await res.json();
@@ -152,6 +244,7 @@ export default function AdminUsersMasterPage() {
         setNewEmail('');
         setNewPassword('');
         setNewRole('editor');
+        setNewPermissions({ ...ROLE_PERMISSIONS_PRESETS.editor.permissions });
         setNewStatus('active');
         setNewBio('');
         fetchUsers();
@@ -387,7 +480,7 @@ export default function AdminUsersMasterPage() {
           </div>
         </div>
 
-        <div className="flex items-center gap-2.5">
+        <div className="flex flex-wrap items-center gap-2.5">
           <button
             type="button"
             onClick={fetchUsers}
@@ -399,7 +492,21 @@ export default function AdminUsersMasterPage() {
 
           <button
             type="button"
-            onClick={() => setCreateModalOpen(true)}
+            onClick={() => setRoleMatrixModalOpen(true)}
+            className="px-3.5 py-2.5 rounded-2xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 hover:border-yellow-400/40 font-bold text-xs flex items-center gap-2 transition cursor-pointer shadow-sm"
+            title="View and manage role access details"
+          >
+            <Shield className="w-4 h-4 text-yellow-400" />
+            <span>Role Access Details</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => {
+              setNewRole('editor');
+              setNewPermissions({ ...ROLE_PERMISSIONS_PRESETS.editor.permissions });
+              setCreateModalOpen(true);
+            }}
             className="px-4 py-2.5 rounded-2xl bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-600 hover:to-yellow-500 text-slate-950 font-black text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-yellow-500/10 transition cursor-pointer"
           >
             <UserPlus className="w-4 h-4 stroke-[2.5]" />
@@ -780,7 +887,13 @@ export default function AdminUsersMasterPage() {
                   <label className="block text-slate-300 font-bold mb-1">Role</label>
                   <select
                     value={newRole}
-                    onChange={(e) => setNewRole(e.target.value)}
+                    onChange={(e) => {
+                      const nextRole = e.target.value;
+                      setNewRole(nextRole);
+                      if (ROLE_PERMISSIONS_PRESETS[nextRole]) {
+                        setNewPermissions({ ...ROLE_PERMISSIONS_PRESETS[nextRole].permissions });
+                      }
+                    }}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white outline-none focus:border-yellow-400 cursor-pointer"
                   >
                     <option value="editor">Editor (Create &amp; Publish Posts)</option>
@@ -801,6 +914,51 @@ export default function AdminUsersMasterPage() {
                     <option value="active">Active (Can Login)</option>
                     <option value="suspended">Suspended (Blocked)</option>
                   </select>
+                </div>
+              </div>
+
+              {/* Granular Module Permissions with Role Auto-sync */}
+              <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2.5">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-1.5">
+                    <Shield className="w-3.5 h-3.5 text-yellow-400" />
+                    <span className="text-slate-300 font-bold uppercase tracking-wider text-[10px]">
+                      Module Access for {ROLE_PERMISSIONS_PRESETS[newRole]?.label || newRole}
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (ROLE_PERMISSIONS_PRESETS[newRole]) {
+                        setNewPermissions({ ...ROLE_PERMISSIONS_PRESETS[newRole].permissions });
+                      }
+                    }}
+                    className="text-[10px] text-yellow-400 hover:underline cursor-pointer"
+                  >
+                    Reset to {ROLE_PERMISSIONS_PRESETS[newRole]?.label || 'Role'} Defaults
+                  </button>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                  {PERMISSION_MODULES.map((perm) => (
+                    <label
+                      key={perm.key}
+                      className="flex items-center gap-2 p-2 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 text-slate-300 hover:text-white cursor-pointer select-none transition-colors"
+                      title={perm.desc}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={Boolean(newPermissions[perm.key])}
+                        onChange={(e) =>
+                          setNewPermissions({
+                            ...newPermissions,
+                            [perm.key]: e.target.checked,
+                          })
+                        }
+                        className="rounded border-slate-700 text-yellow-500 focus:ring-yellow-400 cursor-pointer"
+                      />
+                      <span className="text-[11px] font-semibold">{perm.label}</span>
+                    </label>
+                  ))}
                 </div>
               </div>
 
@@ -899,16 +1057,22 @@ export default function AdminUsersMasterPage() {
                   <label className="block text-slate-300 font-bold mb-1">Role</label>
                   <select
                     value={editModalUser.role || 'editor'}
-                    onChange={(e) =>
-                      setEditModalUser({ ...editModalUser, role: e.target.value })
-                    }
+                    onChange={(e) => {
+                      const nextRole = e.target.value;
+                      const defaults = ROLE_PERMISSIONS_PRESETS[nextRole]?.permissions || {};
+                      setEditModalUser({
+                        ...editModalUser,
+                        role: nextRole,
+                        permissions: { ...defaults },
+                      });
+                    }}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white outline-none focus:border-yellow-400 cursor-pointer"
                   >
-                    <option value="superadmin">Super Admin</option>
-                    <option value="admin">Admin</option>
-                    <option value="editor">Editor</option>
-                    <option value="author">Author</option>
-                    <option value="viewer">Viewer</option>
+                    <option value="superadmin">Super Admin (Full Root Access)</option>
+                    <option value="admin">Admin (Manage Content &amp; Squad)</option>
+                    <option value="editor">Editor (Create &amp; Publish Posts)</option>
+                    <option value="author">Author (Draft Articles &amp; Upload Media)</option>
+                    <option value="viewer">Viewer (Read-Only Analytics)</option>
                   </select>
                 </div>
 
@@ -929,21 +1093,33 @@ export default function AdminUsersMasterPage() {
 
               {/* Granular Permissions Section */}
               <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2.5">
-                <span className="text-slate-400 font-bold uppercase tracking-wider text-[10px] block">
-                  Granular Module Permissions
-                </span>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-1.5">
+                    <Shield className="w-3.5 h-3.5 text-yellow-400" />
+                    <span className="text-slate-300 font-bold uppercase tracking-wider text-[10px]">
+                      Module Access for {ROLE_PERMISSIONS_PRESETS[editModalUser.role]?.label || editModalUser.role}
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const defaults = ROLE_PERMISSIONS_PRESETS[editModalUser.role]?.permissions || {};
+                      setEditModalUser({
+                        ...editModalUser,
+                        permissions: { ...defaults },
+                      });
+                    }}
+                    className="text-[10px] text-yellow-400 hover:underline cursor-pointer"
+                  >
+                    Reset to {ROLE_PERMISSIONS_PRESETS[editModalUser.role]?.label || 'Role'} Defaults
+                  </button>
+                </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-                  {[
-                    { key: 'managePosts', label: 'Articles' },
-                    { key: 'managePlayers', label: 'Players' },
-                    { key: 'manageMatches', label: 'Match Center' },
-                    { key: 'manageMedia', label: 'Media Library' },
-                    { key: 'manageRedirects', label: '301/302 Redirects' },
-                    { key: 'manageUsers', label: 'User Control' },
-                  ].map((perm) => (
+                  {PERMISSION_MODULES.map((perm) => (
                     <label
                       key={perm.key}
-                      className="flex items-center gap-2 text-slate-300 hover:text-white cursor-pointer select-none"
+                      className="flex items-center gap-2 p-2 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 text-slate-300 hover:text-white cursor-pointer select-none transition-colors"
+                      title={perm.desc}
                     >
                       <input
                         type="checkbox"
@@ -957,9 +1133,9 @@ export default function AdminUsersMasterPage() {
                             },
                           })
                         }
-                        className="rounded border-slate-700 text-yellow-500 focus:ring-yellow-400"
+                        className="rounded border-slate-700 text-yellow-500 focus:ring-yellow-400 cursor-pointer"
                       />
-                      <span className="text-[11px] font-medium">{perm.label}</span>
+                      <span className="text-[11px] font-semibold">{perm.label}</span>
                     </label>
                   ))}
                 </div>
@@ -1106,6 +1282,156 @@ export default function AdminUsersMasterPage() {
                 className="px-5 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-bold transition shadow-lg shadow-red-600/20 disabled:opacity-50"
               >
                 {deleting ? 'Deleting...' : 'Yes, Delete'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ──────── MODAL 5: ROLE ACCESS & PERMISSIONS DETAILS ──────── */}
+      {roleMatrixModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fadeIn"
+          onClick={() => setRoleMatrixModalOpen(false)}
+        >
+          <div
+            className="w-full max-w-3xl bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="p-5 border-b border-slate-800 flex items-center justify-between bg-slate-950/70">
+              <div className="flex items-center gap-3">
+                <div className="p-2.5 rounded-2xl bg-yellow-400/10 border border-yellow-400/20 text-yellow-400">
+                  <ShieldCheck className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="text-base sm:text-lg font-black text-white flex items-center gap-2">
+                    <span>Role Access &amp; Permissions Guide</span>
+                    <span className="px-2 py-0.5 rounded-lg bg-yellow-400/15 border border-yellow-400/30 text-yellow-400 text-[10px] font-bold">
+                      Master Matrix
+                    </span>
+                  </h3>
+                  <p className="text-xs text-slate-400">
+                    Kis role me kya-kya access hoga aur kaun se modules open rahenge.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setRoleMatrixModalOpen(false)}
+                className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Modal Body */}
+            <div className="p-6 overflow-y-auto space-y-6 text-xs">
+              {/* Role Cards Breakdown */}
+              <div>
+                <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider mb-2.5">
+                  1. Available System Roles &amp; Responsibilities
+                </span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                  {Object.values(ROLE_PERMISSIONS_PRESETS).map((r) => {
+                    const isSelected = selectedMatrixRole === r.key;
+                    return (
+                      <div
+                        key={r.key}
+                        onClick={() => setSelectedMatrixRole(r.key)}
+                        className={`p-3.5 rounded-2xl border transition-all cursor-pointer ${
+                          isSelected
+                            ? 'bg-slate-800/90 border-yellow-400/60 shadow-lg shadow-yellow-500/10'
+                            : 'bg-slate-950/60 border-slate-800 hover:border-slate-700'
+                        }`}
+                      >
+                        <div className="flex items-center justify-between mb-1.5">
+                          <span className={`px-2 py-0.5 rounded-lg text-[10px] font-black uppercase border ${r.badgeColor}`}>
+                            {r.label}
+                          </span>
+                          {isSelected && (
+                            <span className="text-[10px] text-yellow-400 font-bold">Selected</span>
+                          )}
+                        </div>
+                        <p className="text-slate-400 text-[11px] leading-relaxed mt-1">
+                          {r.description}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Full Matrix Table */}
+              <div>
+                <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider mb-2.5">
+                  2. Detailed Permissions Breakdown By Role
+                </span>
+                <div className="rounded-2xl border border-slate-800 overflow-hidden bg-slate-950">
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left text-xs">
+                      <thead className="bg-slate-900 border-b border-slate-800 text-[10px] uppercase font-bold text-slate-400">
+                        <tr>
+                          <th className="py-2.5 px-3.5">Module / Privilege</th>
+                          <th className="py-2.5 px-2 text-center text-yellow-400">Super Admin</th>
+                          <th className="py-2.5 px-2 text-center text-blue-400">Admin</th>
+                          <th className="py-2.5 px-2 text-center text-emerald-400">Editor</th>
+                          <th className="py-2.5 px-2 text-center text-purple-400">Author</th>
+                          <th className="py-2.5 px-2 text-center text-slate-400">Viewer</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-800/60">
+                        {PERMISSION_MODULES.map((perm) => (
+                          <tr key={perm.key} className="hover:bg-slate-900/40 transition-colors">
+                            <td className="py-3 px-3.5">
+                              <div className="font-bold text-white text-xs">{perm.label}</div>
+                              <div className="text-[10px] text-slate-400 mt-0.5">{perm.desc}</div>
+                            </td>
+                            {['superadmin', 'admin', 'editor', 'author', 'viewer'].map((roleKey) => {
+                              const allowed = Boolean(ROLE_PERMISSIONS_PRESETS[roleKey]?.permissions?.[perm.key]);
+                              return (
+                                <td key={roleKey} className="py-3 px-2 text-center">
+                                  {allowed ? (
+                                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-black text-xs" title="Access Allowed">
+                                      ✓
+                                    </span>
+                                  ) : (
+                                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-red-500/10 border border-red-500/20 text-red-400/50 font-bold text-xs" title="Access Blocked">
+                                      —
+                                    </span>
+                                  )}
+                                </td>
+                              );
+                            })}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              {/* Helpful Tip */}
+              <div className="p-3.5 rounded-xl bg-yellow-400/10 border border-yellow-400/20 text-yellow-300 text-[11px] flex items-start gap-2.5">
+                <Info className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" />
+                <div className="leading-relaxed">
+                  <strong className="text-yellow-400 block mb-0.5">Custom Overrides Support:</strong>
+                  Jab aap "Add New User" ya "Edit User" par click karte hain, toh Role change karne par ye permissions automatically pre-fill ho jati hain. Aap kisi bhi user ke liye individual checkboxes ko check ya uncheck karke custom permissions bhi de sakte hain.
+                </div>
+              </div>
+            </div>
+
+            {/* Modal Footer */}
+            <div className="p-4 border-t border-slate-800 flex items-center justify-between bg-slate-950/60">
+              <span className="text-[11px] text-slate-400">
+                Logged in as <strong className="text-white capitalize">{currentUser?.username || 'Super Admin'}</strong>
+              </span>
+              <button
+                type="button"
+                onClick={() => setRoleMatrixModalOpen(false)}
+                className="px-5 py-2 rounded-xl bg-yellow-400 hover:bg-yellow-300 text-slate-950 font-bold text-xs transition cursor-pointer"
+              >
+                Close Guide
               </button>
             </div>
           </div>
