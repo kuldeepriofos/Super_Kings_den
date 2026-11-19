@@ -4,6 +4,7 @@ import path from 'path';
 import connectToDatabase from '../../../../lib/mongodb';
 import { getAdminSession } from '../../../../lib/auth';
 import Post from '../../../../models/Post';
+import AdminUser from '../../../../models/AdminUser';
 import { invalidatePostsCache } from '../../../../services/api';
 
 export const dynamic = 'force-dynamic';
@@ -160,19 +161,26 @@ export async function GET(request) {
     const totalPages = Math.ceil(total / limit) || 1;
     const skip = (page - 1) * limit;
 
-    const [posts, distinctAuthors] = await Promise.all([
+    const [posts, adminUsers] = await Promise.all([
       Post.find(filter)
         .sort(sortObj)
         .skip(skip)
         .limit(limit)
         .lean(),
-      Post.distinct('author'),
+      AdminUser.find({ status: { $ne: 'suspended' } })
+        .select('name username')
+        .sort({ name: 1, username: 1 })
+        .lean(),
     ]);
+
+    const userAuthors = (adminUsers || [])
+      .map((u) => (u.name && u.name.trim()) || (u.username && u.username.trim()))
+      .filter(Boolean);
 
     return NextResponse.json({
       success: true,
       posts,
-      authors: (distinctAuthors || []).filter(Boolean).sort(),
+      authors: userAuthors,
       pagination: {
         page,
         limit,

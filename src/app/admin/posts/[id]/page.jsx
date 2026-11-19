@@ -23,19 +23,6 @@ import MediaLibraryModal from '../../../../components/admin/MediaLibraryModal';
 import RichTextEditor from '../../../../components/admin/RichTextEditor';
 import PostSeoSchemaBox from '../../../../components/admin/PostSeoSchemaBox';
 
-const DEFAULT_AUTHORS = [
-  'Super Kings Den Team',
-  'Super Kings Den Admin',
-  'News Desk',
-  'Ajay Nedungadi',
-  'Divakar Jha',
-  'Divyansh Mishra',
-  'Hire and Hire',
-  'Rati Agarwal',
-  'Vaibhaw Tiwari',
-  'Yash Soni',
-];
-
 export default function EditPostPage() {
   const router = useRouter();
   const params = useParams();
@@ -69,7 +56,7 @@ export default function EditPostPage() {
   const [customSchema, setCustomSchema] = useState('');
 
   const [categories, setCategories] = useState([]);
-  const [authorsList, setAuthorsList] = useState(DEFAULT_AUTHORS);
+  const [authorsList, setAuthorsList] = useState([]);
   const [isCustomAuthor, setIsCustomAuthor] = useState(false);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -203,7 +190,7 @@ export default function EditPostPage() {
           slug: cleanSlug,
           category,
           franchise,
-          author: (author && author !== '__custom__') ? author.trim() : 'Super Kings Den Team',
+          author: (author && author !== '__custom__') ? author.trim() : (authorsList[0]?.name || authorsList[0] || 'Super Admin'),
           featuredImage,
           readingTime,
           excerpt,
@@ -693,28 +680,39 @@ export default function EditPostPage() {
               <div className="flex items-center justify-between mb-1.5">
                 <label className="text-xs text-slate-400 font-medium flex items-center gap-1.5">
                   <User className="w-3.5 h-3.5 text-slate-500" />
-                  <span>Author</span>
+                  <span>Author (User)</span>
                 </label>
-                {isCustomAuthor ? (
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setIsCustomAuthor(false);
-                      if (!author || author === '__custom__') setAuthor('Super Kings Den Team');
-                    }}
-                    className="text-[11px] text-yellow-400 hover:underline cursor-pointer"
+                <div className="flex items-center gap-2">
+                  <Link
+                    href="/admin/users"
+                    target="_blank"
+                    className="text-[11px] text-slate-400 hover:text-yellow-400 transition-colors"
+                    title="Manage users in User Control"
                   >
-                    Select from list
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => setIsCustomAuthor(true)}
-                    className="text-[11px] text-slate-400 hover:text-yellow-400 transition-colors cursor-pointer"
-                  >
-                    + Custom
-                  </button>
-                )}
+                    Manage Users ↗
+                  </Link>
+                  {isCustomAuthor ? (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setIsCustomAuthor(false);
+                        const fallbackUser = authorsList[0]?.name || authorsList[0] || 'Super Admin';
+                        if (!author || author === '__custom__') setAuthor(fallbackUser);
+                      }}
+                      className="text-[11px] text-yellow-400 hover:underline cursor-pointer"
+                    >
+                      Select from users
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setIsCustomAuthor(true)}
+                      className="text-[11px] text-slate-400 hover:text-yellow-400 transition-colors cursor-pointer"
+                    >
+                      + Custom
+                    </button>
+                  )}
+                </div>
               </div>
 
               {isCustomAuthor ? (
@@ -731,7 +729,8 @@ export default function EditPostPage() {
                     type="button"
                     onClick={() => {
                       setIsCustomAuthor(false);
-                      if (!author || author === '__custom__') setAuthor('Super Kings Den Team');
+                      const fallbackUser = authorsList[0]?.name || authorsList[0] || 'Super Admin';
+                      if (!author || author === '__custom__') setAuthor(fallbackUser);
                     }}
                     className="px-2.5 py-1.5 text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl transition-colors cursor-pointer"
                   >
@@ -751,14 +750,19 @@ export default function EditPostPage() {
                   }}
                   className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-200 focus:border-yellow-400 outline-none cursor-pointer"
                 >
-                  {author && !authorsList.some((a) => a.toLowerCase() === author.toLowerCase()) && author !== '__custom__' && (
-                    <option value={author}>{author}</option>
+                  <option value="" disabled>-- Select User Author --</option>
+                  {author && !authorsList.some((a) => (typeof a === 'object' ? a.name : a).toLowerCase() === author.toLowerCase()) && author !== '__custom__' && (
+                    <option value={author}>{author} (Current)</option>
                   )}
-                  {authorsList.map((a) => (
-                    <option key={a} value={a}>
-                      {a}
-                    </option>
-                  ))}
+                  {authorsList.map((a) => {
+                    const name = typeof a === 'object' ? a.name : a;
+                    const role = typeof a === 'object' && a.role ? ` (${a.role})` : '';
+                    return (
+                      <option key={name} value={name}>
+                        {name}{role}
+                      </option>
+                    );
+                  })}
                   <option value="__custom__">+ Enter Custom Author...</option>
                 </select>
               )}

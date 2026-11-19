@@ -1,23 +1,9 @@
 import { NextResponse } from 'next/server';
 import connectToDatabase from '../../../../lib/mongodb';
 import { getAdminSession } from '../../../../lib/auth';
-import Post from '../../../../models/Post';
 import AdminUser from '../../../../models/AdminUser';
 
 export const dynamic = 'force-dynamic';
-
-const DEFAULT_AUTHORS = [
-  'Super Kings Den Team',
-  'Super Kings Den Admin',
-  'News Desk',
-  'Ajay Nedungadi',
-  'Divakar Jha',
-  'Divyansh Mishra',
-  'Hire and Hire',
-  'Rati Agarwal',
-  'Vaibhaw Tiwari',
-  'Yash Soni',
-];
 
 export async function GET(request) {
   try {
@@ -28,36 +14,40 @@ export async function GET(request) {
 
     await connectToDatabase();
 
-    const [postAuthors, adminUsers] = await Promise.all([
-      Post.distinct('author'),
-      AdminUser.find({ isActive: { $ne: false } }).select('name username').lean(),
-    ]);
+    // Authors must strictly be registered active admin/editor/author users
+    const adminUsers = await AdminUser.find({
+      status: { $ne: 'suspended' },
+    })
+      .select('name username role email')
+      .sort({ role: 1, name: 1, username: 1 })
+      .lean();
 
-    const set = new Set(DEFAULT_AUTHORS);
+    const seen = new Set();
+    const authors = [];
 
-    (postAuthors || []).forEach((a) => {
-      if (a && typeof a === 'string' && a.trim()) {
-        set.add(a.trim());
+    (adminUsers || []).forEach((u) => {
+      const displayName = (u.name && u.name.trim()) || (u.username && u.username.trim());
+      if (displayName && !seen.has(displayName)) {
+        seen.add(displayName);
+        authors.push({
+          id: String(u._id),
+          name: displayName,
+          username: u.username,
+          role: u.role || 'author',
+        });
       }
     });
 
-    (adminUsers || []).forEach((u) => {
-      if (u.name && u.name.trim()) set.add(u.name.trim());
-      else if (u.username && u.username.trim()) set.add(u.username.trim());
+    return NextResponse.json({
+      success: true,
+      authors,
+      authorNames: authors.map((a) => a.name),
     });
-
-    const authors = Array.from(set).sort((a, b) => {
-      // Prioritize primary team authors at top
-      if (a === 'Super Kings Den Team') return -1;
-      if (b === 'Super Kings Den Team') return 1;
-      if (a === 'Super Kings Den Admin') return -1;
-      if (b === 'Super Kings Den Admin') return 1;
-      return a.localeCompare(b);
-    });
-
-    return NextResponse.json({ success: true, authors });
   } catch (err) {
     console.error('Authors GET error:', err);
-    return NextResponse.json({ success: true, authors: DEFAULT_AUTHORS });
+    return NextResponse.json(
+      { success: false, error: err.message, authors: [], authorNames: [] },
+      { status: 500 }
+    );
   }
 }
