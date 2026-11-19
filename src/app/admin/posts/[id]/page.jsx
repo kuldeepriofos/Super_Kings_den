@@ -23,6 +23,19 @@ import MediaLibraryModal from '../../../../components/admin/MediaLibraryModal';
 import RichTextEditor from '../../../../components/admin/RichTextEditor';
 import PostSeoSchemaBox from '../../../../components/admin/PostSeoSchemaBox';
 
+const DEFAULT_AUTHORS = [
+  'Super Kings Den Team',
+  'Super Kings Den Admin',
+  'News Desk',
+  'Ajay Nedungadi',
+  'Divakar Jha',
+  'Divyansh Mishra',
+  'Hire and Hire',
+  'Rati Agarwal',
+  'Vaibhaw Tiwari',
+  'Yash Soni',
+];
+
 export default function EditPostPage() {
   const router = useRouter();
   const params = useParams();
@@ -56,6 +69,8 @@ export default function EditPostPage() {
   const [customSchema, setCustomSchema] = useState('');
 
   const [categories, setCategories] = useState([]);
+  const [authorsList, setAuthorsList] = useState(DEFAULT_AUTHORS);
+  const [isCustomAuthor, setIsCustomAuthor] = useState(false);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
@@ -81,10 +96,23 @@ export default function EditPostPage() {
   useEffect(() => {
     async function loadData() {
       try {
-        // Load categories
-        const catRes = await fetch('/api/admin/categories/');
-        const catData = await catRes.json();
-        if (catData.categories) setCategories(catData.categories);
+        // Load categories & authors in parallel
+        const [catRes, authRes] = await Promise.all([
+          fetch('/api/admin/categories/').catch(() => null),
+          fetch('/api/admin/authors/').catch(() => null),
+        ]);
+
+        if (catRes && catRes.ok) {
+          const catData = await catRes.json();
+          if (catData.categories) setCategories(catData.categories);
+        }
+
+        if (authRes && authRes.ok) {
+          const authData = await authRes.json();
+          if (authData.authors && Array.isArray(authData.authors)) {
+            setAuthorsList(authData.authors);
+          }
+        }
 
         // Load post
         const postRes = await fetch(`/api/admin/posts/${postId}/`);
@@ -175,7 +203,7 @@ export default function EditPostPage() {
           slug: cleanSlug,
           category,
           franchise,
-          author,
+          author: (author && author !== '__custom__') ? author.trim() : 'Super Kings Den Team',
           featuredImage,
           readingTime,
           excerpt,
@@ -662,16 +690,78 @@ export default function EditPostPage() {
 
             {/* Author */}
             <div>
-              <label className="block text-xs text-slate-400 mb-1.5 font-medium flex items-center gap-1.5">
-                <User className="w-3.5 h-3.5 text-slate-500" />
-                <span>Author</span>
-              </label>
-              <input
-                type="text"
-                value={author}
-                onChange={(e) => setAuthor(e.target.value)}
-                className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-200 focus:border-yellow-400 outline-none"
-              />
+              <div className="flex items-center justify-between mb-1.5">
+                <label className="text-xs text-slate-400 font-medium flex items-center gap-1.5">
+                  <User className="w-3.5 h-3.5 text-slate-500" />
+                  <span>Author</span>
+                </label>
+                {isCustomAuthor ? (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsCustomAuthor(false);
+                      if (!author || author === '__custom__') setAuthor('Super Kings Den Team');
+                    }}
+                    className="text-[11px] text-yellow-400 hover:underline cursor-pointer"
+                  >
+                    Select from list
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setIsCustomAuthor(true)}
+                    className="text-[11px] text-slate-400 hover:text-yellow-400 transition-colors cursor-pointer"
+                  >
+                    + Custom
+                  </button>
+                )}
+              </div>
+
+              {isCustomAuthor ? (
+                <div className="flex gap-1.5">
+                  <input
+                    type="text"
+                    placeholder="Enter author name..."
+                    value={author === '__custom__' ? '' : author}
+                    onChange={(e) => setAuthor(e.target.value)}
+                    autoFocus
+                    className="flex-1 px-3 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-200 focus:border-yellow-400 outline-none"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsCustomAuthor(false);
+                      if (!author || author === '__custom__') setAuthor('Super Kings Den Team');
+                    }}
+                    className="px-2.5 py-1.5 text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl transition-colors cursor-pointer"
+                  >
+                    List
+                  </button>
+                </div>
+              ) : (
+                <select
+                  value={author}
+                  onChange={(e) => {
+                    if (e.target.value === '__custom__') {
+                      setIsCustomAuthor(true);
+                      setAuthor('');
+                    } else {
+                      setAuthor(e.target.value);
+                    }
+                  }}
+                  className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-200 focus:border-yellow-400 outline-none cursor-pointer"
+                >
+                  {author && !authorsList.some((a) => a.toLowerCase() === author.toLowerCase()) && author !== '__custom__' && (
+                    <option value={author}>{author}</option>
+                  )}
+                  {authorsList.map((a) => (
+                    <option key={a} value={a}>
+                      {a}
+                    </option>
+                  ))}
+                  <option value="__custom__">+ Enter Custom Author...</option>
+                </select>
+              )}
             </div>
 
             {/* Reading Time */}

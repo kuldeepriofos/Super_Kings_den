@@ -6,6 +6,8 @@ import { getAdminSession } from '../../../../lib/auth';
 import Post from '../../../../models/Post';
 import { invalidatePostsCache } from '../../../../services/api';
 
+export const dynamic = 'force-dynamic';
+
 function slugify(text) {
   return String(text || '')
     .toLowerCase()

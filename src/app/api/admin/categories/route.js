@@ -7,6 +7,8 @@ import Category from '../../../../models/Category';
 import Post from '../../../../models/Post';
 import { invalidateCategoriesCache } from '../../../../services/api';
 
+export const dynamic = 'force-dynamic';
+
 function syncCategoriesJson(category, action = 'upsert') {
   try {
     const filePath = path.join(process.cwd(), 'src', 'data', 'categoriesData.json');
