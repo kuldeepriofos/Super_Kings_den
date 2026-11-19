@@ -58,13 +58,17 @@ export async function GET(request) {
           }
 
           const rolePermissions = await getPermissionsForRole(dbUser.role || 'viewer');
+          const effectivePermissions = {
+            ...rolePermissions,
+            ...(dbUser.permissions || {}),
+          };
 
           liveUser = {
             username: dbUser.username,
             name: dbUser.name || dbUser.username,
             role: dbUser.role || 'viewer',
             status: dbUser.status || 'active',
-            permissions: rolePermissions,
+            permissions: effectivePermissions,
           };
         }
       }

@@ -88,13 +88,46 @@ export async function PUT(request, { params }) {
     if (email !== undefined) targetUser.email = String(email).trim().toLowerCase();
     if (bio !== undefined) targetUser.bio = String(bio).trim();
 
-    // Update role & status if permitted (permissions automatically sync from role)
+    // Update role & status if permitted
     if (role && ['superadmin', 'admin', 'editor', 'author', 'viewer'].includes(role)) {
       targetUser.role = role;
-      targetUser.permissions = await getPermissionsForRole(role);
+      if (!permissions) {
+        targetUser.permissions = await getPermissionsForRole(role);
+      }
     }
     if (status && ['active', 'suspended'].includes(status)) {
       targetUser.status = status;
+    }
+
+    // Update granular permissions if passed from user access management modal
+    if (permissions && typeof permissions === 'object') {
+      const merged = {
+        ...(targetUser.permissions || {}),
+        ...permissions,
+      };
+
+      // Ensure core system flags are kept in sync with granular module edit flags
+      if (permissions.articles_edit !== undefined || permissions.categories_edit !== undefined) {
+        merged.managePosts = Boolean(merged.articles_edit || merged.categories_edit || merged.pages_edit || merged.managePosts);
+      }
+      if (permissions.players_edit !== undefined) {
+        merged.managePlayers = Boolean(merged.players_edit || merged.managePlayers);
+      }
+      if (permissions.matches_edit !== undefined || permissions.standings_edit !== undefined) {
+        merged.manageMatches = Boolean(merged.matches_edit || merged.standings_edit || merged.manageMatches);
+      }
+      if (permissions.media_edit !== undefined || permissions.media_delete !== undefined) {
+        merged.manageMedia = Boolean(merged.media_edit || merged.media_delete || merged.manageMedia);
+      }
+      if (permissions.redirects_edit !== undefined) {
+        merged.manageRedirects = Boolean(merged.redirects_edit || merged.manageRedirects);
+      }
+      if (permissions.users_edit !== undefined) {
+        merged.manageUsers = Boolean(merged.users_edit || merged.manageUsers);
+      }
+
+      targetUser.permissions = merged;
+      targetUser.markModified('permissions');
     }
 
     // Password reset if new password provided

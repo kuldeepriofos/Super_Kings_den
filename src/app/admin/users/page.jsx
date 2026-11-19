@@ -33,7 +33,50 @@ import {
   Info,
   Save,
   RotateCcw,
+  Settings2,
 } from 'lucide-react';
+
+export const ACCESS_MODULE_GROUPS = [
+  {
+    id: 'master',
+    title: 'MASTER / CONTENT & CMS',
+    items: [
+      { id: 'articles', label: 'Articles CMS', actions: ['view', 'edit', 'delete'] },
+      { id: 'categories', label: 'Categories Master', actions: ['view', 'edit', 'delete'] },
+      { id: 'pages', label: 'Pages Master', actions: ['view', 'edit', 'delete'] },
+      { id: 'media', label: 'Media Library', actions: ['view', 'edit', 'delete'] },
+    ],
+  },
+  {
+    id: 'cricket',
+    title: 'CRICKET & SQUAD',
+    items: [
+      { id: 'players', label: 'Players & Squad Master', actions: ['view', 'edit', 'delete'] },
+      { id: 'matches', label: 'Match Center & Fixtures', actions: ['view', 'edit', 'delete'] },
+      { id: 'standings', label: 'Standings & Points Table', actions: ['view', 'edit', 'delete'] },
+      { id: 'stats', label: 'Franchise Stats & Records', actions: ['view', 'edit', 'delete'] },
+    ],
+  },
+  {
+    id: 'crm',
+    title: 'CRM & FAN DESK',
+    items: [
+      { id: 'leads', label: 'Fan Inquiries & Leads', actions: ['view', 'edit', 'delete'] },
+      { id: 'contact', label: 'Contact Info & Desk Hours', actions: ['view', 'edit'] },
+      { id: 'social', label: 'Social Media Links', actions: ['view', 'edit'] },
+    ],
+  },
+  {
+    id: 'system',
+    title: 'SYSTEM & ACCESS CONTROL',
+    items: [
+      { id: 'users', label: 'User Master & Credentials', actions: ['view', 'edit', 'delete'] },
+      { id: 'redirects', label: '301/302 SEO Redirects', actions: ['view', 'edit', 'delete'] },
+      { id: 'code', label: 'Header & Footer Custom Code', actions: ['view', 'edit'] },
+      { id: 'dashboard', label: 'Overview & Analytics Dashboard', actions: ['view'] },
+    ],
+  },
+];
 
 export const PERMISSION_MODULES = [
   {
@@ -152,6 +195,55 @@ export const DEFAULT_ROLE_PRESETS = {
   },
 };
 
+/**
+ * Generate default granular permissions according to role
+ */
+export function generateGranularPresetsForRole(roleKey) {
+  const perms = {};
+  const isSuper = roleKey === 'superadmin';
+  const isAdmin = roleKey === 'admin' || isSuper;
+  const isEditor = roleKey === 'editor' || isAdmin;
+  const isAuthor = roleKey === 'author';
+
+  ACCESS_MODULE_GROUPS.forEach((group) => {
+    group.items.forEach((item) => {
+      item.actions.forEach((action) => {
+        const key = `${item.id}_${action}`;
+        if (isSuper) {
+          perms[key] = true;
+        } else if (isAdmin) {
+          if (item.id === 'users' && (action === 'edit' || action === 'delete')) {
+            perms[key] = false;
+          } else {
+            perms[key] = true;
+          }
+        } else if (isEditor) {
+          if (['articles', 'categories', 'pages', 'media', 'players', 'matches', 'standings', 'stats'].includes(item.id)) {
+            perms[key] = true;
+          } else if (action === 'view') {
+            perms[key] = true;
+          } else {
+            perms[key] = false;
+          }
+        } else if (isAuthor) {
+          if (['articles', 'media'].includes(item.id)) {
+            perms[key] = action === 'view' || action === 'edit';
+          } else if (action === 'view') {
+            perms[key] = true;
+          } else {
+            perms[key] = false;
+          }
+        } else {
+          // viewer: view only
+          perms[key] = action === 'view';
+        }
+      });
+    });
+  });
+
+  return perms;
+}
+
 export default function AdminUsersMasterPage() {
   // Navigation tab: 'users' or 'roles'
   const [activeTab, setActiveTab] = useState('users');
@@ -177,6 +269,11 @@ export default function AdminUsersMasterPage() {
   const [editModalUser, setEditModalUser] = useState(null);
   const [passwordModalUser, setPasswordModalUser] = useState(null);
   const [deleteConfirmUser, setDeleteConfirmUser] = useState(null);
+
+  // ──────── MANAGE ACCESS FOR USER MODAL (POPUP) ────────
+  const [accessModalUser, setAccessModalUser] = useState(null);
+  const [userAccessPerms, setUserAccessPerms] = useState({});
+  const [savingAccess, setSavingAccess] = useState(false);
 
   // Form states for Create User
   const [newUsername, setNewUsername] = useState('');
@@ -265,7 +362,81 @@ export default function AdminUsersMasterPage() {
     return () => clearTimeout(t);
   }, [search]);
 
-  // Create User Handler (Simple: only assigns Role)
+  // Open Manage Access Modal for a specific user
+  const handleOpenAccessModal = (user) => {
+    setAccessModalUser(user);
+    const defaults = generateGranularPresetsForRole(user.role || 'editor');
+    const existing = user.permissions || {};
+    setUserAccessPerms({
+      ...defaults,
+      ...existing,
+    });
+  };
+
+  // Toggle single granular permission
+  const handleToggleSinglePerm = (permKey) => {
+    setUserAccessPerms((prev) => ({
+      ...prev,
+      [permKey]: !prev[permKey],
+    }));
+  };
+
+  // Toggle group Select All
+  const handleToggleGroupSelectAll = (group) => {
+    const allGroupKeys = group.items.flatMap((item) =>
+      item.actions.map((act) => `${item.id}_${act}`)
+    );
+    const allChecked = allGroupKeys.every((k) => Boolean(userAccessPerms[k]));
+    const nextVal = !allChecked;
+
+    setUserAccessPerms((prev) => {
+      const updated = { ...prev };
+      allGroupKeys.forEach((k) => {
+        updated[k] = nextVal;
+      });
+      return updated;
+    });
+  };
+
+  // Apply role preset inside access modal
+  const handleApplyRolePreset = (roleKey) => {
+    const presetPerms = generateGranularPresetsForRole(roleKey);
+    setUserAccessPerms(presetPerms);
+    showToast('info', `Applied "${roleKey.toUpperCase()}" permissions preset. Click "Save Access" to apply.`);
+  };
+
+  // Save granular access for user
+  const handleSaveAccess = async () => {
+    if (!accessModalUser) return;
+    setSavingAccess(true);
+
+    try {
+      const res = await fetch(`/api/admin/users/${accessModalUser._id}/`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          permissions: userAccessPerms,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        showToast(
+          'success',
+          `Access permissions for "${accessModalUser.name || accessModalUser.username}" saved successfully!`
+        );
+        setAccessModalUser(null);
+        fetchUsers();
+      } else {
+        showToast('error', data.error || 'Failed to save access permissions');
+      }
+    } catch (err) {
+      showToast('error', err.message);
+    } finally {
+      setSavingAccess(false);
+    }
+  };
+
+  // Create User Handler
   const handleCreateUser = async (e) => {
     e.preventDefault();
     if (!newUsername.trim() || !newPassword.trim()) {
@@ -311,7 +482,7 @@ export default function AdminUsersMasterPage() {
     }
   };
 
-  // Update User Handler (Simple: role re-assignment)
+  // Update User Handler
   const handleUpdateUser = async (e) => {
     e.preventDefault();
     if (!editModalUser) return;
@@ -425,7 +596,7 @@ export default function AdminUsersMasterPage() {
 
   // Toggle permission checkmark for a role in Role Editor
   const handleToggleRolePermission = (roleKey, permKey) => {
-    if (roleKey === 'superadmin') return; // root locked
+    if (roleKey === 'superadmin') return;
     setEditableRoles((prev) => {
       const rolePerms = prev[roleKey] || {};
       return {
@@ -653,7 +824,7 @@ export default function AdminUsersMasterPage() {
         </div>
       </div>
 
-      {/* ──────── TAB 2: ROLE PERMISSIONS EDITOR (ROLE-BASED CHECKMARKS) ──────── */}
+      {/* ──────── TAB 2: ROLE PERMISSIONS EDITOR ──────── */}
       {activeTab === 'roles' && (
         <div className="space-y-6">
           {/* Info Banner */}
@@ -661,7 +832,7 @@ export default function AdminUsersMasterPage() {
             <Info className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
             <div className="leading-relaxed">
               <strong className="text-yellow-400 block mb-0.5">Role-Based Access Control (RBAC):</strong>
-              Yahan aap har Role ke right/permissions par checkmarks set kar sakte hain. Jab aap kisi user ko ye Role assign karenge, toh us user ko wahi rights milenge jo us role ke checkmarks me set hain. User-wise alag permission dene ki jarurat nahi hai!
+              Yahan aap har Role ke rights par checkmarks set kar sakte hain. Jab aap kisi user ko ye Role assign karenge, toh us user ko wahi rights milenge. Kisi specific user ko custom access dena ho toh Users Directory me &quot;Manage Access&quot; popup se kar sakte hain!
             </div>
           </div>
 
@@ -857,7 +1028,7 @@ export default function AdminUsersMasterPage() {
                     <th className="p-4 pl-6">User / Identity</th>
                     <th className="p-4">Email</th>
                     <th className="p-4">Assigned Role</th>
-                    <th className="p-4">Role Privileges</th>
+                    <th className="p-4">Access Rights</th>
                     <th className="p-4">Status</th>
                     <th className="p-4">Last Login</th>
                     <th className="p-4 text-right pr-6">Actions</th>
@@ -939,48 +1110,17 @@ export default function AdminUsersMasterPage() {
                           {/* Assigned Role */}
                           <td className="p-4">{renderRoleBadge(user.role)}</td>
 
-                          {/* Role Privileges Pills */}
+                          {/* Role Privileges with Quick Access Popup Button */}
                           <td className="p-4">
-                            <div className="flex flex-wrap items-center gap-1 max-w-xs">
-                              {userPerms.managePosts && (
-                                <span className="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] text-slate-300 font-semibold">
-                                  Posts
-                                </span>
-                              )}
-                              {userPerms.managePlayers && (
-                                <span className="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] text-slate-300 font-semibold">
-                                  Players
-                                </span>
-                              )}
-                              {userPerms.manageMatches && (
-                                <span className="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] text-slate-300 font-semibold">
-                                  Matches
-                                </span>
-                              )}
-                              {userPerms.manageMedia && (
-                                <span className="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] text-slate-300 font-semibold">
-                                  Media
-                                </span>
-                              )}
-                              {userPerms.manageRedirects && (
-                                <span className="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] text-yellow-400 font-semibold">
-                                  Redirects
-                                </span>
-                              )}
-                              {userPerms.manageUsers && (
-                                <span className="px-1.5 py-0.5 rounded bg-yellow-400/10 text-yellow-300 border border-yellow-400/20 text-[10px] font-bold">
-                                  User Control
-                                </span>
-                              )}
-                              {!userPerms.managePosts &&
-                                !userPerms.managePlayers &&
-                                !userPerms.manageMatches &&
-                                !userPerms.manageMedia &&
-                                !userPerms.manageRedirects &&
-                                !userPerms.manageUsers && (
-                                  <span className="text-[10px] text-slate-500 italic">Read-only</span>
-                                )}
-                            </div>
+                            <button
+                              type="button"
+                              onClick={() => handleOpenAccessModal(user)}
+                              className="px-2.5 py-1 rounded-xl bg-slate-800 hover:bg-slate-700 hover:border-yellow-400/50 border border-slate-700 text-slate-200 text-[11px] font-bold inline-flex items-center gap-1.5 transition cursor-pointer shadow-sm group/btn"
+                              title="Click to view & customize granular access permissions for this user"
+                            >
+                              <Shield className="w-3.5 h-3.5 text-yellow-400 group-hover/btn:scale-110 transition-transform" />
+                              <span>Manage Access</span>
+                            </button>
                           </td>
 
                           {/* Status */}
@@ -1020,6 +1160,16 @@ export default function AdminUsersMasterPage() {
                           {/* Actions */}
                           <td className="p-4 text-right pr-6">
                             <div className="flex items-center justify-end gap-1">
+                              {/* Manage Access Popup Icon */}
+                              <button
+                                type="button"
+                                onClick={() => handleOpenAccessModal(user)}
+                                className="p-1.5 rounded-lg text-slate-400 hover:text-yellow-400 hover:bg-slate-800 transition cursor-pointer"
+                                title="Manage Access (View/Edit/Delete Matrix)"
+                              >
+                                <Settings2 className="w-4 h-4" />
+                              </button>
+
                               {/* Edit User Button */}
                               <button
                                 type="button"
@@ -1091,7 +1241,183 @@ export default function AdminUsersMasterPage() {
         </div>
       )}
 
-      {/* ──────── MODAL 1: CREATE NEW USER (SIMPLIFIED: ROLE ASSIGNMENT ONLY) ──────── */}
+      {/* ──────── POPUP MODAL: MANAGE ACCESS FOR USER (MATCHING USER SCREENSHOT) ──────── */}
+      {accessModalUser && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-sm animate-fadeIn"
+          onClick={() => setAccessModalUser(null)}
+        >
+          <div
+            className="w-full max-w-2xl bg-white text-slate-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh] border border-slate-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Top Bar */}
+            <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-white">
+              <div className="flex items-center gap-3">
+                <h2 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
+                  Manage Access for {accessModalUser.name || accessModalUser.username}
+                </h2>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <button
+                  type="button"
+                  disabled={savingAccess}
+                  onClick={handleSaveAccess}
+                  className="px-5 py-2 rounded-xl bg-[#1d4ed8] hover:bg-[#1e40af] text-white font-bold text-xs shadow-md shadow-blue-500/20 transition cursor-pointer disabled:opacity-50"
+                >
+                  {savingAccess ? 'Saving Access...' : 'Save Access'}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setAccessModalUser(null)}
+                  className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition cursor-pointer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Quick Presets Subheader */}
+            <div className="px-6 py-2.5 bg-slate-50 border-b border-slate-100 flex flex-wrap items-center justify-between gap-2 text-xs">
+              <div className="flex items-center gap-1.5">
+                <span className="text-slate-500 font-bold text-[11px] uppercase tracking-wider">Quick Preset:</span>
+                {['superadmin', 'admin', 'editor', 'author', 'viewer'].map((roleKey) => (
+                  <button
+                    key={roleKey}
+                    type="button"
+                    onClick={() => handleApplyRolePreset(roleKey)}
+                    className="px-2 py-0.5 rounded-md bg-white border border-slate-200 hover:border-blue-400 text-slate-700 hover:text-blue-600 font-semibold text-[11px] capitalize transition cursor-pointer shadow-2xs"
+                  >
+                    {roleKey}
+                  </button>
+                ))}
+              </div>
+              <span className="text-slate-400 text-[11px]">
+                Role: <strong className="text-slate-800 capitalize">{accessModalUser.role}</strong>
+              </span>
+            </div>
+
+            {/* Modal Scrollable Body */}
+            <div className="p-6 overflow-y-auto space-y-5 text-xs bg-slate-50/50">
+              {ACCESS_MODULE_GROUPS.map((group) => {
+                const allGroupKeys = group.items.flatMap((item) =>
+                  item.actions.map((act) => `${item.id}_${act}`)
+                );
+                const isAllSelected = allGroupKeys.every((k) => Boolean(userAccessPerms[k]));
+                const isSomeSelected = !isAllSelected && allGroupKeys.some((k) => Boolean(userAccessPerms[k]));
+
+                return (
+                  <div
+                    key={group.id}
+                    className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-2xs"
+                  >
+                    {/* Category Header */}
+                    <div className="px-4 py-2.5 bg-slate-100/90 border-b border-slate-200 flex items-center justify-between">
+                      <span className="text-xs font-black uppercase tracking-wider text-slate-700">
+                        {group.title}
+                      </span>
+
+                      <label className="flex items-center gap-2 cursor-pointer select-none">
+                        <input
+                          type="checkbox"
+                          checked={isAllSelected}
+                          ref={(el) => {
+                            if (el) el.indeterminate = isSomeSelected;
+                          }}
+                          onChange={() => handleToggleGroupSelectAll(group)}
+                          className="w-4 h-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500 cursor-pointer"
+                        />
+                        <span className="text-xs font-bold text-slate-600 hover:text-slate-900">
+                          Select All
+                        </span>
+                      </label>
+                    </div>
+
+                    {/* Category Item Rows */}
+                    <div className="divide-y divide-slate-100">
+                      {group.items.map((item) => (
+                        <div
+                          key={item.id}
+                          className="px-4 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50/70 transition-colors"
+                        >
+                          <span className="text-xs font-semibold text-slate-800">
+                            {item.label}
+                          </span>
+
+                          {/* Action Checkboxes (View, Edit, Delete) */}
+                          <div className="flex items-center gap-6 sm:min-w-[220px] justify-start sm:justify-end">
+                            {['view', 'edit', 'delete'].map((action) => {
+                              const applies = item.actions.includes(action);
+                              if (!applies) {
+                                return (
+                                  <div
+                                    key={action}
+                                    className="hidden sm:block w-14"
+                                  />
+                                );
+                              }
+                              const permKey = `${item.id}_${action}`;
+                              const isChecked = Boolean(userAccessPerms[permKey]);
+
+                              return (
+                                <label
+                                  key={action}
+                                  className="flex items-center gap-1.5 cursor-pointer select-none group/check"
+                                >
+                                  <input
+                                    type="checkbox"
+                                    checked={isChecked}
+                                    onChange={() => handleToggleSinglePerm(permKey)}
+                                    className="w-4 h-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500 cursor-pointer"
+                                  />
+                                  <span
+                                    className={`text-xs capitalize font-medium ${
+                                      isChecked ? 'text-slate-900 font-bold' : 'text-slate-500'
+                                    }`}
+                                  >
+                                    {action}
+                                  </span>
+                                </label>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Modal Bottom Action Bar */}
+            <div className="px-6 py-3.5 border-t border-slate-200 flex items-center justify-between bg-white">
+              <span className="text-xs text-slate-500 font-medium">
+                Changes take effect immediately upon saving.
+              </span>
+              <div className="flex items-center gap-2.5">
+                <button
+                  type="button"
+                  onClick={() => setAccessModalUser(null)}
+                  className="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition cursor-pointer"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  disabled={savingAccess}
+                  onClick={handleSaveAccess}
+                  className="px-5 py-2 rounded-xl bg-[#1d4ed8] hover:bg-[#1e40af] text-white font-bold text-xs shadow-md shadow-blue-500/20 transition cursor-pointer disabled:opacity-50"
+                >
+                  {savingAccess ? 'Saving...' : 'Save Access'}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ──────── MODAL 1: CREATE NEW USER ──────── */}
       {createModalOpen && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fadeIn"
@@ -1287,7 +1613,7 @@ export default function AdminUsersMasterPage() {
         </div>
       )}
 
-      {/* ──────── MODAL 2: EDIT USER ROLE & PROFILE (SIMPLIFIED) ──────── */}
+      {/* ──────── MODAL 2: EDIT USER ROLE & PROFILE ──────── */}
       {editModalUser && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fadeIn"
@@ -1383,47 +1709,29 @@ export default function AdminUsersMasterPage() {
                 </div>
               </div>
 
-              {/* Informative Box: Privileges inherited from the selected role */}
-              {(() => {
-                const selectedRoleKey = editModalUser.role || 'editor';
-                const selectedRoleDef = roles.find((r) => r.role === selectedRoleKey) || DEFAULT_ROLE_PRESETS[selectedRoleKey];
-                const activePerms = editableRoles[selectedRoleKey] || selectedRoleDef?.permissions || {};
-
-                return (
-                  <div className="p-3.5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-1.5">
-                        <Shield className="w-3.5 h-3.5 text-yellow-400" />
-                        <span className="text-slate-300 font-bold uppercase tracking-wider text-[10px]">
-                          Rights inherited from &ldquo;{selectedRoleDef?.label || selectedRoleKey}&rdquo;
-                        </span>
-                      </div>
-                      <span className="text-[10px] text-slate-500">
-                        Configured in Role Editor
-                      </span>
-                    </div>
-
-                    <div className="flex flex-wrap gap-1.5">
-                      {PERMISSION_MODULES.map((perm) => {
-                        const allowed = selectedRoleKey === 'superadmin' ? true : Boolean(activePerms[perm.key]);
-                        return (
-                          <span
-                            key={perm.key}
-                            className={`px-2 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1 border ${
-                              allowed
-                                ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400'
-                                : 'bg-slate-900 border-slate-800 text-slate-500'
-                            }`}
-                          >
-                            <span>{allowed ? '✓' : '—'}</span>
-                            <span>{perm.label}</span>
-                          </span>
-                        );
-                      })}
-                    </div>
+              {/* Quick shortcut to open Manage Access modal */}
+              <div className="p-3.5 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-between">
+                <div>
+                  <div className="text-xs font-bold text-white flex items-center gap-1.5">
+                    <Shield className="w-3.5 h-3.5 text-yellow-400" />
+                    <span>Granular Access Matrix</span>
                   </div>
-                );
-              })()}
+                  <p className="text-[10px] text-slate-400 mt-0.5">
+                    Configure View / Edit / Delete rights per module for this user.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    const target = { ...editModalUser };
+                    setEditModalUser(null);
+                    handleOpenAccessModal(target);
+                  }}
+                  className="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition cursor-pointer"
+                >
+                  Manage Access &rarr;
+                </button>
+              </div>
 
               <div>
                 <label className="block text-slate-300 font-bold mb-1">Author Bio</label>

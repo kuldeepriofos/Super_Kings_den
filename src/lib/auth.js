@@ -104,6 +104,11 @@ export async function requirePermission(request, permission) {
 
     if (dbUser) {
       if (dbUser.role === 'superadmin') return { ...session, role: 'superadmin' };
+      // Check user-level permissions override first
+      if (dbUser.permissions && dbUser.permissions[permission]) {
+        return { ...session, role: dbUser.role, permissions: dbUser.permissions };
+      }
+      // Fallback to role-level configured permissions
       const rolePerms = await getPermissionsForRole(dbUser.role || 'viewer');
       if (rolePerms && rolePerms[permission]) {
         return { ...session, role: dbUser.role, permissions: rolePerms };
